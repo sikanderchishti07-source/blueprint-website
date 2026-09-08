@@ -26,11 +26,11 @@
     default:    ['https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=800&q=80', 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80', 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80']
   };
   var CATEGORIES = {
-    air:        { label: '💨 Air Quality',    bg: 'rgba(15,61,178,.13)',  color: '#0f3db2', imgKey: 'air' },
-    water:      { label: '💧 Water',          bg: 'rgba(15,61,178,.11)',  color: '#0a2a7a', imgKey: 'water' },
+    air:        { label: '💨 Air Quality',    bg: 'rgba(0, 113, 129,.13)',  color: '#007181', imgKey: 'air' },
+    water:      { label: '💧 Water',          bg: 'rgba(0, 113, 129,.11)',  color: '#005a66', imgKey: 'water' },
     climate:    { label: '🌡 Climate',        bg: 'rgba(160,80,20,.11)',  color: '#a05014', imgKey: 'climate' },
     energy:     { label: '⚡ Energy',         bg: 'rgba(100,117,66,.15)', color: '#4d5a33', imgKey: 'energy' },
-    regulation: { label: '📋 Regulation',     bg: 'rgba(15,61,178,.11)',  color: '#0f3db2', imgKey: 'regulation' },
+    regulation: { label: '📋 Regulation',     bg: 'rgba(0, 113, 129,.11)',  color: '#007181', imgKey: 'regulation' },
     green:      { label: '🌱 Sustainability', bg: 'rgba(100,117,66,.15)', color: '#647542', imgKey: 'green' },
     default:    { label: '🌍 Environment',    bg: 'rgba(100,117,66,.12)', color: '#647542', imgKey: 'default' }
   };

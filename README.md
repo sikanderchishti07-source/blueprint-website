@@ -35,13 +35,16 @@ build/                      ← source of the shared markup; optional
   build.sh                  python3 build.py + tailwind compile
 ```
 
-## Brand palette (from the logo)
+## Brand palette
+
+A teal family (client-approved), with the olive and green taken from the logo.
 
 | Token            | Hex       | Use                                   |
 |------------------|-----------|---------------------------------------|
-| `--bp-blue`      | `#0f3db2` | Primary — buttons, links, accents     |
-| `--bp-blue-deep` | `#0a2a7a` | Headings on light, dark sections      |
-| `--bp-blue-ink`  | `#071d55` | Footer, top strip, deepest surfaces   |
+| `--bp-blue`      | `#007181` | Primary — buttons, links, accents     |
+| `--bp-blue-deep` | `#005a66` | Headings on light, dark sections      |
+| `--bp-blue-ink`  | `#04333a` | Footer, top strip, deepest surfaces   |
+| `--bp-blue-soft` | `#2a93a3` | Secondary accents                     |
 | `--bp-olive`     | `#647542` | Secondary — olive buttons, checks     |
 | `--bp-olive-light` | `#a3b56f` | Highlight on dark backgrounds (replaces old gold) |
 | `--bp-green-ink` | `#102e20` | Body text                             |
@@ -69,3 +72,5 @@ The CSS and JS files in `site/css/` and `site/js/` are *not* generated and are s
 ```bash
 npx tailwindcss -c tailwind.config.js -i tailwind.input.css -o ../site/css/tailwind.css --minify
 ```
+
+To change the palette later, edit the `--bp-*` tokens at the top of `site/css/base.css` **and** the matching `bp` colours in `build/tailwind.config.js`, then run `build/build.sh`.

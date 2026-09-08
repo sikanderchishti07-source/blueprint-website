@@ -82,7 +82,7 @@
         '@media(max-width:820px){.portal-side{display:none!important;}.portal-stats{grid-template-columns:1fr!important;}}' +
       '</style>' +
       '<div style="display:flex; min-height:700px; max-height:85vh; background:#f0f4f8;">' +
-        '<div class="portal-side" style="width:280px; background:linear-gradient(180deg, #0f3db2 0%, #071d55 100%); display:flex; flex-direction:column; flex-shrink:0;">' +
+        '<div class="portal-side" style="width:280px; background:linear-gradient(180deg, #007181 0%, #04333a 100%); display:flex; flex-direction:column; flex-shrink:0;">' +
           '<div style="padding:24px; border-bottom:1px solid rgba(255,255,255,.08);"><img src="assets/logo/blueprint-logo-white.png" alt="BluePrint" style="height:40px; width:auto;" /></div>' +
           '<div style="margin:20px 16px; padding:16px; background:rgba(255,255,255,.08); border-radius:14px; border:1px solid rgba(255,255,255,.06);">' +
             '<div style="display:flex; align-items:center; gap:12px;">' +
@@ -110,7 +110,7 @@
           '</div>' +
           '<div style="flex:1; padding:28px 32px; overflow-y:auto; background:#f0f4f8;">' +
             '<div id="dash-overview">' +
-              '<div style="background:var(--bp-grad); border-radius:20px; padding:32px 36px; margin-bottom:28px; position:relative; overflow:hidden; box-shadow:0 10px 40px rgba(7,29,85,.3);">' +
+              '<div style="background:var(--bp-grad); border-radius:20px; padding:32px 36px; margin-bottom:28px; position:relative; overflow:hidden; box-shadow:0 10px 40px rgba(4, 51, 58,.3);">' +
                 '<div style="position:absolute; top:-50px; right:-50px; width:200px; height:200px; background:rgba(255,255,255,.05); border-radius:50%;"></div>' +
                 '<div style="position:relative; z-index:1;">' +
                   '<div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;"><div style="width:8px; height:8px; background:#10b981; border-radius:50%;"></div><span style="font-size:12px; color:rgba(255,255,255,.7); text-transform:uppercase; letter-spacing:1px; font-weight:600;">Welcome Back</span></div>' +
@@ -189,7 +189,7 @@
             var images = [];
             if (r.files) ['stationImages', 'noiseImages', 'coordinateImages'].forEach(function (k) { if (r.files[k]) images = images.concat(r.files[k].map(getFileUrl).map(safeUrl).filter(Boolean)); });
             var downloadBtn = pdfUrl
-              ? '<a href="' + pdfUrl + '" target="_blank" rel="noopener" style="background:var(--bp-grad-blue); color:white; padding:12px 24px; border-radius:12px; font-size:13px; text-decoration:none; display:inline-flex; align-items:center; gap:10px; font-weight:600; box-shadow:0 4px 14px rgba(15,61,178,.35);"><i class="fas fa-download"></i> Download PDF</a>'
+              ? '<a href="' + pdfUrl + '" target="_blank" rel="noopener" style="background:var(--bp-grad-blue); color:white; padding:12px 24px; border-radius:12px; font-size:13px; text-decoration:none; display:inline-flex; align-items:center; gap:10px; font-weight:600; box-shadow:0 4px 14px rgba(0, 113, 129,.35);"><i class="fas fa-download"></i> Download PDF</a>'
               : '<span style="color:#94a3b8; font-size:13px; background:#f1f5f9; padding:12px 24px; border-radius:12px; font-weight:500;">No PDF available</span>';
             var html = '<div style="background:white; border-radius:20px; overflow:hidden; box-shadow:0 1px 3px rgba(0,0,0,.08); border:1px solid #e2e8f0;">' +
               '<div style="background:var(--bp-grad-blue); padding:24px 28px; color:white; position:relative; overflow:hidden;">' +

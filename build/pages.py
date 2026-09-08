@@ -180,7 +180,7 @@ def home():
       <p class="text-gray-600 max-w-2xl mx-auto">Proven track record across Saudi Arabia's major national development programs</p>
     </div>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 scroll-reveal">
-""" + "".join(f"""      <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer"><img src="{img}" alt="{title}" class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500" /><div class="absolute inset-0 opacity-90" style="background:linear-gradient(to top,#071d55 0%,rgba(7,29,85,.5) 50%,transparent 100%);"></div><div class="absolute bottom-0 left-0 right-0 p-6 text-white"><div class="flex items-center space-x-2 mb-2"><i class="fas {icon} text-bp-sage"></i><span class="text-sm font-medium text-bp-sage">{cat}</span></div><h3 class="text-xl font-bold mb-2">{title}</h3><p class="text-sm text-gray-300">{desc}</p></div></div>
+""" + "".join(f"""      <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer"><img src="{img}" alt="{title}" class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500" /><div class="absolute inset-0 opacity-90" style="background:linear-gradient(to top,#04333a 0%,rgba(4, 51, 58,.5) 50%,transparent 100%);"></div><div class="absolute bottom-0 left-0 right-0 p-6 text-white"><div class="flex items-center space-x-2 mb-2"><i class="fas {icon} text-bp-sage"></i><span class="text-sm font-medium text-bp-sage">{cat}</span></div><h3 class="text-xl font-bold mb-2">{title}</h3><p class="text-sm text-gray-300">{desc}</p></div></div>
 """ for img, icon, cat, title, desc in [
     ("https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=400&h=300&fit=crop", "fa-industry", "Industrial", "Riyadh Cement Plant", "Comprehensive ambient air and stack emission monitoring with US EPA methods"),
     ("https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=400&h=300&fit=crop", "fa-tree", "Urban Development", "King Salman Park (KSP)", "Environmental monitoring for Riyadh's largest urban park project"),
@@ -277,7 +277,7 @@ def technology():
       <div class="equipment-card bg-gray-50 rounded-2xl border-2 border-transparent hover:border-bp-primary cursor-pointer group overflow-hidden">
         <div class="relative w-full h-44 overflow-hidden bg-bp-light">
           <img src="{img}?w=600&h=380&fit=crop&q=80" alt="{title}" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='{fb}?w=600&h=380&fit=crop'" />
-          <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" style="background:linear-gradient(to top,rgba(7,29,85,.65),transparent);"></div>
+          <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" style="background:linear-gradient(to top,rgba(4, 51, 58,.65),transparent);"></div>
           <span class="absolute bottom-3 left-3 text-xs font-bold text-white bg-bp-olive px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">{badge}</span>
         </div>
         <div class="p-5"><div class="flex items-center gap-2 mb-2"><div class="w-7 h-7 bg-bp-light rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas {icon} text-bp-primary text-xs"></i></div><h4 class="font-bold text-bp-ink text-sm">{title}</h4></div><p class="text-xs text-gray-500 leading-relaxed">{desc}</p></div>
