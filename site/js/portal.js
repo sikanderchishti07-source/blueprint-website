@@ -6,6 +6,19 @@
   'use strict';
   var C = window.BP_CONFIG || {};
 
+  /* Escape any value coming from the API or from user input before it
+     goes into innerHTML. */
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+  /* Only allow http(s) file links through to href/src. */
+  function safeUrl(u) {
+    var v = String(u || '');
+    return /^https?:\/\//i.test(v) ? esc(v) : '';
+  }
+
   function loginMarkup() {
     return '<div id="portalLogin" style="padding:40px; max-width:420px; margin:0 auto;">' +
       '<button onclick="closeModal(\'portalModal\')" class="modal-close-btn" style="position:absolute; top:20px; right:20px;" aria-label="Close"><i class="fas fa-times"></i></button>' +
@@ -73,8 +86,8 @@
           '<div style="padding:24px; border-bottom:1px solid rgba(255,255,255,.08);"><img src="assets/logo/blueprint-logo-white.png" alt="BluePrint" style="height:40px; width:auto;" /></div>' +
           '<div style="margin:20px 16px; padding:16px; background:rgba(255,255,255,.08); border-radius:14px; border:1px solid rgba(255,255,255,.06);">' +
             '<div style="display:flex; align-items:center; gap:12px;">' +
-              '<div style="width:42px; height:42px; background:var(--bp-grad-olive); border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:16px; color:white;">' + companyName.charAt(0).toUpperCase() + '</div>' +
-              '<div style="flex:1; min-width:0;"><div style="font-weight:600; font-size:14px; color:white; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">' + companyName + '</div><div style="font-size:11px; color:rgba(255,255,255,.5); margin-top:2px;">' + clientId + '</div></div>' +
+              '<div style="width:42px; height:42px; background:var(--bp-grad-olive); border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:16px; color:white;">' + esc(companyName.charAt(0).toUpperCase()) + '</div>' +
+              '<div style="flex:1; min-width:0;"><div style="font-weight:600; font-size:14px; color:white; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">' + esc(companyName) + '</div><div style="font-size:11px; color:rgba(255,255,255,.5); margin-top:2px;">' + esc(clientId) + '</div></div>' +
               '<div style="width:8px; height:8px; background:#10b981; border-radius:50%; box-shadow:0 0 8px rgba(16,185,129,.6);"></div>' +
             '</div>' +
           '</div>' +
@@ -101,7 +114,7 @@
                 '<div style="position:absolute; top:-50px; right:-50px; width:200px; height:200px; background:rgba(255,255,255,.05); border-radius:50%;"></div>' +
                 '<div style="position:relative; z-index:1;">' +
                   '<div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;"><div style="width:8px; height:8px; background:#10b981; border-radius:50%;"></div><span style="font-size:12px; color:rgba(255,255,255,.7); text-transform:uppercase; letter-spacing:1px; font-weight:600;">Welcome Back</span></div>' +
-                  '<h2 style="font-family:var(--font-display); font-size:28px; font-weight:700; color:white; margin:0 0 8px 0; letter-spacing:-.5px;">Hello, ' + companyName + '! 👋</h2>' +
+                  '<h2 style="font-family:var(--font-display); font-size:28px; font-weight:700; color:white; margin:0 0 8px 0; letter-spacing:-.5px;">Hello, ' + esc(companyName) + '! 👋</h2>' +
                   '<p style="font-size:15px; color:rgba(255,255,255,.75); margin:0; max-width:500px; line-height:1.6;">Access your environmental monitoring reports, track compliance status, and download documentation all in one place.</p>' +
                 '</div>' +
               '</div>' +
@@ -154,6 +167,7 @@
           recentEl.innerHTML = '<div style="display:flex; flex-direction:column; gap:10px;">' + reports.slice(0, 3).map(function (r, idx) {
             var title = r.reportTitle || r.title || 'Report', type = r.reportType || '', loc = r.location || '';
             var date = r.reportDate ? new Date(r.reportDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : '';
+            title = esc(title); type = esc(type); loc = esc(loc);
             return '<div onclick="switchSection(\'reports\')" style="background:#f8fafc; padding:16px 18px; border-radius:12px; display:flex; align-items:center; gap:14px; cursor:pointer; border:1px solid #e2e8f0;">' +
               '<div style="width:46px; height:46px; background:' + grads[idx % 3] + '; border-radius:12px; display:flex; align-items:center; justify-content:center; flex-shrink:0;"><i class="fas fa-file-lines" style="color:white; font-size:18px;"></i></div>' +
               '<div style="flex:1; min-width:0;"><p style="font-size:14px; font-weight:600; color:#1e293b; margin:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">' + title + '</p><p style="font-size:12px; color:#64748b; margin:4px 0 0 0;"><span style="background:#e2e8f0; padding:2px 8px; border-radius:4px; font-size:11px; font-weight:500;">' + type + '</span> <span style="margin-left:8px;"><i class="fas fa-location-dot" style="margin-right:4px; font-size:10px;"></i>' + loc + '</span></p></div>' +
@@ -168,12 +182,12 @@
           reportsEl.innerHTML = '<div style="text-align:center; padding:80px 40px; background:white; border-radius:20px; border:1px solid #e2e8f0;"><div style="width:88px; height:88px; background:linear-gradient(135deg,#f1f5f9,#e2e8f0); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 24px;"><i class="fas fa-folder-open" style="font-size:36px; color:#94a3b8;"></i></div><h3 style="color:#1e293b; margin:0 0 8px 0; font-size:20px; font-weight:700;">No Reports Yet</h3><p style="color:#64748b; font-size:14px; max-width:300px; margin:0 auto;">Your environmental reports will appear here once they are uploaded by the BluePrint team.</p></div>';
         } else {
           reportsEl.innerHTML = '<div style="display:flex; flex-direction:column; gap:20px;">' + reports.map(function (r, idx) {
-            var title = r.reportTitle || r.title || 'Untitled Report', type = r.reportType || 'Report', loc = r.location || '';
+            var title = esc(r.reportTitle || r.title || 'Untitled Report'), type = esc(r.reportType || 'Report'), loc = esc(r.location || '');
             var raw = r.issueDate || r.reportDate || '';
             var date = raw ? new Date(raw).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }) : '';
-            var pdfUrl = (r.files && r.files.pdfReport) ? getFileUrl(r.files.pdfReport) : '';
+            var pdfUrl = (r.files && r.files.pdfReport) ? safeUrl(getFileUrl(r.files.pdfReport)) : '';
             var images = [];
-            if (r.files) ['stationImages', 'noiseImages', 'coordinateImages'].forEach(function (k) { if (r.files[k]) images = images.concat(r.files[k].map(getFileUrl)); });
+            if (r.files) ['stationImages', 'noiseImages', 'coordinateImages'].forEach(function (k) { if (r.files[k]) images = images.concat(r.files[k].map(getFileUrl).map(safeUrl).filter(Boolean)); });
             var downloadBtn = pdfUrl
               ? '<a href="' + pdfUrl + '" target="_blank" rel="noopener" style="background:var(--bp-grad-blue); color:white; padding:12px 24px; border-radius:12px; font-size:13px; text-decoration:none; display:inline-flex; align-items:center; gap:10px; font-weight:600; box-shadow:0 4px 14px rgba(15,61,178,.35);"><i class="fas fa-download"></i> Download PDF</a>'
               : '<span style="color:#94a3b8; font-size:13px; background:#f1f5f9; padding:12px 24px; border-radius:12px; font-weight:500;">No PDF available</span>';

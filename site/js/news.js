@@ -8,6 +8,14 @@
   if (!document.getElementById('news-grid')) return;
   var C = window.BP_CONFIG || {};
 
+  /* Escape text before putting it into innerHTML. Article fields come
+     from an external news API, so they are never trusted as markup. */
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+
   var TOPIC_IMAGES = {
     air:        ['https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?w=800&q=80', 'https://images.unsplash.com/photo-1569952266837-07ce4f964a5e?w=800&q=80', 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&q=80'],
     water:      ['https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=800&q=80', 'https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=800&q=80', 'https://images.unsplash.com/photo-1559825481-12a05cc00344?w=800&q=80'],
@@ -47,6 +55,12 @@
     if (/green|sustainab|tree|forest/.test(t))       return CATEGORIES.green;
     return CATEGORIES.default;
   }
+  /* Only allow http(s) links through to href — a feed should never
+     be able to inject a javascript: URL. */
+  function safeUrl(u) {
+    var v = String(u || '');
+    return /^https?:\/\//i.test(v) ? esc(v) : '#';
+  }
   function getImage(a, i) { if (a.image && a.image.startsWith('http')) return a.image; var pool = TOPIC_IMAGES[getCategory(a).imgKey] || TOPIC_IMAGES.default; return pool[i % pool.length]; }
   function getFallbackImage(a, i) { var pool = TOPIC_IMAGES[getCategory(a).imgKey] || TOPIC_IMAGES.default; return pool[(i + 1) % pool.length]; }
   function timeAgo(d) {
@@ -74,7 +88,7 @@
     var track = document.getElementById('ticker-track'); if (!track || !articles.length) return;
     var items = articles.concat(articles);
     track.innerHTML = items.map(function (a) {
-      return '<span class="ticker-item"><span class="tk-arrow">▶</span><span>' + a.title + '</span><span class="tk-time">' + timeAgo(a.publishedAt) + '</span></span>';
+      return '<span class="ticker-item"><span class="tk-arrow">▶</span><span>' + esc(a.title) + '</span><span class="tk-time">' + timeAgo(a.publishedAt) + '</span></span>';
     }).join('');
   }
   function filterArticles(a) {
@@ -84,10 +98,10 @@
   function renderCard(a, i) {
     var cat = getCategory(a), img = getImage(a, i), fb = getFallbackImage(a, i);
     return '<div class="news-card' + (i === 0 ? ' featured' : '') + '">' +
-      '<div class="card-img-wrap"><img src="' + img + '" alt="' + (a.title || '').replace(/"/g, '') + '" loading="lazy" onerror="this.onerror=null;this.src=\'' + fb + '\'" /><div class="card-img-overlay"></div>' +
-      '<span class="card-badge" style="background:' + cat.bg + ';color:' + cat.color + ';">' + cat.label + '</span><span class="card-source">' + ((a.source && a.source.name) || 'News') + '</span></div>' +
-      '<div class="card-body"><h3 class="card-title">' + a.title + '</h3><p class="card-desc">' + (a.description || 'Read the full article for details.') + '</p>' +
-      '<div class="card-footer"><span class="card-time">' + timeAgo(a.publishedAt) + '</span><a href="' + a.url + '" target="_blank" rel="noopener" class="read-more">Read More <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></div></div>';
+      '<div class="card-img-wrap"><img src="' + esc(img) + '" alt="' + esc(a.title) + '" loading="lazy" onerror="this.onerror=null;this.src=\'' + fb + '\'" /><div class="card-img-overlay"></div>' +
+      '<span class="card-badge" style="background:' + cat.bg + ';color:' + cat.color + ';">' + cat.label + '</span><span class="card-source">' + esc((a.source && a.source.name) || 'News') + '</span></div>' +
+      '<div class="card-body"><h3 class="card-title">' + esc(a.title) + '</h3><p class="card-desc">' + esc(a.description || 'Read the full article for details.') + '</p>' +
+      '<div class="card-footer"><span class="card-time">' + timeAgo(a.publishedAt) + '</span><a href="' + safeUrl(a.url) + '" target="_blank" rel="noopener" class="read-more">Read More <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></div></div>';
   }
   function renderGrid() {
     var grid = document.getElementById('news-grid'); if (!grid) return;

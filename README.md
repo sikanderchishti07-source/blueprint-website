@@ -56,7 +56,7 @@ build/                      ← source of the shared markup; optional
 
 ## Editing shared markup
 
-Nav, footer, modals and widgets appear on every page. Edit them once in `build/partials.py`, then rebuild:
+**The five HTML files in `site/` are generated — do not edit them by hand.** Each one starts with a warning comment saying so. Nav, footer, modals and widgets appear on every page; edit them once in `build/partials.py`, then rebuild:
 
 ```bash
 cd build
@@ -64,7 +64,7 @@ npm install            # first time only (installs Tailwind CLI)
 ./build.sh             # regenerates site/*.html and site/css/tailwind.css
 ```
 
-If you edit HTML files directly instead, re-run only the Tailwind step after adding new utility classes:
+The CSS and JS files in `site/css/` and `site/js/` are *not* generated and are safe to edit directly — except `site/css/tailwind.css`. After adding new Tailwind utility classes to any markup, re-run just the Tailwind step:
 
 ```bash
 npx tailwindcss -c tailwind.config.js -i tailwind.input.css -o ../site/css/tailwind.css --minify
