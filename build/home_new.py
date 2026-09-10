@@ -64,36 +64,39 @@ HOME = """
 </section>
 
 <!-- SERVICES — three cards, click to expand -->
-<section id="services" class="py-28" style="background:var(--bp-page);">
+<section id="services" class="py-20" style="background:var(--bp-page);">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16 scroll-reveal">
+    <div class="text-center mb-10 scroll-reveal">
       <div class="showcase-eyebrow">What we do</div>
-      <h2 class="text-4xl lg:text-5xl font-bold text-bp-ink mb-5 tracking-tight">Take on any obligation</h2>
-      <p class="text-gray-600 text-base max-w-xl mx-auto leading-relaxed">Three service lines covering the whole compliance lifecycle &mdash; from first permit through to continuous reporting.</p>
+      <h2 class="text-3xl lg:text-4xl font-bold text-bp-ink mb-3 tracking-tight">Take on any obligation</h2>
+      <p class="text-gray-600 text-sm max-w-lg mx-auto leading-relaxed">Three service lines covering the whole compliance lifecycle.</p>
     </div>
 
     <div class="svc-showcase scroll-reveal">
       <div class="svc-stage" id="svcStage"></div>
-
-      <div class="svc-panel" id="svcPanel" role="dialog" aria-modal="false" aria-hidden="true" aria-label="Service list">
-        <div class="svc-panel-inner">
-          <div class="svc-panel-hero" id="svcPanelHero">
-            <div class="svc-panel-head">
-              <div class="svc-panel-kicker" id="svcPanelKicker"></div>
-              <h3 id="svcPanelTitle"></h3>
-            </div>
-          </div>
-          <button class="svc-panel-close" id="svcPanelClose" onclick="closeSvcPanel()" aria-label="Close service list">&times;</button>
-          <div class="svc-panel-grid" id="svcPanelGrid"></div>
-          <div class="svc-panel-foot">
-            <span id="svcPanelBlurb"></span>
-            <a href="services.html" class="svc-panel-btn" id="svcPanelLink">See full detail <i class="fas fa-arrow-right" style="font-size:.7rem;"></i></a>
-          </div>
-        </div>
-      </div>
+      <p class="svc-hint">Hover a card to preview &middot; click to open the full list</p>
     </div>
   </div>
 </section>
+
+<!-- FULL-SCREEN SERVICE OVERLAY -->
+<div class="svc-overlay" id="svcOverlay" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Service list">
+  <div class="svc-ov-bg" id="svcOvBg" aria-hidden="true"></div>
+  <div class="svc-ov-scrim" aria-hidden="true"></div>
+  <button class="svc-ov-close" id="svcOvClose" onclick="closeSvcOverlay()" aria-label="Close">&times;</button>
+  <div class="svc-ov-inner">
+    <div class="svc-ov-head">
+      <div class="svc-ov-kicker" id="svcOvKicker"></div>
+      <h2 id="svcOvTitle"></h2>
+      <p id="svcOvBlurb"></p>
+    </div>
+    <div class="svc-ov-grid" id="svcOvGrid"></div>
+    <div class="svc-ov-foot">
+      <a href="services.html" class="svc-ov-btn" id="svcOvLink">See full detail <i class="fas fa-arrow-right" style="font-size:.7rem;"></i></a>
+      <a href="contact.html" class="svc-ov-btn ghost">Talk to a consultant</a>
+    </div>
+  </div>
+</div>
 
 <!-- WHAT IT MEANS FOR YOU — alternating feature blocks -->
 <section class="py-28 bg-white">

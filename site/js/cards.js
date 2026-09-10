@@ -57,7 +57,7 @@
     }
   ];
 
-  var panel = document.getElementById('svcPanel');
+  var overlay = document.getElementById('svcOverlay');
   var lastFocus = null;
 
   GROUPS.forEach(function (g, i) {
@@ -65,59 +65,75 @@
     c.type = 'button';
     c.className = 'svc-card';
     c.setAttribute('aria-label', 'View ' + g.key.replace(/&amp;/g, 'and') + ' services');
-    c.addEventListener('click', function () { openPanel(i, c); });
+    c.addEventListener('click', function () { openOverlay(i, c); });
+    var teaser = g.items.slice(0, 4).map(function (it) { return '<li>' + it[0] + '</li>'; }).join('');
     c.innerHTML =
-      '<span class="svc-card-bg" style="background-image:url(\'' + g.img + '\');background-position:' + g.pos + '"></span>' +
-      '<span class="svc-card-veil"></span>' +
-      '<span class="svc-card-num">' + g.num + '</span>' +
-      '<span class="svc-card-icon"><i class="fas ' + g.icon + '"></i></span>' +
-      '<span class="svc-card-glass">' +
-        '<span class="svc-card-count">' + g.items.length + ' services</span>' +
-        '<span class="svc-card-title">' + g.key + '</span>' +
-        '<span class="svc-card-blurb">' + g.blurb + '</span>' +
-        '<span class="svc-card-cta">Explore <i class="fas fa-arrow-right"></i></span>' +
+      '<span class="svc-flip">' +
+        '<span class="svc-face svc-front">' +
+          '<span class="svc-card-bg" style="background-image:url(\'' + g.img + '\');background-position:' + g.pos + '"></span>' +
+          '<span class="svc-card-veil"></span>' +
+          '<span class="svc-card-num">' + g.num + '</span>' +
+          '<span class="svc-card-icon"><i class="fas ' + g.icon + '"></i></span>' +
+          '<span class="svc-card-glass">' +
+            '<span class="svc-card-count">' + g.items.length + ' services</span>' +
+            '<span class="svc-card-title">' + g.key + '</span>' +
+            '<span class="svc-card-blurb">' + g.blurb + '</span>' +
+          '</span>' +
+        '</span>' +
+        '<span class="svc-face svc-back">' +
+          '<span class="svc-back-num">' + g.num + '</span>' +
+          '<span class="svc-back-title">' + g.key + '</span>' +
+          '<ul class="svc-back-list">' + teaser + '</ul>' +
+          '<span class="svc-back-more">+ ' + (g.items.length - 4) + ' more</span>' +
+          '<span class="svc-back-cta">Open full list <i class="fas fa-arrow-right"></i></span>' +
+        '</span>' +
       '</span>';
     stage.appendChild(c);
   });
 
-  function openPanel(i, trigger) {
+  function openOverlay(i, trigger) {
     var g = GROUPS[i];
     lastFocus = trigger || null;
-    document.getElementById('svcPanelHero').style.backgroundImage = "url('" + g.img + "')";
-    document.getElementById('svcPanelHero').style.backgroundPosition = g.pos;
-    document.getElementById('svcPanelKicker').innerHTML = g.num + ' &mdash; ' + g.items.length + ' services';
-    document.getElementById('svcPanelTitle').innerHTML = g.key;
-    document.getElementById('svcPanelBlurb').innerHTML = g.blurb;
-    var link = document.getElementById('svcPanelLink');
+    document.getElementById('svcOvBg').style.backgroundImage = "url('" + g.img + "')";
+    document.getElementById('svcOvBg').style.backgroundPosition = g.pos;
+    document.getElementById('svcOvKicker').innerHTML = g.num + ' &mdash; ' + g.items.length + ' services';
+    document.getElementById('svcOvTitle').innerHTML = g.key;
+    document.getElementById('svcOvBlurb').innerHTML = g.blurb;
+    var link = document.getElementById('svcOvLink');
     link.setAttribute('href', g.href);
 
-    var grid = document.getElementById('svcPanelGrid');
+    var grid = document.getElementById('svcOvGrid');
     grid.innerHTML = '';
     g.items.forEach(function (it, n) {
       var a = document.createElement('a');
-      a.className = 'svc-item';
+      a.className = 'svc-ov-item';
       a.setAttribute('href', it[2]);
-      a.style.animationDelay = (0.055 * n + 0.14) + 's';
-      a.innerHTML = '<span class="svc-item-n">' + String(n + 1).replace(/^(\d)$/, '0$1') + '</span>' +
-                    '<span><span class="svc-item-t">' + it[0] + '</span>' +
-                    '<span class="svc-item-d">' + it[1] + '</span></span>';
+      a.style.animationDelay = (0.045 * n + 0.22) + 's';
+      a.innerHTML = '<span class="svc-ov-n">' + String(n + 1).replace(/^(\d)$/, '0$1') + '</span>' +
+                    '<span class="svc-ov-text"><span class="svc-ov-t">' + it[0] + '</span>' +
+                    '<span class="svc-ov-d">' + it[1] + '</span></span>' +
+                    '<i class="fas fa-arrow-right svc-ov-go"></i>';
       grid.appendChild(a);
     });
 
-    stage.classList.add('is-open');
-    panel.classList.add('is-open');
-    panel.setAttribute('aria-hidden', 'false');
-    setTimeout(function () { document.getElementById('svcPanelClose').focus(); }, 380);
+    overlay.classList.add('is-open');
+    overlay.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    setTimeout(function () { document.getElementById('svcOvClose').focus(); }, 380);
   }
 
-  window.closeSvcPanel = function () {
-    stage.classList.remove('is-open');
-    panel.classList.remove('is-open');
-    panel.setAttribute('aria-hidden', 'true');
+  window.closeSvcOverlay = function () {
+    overlay.classList.remove('is-open');
+    overlay.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
     if (lastFocus) lastFocus.focus();
   };
 
+  overlay.addEventListener('click', function (e) {
+    if (e.target === overlay) closeSvcOverlay();
+  });
+
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && panel.classList.contains('is-open')) closeSvcPanel();
+    if (e.key === 'Escape' && overlay.classList.contains('is-open')) closeSvcOverlay();
   });
 })();
