@@ -3,49 +3,34 @@ HOME = """
 <section class="relative min-h-screen flex items-center hero-gradient overflow-hidden">
   <div id="particles" class="absolute inset-0 overflow-hidden" aria-hidden="true"></div>
   <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
-    <div class="grid lg:grid-cols-2 gap-12 items-center">
-      <div class="text-white space-y-8 animate-slide-up">
-        <div class="inline-flex items-center space-x-2 px-4 py-2 bg-white/10 rounded-full backdrop-blur-sm border border-white/20">
-          <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-          <span class="text-sm font-medium">Accredited Saudi Environmental Consultancy</span>
+    <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+      <div class="text-white animate-slide-up">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 rounded-full backdrop-blur-sm border border-white/20 mb-8">
+          <span class="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></span>
+          <span class="text-xs font-medium tracking-wide">NCEC &amp; MWAN accredited &middot; Riyadh</span>
         </div>
-        <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight">Your blueprint<br>for <span class="text-bp-sage">environmental</span><br>compliance.</h1>
-        <p class="text-xl text-gray-200 max-w-lg leading-relaxed">BluePrint delivers integrated studies, permits, and reporting that keep your facility fully aligned with KSA environmental regulations — from first assessment to continuous compliance.</p>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.08] tracking-tight mb-6">Your blueprint for<br><span class="text-bp-sage">environmental compliance.</span></h1>
+        <p class="text-lg text-gray-200/90 max-w-md leading-relaxed mb-10">Studies, permits and reporting that keep your facility compliant across the Kingdom.</p>
         <div class="flex flex-wrap gap-4">
-          <a href="contact.html" class="px-8 py-4 bg-white text-bp-ink rounded-full font-bold hover:bg-bp-sage hover:text-bp-ink transition-all transform hover:scale-105 shadow-xl">Book a consultation</a>
-          <a href="services.html" class="px-8 py-4 border-2 border-white text-white rounded-full font-bold hover:bg-white hover:text-bp-ink transition-all flex items-center gap-2">Explore services <i class="fas fa-arrow-right" style="font-size:.8rem;"></i></a>
-        </div>
-        <div class="flex flex-wrap gap-2 pt-2">
-          <span class="flex items-center gap-2 px-4 py-2 bg-white/15 backdrop-blur-sm rounded-full text-sm border border-white/30"><i class="fas fa-check-circle text-bp-sage"></i> NCEC-aligned</span>
-          <span class="flex items-center gap-2 px-4 py-2 bg-white/15 backdrop-blur-sm rounded-full text-sm border border-white/30"><i class="fas fa-recycle text-bp-sage"></i> MWAN specialists</span>
-          <span class="flex items-center gap-2 px-4 py-2 bg-white/15 backdrop-blur-sm rounded-full text-sm border border-white/30"><i class="fas fa-file-signature text-bp-sage"></i> End-to-end reporting</span>
+          <a href="contact.html" class="px-8 py-4 bg-white text-bp-ink rounded-full font-bold hover:bg-bp-sage transition-all transform hover:scale-105 shadow-xl">Book a free consultation</a>
+          <a href="services.html" class="px-8 py-4 border border-white/40 text-white rounded-full font-bold hover:bg-white/10 transition-all flex items-center gap-2">Our services <i class="fas fa-arrow-right" style="font-size:.75rem;"></i></a>
         </div>
       </div>
-      <div class="relative hidden lg:block">
-        <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=800&h=600&fit=crop" alt="Wind turbines on green hills" class="rounded-3xl shadow-2xl transform hover:scale-105 transition-transform duration-700 object-cover h-[500px] w-full" />
-        <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl p-6 shadow-2xl animate-float">
-          <div class="flex items-center space-x-4">
-            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600"><i class="fas fa-shield-alt text-xl"></i></div>
-            <div><p class="text-2xl font-bold text-bp-ink">100%</p><p class="text-sm text-gray-600">Compliance-first, always</p></div>
-          </div>
+      <div class="relative">
+        <div class="hero-media rounded-3xl overflow-hidden shadow-2xl">
+          <video class="hero-video" autoplay muted loop playsinline preload="metadata"
+                 poster="assets/video/hero-poster.jpg"
+                 aria-label="Saudi coastline with environmental monitoring data points">
+            <source src="assets/video/hero.webm" type="video/webm" />
+            <source src="assets/video/hero.mp4" type="video/mp4" />
+          </video>
+          <div class="hero-media-tint" aria-hidden="true"></div>
         </div>
       </div>
     </div>
   </div>
   <div class="absolute bottom-0 left-0 right-0" aria-hidden="true">
     <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="#f5f7fb" /></svg>
-  </div>
-</section>
-
-<!-- CREDENTIAL BAR -->
-<section class="py-20 -mt-20 relative z-20">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-      <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow text-center group"><div class="text-4xl font-bold stat-number mb-2 group-hover:scale-110 transition-transform inline-block">20+</div><p class="text-gray-600 font-medium">Licensed environmental activities</p></div>
-      <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow text-center group"><div class="text-4xl font-bold stat-number mb-2 group-hover:scale-110 transition-transform inline-block">7</div><p class="text-gray-600 font-medium">Licences &amp; accreditations held</p></div>
-      <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow text-center group"><div class="text-4xl font-bold stat-number mb-2 group-hover:scale-110 transition-transform inline-block">7</div><p class="text-gray-600 font-medium">Service categories</p></div>
-      <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow text-center group"><div class="text-4xl font-bold stat-number mb-2 group-hover:scale-110 transition-transform inline-block">KSA</div><p class="text-gray-600 font-medium">Riyadh-based, Kingdom-wide</p></div>
-    </div>
   </div>
 </section>
 
@@ -160,11 +145,36 @@ PROCESS_CARDS      </div>
   </div>
 </section>
 
-<!-- ACCREDITATION STRIP -->
-<section class="logo-ticker-section">
+<!-- ACCREDITED & TRUSTED (merged: credentials + accreditations + why us) -->
+<section id="accreditations" class="py-24 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="logo-ticker-header"><h3>Accredited to do the work that counts</h3><p>Studies and permit files are only accepted from accredited parties. BluePrint holds active registration with each of the following.</p></div>
-    <div class="flex flex-wrap justify-center gap-3">
+
+    <div class="text-center mb-14 scroll-reveal">
+      <div class="showcase-eyebrow">Accredited &amp; trusted</div>
+      <h2 class="text-4xl font-bold text-bp-ink mb-4">Licensed to do the work that counts</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">Studies and permit files are only accepted from accredited parties. BluePrint holds active registration with every authority that matters in the Kingdom.</p>
+    </div>
+
+    <div class="grid md:grid-cols-4 gap-5 mb-14 scroll-reveal">
+      <div class="text-center px-5 py-8 rounded-2xl" style="background:var(--bp-blue-tint);">
+        <div class="text-4xl font-bold stat-number mb-2">20+</div>
+        <p class="text-sm text-gray-600 font-medium">Licensed environmental activities</p>
+      </div>
+      <div class="text-center px-5 py-8 rounded-2xl" style="background:var(--bp-blue-tint);">
+        <div class="text-4xl font-bold stat-number mb-2">7</div>
+        <p class="text-sm text-gray-600 font-medium">Licences &amp; accreditations held</p>
+      </div>
+      <div class="text-center px-5 py-8 rounded-2xl" style="background:var(--bp-blue-tint);">
+        <div class="text-4xl font-bold stat-number mb-2">7</div>
+        <p class="text-sm text-gray-600 font-medium">Service categories</p>
+      </div>
+      <div class="text-center px-5 py-8 rounded-2xl" style="background:var(--bp-blue-tint);">
+        <div class="text-4xl font-bold stat-number mb-2">KSA</div>
+        <p class="text-sm text-gray-600 font-medium">Riyadh-based, Kingdom-wide</p>
+      </div>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-3 mb-16 scroll-reveal">
       <span class="px-5 py-3 bg-white border rounded-xl text-sm font-semibold text-bp-ink" style="border-color:var(--bp-border);">NCEC Licence</span>
       <span class="px-5 py-3 bg-white border rounded-xl text-sm font-semibold text-bp-ink" style="border-color:var(--bp-border);">MWAN Registration</span>
       <span class="px-5 py-3 bg-white border rounded-xl text-sm font-semibold text-bp-ink" style="border-color:var(--bp-border);">Royal Commission for Jubail &amp; Yanbu</span>
@@ -173,11 +183,27 @@ PROCESS_CARDS      </div>
       <span class="px-5 py-3 bg-white border rounded-xl text-sm font-semibold text-bp-ink" style="border-color:var(--bp-border);">ISO 14001</span>
       <span class="px-5 py-3 bg-white border rounded-xl text-sm font-semibold text-bp-ink" style="border-color:var(--bp-border);">ISO 45001:2018</span>
     </div>
+
+    <div class="grid md:grid-cols-3 gap-8 scroll-reveal pt-12" style="border-top:1px solid var(--bp-border);">
+      <div class="flex items-start gap-4">
+        <span class="w-11 h-11 rounded-xl bg-bp-light text-bp-primary flex items-center justify-center flex-shrink-0"><i class="fas fa-stamp"></i></span>
+        <div><h4 class="font-bold text-bp-ink mb-1">Reports authorities accept</h4><p class="text-sm text-gray-600 leading-relaxed">Government-accredited and NCEC-aligned, so your file clears review the first time.</p></div>
+      </div>
+      <div class="flex items-start gap-4">
+        <span class="w-11 h-11 rounded-xl bg-bp-light text-bp-primary flex items-center justify-center flex-shrink-0"><i class="fas fa-sliders-h"></i></span>
+        <div><h4 class="font-bold text-bp-ink mb-1">Built around your facility</h4><p class="text-sm text-gray-600 leading-relaxed">Solutions shaped to your sector and activity, never a generic template.</p></div>
+      </div>
+      <div class="flex items-start gap-4">
+        <span class="w-11 h-11 rounded-xl bg-bp-light text-bp-primary flex items-center justify-center flex-shrink-0"><i class="fas fa-handshake"></i></span>
+        <div><h4 class="font-bold text-bp-ink mb-1">One partner, whole lifecycle</h4><p class="text-sm text-gray-600 leading-relaxed">Licensing, studies and reporting under a single accountable team.</p></div>
+      </div>
+    </div>
+
   </div>
 </section>
 
 <!-- SECTORS -->
-<section id="sectors" class="py-24 bg-white">
+<section id="sectors" class="py-24" style="background:var(--bp-page);">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16 scroll-reveal">
       <div class="inline-block px-4 py-2 bg-bp-light rounded-full text-bp-primary font-semibold text-sm mb-4">Who we serve</div>
@@ -189,25 +215,6 @@ SECTOR_CARDS    </div>
   </div>
 </section>
 
-<!-- WHY BLUEPRINT -->
-<section class="py-24" style="background:var(--bp-page);">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16 scroll-reveal">
-      <div class="showcase-eyebrow">Why BluePrint</div>
-      <h2 class="text-4xl font-bold text-bp-ink mb-4">Accredited expertise, without the guesswork</h2>
-      <p class="text-gray-600 max-w-2xl mx-auto">We are a Saudi firm of accredited consultants delivering end-to-end environmental compliance — so your team can focus on operations, not paperwork.</p>
-    </div>
-    <div class="grid md:grid-cols-3 gap-6 scroll-reveal">
-      <div class="bg-white p-8 rounded-2xl shadow text-center group hover:bg-bp-ink hover:text-white transition-all duration-300"><div class="w-16 h-16 mx-auto bg-bp-light rounded-full flex items-center justify-center text-bp-primary text-2xl mb-4 group-hover:bg-white transition-all"><i class="fas fa-stamp"></i></div><h4 class="font-bold text-lg mb-2">Government-accredited &amp; NCEC-aligned</h4><p class="text-sm text-gray-600 group-hover:text-gray-300">Reports authorities recognise and accept the first time.</p></div>
-      <div class="bg-white p-8 rounded-2xl shadow text-center group hover:bg-bp-ink hover:text-white transition-all duration-300"><div class="w-16 h-16 mx-auto bg-bp-light rounded-full flex items-center justify-center text-bp-primary text-2xl mb-4 group-hover:bg-white transition-all"><i class="fas fa-sliders-h"></i></div><h4 class="font-bold text-lg mb-2">Customised by facility type</h4><p class="text-sm text-gray-600 group-hover:text-gray-300">Solutions shaped to your sector, not a generic template.</p></div>
-      <div class="bg-white p-8 rounded-2xl shadow text-center group hover:bg-bp-ink hover:text-white transition-all duration-300"><div class="w-16 h-16 mx-auto bg-bp-light rounded-full flex items-center justify-center text-bp-primary text-2xl mb-4 group-hover:bg-white transition-all"><i class="fas fa-handshake"></i></div><h4 class="font-bold text-lg mb-2">One partner, whole lifecycle</h4><p class="text-sm text-gray-600 group-hover:text-gray-300">Licensing, studies and reporting under a single accountable team.</p></div>
-    </div>
-    <div class="mt-14 rounded-3xl p-10 text-white scroll-reveal text-center" style="background:var(--bp-grad);">
-      <p class="text-2xl md:text-3xl font-display font-bold leading-snug max-w-3xl mx-auto">&ldquo;Compliance shouldn't slow your business down. We turn <span class="text-bp-sage">regulation into a blueprint</span> — clear, accredited, and on time.&rdquo;</p>
-      <p class="mt-6 text-sm text-white/70">The BluePrint Advisory Team &middot; Accredited environmental consultants</p>
-    </div>
-  </div>
-</section>
 """
 
 PROCESS = [

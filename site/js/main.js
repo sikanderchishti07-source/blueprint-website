@@ -68,14 +68,6 @@
     });
   });
 
-  /* ── Modal helpers ───────────────────────────────────────── */
-  window.closeOnOverlay = function (e, id) { if (e.target === document.getElementById(id)) closeModal(id); };
-  window.closeModal = function (id) { var m = document.getElementById(id); if (m) m.classList.remove('active'); };
-  window.openModal  = function (id) { var m = document.getElementById(id); if (m) m.classList.add('active'); };
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') document.querySelectorAll('.modal-overlay.active').forEach(function (m) { m.classList.remove('active'); });
-  });
-
   /* ── Hero particles ──────────────────────────────────────── */
   var container = document.getElementById('particles');
   if (container) {

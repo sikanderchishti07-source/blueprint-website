@@ -44,11 +44,7 @@ h1, h2, h3, h4 { letter-spacing: 0; line-height: 1.45; }
 .showcase-eyebrow::before { margin-left: 0; }
 
 /* Floating widgets swap sides */
-#chatbotWidget { right: auto; left: 28px; }
 .whatsapp-container { right: auto; left: 28px; }
-#aqiWidget { left: auto; right: 28px; }
-#aqiCard { transform-origin: bottom right; }
-#aqiClose { right: auto; left: -6px; }
 #expertCTA { left: auto; right: 0; }
 #expertPanel { left: auto; right: 0; border-radius: 20px 0 0 20px; transform: translateY(-50%) translateX(340px); }
 #expertCTA.open #expertPanel { transform: translateY(-50%) translateX(0); }

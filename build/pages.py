@@ -36,11 +36,10 @@ def services():
         <div class="isvc-panel-body" id="isvc-panel-body-{i}"></div>
       </div>""" for i, (icon, name, short, img, fb, badge, bcls) in enumerate(SERVICE_TABS))
     mons = "".join(f'''
-      <div class="bg-white rounded-2xl p-6 shadow-sm border hover:shadow-lg hover:-translate-y-0.5 transition-all" style="border-color:var(--bp-border);">
-        <div class="w-11 h-11 rounded-xl flex items-center justify-center text-base mb-4" style="background:var(--bp-olive-tint);color:var(--bp-olive);"><i class="fas {ic}"></i></div>
-        <h3 class="font-display font-bold text-bp-ink text-base mb-2 leading-snug">{nm}</h3>
-        <p class="text-sm text-gray-600 leading-relaxed">{d}</p>
-      </div>''' for _img, _fb, _bd, ic, nm, d in LAB_SERVICES)
+        <a href="technology.html#equipment" class="flex items-center gap-3 px-4 py-3.5 bg-white rounded-xl border hover:border-bp-olive transition-all" style="border-color:var(--bp-border);text-decoration:none;">
+          <span class="w-9 h-9 rounded-lg flex items-center justify-center text-sm flex-shrink-0" style="background:var(--bp-olive-tint);color:var(--bp-olive);"><i class="fas {ic}"></i></span>
+          <span class="font-display font-semibold text-bp-ink text-sm leading-snug">{nm}</span>
+        </a>''' for _img, _fb, _bd, ic, nm, _d in LAB_SERVICES)
     cats = "".join(f'''
       <div class="bg-white rounded-2xl p-7 shadow-sm border hover:shadow-lg transition-all" style="border-color:var(--bp-border);">
         <div class="flex items-start justify-between mb-4">
@@ -73,11 +72,11 @@ def services():
     <div class="text-center mb-14 scroll-reveal">
       <div class="showcase-eyebrow">Monitoring &amp; testing</div>
       <h2 class="text-4xl font-bold text-bp-ink mb-4">The measurements behind the paperwork</h2>
-      <p class="text-gray-600 max-w-2xl mx-auto">A permit is only as good as the data supporting it. BluePrint carries out the sampling, testing and monitoring your conditions require &mdash; to the method they require &mdash; and reports it in the form the regulator expects.</p>
+      <p class="text-gray-600 max-w-2xl mx-auto">A permit is only as good as the data behind it. We carry out the sampling and testing your conditions require, to the method they require.</p>
     </div>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 scroll-reveal">{mons}
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 scroll-reveal max-w-5xl mx-auto">{mons}
     </div>
-    <div class="text-center mt-12 scroll-reveal"><a href="technology.html" class="btn-olive">See laboratory &amp; accreditations <i class="fas fa-arrow-right" style="font-size:.75rem;"></i></a></div>
+    <div class="text-center mt-10 scroll-reveal"><a href="technology.html" class="btn-olive">Full laboratory services <i class="fas fa-arrow-right" style="font-size:.75rem;"></i></a></div>
   </div>
 </section>
 
@@ -107,7 +106,7 @@ def technology():
         </div>
         <div class="p-5"><div class="flex items-center gap-2 mb-2"><div class="w-7 h-7 bg-bp-light rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas {icon} text-bp-primary text-xs"></i></div><h4 class="font-bold text-bp-ink text-sm">{title}</h4></div><p class="text-xs text-gray-500 leading-relaxed">{desc}</p></div>
       </div>""" for img, fb, badge, icon, title, desc in LAB_SERVICES)
-    accs = "".join(f"""
+    _unused_accs = "".join(f"""
       <div class="bg-white p-7 rounded-2xl shadow-lg border-t-4 hover:-translate-y-1 transition-all" style="border-top-color:var(--bp-{'olive' if i % 2 else 'blue'});">
         <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-xl mb-5" style="background:var(--bp-{'olive-tint' if i % 2 else 'blue-tint'});color:var(--bp-{'olive' if i % 2 else 'blue'});"><i class="fas {ic}"></i></div>
         <h3 class="text-base font-bold text-bp-ink mb-1 leading-snug">{name}</h3>
@@ -128,12 +127,10 @@ def technology():
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16 scroll-reveal">
       <div class="showcase-eyebrow">Licences &amp; accreditations</div>
-      <h2 class="text-4xl font-bold text-bp-ink mb-4">Accredited to do the work that counts</h2>
-      <p class="text-gray-600 max-w-2xl mx-auto">Studies and permit files are only accepted from accredited parties. BluePrint operates under full regulatory licensing in the Kingdom, holding active registration and accreditation from the following authorities.</p>
+      <h2 class="text-4xl font-bold text-bp-ink mb-4">Testing that carries weight</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">Results are only accepted from accredited parties. <a href="index.html#accreditations" class="text-bp-primary font-semibold">See all seven licences and accreditations &rarr;</a></p>
     </div>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 scroll-reveal">{accs}
-    </div>
-    <div class="mt-12 rounded-3xl p-8 text-white scroll-reveal" style="background:var(--bp-grad);">
+    <div class="rounded-3xl p-8 text-white scroll-reveal" style="background:var(--bp-grad);">
       <div class="grid md:grid-cols-2 gap-8 items-center">
         <div>
           <h3 class="text-2xl font-bold mb-4">Licensed across 20+ environmental activities</h3>
@@ -142,102 +139,6 @@ def technology():
         </div>
         <div class="relative"><img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?w=500&h=300&fit=crop" alt="Laboratory" class="rounded-2xl shadow-2xl opacity-90" loading="lazy" /></div>
       </div>
-    </div>
-  </div>
-</section>
-"""
-
-
-# ─────────────────────────── RESOURCES ──────────────────────────
-def resources():
-    return page_header("Free tools &amp; live environmental intelligence",
-                       "Check which standards apply to your facility, estimate your carbon footprint, and follow curated environmental news from Saudi Arabia and the region.",
-                       "Resources") + """
-<section id="tools" class="py-20 bg-bp-light">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid md:grid-cols-2 gap-8 scroll-reveal">
-      <div class="bg-white rounded-3xl p-10 shadow-xl hover:shadow-2xl transition-all group cursor-pointer" onclick="openCalculator('compliance')">
-        <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform" style="background:var(--bp-grad-blue);"><i class="fas fa-balance-scale"></i></div>
-        <h3 class="text-2xl font-bold text-bp-ink mb-3">Regulatory Compliance Checker</h3>
-        <p class="text-gray-600 mb-6">Select your industry and location to instantly see which NCEC, WHO, and EPA standards apply to your operations.</p>
-        <div class="flex flex-wrap gap-2 mb-6"><span class="px-3 py-1 bg-bp-light text-bp-primary rounded-full text-xs font-medium">NCEC Standards</span><span class="px-3 py-1 bg-bp-light text-bp-primary rounded-full text-xs font-medium">WHO Guidelines</span><span class="px-3 py-1 bg-bp-light text-bp-primary rounded-full text-xs font-medium">US EPA Methods</span></div>
-        <button class="w-full py-3 bg-bp-primary text-white rounded-xl font-bold hover:bg-bp-dark transition-all">Check Compliance Requirements →</button>
-      </div>
-      <div class="bg-white rounded-3xl p-10 shadow-xl hover:shadow-2xl transition-all group cursor-pointer" onclick="openCalculator('carbon')">
-        <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform" style="background:var(--bp-grad-olive);"><i class="fas fa-leaf"></i></div>
-        <h3 class="text-2xl font-bold text-bp-ink mb-3">Carbon Footprint Calculator</h3>
-        <p class="text-gray-600 mb-6">Estimate your organization's carbon emissions across Scope 1, 2, and 3 categories with our interactive tool.</p>
-        <div class="flex flex-wrap gap-2 mb-6"><span class="px-3 py-1 rounded-full text-xs font-medium text-bp-olive" style="background:var(--bp-olive-tint);">Scope 1, 2 &amp; 3</span><span class="px-3 py-1 rounded-full text-xs font-medium text-bp-olive" style="background:var(--bp-olive-tint);">tCO₂e Output</span><span class="px-3 py-1 rounded-full text-xs font-medium text-bp-olive" style="background:var(--bp-olive-tint);">Reduction Tips</span></div>
-        <button class="w-full py-3 bg-bp-olive text-white rounded-xl font-bold hover:opacity-90 transition-all">Calculate Carbon Footprint →</button>
-      </div>
-    </div>
-
-    <div id="aqi" class="mt-8 bg-white rounded-3xl p-8 shadow-xl scroll-reveal flex flex-wrap items-center justify-between gap-6">
-      <div class="flex items-center gap-4">
-        <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-white text-xl" style="background:linear-gradient(135deg,#16a34a,#4ade80);"><i class="fas fa-map-marked-alt"></i></div>
-        <div><h3 class="text-xl font-bold text-bp-ink">Live Riyadh Air Quality Index</h3><p class="text-sm text-gray-600">Real-time AQI, PM2.5 and PM10 readings — open the live widget in the bottom-left corner of any page.</p></div>
-      </div>
-      <button onclick="toggleAQI()" class="btn-olive"><i class="fas fa-satellite-dish" style="font-size:.8rem;"></i> Open live AQI</button>
-    </div>
-  </div>
-</section>
-
-<section id="env-news-section">
-  <div class="ticker-wrap">
-    <div class="ticker-track" id="ticker-track">
-      <span class="ticker-item"><span style="width:7px;height:7px;background:#a3b56f;border-radius:50%;display:inline-block;animation:pulse-dot 2s ease-in-out infinite;"></span><span style="color:#a3b56f;font-weight:700;letter-spacing:.1em;font-size:.68rem;">BREAKING</span><span style="color:rgba(255,255,255,.5);">·</span>Loading latest Saudi Arabia environmental news&hellip;</span>
-    </div>
-  </div>
-
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-6">
-    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-      <div>
-        <div class="flex items-center gap-2 mb-3"><div class="live-dot"></div><span style="font-size:.72rem;font-weight:600;color:var(--bp-olive);letter-spacing:.12em;text-transform:uppercase;">Live Feed · Auto-refreshes every 45 min</span></div>
-        <h2 class="section-title text-4xl md:text-5xl mb-2">Environmental <span style="color:var(--bp-blue);">News Bulletin</span></h2>
-        <p style="font-size:.85rem;color:var(--bp-muted);">Saudi Arabia &amp; Middle East · Curated environmental intelligence</p>
-      </div>
-      <div class="flex flex-col items-start md:items-end gap-3">
-        <div class="flex flex-wrap gap-2">
-          <button class="filter-pill active" data-topic="all">All Topics</button>
-          <button class="filter-pill" data-topic="air quality">Air Quality</button>
-          <button class="filter-pill" data-topic="sustainability">Sustainability</button>
-          <button class="filter-pill" data-topic="climate">Climate</button>
-          <button class="filter-pill" data-topic="water">Water</button>
-        </div>
-        <div class="flex items-center gap-3">
-          <span id="last-updated" class="news-meta">Fetching news…</span>
-          <button class="refresh-btn" onclick="loadNews(true)"><svg id="refresh-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg> Refresh</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">
-    <div class="flex gap-4 flex-wrap">
-      <div class="news-stat"><div class="ns-val" id="stat-count">—</div><div class="ns-lbl">Articles</div></div>
-      <div class="news-stat"><div class="ns-val" id="stat-sources">—</div><div class="ns-lbl">Sources</div></div>
-      <div class="news-stat"><div class="ns-val">KSA</div><div class="ns-lbl">Region</div></div>
-    </div>
-  </div>
-
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-    <div id="skeleton-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="skeleton" style="height:390px;"></div><div class="skeleton" style="height:390px;"></div><div class="skeleton" style="height:390px;"></div>
-      <div class="skeleton" style="height:390px;"></div><div class="skeleton" style="height:390px;"></div><div class="skeleton" style="height:390px;"></div>
-    </div>
-    <div id="news-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" style="display:none;"></div>
-    <div id="news-error" style="display:none;text-align:center;padding:60px 20px;">
-      <div style="font-size:2.5rem;margin-bottom:12px;">📡</div>
-      <div class="font-display" style="font-size:1.25rem;font-weight:700;color:var(--bp-text);margin-bottom:8px;">Could not fetch live news</div>
-      <div style="font-size:.82rem;color:var(--bp-muted);margin-bottom:24px;">Showing curated articles. Check your API key or network.</div>
-      <button onclick="loadNews(true)" class="btn-primary">Try Again</button>
-    </div>
-  </div>
-
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10" style="border-top:1px solid var(--bp-border);">
-    <div class="flex flex-wrap items-center justify-between gap-3 pt-6">
-      <p class="news-meta">Powered by GNews API · Images via Unsplash · BluePrint Environmental Services</p>
-      <p id="next-refresh-label" class="news-meta">Next refresh in: —</p>
     </div>
   </div>
 </section>
@@ -263,7 +164,7 @@ def contact():
           <div class="flex items-start space-x-4"><div class="w-12 h-12 bg-bp-light rounded-xl flex items-center justify-center text-bp-primary flex-shrink-0"><i class="fas fa-clock text-xl"></i></div><div><h4 class="font-bold text-bp-ink mb-1">Working hours</h4><p class="text-gray-600">Sunday &ndash; Thursday &middot; 9:00 AM &ndash; 6:00 PM (AST)</p></div></div>
         </div>
         <div class="mt-10 flex flex-wrap gap-3">
-          <button onclick="openBookingModal()" class="btn-olive"><i class="fas fa-calendar-check" style="font-size:.8rem;"></i> Book a site visit</button>
+          <a data-wa="Hello BluePrint, I would like to arrange a site visit." class="btn-olive"><i class="fab fa-whatsapp" style="font-size:.9rem;"></i> Arrange a site visit</a>
           <a data-wa="Hello BluePrint, I would like to ask about your environmental services." class="btn-ghost"><i class="fab fa-whatsapp" style="font-size:.9rem;"></i> Chat on WhatsApp</a>
         </div>
       </div>

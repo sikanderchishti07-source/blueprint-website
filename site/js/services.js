@@ -56,7 +56,7 @@
       + '<div class="isvc-stats-row">' + stats + '</div>'
       + '<div class="isvc-cta-row">'
       + '<a href="contact.html" class="isvc-btn-primary"><i class="fas fa-paper-plane" style="font-size:.76rem;"></i> Get a Quote</a>'
-      + '<button type="button" class="isvc-btn-ghost" onclick="openBookingModal()">Book a site visit <i class="fas fa-arrow-right" style="font-size:.7rem;"></i></button>'
+      + '<a href="contact.html" class="isvc-btn-ghost">Talk to a consultant <i class="fas fa-arrow-right" style="font-size:.7rem;"></i></a>'
       + '</div>';
   }
 

@@ -91,24 +91,10 @@
   .isvc-btn-primary, .isvc-btn-ghost { flex: 1; justify-content: center; font-size: .78rem; }
 }
 
-/* ── Environmental news bulletin ──────────────────────────── */
-#env-news-section { font-family: var(--font-body); background: var(--bp-page); color: var(--bp-text); position: relative; overflow: hidden; }
-.ticker-wrap { background: var(--bp-blue-deep); border-bottom: 1px solid rgba(255,255,255,.07); overflow: hidden; white-space: nowrap; padding: 10px 0; }
-.ticker-track { display: inline-block; animation: scroll-ticker 70s linear infinite; }
-.ticker-track:hover { animation-play-state: paused; }
-@keyframes scroll-ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-.ticker-item { display: inline-flex; align-items: center; gap: 12px; padding: 0 24px; border-right: 1px solid rgba(255,255,255,.09); font-size: .73rem; color: rgba(255,255,255,.85); }
-.ticker-item .tk-arrow { color: var(--bp-olive-light); font-weight: 700; font-size: .68rem; }
-.ticker-item .tk-time  { font-size: .6rem; color: rgba(255,255,255,.4); margin-left: 4px; }
+/* ── Article cards (used by the blog listing) ──────────────── */
 .section-title { font-family: var(--font-display); font-weight: 800; letter-spacing: -.03em; color: var(--bp-blue-ink); }
 .live-dot { width: 8px; height: 8px; background: var(--bp-olive); border-radius: 50%; flex-shrink: 0; animation: pulse-dot 2s ease-in-out infinite; }
 @keyframes pulse-dot { 0%,100% { box-shadow: 0 0 0 0 rgba(100,117,66,.55); } 50% { box-shadow: 0 0 0 7px rgba(100,117,66,0); } }
-.filter-pill { font-family: var(--font-body); font-size: .78rem; font-weight: 500; padding: 6px 16px; border-radius: 999px; border: 1.5px solid var(--bp-border-md); cursor: pointer; transition: all .22s ease; background: var(--bp-card); color: var(--bp-muted); }
-.filter-pill:hover { border-color: var(--bp-blue); color: var(--bp-blue); background: rgba(0, 113, 129,.05); }
-.filter-pill.active { background: var(--bp-blue); color: #fff; border-color: var(--bp-blue); box-shadow: 0 4px 14px rgba(0, 113, 129,.28); }
-.news-stat { background: #fff; border-radius: 16px; padding: 16px 24px; text-align: center; min-width: 100px; border: 1px solid var(--bp-border); box-shadow: 0 2px 10px rgba(0, 90, 102,.07); }
-.news-stat .ns-val { font-family: var(--font-display); font-size: 1.7rem; font-weight: 800; color: var(--bp-blue); line-height: 1; }
-.news-stat .ns-lbl { font-size: .68rem; color: var(--bp-muted); text-transform: uppercase; letter-spacing: .07em; margin-top: 3px; }
 .news-card { background: var(--bp-card); border: 1px solid var(--bp-border); border-radius: 16px; overflow: hidden; transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease; animation: card-enter .55s ease both; position: relative; box-shadow: 0 2px 14px rgba(0, 90, 102,.07); }
 .news-card:hover { transform: translateY(-5px); box-shadow: 0 18px 50px rgba(0, 90, 102,.14), 0 0 0 1px rgba(0, 113, 129,.18); border-color: rgba(0, 113, 129,.22); }
 @keyframes card-enter { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
@@ -133,11 +119,6 @@
 .read-more:hover { gap: 9px; color: var(--bp-blue-deep); }
 .news-card.featured .card-img-wrap { height: 240px; }
 .news-card.featured .card-title { font-size: 1.18rem; }
-.skeleton { background: linear-gradient(90deg, #e7ebf3 25%, #d8dfef 50%, #e7ebf3 75%); background-size: 200% 100%; animation: shimmer 1.6s infinite; border-radius: 16px; }
-@keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
-.refresh-btn { display: inline-flex; align-items: center; gap: 6px; padding: 7px 18px; border-radius: 999px; border: 1.5px solid var(--bp-border-md); background: var(--bp-card); color: var(--bp-blue); font-family: var(--font-body); font-size: .78rem; font-weight: 600; cursor: pointer; letter-spacing: .02em; transition: all .22s ease; box-shadow: 0 2px 8px rgba(0, 90, 102,.08); }
-.refresh-btn:hover { background: var(--bp-blue); color: #fff; border-color: var(--bp-blue); box-shadow: 0 4px 16px rgba(0, 113, 129,.28); }
-.news-meta { font-size: .7rem; color: var(--bp-faint); letter-spacing: .04em; }
 
 /* ── Responsive — floating widgets & ticker ───────────────── */
 @media (max-width: 768px) {
@@ -146,7 +127,6 @@
   .whatsapp-icon { width: 26px; height: 26px; }
   .logo-ticker-section { padding: 2.5rem 0 1.5rem; }
   .logo-item { min-width: 100px; height: 48px; }
-  .logo-ticker-track { gap: 2rem; }
   #expertCTA { display: none; }
 }
 @media (max-width: 480px) {
@@ -155,9 +135,6 @@
   .whatsapp-icon { width: 24px; height: 24px; }
   .logo-ticker-wrapper { padding: 1rem 0; }
   .logo-item { min-width: 80px; height: 40px; padding: 0 1rem; }
-  .logo-ticker-track { gap: 1.5rem; }
-  #chatbotWidget { bottom: 20px; right: 20px; }
-  #aqiWidget { bottom: 20px; left: 20px; }
 }
 
 /* ── Article & legal body copy ─────────────────────────────── */
@@ -177,3 +154,17 @@
 .article-body .not-prose, .article-body .not-prose * { all: revert-layer; }
 .article-body .not-prose h3 { font-family: var(--font-display); }
 @media (max-width: 640px) { .article-body { font-size: .95rem; } .article-body h2 { font-size: 1.3rem; } }
+
+/* ── Hero video panel ──────────────────────────────────────── */
+.hero-media { position: relative; height: 520px; width: 100%; background: var(--bp-blue-deep); }
+@media (max-width: 1023px) { .hero-media { height: 300px; } }
+@media (max-width: 640px)  { .hero-media { height: 240px; border-radius: 20px; } }
+.hero-video { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* Ties the footage into the teal palette so it doesn't read as a pasted-in stock clip */
+.hero-media-tint { position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(200deg, rgba(0,113,129,.18) 0%, rgba(0,113,129,0) 45%, rgba(4,51,58,.32) 100%);
+  mix-blend-mode: multiply; }
+.hero-media::after { content: ''; position: absolute; inset: 0; pointer-events: none;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.10); border-radius: inherit; }
+@media (prefers-reduced-motion: reduce) { .hero-video { display: none; }
+  .hero-media { background: url('../assets/video/hero-poster.jpg') center/cover; } }

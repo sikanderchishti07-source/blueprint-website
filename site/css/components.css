@@ -3,58 +3,6 @@
    Floating widgets, calculator, chatbot, portal, cards.
    ============================================================ */
 
-/* ── Carbon / compliance calculator ───────────────────────── */
-.calc-tab-active { background: var(--bp-grad-blue) !important; color: #fff !important; }
-.range-track { -webkit-appearance: none; appearance: none; width: 100%; height: 6px; border-radius: 9999px; background: #e5e7eb; outline: none; }
-.range-track::-webkit-slider-thumb { -webkit-appearance: none; width: 20px; height: 20px; border-radius: 50%; background: var(--bp-grad-blue); cursor: pointer; box-shadow: 0 2px 8px rgba(0, 113, 129,.4); }
-.range-track::-moz-range-thumb { width: 20px; height: 20px; border-radius: 50%; background: var(--bp-blue); border: none; cursor: pointer; }
-.result-card { background: var(--bp-grad-blue); color: #fff; border-radius: 16px; padding: 20px; text-align: center; }
-.result-card.total { background: var(--bp-grad-olive); }
-
-/* ── AI chatbot (bottom-right) ────────────────────────────── */
-#chatbotWidget { position: fixed; bottom: 28px; right: 28px; z-index: 999; }
-#chatWindow { width: 380px; max-width: calc(100vw - 40px); max-height: 560px; display: none; flex-direction: column; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 60px rgba(4, 51, 58,.3); animation: slideInRight .3s ease-out; background: #fff; }
-#chatWindow.open { display: flex; }
-.chat-header { background: var(--bp-grad-blue); padding: 16px; display: flex; align-items: center; gap: 12px; }
-.chat-msg { max-width: 80%; padding: 10px 14px; border-radius: 18px; font-size: 14px; line-height: 1.5; }
-.chat-msg.bot  { background: var(--bp-blue-tint); color: var(--bp-blue-ink); border-bottom-left-radius: 4px; }
-.chat-msg.user { background: var(--bp-grad-blue); color: #fff; border-bottom-right-radius: 4px; margin-left: auto; }
-.typing-indicator span { width: 7px; height: 7px; border-radius: 50%; background: var(--bp-blue); display: inline-block; animation: bounce 1.2s infinite; }
-.typing-indicator span:nth-child(2) { animation-delay: .2s; }
-.typing-indicator span:nth-child(3) { animation-delay: .4s; }
-.chat-toggle { width: 64px; height: 64px; background: var(--bp-grad-blue); border-radius: 50%; box-shadow: 0 12px 30px rgba(4, 51, 58,.35); display: flex; align-items: center; justify-content: center; color: #fff; border: none; cursor: pointer; transition: transform .2s; margin-top: 12px; margin-left: auto; position: relative; font-size: 1.5rem; }
-.chat-toggle:hover { transform: scale(1.08); }
-.chat-toggle .online { position: absolute; top: -2px; right: -2px; width: 18px; height: 18px; background: #4ade80; border-radius: 50%; border: 2px solid #fff; animation: pulse 2s infinite; }
-@keyframes slideInRight { 0% { opacity: 0; transform: translateX(20px); } 100% { opacity: 1; transform: translateX(0); } }
-@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .5; } }
-
-/* ── AQI live widget (bottom-left) ────────────────────────── */
-#aqiWidget { position: fixed; bottom: 28px; left: 28px; z-index: 998; display: flex; flex-direction: column; align-items: flex-start; gap: 8px; pointer-events: none; }
-#aqiDot { width: 46px; height: 46px; border-radius: 50%; background: var(--aqi-color, #eab308); cursor: pointer; pointer-events: all; display: flex; align-items: center; justify-content: center; flex-direction: column; transition: background .5s ease, transform .2s ease; animation: aqiPulse 2s ease-in-out infinite; position: relative; user-select: none; }
-#aqiDot:hover { transform: scale(1.1); }
-#aqiDot .dot-aqi { font-size: 11px; font-weight: 800; color: #fff; line-height: 1; }
-#aqiDot .dot-label { font-size: 7px; font-weight: 600; color: rgba(255,255,255,.85); letter-spacing: .5px; }
-@keyframes aqiPulse { 0%,100% { box-shadow: 0 0 0 0 var(--aqi-color-alpha, rgba(234,179,8,.6)); } 50% { box-shadow: 0 0 0 12px transparent; } }
-#aqiCard { background: linear-gradient(135deg, #04333a, #007181); border: 1px solid rgba(255,255,255,.1); border-radius: 20px; padding: 16px; width: 220px; color: #fff; pointer-events: all; transform-origin: bottom left; transform: scale(0) translateY(8px); opacity: 0; transition: transform .4s cubic-bezier(.34,1.56,.64,1), opacity .25s ease; box-shadow: 0 10px 40px rgba(0,0,0,.5); }
-#aqiCard.open { transform: scale(1) translateY(0); opacity: 1; }
-#aqiClose { position: absolute; top: -6px; right: -6px; width: 20px; height: 20px; border-radius: 50%; background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.25); color: #fff; font-size: 10px; display: none; align-items: center; justify-content: center; cursor: pointer; pointer-events: all; transition: background .2s; }
-#aqiClose:hover { background: rgba(255,255,255,.3); }
-#aqiWidget.expanded #aqiClose { display: flex; }
-.aqi-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
-.aqi-live-badge { display: flex; align-items: center; gap: 5px; font-size: 10px; font-weight: 700; opacity: .7; letter-spacing: 1px; }
-.aqi-live-dot { width: 7px; height: 7px; background: #4ade80; border-radius: 50%; animation: aqiPulse 2s infinite; --aqi-color: #4ade80; --aqi-color-alpha: rgba(74,222,128,.5); }
-#aqiCardTime { font-size: 10px; opacity: .5; }
-.aqi-main { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
-#aqiCircle { width: 58px; height: 58px; border-radius: 50%; background: var(--aqi-color, #eab308); display: flex; align-items: center; justify-content: center; flex-direction: column; flex-shrink: 0; transition: background .5s, box-shadow .5s; }
-#aqiCircle .c-val  { font-size: 20px; font-weight: 800; color: #fff; line-height: 1; }
-#aqiCircle .c-unit { font-size: 8px; color: rgba(255,255,255,.8); }
-#aqiLabel    { font-size: 14px; font-weight: 700; }
-#aqiSublabel { font-size: 10px; opacity: .6; margin-top: 2px; }
-.aqi-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
-.aqi-stat  { background: rgba(255,255,255,.08); border-radius: 10px; padding: 7px; text-align: center; }
-.aqi-stat .sv { font-size: 15px; font-weight: 700; color: #4ade80; transition: color .5s; }
-.aqi-stat .sl { font-size: 9px; opacity: .6; margin-top: 1px; }
-
 /* ── WhatsApp floating button ─────────────────────────────── */
 .whatsapp-container { position: fixed; bottom: 140px; right: 28px; z-index: 999; display: flex; flex-direction: column; align-items: center; gap: 10px; }
 .whatsapp-btn { width: 60px; height: 60px; background-color: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(37,211,102,.4); text-decoration: none; transition: all .3s ease; border: none; cursor: pointer; }
@@ -133,7 +81,7 @@
 @media (max-width: 960px) { .svc-preview { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 600px) { .svc-preview { grid-template-columns: 1fr; } }
 
-/* ── Client portal (legacy sidebar classes used by static markup) ── */
+
 .portal-sidebar-item { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 10px; font-size: .85rem; font-weight: 500; color: #4b5563; cursor: pointer; transition: background .2s; }
 .portal-sidebar-item:hover, .portal-sidebar-item.active { background: var(--bp-blue-tint); color: var(--bp-blue); }
 .status-badge { font-size: .68rem; font-weight: 700; padding: 3px 10px; border-radius: 999px; }

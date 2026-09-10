@@ -80,19 +80,12 @@
     <a href="technology.html#standards" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-stamp"></i></div>Licences &amp; Accreditations</a>
 
     <div class="drawer-divider"></div>
-    <span class="drawer-section-title">Resources</span>
-    <a href="resources.html#tools" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-calculator"></i></div>Free Compliance Tools</a>
-    <a href="resources.html#env-news-section" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-newspaper"></i></div>News Bulletin</a>
-    <a href="resources.html#aqi" class="drawer-link"><div class="drawer-link-icon" style="background:rgba(74,222,128,.1);"><i class="fas fa-map-marked-alt" style="color:#16a34a;"></i></div><span>Live AQI <span style="font-size:.55rem;padding:1px 6px;background:#dcfce7;color:#15803d;border-radius:999px;font-weight:700;letter-spacing:.06em;margin-left:3px;">LIVE</span></span></a>
-
-    <div class="drawer-divider"></div>
     <a href="blog.html" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-pen-nib"></i></div>Blog</a>
     <a href="contact.html" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-envelope"></i></div>Contact</a>
     <a href="index_arabic.html" class="drawer-link"><div class="drawer-link-icon">🌐</div>العربية (Arabic)</a>
   </div>
   <div class="drawer-footer">
-    <button onclick="openBookingModal();closeNavDrawer();" class="drawer-portal-btn olive"><i class="fas fa-calendar-check"></i> Book a Site Visit</button>
-    <button onclick="openPortal();closeNavDrawer();" class="drawer-portal-btn"><i class="fas fa-user-circle"></i> Client Portal</button>
+    <a href="contact.html" class="drawer-portal-btn"><i class="fas fa-paper-plane"></i> Free Consultation</a>
     <a data-wa="Hello BluePrint, I would like to ask about your environmental services." class="drawer-wa-btn"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
   </div>
 </div>
@@ -230,37 +223,6 @@
           </div>
 
           <div class="nav-item">
-            <a href="resources.html" class="nav-link" data-page="resources.html">Resources <i class="fas fa-chevron-down nav-chevron"></i></a>
-            <div class="nav-dropdown">
-              <div class="nav-dropdown-box" style="min-width:230px;">
-                <div class="nav-dropdown-title">Free Tools</div>
-                <a href="resources.html#tools" class="nav-dd-link">
-                  <div class="nav-dd-icon"><i class="fas fa-balance-scale"></i></div>
-                  <div class="nav-dd-text-wrap"><span class="nav-dd-label">Compliance Checker</span><span class="nav-dd-sub">NCEC, WHO, EPA standards</span></div>
-                </a>
-                <a href="resources.html#tools" class="nav-dd-link">
-                  <div class="nav-dd-icon"><i class="fas fa-calculator"></i></div>
-                  <div class="nav-dd-text-wrap"><span class="nav-dd-label">Carbon Calculator</span><span class="nav-dd-sub">Scope 1, 2 &amp; 3 emissions</span></div>
-                </a>
-                <div class="nav-dd-divider"></div>
-                <div class="nav-dropdown-title">Live Data</div>
-                <a href="blog.html" class="nav-dd-link">
-                  <div class="nav-dd-icon"><i class="fas fa-pen-nib"></i></div>
-                  <div class="nav-dd-text-wrap"><span class="nav-dd-label">The Compliance Briefing</span><span class="nav-dd-sub">Guides from our consultants</span></div>
-                </a>
-                <a href="resources.html#env-news-section" class="nav-dd-link">
-                  <div class="nav-dd-icon"><i class="fas fa-newspaper"></i></div>
-                  <div class="nav-dd-text-wrap"><span class="nav-dd-label">News Bulletin</span><span class="nav-dd-sub">KSA environmental intelligence</span></div>
-                </a>
-                <a href="resources.html#aqi" class="nav-dd-link">
-                  <div class="nav-dd-icon" style="background:rgba(74,222,128,.12);color:#16a34a;"><i class="fas fa-map-marked-alt"></i></div>
-                  <div class="nav-dd-text-wrap"><span class="nav-dd-label">Live AQI<span style="font-size:.55rem;padding:1px 6px;background:#dcfce7;color:#15803d;border-radius:999px;font-weight:700;letter-spacing:.06em;margin-left:3px;">LIVE</span></span><span class="nav-dd-sub">Real-time Riyadh air quality</span></div>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="nav-item">
             <a href="blog.html" class="nav-link" data-page="blog.html">Blog</a>
           </div>
 
@@ -271,9 +233,7 @@
 
         <div class="nav-actions">
           <a href="index_arabic.html" class="nav-lang-btn">🌐 <span>العربية</span></a>
-          <a href="contact.html" class="nav-contact-btn"><i class="fas fa-phone" style="font-size:.7rem;"></i> Free Consultation</a>
-          <button onclick="openPortal()" class="nav-portal-btn"><i class="fas fa-user-circle"></i> Client Portal</button>
-          <button onclick="openBookingModal()" class="nav-book-btn"><i class="fas fa-calendar-check"></i><span>Book a Site Visit</span></button>
+          <a href="contact.html" class="nav-portal-btn"><i class="fas fa-paper-plane"></i> Free Consultation</a>
           <button class="nav-hamburger" id="navHamburger" onclick="toggleNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button>
         </div>
 
@@ -452,14 +412,11 @@
       </div>
 
       <div>
-        <h4 class="footer-col-title">Tools &amp; Resources</h4>
+        <h4 class="footer-col-title">Resources</h4>
         <ul class="footer-link-list">
-          <li><button onclick="openPortal()"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Client Portal</button></li>
-          <li><button onclick="openCalculator('compliance')"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Compliance Checker</button></li>
-          <li><button onclick="openCalculator('carbon')"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Carbon Calculator</button></li>
+          <li><a href="blog.html"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Compliance Briefing</a></li>
+          <li><a href="services.html#permitting"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Permitting Guide</a></li>
           <li><a href="technology.html#standards"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Accreditations</a></li>
-          <li><a href="resources.html#aqi"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Live AQI<span class="footer-live-chip">Live</span></a></li>
-          <li><a href="resources.html#env-news-section"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>News Bulletin</a></li>
         </ul>
       </div>
 
@@ -495,175 +452,8 @@
 </footer>
 
 <!-- ============================================================
-     MODAL — CLIENT PORTAL (content injected by js/portal.js)
+     FLOATING WIDGETS — WhatsApp, expert CTA
      ============================================================ -->
-<div id="portalModal" class="modal-overlay" onclick="closeOnOverlay(event,'portalModal')" role="dialog" aria-modal="true" aria-label="Client portal">
-  <div class="modal-box w-full max-w-5xl mx-4"></div>
-</div>
-
-<!-- ============================================================
-     MODAL — ENVIRONMENTAL TOOLS (Compliance Checker + Carbon)
-     ============================================================ -->
-<div id="calcModal" class="modal-overlay" onclick="closeOnOverlay(event,'calcModal')" role="dialog" aria-modal="true" aria-label="Environmental tools">
-  <div class="modal-box w-full max-w-3xl mx-4">
-    <div class="p-8">
-      <div class="flex justify-between items-center mb-6">
-        <h2 class="text-2xl font-bold text-bp-ink">Environmental Tools</h2>
-        <button onclick="closeModal('calcModal')" class="modal-close-btn" aria-label="Close"><i class="fas fa-times"></i></button>
-      </div>
-      <div class="flex gap-3 mb-8">
-        <button id="calcTab-compliance" onclick="switchCalcTab('compliance')" class="flex-1 py-3 rounded-xl font-semibold text-sm transition-all bg-gray-100 text-gray-700 hover:bg-gray-200 calc-tab-active">⚖️ Compliance Checker</button>
-        <button id="calcTab-carbon" onclick="switchCalcTab('carbon')" class="flex-1 py-3 rounded-xl font-semibold text-sm transition-all bg-gray-100 text-gray-700 hover:bg-gray-200">🌿 Carbon Calculator</button>
-      </div>
-
-      <div id="calc-compliance">
-        <div class="grid md:grid-cols-2 gap-5 mb-6">
-          <div><label for="compIndustry" class="block text-sm font-semibold text-gray-700 mb-2">Industry Type</label><select id="compIndustry" onchange="updateCompliance()" class="w-full px-4 py-3 border border-gray-200 rounded-xl outline-none focus:border-bp-primary bg-gray-50"><option value="">Select industry…</option><option value="cement">Cement / Concrete</option><option value="power">Power Generation</option><option value="oil">Oil &amp; Gas / Petrochemical</option><option value="construction">Construction</option><option value="food">Food &amp; Beverage</option><option value="pharma">Pharmaceutical</option></select></div>
-          <div><label for="compRegion" class="block text-sm font-semibold text-gray-700 mb-2">Region / Location</label><select id="compRegion" onchange="updateCompliance()" class="w-full px-4 py-3 border border-gray-200 rounded-xl outline-none focus:border-bp-primary bg-gray-50"><option value="">Select region…</option><option value="ksa">Saudi Arabia (NCEC)</option><option value="uae">UAE</option><option value="intl">International / IFC</option></select></div>
-        </div>
-        <div id="complianceResults" class="hidden">
-          <div class="bg-bp-light rounded-2xl p-6 mb-4"><h4 class="font-bold text-bp-ink mb-4 flex items-center gap-2"><i class="fas fa-clipboard-list text-bp-primary"></i> Applicable Standards</h4><div id="complianceList" class="space-y-2"></div></div>
-          <div class="bg-amber-50 rounded-2xl p-4 border border-amber-100"><p class="text-sm text-amber-800"><i class="fas fa-info-circle mr-2"></i><strong>Disclaimer:</strong> Indicative overview only. Contact BluePrint for a full assessment tailored to your facility.</p></div>
-          <button onclick="goToContact('calcModal')" class="w-full mt-4 py-3 bg-bp-dark text-white rounded-xl font-bold hover:bg-bp-olive transition-all">Get a Full Compliance Assessment →</button>
-        </div>
-        <div id="compliancePlaceholder" class="text-center py-10 text-gray-400"><i class="fas fa-balance-scale text-5xl mb-3 block opacity-30"></i><p>Select your industry and region to see applicable standards</p></div>
-      </div>
-
-      <div id="calc-carbon" class="hidden">
-        <div class="space-y-5 mb-6">
-          <div><label for="electricity" class="block text-sm font-semibold text-gray-700 mb-2">⚡ Electricity Consumption (MWh/year)</label><input type="range" id="electricity" class="range-track" min="0" max="50000" value="10000" oninput="updateCarbon()" /><div class="flex justify-between text-xs text-gray-400 mt-1"><span>0</span><span id="elecVal" class="font-bold text-bp-ink">10,000 MWh</span><span>50,000</span></div></div>
-          <div><label for="diesel" class="block text-sm font-semibold text-gray-700 mb-2">🚛 Diesel Consumption (litres/year)</label><input type="range" id="diesel" class="range-track" min="0" max="500000" value="50000" oninput="updateCarbon()" /><div class="flex justify-between text-xs text-gray-400 mt-1"><span>0</span><span id="dieselVal" class="font-bold text-bp-ink">50,000 L</span><span>500,000</span></div></div>
-          <div><label for="travel" class="block text-sm font-semibold text-gray-700 mb-2">✈️ Business Travel (km/year)</label><input type="range" id="travel" class="range-track" min="0" max="500000" value="100000" oninput="updateCarbon()" /><div class="flex justify-between text-xs text-gray-400 mt-1"><span>0</span><span id="travelVal" class="font-bold text-bp-ink">100,000 km</span><span>500,000</span></div></div>
-          <div><label for="procGas" class="block text-sm font-semibold text-gray-700 mb-2">🏭 Process Gas Emissions (tCO₂e/year)</label><input type="range" id="procGas" class="range-track" min="0" max="10000" value="500" oninput="updateCarbon()" /><div class="flex justify-between text-xs text-gray-400 mt-1"><span>0</span><span id="processVal" class="font-bold text-bp-ink">500 tCO₂e</span><span>10,000</span></div></div>
-        </div>
-        <div class="grid grid-cols-3 gap-4 mb-4">
-          <div class="result-card"><p class="text-2xl font-bold" id="scope1">-</p><p class="text-xs opacity-70 mt-1">Scope 1 (tCO₂e)</p></div>
-          <div class="result-card"><p class="text-2xl font-bold" id="scope2">-</p><p class="text-xs opacity-70 mt-1">Scope 2 (tCO₂e)</p></div>
-          <div class="result-card total"><p class="text-2xl font-bold" id="totalCarbon">-</p><p class="text-xs opacity-70 mt-1">Total (tCO₂e)</p></div>
-        </div>
-        <div id="carbonTip" class="hidden bg-green-50 border border-green-200 rounded-xl p-4 text-sm text-green-800 mb-4"></div>
-        <button onclick="goToContact('calcModal')" class="w-full py-3 bg-bp-dark text-white rounded-xl font-bold hover:bg-bp-olive transition-all">Get a Carbon Reduction Plan →</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ============================================================
-     MODAL — INSPECTION BOOKING
-     ============================================================ -->
-<div id="bookingModal" class="modal-overlay" onclick="closeOnOverlay(event,'bookingModal')" role="dialog" aria-modal="true" aria-label="Book a site visit">
-  <div class="modal-box w-full max-w-2xl mx-4">
-    <div class="p-6 border-b border-gray-100">
-      <div class="flex items-center justify-between">
-        <div class="flex items-center gap-3">
-          <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background:var(--bp-grad-blue);"><i class="fas fa-calendar-check text-white text-xl"></i></div>
-          <div><h2 class="text-xl font-bold text-bp-ink">Book a Site Visit</h2><p class="text-sm text-gray-500">Schedule a scoping visit with our consultants</p></div>
-        </div>
-        <button onclick="closeModal('bookingModal')" class="modal-close-btn" aria-label="Close"><i class="fas fa-times"></i></button>
-      </div>
-    </div>
-
-    <div id="bookingFormContainer" class="p-6">
-      <form id="bookingForm" onsubmit="submitBooking(event)">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-          <div><label for="bkCompanyName" class="block text-sm font-medium text-gray-700 mb-1">Company Name *</label><input type="text" id="bkCompanyName" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-bp-primary focus:border-transparent" placeholder="Your company name"></div>
-          <div><label for="bkContactName" class="block text-sm font-medium text-gray-700 mb-1">Contact Person *</label><input type="text" id="bkContactName" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-bp-primary focus:border-transparent" placeholder="Full name"></div>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-          <div><label for="bkEmail" class="block text-sm font-medium text-gray-700 mb-1">Email *</label><input type="email" id="bkEmail" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-bp-primary focus:border-transparent" placeholder="email@company.com"></div>
-          <div><label for="bkPhone" class="block text-sm font-medium text-gray-700 mb-1">Phone *</label><input type="tel" id="bkPhone" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-bp-primary focus:border-transparent" placeholder="+966 50 XXX XXXX"></div>
-        </div>
-        <div class="mb-4">
-          <label for="bkServiceType" class="block text-sm font-medium text-gray-700 mb-1">Service Type *</label>
-          <select id="bkServiceType" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-bp-primary focus:border-transparent bg-white">
-            <option value="">Select a service...</option>
-            <option value="environmental_permit">📄 Environmental Permit (NCEC)</option>
-            <option value="impact_assessment">📋 Environmental Impact Assessment</option>
-            <option value="waste_permit">♻️ Waste Management Permit (MWAN)</option>
-            <option value="management_plan">🗂️ Environmental Management Plan</option>
-            <option value="register">📁 Environmental Register</option>
-            <option value="periodic_report">🗓️ Periodic Environmental Report</option>
-            <option value="measurements">🔬 Environmental Measurements</option>
-            <option value="audit">🔍 Environmental Audit</option>
-            <option value="other">📝 Other / Not sure yet</option>
-          </select>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-          <div><label for="bkLocation" class="block text-sm font-medium text-gray-700 mb-1">Site Location *</label><input type="text" id="bkLocation" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-bp-primary focus:border-transparent" placeholder="Site address or area"></div>
-          <div><label for="bkCity" class="block text-sm font-medium text-gray-700 mb-1">City *</label>
-            <select id="bkCity" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-bp-primary focus:border-transparent bg-white">
-              <option value="">Select city...</option><option value="Riyadh">Riyadh</option><option value="Jeddah">Jeddah</option><option value="Dammam">Dammam</option><option value="Makkah">Makkah</option><option value="Madinah">Madinah</option><option value="Khobar">Khobar</option><option value="Dhahran">Dhahran</option><option value="Jubail">Jubail</option><option value="Yanbu">Yanbu</option><option value="Tabuk">Tabuk</option><option value="Other">Other</option>
-            </select>
-          </div>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-          <div><label for="bkDate" class="block text-sm font-medium text-gray-700 mb-1">Preferred Date *</label><input type="date" id="bkDate" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-bp-primary focus:border-transparent"></div>
-          <div><label for="bkTime" class="block text-sm font-medium text-gray-700 mb-1">Preferred Time *</label>
-            <select id="bkTime" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-bp-primary focus:border-transparent bg-white">
-              <option value="">Select time...</option><option value="morning">🌅 Morning (8 AM - 12 PM)</option><option value="afternoon">☀️ Afternoon (12 PM - 5 PM)</option><option value="evening">🌆 Evening (5 PM - 8 PM)</option><option value="flexible">🔄 Flexible</option>
-            </select>
-          </div>
-        </div>
-        <div class="mb-6"><label for="bkDescription" class="block text-sm font-medium text-gray-700 mb-1">Additional Details (Optional)</label><textarea id="bkDescription" rows="3" class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-bp-primary focus:border-transparent" placeholder="Any specific requirements or notes..."></textarea></div>
-        <button type="submit" id="bkSubmitBtn" class="w-full py-4 text-white rounded-xl font-bold text-lg hover:shadow-lg transition-all flex items-center justify-center gap-2" style="background:var(--bp-grad);"><i class="fas fa-paper-plane"></i> Submit Booking Request</button>
-      </form>
-    </div>
-
-    <div id="bookingSuccess" class="p-8 text-center" style="display:none;">
-      <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fas fa-check text-green-500 text-3xl"></i></div>
-      <h3 class="text-2xl font-bold text-bp-ink mb-2">Booking Submitted!</h3>
-      <p class="text-gray-600 mb-4">Your reference number:</p>
-      <div class="bg-gray-100 rounded-xl py-3 px-6 inline-block mb-6"><span id="bookingRefNumber" class="text-xl font-mono font-bold text-bp-ink">BK2604-0001</span></div>
-      <p class="text-sm text-gray-500 mb-6">We will contact you within 24 hours to confirm your appointment.</p>
-      <button onclick="resetBookingForm()" class="px-8 py-3 bg-bp-dark text-white rounded-xl font-semibold hover:bg-bp-olive transition-all">Book Another Inspection</button>
-    </div>
-  </div>
-</div>
-
-<!-- ============================================================
-     FLOATING WIDGETS — AQI, chatbot, WhatsApp, expert CTA
-     ============================================================ -->
-<div id="aqiWidget">
-  <div id="aqiCard">
-    <div class="aqi-header"><div class="aqi-live-badge"><span class="aqi-live-dot"></span>LIVE · RIYADH</div><span id="aqiCardTime">--</span></div>
-    <div class="aqi-main">
-      <div id="aqiCircle"><span class="c-val" id="aqiValue">--</span><span class="c-unit">AQI</span></div>
-      <div><div id="aqiLabel">Loading...</div><div id="aqiSublabel">Air Quality Index</div></div>
-    </div>
-    <div class="aqi-stats">
-      <div class="aqi-stat"><div class="sv" id="aqiPM25">--</div><div class="sl">PM2.5 µg/m³</div></div>
-      <div class="aqi-stat"><div class="sv" id="aqiPM10">--</div><div class="sl">PM10 µg/m³</div></div>
-    </div>
-  </div>
-  <div id="aqiDot" onclick="toggleAQI()" title="Live Air Quality · Riyadh">
-    <span class="dot-aqi" id="dotAqiVal">--</span><span class="dot-label">AQI</span>
-    <div id="aqiClose" onclick="dismissAQI(event)" title="Dismiss">✕</div>
-  </div>
-</div>
-
-<div id="chatbotWidget">
-  <div id="chatWindow">
-    <div class="chat-header">
-      <img src="assets/logo/blueprint-mark.png" alt="" class="w-10 h-10 bg-white rounded-full p-1.5 object-contain" />
-      <div class="flex-1"><p class="font-bold text-white text-sm">BluePrint Assistant</p><p class="text-xs text-white/70 flex items-center gap-1"><span class="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse inline-block"></span> Online</p></div>
-      <button onclick="toggleChat()" class="text-white/70 hover:text-white" aria-label="Close chat"><i class="fas fa-times"></i></button>
-    </div>
-    <div id="chatMessages" class="flex-1 p-4 space-y-3 bg-white overflow-y-auto" style="min-height:300px;max-height:360px">
-      <div class="flex gap-2"><div class="w-7 h-7 bg-bp-light rounded-full flex items-center justify-center flex-shrink-0 mt-1"><i class="fas fa-robot text-bp-primary text-xs"></i></div><div class="chat-msg bot">Hello! I'm BluePrint's assistant. Ask about permits, studies, or which requirements apply to your facility.</div></div>
-    </div>
-    <div id="quickReplies" class="px-4 py-2 bg-gray-50 border-t flex flex-wrap gap-2">
-      <button onclick="sendQuick('What services do you offer?')" class="px-3 py-1.5 bg-white border border-gray-200 rounded-full text-xs text-gray-600 hover:border-bp-primary hover:text-bp-primary transition-all">Our services</button>
-      <button onclick="sendQuick('Which environmental permit do I need?')" class="px-3 py-1.5 bg-white border border-gray-200 rounded-full text-xs text-gray-600 hover:border-bp-primary hover:text-bp-primary transition-all">Which permit?</button>
-      <button onclick="sendQuick('How do I book a free consultation?')" class="px-3 py-1.5 bg-white border border-gray-200 rounded-full text-xs text-gray-600 hover:border-bp-primary hover:text-bp-primary transition-all">Free consultation</button>
-    </div>
-    <div class="p-3 border-t bg-white flex gap-2">
-      <input id="chatInput" type="text" placeholder="Ask about our services…" class="flex-1 px-3 py-2 rounded-xl border border-gray-200 text-sm outline-none focus:border-bp-primary" onkeydown="if(event.key==='Enter') sendChat()" aria-label="Chat message" />
-      <button onclick="sendChat()" class="w-9 h-9 bg-bp-dark rounded-xl flex items-center justify-center text-white hover:bg-bp-olive transition-all flex-shrink-0" aria-label="Send"><i class="fas fa-paper-plane text-xs"></i></button>
-    </div>
-  </div>
-  <button onclick="toggleChat()" id="chatToggleBtn" class="chat-toggle" aria-label="Open chat"><i class="fas fa-robot"></i><span class="online"></span></button>
-</div>
-
 <div id="whatsappContainer" class="whatsapp-container">
   <a href="#" id="whatsappBtn" class="whatsapp-btn" title="Chat with us on WhatsApp" aria-label="Chat on WhatsApp">
     <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004c-1.025 0-2.031.313-2.896.893L4.734 5.309l.92 2.844c-.603.947-.923 2.035-.923 3.181 0 3.291 2.692 5.984 5.982 5.984 1.579 0 3.06-.616 4.181-1.732 1.122-1.117 1.742-2.598 1.742-4.181 0-3.291-2.692-5.984-5.982-5.984zm5.846 12.856c-1.196 1.195-2.786 1.852-4.48 1.852-3.491 0-6.33-2.838-6.33-6.33 0-1.1.292-2.191.847-3.144l.547-1.002-1.841-5.631 5.766.891.953-.517c.878-.478 1.877-.733 2.906-.733 3.49 0 6.33 2.838 6.33 6.33 0 1.694-.657 3.285-1.852 4.481"/></svg>
@@ -697,8 +487,6 @@
   </div>
 </div>
 <script src="js/main.js"></script>
-<script src="js/tools.js"></script>
-<script src="js/portal.js"></script>
 <script src="js/widgets.js"></script>
 </body>
 </html>
