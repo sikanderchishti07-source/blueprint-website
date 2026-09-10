@@ -45,11 +45,11 @@ h1, h2, h3, h4 { letter-spacing: 0; line-height: 1.45; }
 
 /* Floating widgets swap sides */
 .whatsapp-container { right: auto; left: 28px; }
-#expertCTA { left: auto; right: 0; }
-#expertPanel { left: auto; right: 0; border-radius: 20px 0 0 20px; transform: translateY(-50%) translateX(340px); }
-#expertCTA.open #expertPanel { transform: translateY(-50%) translateX(0); }
-#expertCTA.open #expertTab { transform: translateX(-300px); }
-.expert-photo-wrap { border-radius: 50% 0 0 50%; border-left: 3px solid var(--bp-blue); border-right: none; }
+#expertCTA { left: auto; right: 28px; }
+#expertPanel { left: auto; right: 28px; transform: translateX(380px); }
+#expertCTA.open #expertPanel { transform: translateX(0); }
+
+
 .expert-label-pill { border-radius: 12px 0 0 12px; }
 .ep-close { right: auto; left: 12px; }
 

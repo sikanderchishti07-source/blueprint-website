@@ -40,12 +40,12 @@ HOME = """
     <div class="grid lg:grid-cols-2 gap-16 items-center">
       <div class="scroll-reveal">
         <div class="inline-block px-4 py-2 bg-bp-light rounded-full text-bp-primary font-semibold text-sm mb-6">Who we are</div>
-        <h2 class="text-4xl font-bold text-bp-ink mb-6 leading-tight">Environmental consultancy for a <span class="text-bp-olive">cleaner Kingdom</span></h2>
-        <p class="text-gray-600 text-lg leading-relaxed mb-4">BluePrint is an environmental consultancy based in Riyadh, formed to answer the demand created by the Kingdom's accelerating environmental regulation. It pairs Saudi competencies with international expertise in the field.</p>
-        <p class="text-gray-600 leading-relaxed mb-6">Clients range from government authorities to industrial and commercial operators: oil and gas, petrochemicals, manufacturing, power and desalination, cement, food, agriculture and urban development.</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-bp-ink mb-5 leading-tight">Environmental consultancy for a <span class="text-bp-olive">cleaner Kingdom</span></h2>
+        <p class="text-gray-600 leading-relaxed mb-4">A Riyadh-based environmental consultancy, formed to meet the demand created by the Kingdom's accelerating environmental regulation &mdash; pairing Saudi competencies with international expertise.</p>
+        <p class="text-gray-600 text-sm leading-relaxed mb-7">Clients range from government authorities to industrial and commercial operators &mdash; oil and gas, petrochemicals, manufacturing, power and desalination, cement, food, agriculture and urban development.</p>
         <div class="space-y-4 mb-8">
-          <div class="flex items-start space-x-4"><div class="w-6 h-6 rounded-full bg-bp-primary flex items-center justify-center flex-shrink-0 mt-1"><i class="fas fa-check text-white text-xs"></i></div><div><h4 class="font-bold text-bp-ink">Our mission</h4><p class="text-gray-600">Innovative environmental solutions to the highest quality and safety standards, with high-standard studies and consultancy that keep clients fully compliant.</p></div></div>
-          <div class="flex items-start space-x-4"><div class="w-6 h-6 rounded-full bg-bp-olive flex items-center justify-center flex-shrink-0 mt-1"><i class="fas fa-check text-white text-xs"></i></div><div><h4 class="font-bold text-bp-ink">Our vision</h4><p class="text-gray-600">Support national environmental policy and grow Saudi Arabia's environmental sector into a regional reference for green innovation.</p></div></div>
+          <div class="flex items-start space-x-4"><div class="w-6 h-6 rounded-full bg-bp-primary flex items-center justify-center flex-shrink-0 mt-1"><i class="fas fa-check text-white text-xs"></i></div><div><h4 class="font-bold text-bp-ink">Our mission</h4><p class="text-gray-600 text-sm leading-relaxed">Innovative environmental solutions to the highest quality and safety standards, keeping clients fully compliant.</p></div></div>
+          <div class="flex items-start space-x-4"><div class="w-6 h-6 rounded-full bg-bp-olive flex items-center justify-center flex-shrink-0 mt-1"><i class="fas fa-check text-white text-xs"></i></div><div><h4 class="font-bold text-bp-ink">Our vision</h4><p class="text-gray-600 text-sm leading-relaxed">Supporting national policy and growing the Kingdom&rsquo;s environmental sector into a regional reference for green innovation.</p></div></div>
         </div>
         <div class="flex flex-wrap gap-3">
           <span class="px-4 py-2 bg-bp-light text-bp-primary rounded-lg font-medium text-sm">NCEC Licensed</span>
@@ -77,7 +77,7 @@ HOME = """
     <div class="text-center mb-14 scroll-reveal">
       <div class="showcase-eyebrow">What we do</div>
       <h2 class="text-4xl font-bold text-bp-ink mb-4">A full spectrum of environmental services</h2>
-      <p class="text-gray-600 max-w-2xl mx-auto">Two halves of one service: the studies and permits that get you licensed, and the monitoring and testing that prove you stay compliant.</p>
+      <p class="text-gray-600 text-sm max-w-xl mx-auto">Two halves of one service: the permits that get you licensed, and the testing that proves you stay compliant.</p>
     </div>
     <div class="scroll-reveal">
       <div class="flex items-center gap-3 mb-5">
@@ -123,7 +123,7 @@ HOME = """
     <div class="text-center mb-16 scroll-reveal">
       <div class="inline-block px-4 py-2 bg-white/10 rounded-full text-bp-sage font-semibold text-sm mb-4 backdrop-blur-sm">How we work</div>
       <h2 class="text-4xl font-bold mb-4">A clear path from audit to approval</h2>
-      <p class="text-gray-300 max-w-2xl mx-auto">Four stages, from the first site visit through to reporting that keeps you compliant cycle after cycle</p>
+      <p class="text-gray-300 text-sm max-w-xl mx-auto">Four stages, from the first site visit through to reporting that keeps you compliant cycle after cycle</p>
     </div>
     <div class="relative">
       <div class="hidden md:block absolute top-1/2 left-0 right-0 h-1 process-line rounded-full transform -translate-y-1/2"></div>
@@ -152,7 +152,7 @@ PROCESS_CARDS      </div>
     <div class="text-center mb-14 scroll-reveal">
       <div class="showcase-eyebrow">Accredited &amp; trusted</div>
       <h2 class="text-4xl font-bold text-bp-ink mb-4">Licensed to do the work that counts</h2>
-      <p class="text-gray-600 max-w-2xl mx-auto">Studies and permit files are only accepted from accredited parties. BluePrint holds active registration with every authority that matters in the Kingdom.</p>
+      <p class="text-gray-600 text-sm max-w-xl mx-auto">Permit files are only accepted from accredited parties. We hold active registration with every authority that matters.</p>
     </div>
 
     <div class="grid md:grid-cols-4 gap-5 mb-14 scroll-reveal">
@@ -208,7 +208,7 @@ PROCESS_CARDS      </div>
     <div class="text-center mb-16 scroll-reveal">
       <div class="inline-block px-4 py-2 bg-bp-light rounded-full text-bp-primary font-semibold text-sm mb-4">Who we serve</div>
       <h2 class="text-4xl font-bold text-bp-ink mb-4">Built for every regulated sector</h2>
-      <p class="text-gray-600 max-w-2xl mx-auto">From heavy manufacturing to healthcare, we tailor compliance strategy to the obligations, risks and inspection cycles of your industry.</p>
+      <p class="text-gray-600 text-sm max-w-xl mx-auto">We tailor compliance strategy to the obligations, risks and inspection cycles of your industry.</p>
     </div>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 scroll-reveal">
 SECTOR_CARDS    </div>
