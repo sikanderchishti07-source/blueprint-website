@@ -1,4 +1,4 @@
-import os, partials as P, pages as G, pages_extra as X, arabic as AR
+import os, partials as P, pages as G, pages_extra as X, arabic as AR, service_pages as SP, svc_permitting as SPP
 OUT = os.path.join(os.path.dirname(__file__), '..', 'site')
 PAGES = {
   'index.html':      ('Environmental Consultancy in Saudi Arabia | BluePrint', 'Accredited Saudi environmental consultancy delivering environmental studies, MWAN permitting, impact assessments, and compliance solutions aligned with KSA regulations.', G.home(), ('js/cards.js',)),
@@ -9,6 +9,25 @@ PAGES = {
   'terms.html':      ('Terms & Conditions | BluePrint Environmental Services', 'The terms and conditions governing use of the BluePrint Environmental Services website and services.', X.legal('terms', G.page_header), ()),
   'contact.html':    ('Contact BluePrint — Free Compliance Consultation', 'Talk to BluePrint accredited environmental consultants in Riyadh. Free initial consultation to map the studies and permits your facility needs in Saudi Arabia.', G.contact(), ()),
 }
+_GROUP_LABEL = {'permitting': 'Compliance &amp; Permitting',
+                'monitoring': 'Monitoring, Testing &amp; Measurement'}
+
+ALL_SERVICES = {}
+ALL_SERVICES.update(SPP.PERMITTING)
+ALL_SERVICES.update(SP.SERVICES)
+
+for _slug, _s in ALL_SERVICES.items():
+    _s.setdefault('group_label', _GROUP_LABEL.get(_s.get('group'), 'Services'))
+    _s.setdefault('detail_img', _s['hero_img'])
+    _s.setdefault('band_img', 'assets/img/svc-air-lab.jpg')
+    _s.setdefault('faq_title', 'Common questions')
+    # related = the other services in the same group, first three
+    _rel = [(o['slug'], o['title'], o['num']) for k, o in ALL_SERVICES.items()
+            if o.get('group') == _s.get('group') and k != _slug][:3]
+    PAGES['service-%s.html' % _slug] = (
+        _s['title'].replace('&amp;', '&') + ' | BluePrint Environmental Services',
+        _s['meta'], SP.service_page(_s, G.page_header, _rel), ())
+
 for a in X.ARTICLES:
     PAGES['blog-%s.html' % a['slug']] = (a['title'] + ' | BluePrint', a['summary'], X.article(a, G.page_header), ())
 
