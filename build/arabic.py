@@ -159,15 +159,15 @@ BODY = """
 </section>
 
 <!-- من نحن -->
-<section id="overview" class="py-24 bg-white">
+<section id="overview" class="py-20 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid lg:grid-cols-2 gap-16 items-center">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
       <div class="scroll-reveal">
         <div class="inline-block px-4 py-2 bg-bp-light rounded-full text-bp-primary font-semibold text-sm mb-6">من نحن</div>
-        <h2 class="text-4xl font-bold text-bp-ink mb-6">استشارات بيئية من أجل <span class="text-bp-olive">مملكة أنظف</span></h2>
-        <p class="text-gray-600 text-lg mb-4">بلوبرنت شركة استشارات بيئية مقرّها الرياض، تأسست استجابةً للطلب المتنامي الذي أوجدته الأنظمة البيئية المتسارعة في المملكة، وتجمع بين الكفاءات السعودية والخبرات الدولية في هذا المجال.</p>
-        <p class="text-gray-600 mb-6">يشمل عملاؤنا الجهات الحكومية والمنشآت الصناعية والتجارية: النفط والغاز، والبتروكيماويات، والتصنيع، والطاقة والتحلية، والأسمنت، والأغذية، والزراعة، والتطوير العمراني.</p>
-        <div class="space-y-4 mb-8">
+        <h2 class="text-2xl lg:text-3xl font-bold text-bp-ink mb-4">استشارات بيئية من أجل <span class="text-bp-olive">مملكة أنظف</span></h2>
+        <p class="text-gray-600 text-sm leading-relaxed mb-3">بلوبرنت شركة استشارات بيئية مقرّها الرياض، تأسست استجابةً للطلب المتنامي الذي أوجدته الأنظمة البيئية المتسارعة في المملكة، وتجمع بين الكفاءات السعودية والخبرات الدولية في هذا المجال.</p>
+        <p class="text-gray-600 text-sm leading-relaxed mb-5">يشمل عملاؤنا الجهات الحكومية والمنشآت الصناعية والتجارية: النفط والغاز، والبتروكيماويات، والتصنيع، والطاقة والتحلية، والأسمنت، والأغذية، والزراعة، والتطوير العمراني.</p>
+        <div class="space-y-3 mb-6">
           <div class="flex items-start gap-4"><div class="w-6 h-6 rounded-full bg-bp-primary flex items-center justify-center flex-shrink-0 mt-1"><i class="fas fa-check text-white text-xs"></i></div><div><h4 class="font-bold text-bp-ink">رسالتنا</h4><p class="text-gray-600">تقديم حلول بيئية مبتكرة بأعلى معايير الجودة والسلامة، ودراسات واستشارات عالية المستوى تحافظ على امتثال عملائنا الكامل.</p></div></div>
           <div class="flex items-start gap-4"><div class="w-6 h-6 rounded-full bg-bp-olive flex items-center justify-center flex-shrink-0 mt-1"><i class="fas fa-check text-white text-xs"></i></div><div><h4 class="font-bold text-bp-ink">رؤيتنا</h4><p class="text-gray-600">دعم السياسات البيئية الوطنية والارتقاء بالقطاع البيئي السعودي ليكون مرجعاً إقليمياً في الابتكار الأخضر.</p></div></div>
         </div>
@@ -179,9 +179,9 @@ BODY = """
       <div class="relative scroll-reveal">
         <div class="absolute -inset-4 rounded-3xl opacity-20 blur-2xl" style="background:var(--bp-grad);"></div>
         <div class="relative bg-white rounded-3xl shadow-2xl overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=400&fit=crop" alt="مختبر بيئي متنقل" class="w-full h-64 object-cover" />
+          <img src="assets/img/about.jpg" alt="ساحل البحر الأحمر السعودي" class="w-full h-52 object-cover" loading="lazy" />
           <div class="p-8">
-            <h3 class="text-2xl font-bold text-bp-ink mb-6">منسجمون مع رؤية 2030</h3>
+            <h3 class="text-xl font-bold text-bp-ink mb-5">منسجمون مع رؤية 2030</h3>
             <div class="space-y-4">
               <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl"><span class="font-display font-extrabold text-bp-primary">٠١</span><div><p class="font-semibold text-bp-ink text-sm">مجتمع حيوي</p><p class="text-xs text-gray-600 mt-1">بيئة أنظف وأكثر صحة ترفع جودة الحياة في أنحاء المملكة.</p></div></div>
               <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl"><span class="font-display font-extrabold text-bp-primary">٠٢</span><div><p class="font-semibold text-bp-ink text-sm">اقتصاد مزدهر</p><p class="text-xs text-gray-600 mt-1">نمو صناعي مسؤول عبر إدارة بيئية ونفايات ملتزمة بالأنظمة.</p></div></div>

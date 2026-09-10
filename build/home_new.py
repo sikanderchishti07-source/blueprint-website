@@ -27,15 +27,15 @@ HOME = """
 </section>
 
 <!-- COMPANY OVERVIEW -->
-<section id="overview" class="py-24 bg-white">
+<section id="overview" class="py-20 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid lg:grid-cols-2 gap-16 items-center">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
       <div class="scroll-reveal">
         <div class="inline-block px-4 py-2 bg-bp-light rounded-full text-bp-primary font-semibold text-sm mb-6">Who we are</div>
-        <h2 class="text-3xl lg:text-4xl font-bold text-bp-ink mb-5 leading-tight">Environmental consultancy for a <span class="text-bp-olive">cleaner Kingdom</span></h2>
-        <p class="text-gray-600 leading-relaxed mb-4">A Riyadh-based environmental consultancy, formed to meet the demand created by the Kingdom's accelerating environmental regulation &mdash; pairing Saudi competencies with international expertise.</p>
-        <p class="text-gray-600 text-sm leading-relaxed mb-7">Clients range from government authorities to industrial and commercial operators &mdash; oil and gas, petrochemicals, manufacturing, power and desalination, cement, food, agriculture and urban development.</p>
-        <div class="space-y-4 mb-8">
+        <h2 class="text-2xl lg:text-3xl font-bold text-bp-ink mb-4 leading-tight">Environmental consultancy for a <span class="text-bp-olive">cleaner Kingdom</span></h2>
+        <p class="text-gray-600 text-sm leading-relaxed mb-3">A Riyadh-based environmental consultancy, formed to meet the demand created by the Kingdom's accelerating environmental regulation &mdash; pairing Saudi competencies with international expertise.</p>
+        <p class="text-gray-600 text-sm leading-relaxed mb-5">Clients range from government authorities to industrial and commercial operators &mdash; oil and gas, petrochemicals, manufacturing, power and desalination, cement, food, agriculture and urban development.</p>
+        <div class="space-y-3 mb-6">
           <div class="flex items-start space-x-4"><div class="w-6 h-6 rounded-full bg-bp-primary flex items-center justify-center flex-shrink-0 mt-1"><i class="fas fa-check text-white text-xs"></i></div><div><h4 class="font-bold text-bp-ink">Our mission</h4><p class="text-gray-600 text-sm leading-relaxed">Innovative environmental solutions to the highest quality and safety standards, keeping clients fully compliant.</p></div></div>
           <div class="flex items-start space-x-4"><div class="w-6 h-6 rounded-full bg-bp-olive flex items-center justify-center flex-shrink-0 mt-1"><i class="fas fa-check text-white text-xs"></i></div><div><h4 class="font-bold text-bp-ink">Our vision</h4><p class="text-gray-600 text-sm leading-relaxed">Supporting national policy and growing the Kingdom&rsquo;s environmental sector into a regional reference for green innovation.</p></div></div>
         </div>
@@ -48,13 +48,13 @@ HOME = """
       <div class="relative scroll-reveal">
         <div class="absolute -inset-4 rounded-3xl opacity-20 blur-2xl" style="background:var(--bp-grad);"></div>
         <div class="relative bg-white rounded-3xl shadow-2xl overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=400&fit=crop" alt="Mobile environmental laboratory at an industrial site" class="w-full h-64 object-cover" />
-          <div class="p-8">
-            <h3 class="text-2xl font-bold text-bp-ink mb-6">Aligned with Vision 2030</h3>
-            <div class="space-y-4">
-              <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl"><span class="font-display font-extrabold text-bp-primary">01</span><div><p class="font-semibold text-bp-ink text-sm">Vibrant Society</p><p class="text-xs text-gray-600 mt-1">A cleaner, healthier environment that improves quality of life across the Kingdom.</p></div></div>
-              <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl"><span class="font-display font-extrabold text-bp-primary">02</span><div><p class="font-semibold text-bp-ink text-sm">Thriving Economy</p><p class="text-xs text-gray-600 mt-1">Responsible industrial growth through compliant waste and environmental management.</p></div></div>
-              <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl"><span class="font-display font-extrabold text-bp-primary">03</span><div><p class="font-semibold text-bp-ink text-sm">Ambitious Nation</p><p class="text-xs text-gray-600 mt-1">Advancing circular-economy practice and environmental governance.</p></div></div>
+          <img src="assets/img/about.jpg" alt="Saudi Red Sea coastline where desert meets protected shoreline" class="w-full h-52 object-cover" loading="lazy" />
+          <div class="p-7">
+            <h3 class="text-xl font-bold text-bp-ink mb-5">Aligned with Vision 2030</h3>
+            <div class="space-y-2.5">
+              <div class="flex items-start gap-3 p-3.5 bg-gray-50 rounded-xl"><span class="font-display font-extrabold text-bp-primary">01</span><div><p class="font-semibold text-bp-ink text-sm">Vibrant Society</p><p class="text-xs text-gray-600 mt-1">A cleaner, healthier environment that improves quality of life across the Kingdom.</p></div></div>
+              <div class="flex items-start gap-3 p-3.5 bg-gray-50 rounded-xl"><span class="font-display font-extrabold text-bp-primary">02</span><div><p class="font-semibold text-bp-ink text-sm">Thriving Economy</p><p class="text-xs text-gray-600 mt-1">Responsible industrial growth through compliant waste and environmental management.</p></div></div>
+              <div class="flex items-start gap-3 p-3.5 bg-gray-50 rounded-xl"><span class="font-display font-extrabold text-bp-primary">03</span><div><p class="font-semibold text-bp-ink text-sm">Ambitious Nation</p><p class="text-xs text-gray-600 mt-1">Advancing circular-economy practice and environmental governance.</p></div></div>
             </div>
           </div>
         </div>
