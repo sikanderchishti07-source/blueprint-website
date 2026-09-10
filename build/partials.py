@@ -23,7 +23,7 @@ def head(title, description, extra_css=""):
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="{description}" />
-  <meta name="theme-color" content="#007181" />
+  <meta name="theme-color" content="#0e93a8" />
   <title>{title}</title>
   <link rel="icon" type="image/png" href="assets/logo/favicon.png" />
 
@@ -128,24 +128,6 @@ def nav():
 </div>
 
 <nav id="navbar">
-  <div class="nav-top-strip">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <span class="nav-live-dot"></span>
-        <span>Riyadh, Saudi Arabia &middot; Sun&ndash;Thu 9:00&ndash;18:00 AST</span>
-        <span class="nav-strip-divider"></span>
-        <a data-tel><i class="fas fa-phone" style="font-size:.6rem;margin-right:4px;"></i><span data-text="phone"></span></a>
-      </div>
-      <div class="hidden md:flex items-center gap-3">
-        <span>NCEC Licensed</span>
-        <span class="nav-strip-divider"></span>
-        <span>MWAN Registered</span>
-        <span class="nav-strip-divider"></span>
-        <a data-mail><i class="fas fa-envelope" style="font-size:.6rem;margin-right:4px;"></i><span data-text="email"></span></a>
-      </div>
-    </div>
-  </div>
-
   <div class="nav-inner">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between" style="height:64px;gap:16px;">

@@ -47,7 +47,7 @@ def blog(page_header):
         <a href="blog-{a['slug']}.html" class="card-img-wrap block">
           <img src="{a['img']}?w=800&h=450&fit=crop&q=80" alt="{a['title']}" loading="lazy" onerror="this.onerror=null;this.src='{a['fb']}?w=800&h=450&fit=crop'" />
           <div class="card-img-overlay"></div>
-          <span class="card-badge" style="background:rgba(0,113,129,.14);color:var(--bp-blue-deep);">{a['cat']}</span>
+          <span class="card-badge" style="background:rgba(14, 147, 168,.14);color:var(--bp-blue-deep);">{a['cat']}</span>
         </a>
         <div class="card-body">
           <h3 class="card-title"><a href="blog-{a['slug']}.html" style="color:inherit;text-decoration:none;">{a['title']}</a></h3>

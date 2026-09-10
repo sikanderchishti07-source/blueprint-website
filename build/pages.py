@@ -67,11 +67,11 @@ def services():
   </div>
 </section>
 
-<section id="monitoring" class="py-24 bg-white">
+<section id="monitoring" class="py-28 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-14 scroll-reveal">
+    <div class="text-center mb-16 scroll-reveal">
       <div class="showcase-eyebrow">Monitoring &amp; testing</div>
-      <h2 class="text-4xl font-bold text-bp-ink mb-4">The measurements behind the paperwork</h2>
+      <h2 class="text-4xl lg:text-5xl font-bold text-bp-ink mb-5 tracking-tight">The measurements behind the paperwork</h2>
       <p class="text-gray-600 max-w-2xl mx-auto">A permit is only as good as the data behind it. We carry out the sampling and testing your conditions require, to the method they require.</p>
     </div>
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 scroll-reveal max-w-5xl mx-auto">{mons}
@@ -80,11 +80,11 @@ def services():
   </div>
 </section>
 
-<section class="py-24" style="background:var(--bp-page);">
+<section class="py-28" style="background:var(--bp-page);">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-14 scroll-reveal">
+    <div class="text-center mb-16 scroll-reveal">
       <div class="showcase-eyebrow">Beyond permitting</div>
-      <h2 class="text-4xl font-bold text-bp-ink mb-4">Six further service categories</h2>
+      <h2 class="text-4xl lg:text-5xl font-bold text-bp-ink mb-5 tracking-tight">Six further service categories</h2>
       <p class="text-gray-600 max-w-2xl mx-auto">Alongside permitting and monitoring, BluePrint delivers specialist work across sustainability, ecology, marine, remediation, modelling and laboratory services.</p>
     </div>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 scroll-reveal">{cats}
@@ -101,7 +101,7 @@ def technology():
       <div class="equipment-card bg-gray-50 rounded-2xl border-2 border-transparent hover:border-bp-primary cursor-pointer group overflow-hidden">
         <div class="relative w-full h-44 overflow-hidden bg-bp-light">
           <img src="{img}?w=600&h=380&fit=crop&q=80" alt="{title}" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='{fb}?w=600&h=380&fit=crop'" />
-          <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" style="background:linear-gradient(to top,rgba(4,51,58,.65),transparent);"></div>
+          <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" style="background:linear-gradient(to top,rgba(11, 47, 56,.65),transparent);"></div>
           <span class="absolute bottom-3 left-3 text-xs font-bold text-white bg-bp-olive px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">{badge}</span>
         </div>
         <div class="p-5"><div class="flex items-center gap-2 mb-2"><div class="w-7 h-7 bg-bp-light rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas {icon} text-bp-primary text-xs"></i></div><h4 class="font-bold text-bp-ink text-sm">{title}</h4></div><p class="text-xs text-gray-500 leading-relaxed">{desc}</p></div>
@@ -116,18 +116,18 @@ def technology():
     return page_header("Laboratory, measurement &amp; accreditation",
                        "Compliance claims need numbers behind them. We measure what your permit requires, to the method it requires, and report it in the form the regulator expects.",
                        "Laboratory") + f"""
-<section id="equipment" class="py-20 bg-white">
+<section id="equipment" class="py-28 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 scroll-reveal">{cards}
     </div>
   </div>
 </section>
 
-<section id="standards" class="py-24" style="background:var(--bp-page);">
+<section id="standards" class="py-28" style="background:var(--bp-page);">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16 scroll-reveal">
       <div class="showcase-eyebrow">Licences &amp; accreditations</div>
-      <h2 class="text-4xl font-bold text-bp-ink mb-4">Testing that carries weight</h2>
+      <h2 class="text-4xl lg:text-5xl font-bold text-bp-ink mb-5 tracking-tight">Testing that carries weight</h2>
       <p class="text-gray-600 max-w-2xl mx-auto">Results are only accepted from accredited parties. <a href="index.html#accreditations" class="text-bp-primary font-semibold">See all seven licences and accreditations &rarr;</a></p>
     </div>
     <div class="rounded-3xl p-8 text-white scroll-reveal" style="background:var(--bp-grad);">

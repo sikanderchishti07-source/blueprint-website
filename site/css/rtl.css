@@ -32,7 +32,7 @@ h1, h2, h3, h4 { letter-spacing: 0; line-height: 1.45; }
 .footer-live-chip { margin-left: 0; margin-right: auto; }
 
 /* Drawer slides in from the left in RTL */
-#navMobileDrawer { right: auto; left: 0; transform: translateX(-100%); box-shadow: 8px 0 40px rgba(4,51,58,.15); }
+#navMobileDrawer { right: auto; left: 0; transform: translateX(-100%); box-shadow: 8px 0 40px rgba(11, 47, 56,.15); }
 #navMobileDrawer.open { transform: translateX(0); }
 
 /* Chevrons and arrows point the other way */

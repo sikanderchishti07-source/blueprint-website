@@ -27,12 +27,12 @@ HOME = """
 </section>
 
 <!-- COMPANY OVERVIEW -->
-<section id="overview" class="py-20 bg-white">
+<section id="overview" class="py-28 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid lg:grid-cols-2 gap-12 items-center">
       <div class="scroll-reveal">
         <div class="inline-block px-4 py-2 bg-bp-light rounded-full text-bp-primary font-semibold text-sm mb-6">Who we are</div>
-        <h2 class="text-2xl lg:text-3xl font-bold text-bp-ink mb-4 leading-tight">Environmental consultancy for a <span class="text-bp-olive">cleaner Kingdom</span></h2>
+        <h2 class="text-2xl lg:text-3xl font-bold text-bp-ink mb-4 leading-tight">Built for the Kingdom&rsquo;s <span class="text-bp-olive">new rulebook</span></h2>
         <p class="text-gray-600 text-sm leading-relaxed mb-3">A Riyadh-based environmental consultancy, formed to meet the demand created by the Kingdom's accelerating environmental regulation &mdash; pairing Saudi competencies with international expertise.</p>
         <p class="text-gray-600 text-sm leading-relaxed mb-5">Clients range from government authorities to industrial and commercial operators &mdash; oil and gas, petrochemicals, manufacturing, power and desalination, cement, food, agriculture and urban development.</p>
         <div class="space-y-3 mb-6">
@@ -63,50 +63,77 @@ HOME = """
   </div>
 </section>
 
-<!-- SERVICES PREVIEW -->
-<section id="services" class="py-24" style="background:var(--bp-page);">
+<!-- SERVICES — three cards, click to expand -->
+<section id="services" class="py-28" style="background:var(--bp-page);">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-14 scroll-reveal">
+    <div class="text-center mb-16 scroll-reveal">
       <div class="showcase-eyebrow">What we do</div>
-      <h2 class="text-4xl font-bold text-bp-ink mb-4">A full spectrum of environmental services</h2>
-      <p class="text-gray-600 text-sm max-w-xl mx-auto">Two halves of one service: the permits that get you licensed, and the testing that proves you stay compliant.</p>
+      <h2 class="text-4xl lg:text-5xl font-bold text-bp-ink mb-5 tracking-tight">Take on any obligation</h2>
+      <p class="text-gray-600 text-base max-w-xl mx-auto leading-relaxed">Three service lines covering the whole compliance lifecycle &mdash; from first permit through to continuous reporting.</p>
     </div>
-    <div class="scroll-reveal">
-      <div class="flex items-center gap-3 mb-5">
-        <span class="w-9 h-9 rounded-xl bg-bp-light text-bp-primary flex items-center justify-center text-sm flex-shrink-0"><i class="fas fa-stamp"></i></span>
-        <div><h3 class="font-display font-bold text-bp-ink text-lg leading-tight">Compliance &amp; Permitting</h3><p class="text-sm text-gray-500">Getting your facility licensed &mdash; and keeping it licensed</p></div>
+
+    <div class="svc-showcase scroll-reveal">
+      <div class="svc-stage" id="svcStage"></div>
+
+      <div class="svc-panel" id="svcPanel" role="dialog" aria-modal="false" aria-hidden="true" aria-label="Service list">
+        <div class="svc-panel-inner">
+          <div class="svc-panel-hero" id="svcPanelHero">
+            <div class="svc-panel-head">
+              <div class="svc-panel-kicker" id="svcPanelKicker"></div>
+              <h3 id="svcPanelTitle"></h3>
+            </div>
+          </div>
+          <button class="svc-panel-close" id="svcPanelClose" onclick="closeSvcPanel()" aria-label="Close service list">&times;</button>
+          <div class="svc-panel-grid" id="svcPanelGrid"></div>
+          <div class="svc-panel-foot">
+            <span id="svcPanelBlurb"></span>
+            <a href="services.html" class="svc-panel-btn" id="svcPanelLink">See full detail <i class="fas fa-arrow-right" style="font-size:.7rem;"></i></a>
+          </div>
+        </div>
       </div>
-      <div class="svc-preview">
-        <a href="services.html#svc-0" class="svc-preview-card"><div class="svc-preview-icon"><i class="fas fa-file-signature"></i></div><div><div class="svc-preview-name">Environmental Permit</div><div class="svc-preview-short">NCEC permit files, prepared and carried to issuance</div></div></a>
-        <a href="services.html#svc-1" class="svc-preview-card"><div class="svc-preview-icon"><i class="fas fa-clipboard-check"></i></div><div><div class="svc-preview-name">Environmental Impact Assessment</div><div class="svc-preview-short">EIAs that answer the questions reviewers actually ask</div></div></a>
-        <a href="services.html#svc-2" class="svc-preview-card"><div class="svc-preview-icon"><i class="fas fa-recycle"></i></div><div><div class="svc-preview-name">Waste Management Permit</div><div class="svc-preview-short">MWAN permits for generators, transporters and treaters</div></div></a>
-        <a href="services.html#svc-3" class="svc-preview-card"><div class="svc-preview-icon"><i class="fas fa-tasks"></i></div><div><div class="svc-preview-name">Environmental Management Plan</div><div class="svc-preview-short">Permit conditions turned into daily practice</div></div></a>
-        <a href="services.html#svc-4" class="svc-preview-card"><div class="svc-preview-icon"><i class="fas fa-folder-open"></i></div><div><div class="svc-preview-name">Environmental Register</div><div class="svc-preview-short">Proof you have been compliant every day since</div></div></a>
-        <a href="services.html#svc-5" class="svc-preview-card"><div class="svc-preview-icon"><i class="fas fa-calendar-check"></i></div><div><div class="svc-preview-name">Periodic Environmental Report</div><div class="svc-preview-short">The obligation most facilities let slip</div></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT IT MEANS FOR YOU — alternating feature blocks -->
+<section class="py-28 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+
+    <div class="grid lg:grid-cols-2 gap-12 items-center scroll-reveal">
+      <div>
+        <div class="showcase-eyebrow">Before you build</div>
+        <h3 class="text-2xl lg:text-3xl font-bold text-bp-ink mb-4 leading-tight">Get licensed without losing a quarter</h3>
+        <p class="text-gray-600 leading-relaxed mb-5">Most delays are not technical. They come from a misclassified activity or a file missing one supporting study. We classify first, then build the submission around what the reviewer will actually ask for.</p>
+        <a href="services.html#svc-0" class="btn-ghost">Environmental permits <i class="fas fa-arrow-right" style="font-size:.7rem;"></i></a>
+      </div>
+      <div class="rounded-2xl overflow-hidden shadow-lg"><img src="assets/img/feature-1.jpg" alt="Coastal industrial development" class="w-full h-72 object-cover" loading="lazy" /></div>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-12 items-center scroll-reveal">
+      <div class="rounded-2xl overflow-hidden shadow-lg lg:order-1"><img src="assets/img/feature-2.jpg" alt="Desert landscape under monitoring" class="w-full h-72 object-cover" loading="lazy" /></div>
+      <div class="lg:order-2">
+        <div class="showcase-eyebrow">While you operate</div>
+        <h3 class="text-2xl lg:text-3xl font-bold text-bp-ink mb-4 leading-tight">Never scramble for an inspection again</h3>
+        <p class="text-gray-600 leading-relaxed mb-5">Inspectors ask for the register first. We keep yours current, run the measurements your permit specifies, and file the periodic reports on schedule &mdash; so an inspection is a document check, not a fire drill.</p>
+        <a href="services.html#monitoring" class="btn-ghost">Monitoring &amp; reporting <i class="fas fa-arrow-right" style="font-size:.7rem;"></i></a>
       </div>
     </div>
 
-    <div class="scroll-reveal mt-12">
-      <div class="flex items-center gap-3 mb-5">
-        <span class="w-9 h-9 rounded-xl flex items-center justify-center text-sm flex-shrink-0" style="background:var(--bp-olive-tint);color:var(--bp-olive);"><i class="fas fa-flask"></i></span>
-        <div><h3 class="font-display font-bold text-bp-ink text-lg leading-tight">Monitoring, Testing &amp; Measurement</h3><p class="text-sm text-gray-500">The numbers behind every compliance claim</p></div>
+    <div class="grid lg:grid-cols-2 gap-12 items-center scroll-reveal">
+      <div>
+        <div class="showcase-eyebrow">When it renews</div>
+        <h3 class="text-2xl lg:text-3xl font-bold text-bp-ink mb-4 leading-tight">Renewals decided long before you apply</h3>
+        <p class="text-gray-600 leading-relaxed mb-5">Renewal review examines the whole permit term, not the application. Clients on ongoing reporting renew from a record that was maintained throughout &mdash; rather than assembled, and audited, at the last minute.</p>
+        <a href="blog-environmental-permit-renewal.html" class="btn-ghost">Read the renewal guide <i class="fas fa-arrow-right" style="font-size:.7rem;"></i></a>
       </div>
-      <div class="svc-preview">
-        <a href="technology.html#equipment" class="svc-preview-card"><div class="svc-preview-icon" style="background:var(--bp-olive-tint);color:var(--bp-olive);"><i class="fas fa-wind"></i></div><div><div class="svc-preview-name">Air Quality Monitoring &amp; Testing</div><div class="svc-preview-short">Measurement and assessment against KSA standards</div></div></a>
-        <a href="technology.html#equipment" class="svc-preview-card"><div class="svc-preview-icon" style="background:var(--bp-olive-tint);color:var(--bp-olive);"><i class="fas fa-tint"></i></div><div><div class="svc-preview-name">Water &amp; Wastewater Testing</div><div class="svc-preview-short">Water and sewage analysis to accredited methods</div></div></a>
-        <a href="technology.html#equipment" class="svc-preview-card"><div class="svc-preview-icon" style="background:var(--bp-olive-tint);color:var(--bp-olive);"><i class="fas fa-volume-up"></i></div><div><div class="svc-preview-name">Noise Monitoring &amp; Assessment</div><div class="svc-preview-short">Environmental noise against regulated limits</div></div></a>
-        <a href="technology.html#equipment" class="svc-preview-card"><div class="svc-preview-icon" style="background:var(--bp-olive-tint);color:var(--bp-olive);"><i class="fas fa-mountain"></i></div><div><div class="svc-preview-name">Soil &amp; Sediment Testing</div><div class="svc-preview-short">Characteristics and contaminant levels</div></div></a>
-        <a href="technology.html#equipment" class="svc-preview-card"><div class="svc-preview-icon" style="background:var(--bp-olive-tint);color:var(--bp-olive);"><i class="fas fa-vial"></i></div><div><div class="svc-preview-name">Environmental Sampling</div><div class="svc-preview-short">Collection and preparation under chain of custody</div></div></a>
-        <a href="technology.html#equipment" class="svc-preview-card"><div class="svc-preview-icon" style="background:var(--bp-olive-tint);color:var(--bp-olive);"><i class="fas fa-microscope"></i></div><div><div class="svc-preview-name">Laboratory Analysis</div><div class="svc-preview-short">Reporting with technical interpretation</div></div></a>
-      </div>
+      <div class="rounded-2xl overflow-hidden shadow-lg"><img src="assets/img/feature-3.jpg" alt="Shoreline and protected vegetation" class="w-full h-72 object-cover" loading="lazy" /></div>
     </div>
 
-    <div class="text-center mt-10 scroll-reveal"><a href="services.html" class="btn-primary">View all services <i class="fas fa-arrow-right" style="font-size:.75rem;"></i></a></div>
   </div>
 </section>
 
 <!-- HOW WE WORK -->
-<section id="process" class="py-24 text-white relative overflow-hidden" style="background:var(--bp-blue-ink);">
+<section id="process" class="py-28 text-white relative overflow-hidden" style="background:var(--bp-blue-ink);">
   <div class="absolute inset-0 opacity-10" aria-hidden="true">
     <div class="absolute top-0 left-0 w-96 h-96 bg-bp-primary rounded-full blur-3xl"></div>
     <div class="absolute bottom-0 right-0 w-96 h-96 bg-bp-olive rounded-full blur-3xl"></div>
@@ -114,8 +141,8 @@ HOME = """
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="text-center mb-16 scroll-reveal">
       <div class="inline-block px-4 py-2 bg-white/10 rounded-full text-bp-sage font-semibold text-sm mb-4 backdrop-blur-sm">How we work</div>
-      <h2 class="text-4xl font-bold mb-4">A clear path from audit to approval</h2>
-      <p class="text-gray-300 text-sm max-w-xl mx-auto">Four stages, from the first site visit through to reporting that keeps you compliant cycle after cycle</p>
+      <h2 class="text-4xl lg:text-5xl font-bold mb-5 tracking-tight">Compliance without the guesswork</h2>
+      <p class="text-gray-300 text-base max-w-xl mx-auto leading-relaxed">Four stages, from the first site visit through to reporting that keeps you compliant cycle after cycle</p>
     </div>
     <div class="relative">
       <div class="hidden md:block absolute top-1/2 left-0 right-0 h-1 process-line rounded-full transform -translate-y-1/2"></div>
@@ -138,13 +165,13 @@ PROCESS_CARDS      </div>
 </section>
 
 <!-- ACCREDITED & TRUSTED (merged: credentials + accreditations + why us) -->
-<section id="accreditations" class="py-24 bg-white">
+<section id="accreditations" class="py-28 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-    <div class="text-center mb-14 scroll-reveal">
+    <div class="text-center mb-16 scroll-reveal">
       <div class="showcase-eyebrow">Accredited &amp; trusted</div>
-      <h2 class="text-4xl font-bold text-bp-ink mb-4">Licensed to do the work that counts</h2>
-      <p class="text-gray-600 text-sm max-w-xl mx-auto">Permit files are only accepted from accredited parties. We hold active registration with every authority that matters.</p>
+      <h2 class="text-4xl lg:text-5xl font-bold text-bp-ink mb-5 tracking-tight">Accredited where it matters</h2>
+      <p class="text-gray-600 text-base max-w-xl mx-auto leading-relaxed">Permit files are only accepted from accredited parties. We hold active registration with every authority that matters.</p>
     </div>
 
     <div class="grid md:grid-cols-4 gap-5 mb-14 scroll-reveal">
@@ -195,12 +222,12 @@ PROCESS_CARDS      </div>
 </section>
 
 <!-- SECTORS -->
-<section id="sectors" class="py-24" style="background:var(--bp-page);">
+<section id="sectors" class="py-28" style="background:var(--bp-page);">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16 scroll-reveal">
       <div class="inline-block px-4 py-2 bg-bp-light rounded-full text-bp-primary font-semibold text-sm mb-4">Who we serve</div>
-      <h2 class="text-4xl font-bold text-bp-ink mb-4">Built for every regulated sector</h2>
-      <p class="text-gray-600 text-sm max-w-xl mx-auto">We tailor compliance strategy to the obligations, risks and inspection cycles of your industry.</p>
+      <h2 class="text-4xl lg:text-5xl font-bold text-bp-ink mb-5 tracking-tight">Every regulated sector</h2>
+      <p class="text-gray-600 text-base max-w-xl mx-auto leading-relaxed">We tailor compliance strategy to the obligations, risks and inspection cycles of your industry.</p>
     </div>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 scroll-reveal">
 SECTOR_CARDS    </div>
@@ -247,6 +274,6 @@ def home():
         f"""        <div class="relative scroll-reveal group"><div class="w-20 h-20 mx-auto bg-white rounded-2xl flex items-center justify-center text-3xl font-bold text-bp-ink shadow-xl relative z-20 transform group-hover:scale-110 group-hover:rotate-3 transition-all">0{n}</div><div class="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/20 hover:bg-white/20 transition-all" style="margin-top:-2.5rem"><div style="height:2.5rem"></div><img src="{img}" alt="{t}" class="w-full h-36 object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" onerror="this.style.display='none'" /><div class="p-6"><h4 class="font-bold text-lg mb-2 text-bp-sage">{t}</h4><p class="text-sm text-gray-300">{d}</p></div></div></div>\n"""
         for n, img, t, d in PROCESS)
     sect = "".join(
-        f"""      <a href="services.html" class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer block"><img src="{img}" alt="{title}" class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500" /><div class="absolute inset-0 opacity-90" style="background:linear-gradient(to top,#04333a 0%,rgba(4,51,58,.5) 50%,transparent 100%);"></div><div class="absolute bottom-0 left-0 right-0 p-6 text-white"><div class="flex items-center space-x-2 mb-2"><i class="fas {icon} text-bp-sage"></i><span class="text-sm font-medium text-bp-sage">{cat}</span></div><h3 class="text-xl font-bold mb-2">{title}</h3><p class="text-sm text-gray-300">{desc}</p></div></a>\n"""
+        f"""      <a href="services.html" class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer block"><img src="{img}" alt="{title}" class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500" /><div class="absolute inset-0 opacity-90" style="background:linear-gradient(to top,#0b2f38 0%,rgba(11, 47, 56,.5) 50%,transparent 100%);"></div><div class="absolute bottom-0 left-0 right-0 p-6 text-white"><div class="flex items-center space-x-2 mb-2"><i class="fas {icon} text-bp-sage"></i><span class="text-sm font-medium text-bp-sage">{cat}</span></div><h3 class="text-xl font-bold mb-2">{title}</h3><p class="text-sm text-gray-300">{desc}</p></div></a>\n"""
         for img, icon, cat, title, desc in SECTORS)
     return HOME.replace("PROCESS_CARDS", proc).replace("SECTOR_CARDS", sect)
