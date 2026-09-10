@@ -10,7 +10,7 @@
 
   var GROUPS = [
     {
-      key: 'Compliance &amp; Permitting', num: '01', icon: 'fa-stamp',
+      key: 'Compliance &amp; Permitting', short: 'Permitting', num: '01', icon: 'fa-stamp',
       img: 'assets/img/card-1.jpg', pos: '20% 30%',
       blurb: 'Getting your facility licensed &mdash; and keeping it licensed.',
       href: 'services.html#permitting',
@@ -24,7 +24,7 @@
       ]
     },
     {
-      key: 'Monitoring, Testing &amp; Measurement', num: '02', icon: 'fa-flask',
+      key: 'Monitoring, Testing &amp; Measurement', short: 'Monitoring', num: '02', icon: 'fa-flask',
       img: 'assets/img/card-2.jpg', pos: '75% 60%',
       blurb: 'The numbers behind every compliance claim.',
       href: 'services.html#monitoring',
@@ -42,7 +42,7 @@
       ]
     },
     {
-      key: 'Specialist Disciplines', num: '03', icon: 'fa-layer-group',
+      key: 'Specialist Disciplines', short: 'Specialist', num: '03', icon: 'fa-layer-group',
       img: 'assets/img/card-3.jpg', pos: '50% 75%',
       blurb: 'Deeper technical work across six disciplines.',
       href: 'services.html',
@@ -66,7 +66,9 @@
     c.className = 'svc-card';
     c.setAttribute('aria-label', 'View ' + g.key.replace(/&amp;/g, 'and') + ' services');
     c.addEventListener('click', function () { openOverlay(i, c); });
-    var teaser = g.items.slice(0, 4).map(function (it) { return '<li>' + it[0] + '</li>'; }).join('');
+    var teaser = g.items.map(function (it) {
+      return '<li><span class="svc-bl-t">' + it[0] + '</span>' +
+             '<span class="svc-bl-d">' + it[1] + '</span></li>'; }).join('');
     c.innerHTML =
       '<span class="svc-flip">' +
         '<span class="svc-face svc-front">' +
@@ -76,15 +78,18 @@
           '<span class="svc-card-icon"><i class="fas ' + g.icon + '"></i></span>' +
           '<span class="svc-card-glass">' +
             '<span class="svc-card-count">' + g.items.length + ' services</span>' +
+            '<span class="svc-card-short">' + g.short + '</span>' +
             '<span class="svc-card-title">' + g.key + '</span>' +
             '<span class="svc-card-blurb">' + g.blurb + '</span>' +
+            '<span class="svc-card-cta">View ' + g.items.length + ' services <i class="fas fa-arrow-right"></i></span>' +
           '</span>' +
         '</span>' +
         '<span class="svc-face svc-back">' +
           '<span class="svc-back-num">' + g.num + '</span>' +
           '<span class="svc-back-title">' + g.key + '</span>' +
+          '<span class="svc-back-sub">' + g.blurb + '</span>' +
           '<ul class="svc-back-list">' + teaser + '</ul>' +
-          '<span class="svc-back-more">+ ' + (g.items.length - 4) + ' more</span>' +
+          
           '<span class="svc-back-cta">Open full list <i class="fas fa-arrow-right"></i></span>' +
         '</span>' +
       '</span>';
