@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  GENERATED FILE — DO NOT EDIT THIS HTML BY HAND.
+
+  This page is assembled by build/build.py from:
+      build/partials.py   (nav, footer, modals, widgets)
+      build/pages.py      (this page's content)
+
+  Any change made directly to this file will be ERASED the next
+  time someone runs build/build.sh. Edit the Python source above
+  and rebuild instead.
+
+  Safe to edit by hand: everything in site/css/ and site/js/
+  (except site/css/tailwind.css, which is also generated).
+  ============================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Environmental services across KSA: impact assessments, MWAN waste permits, environmental registers, management plans, rehabilitation, and reporting." />
+  <meta name="theme-color" content="#007181" />
+  <title>Environmental Services in Saudi Arabia | BluePrint</title>
+  <link rel="icon" type="image/png" href="assets/logo/favicon.png" />
+
+  <!-- Fonts & icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+  <!-- Site styles (css/tailwind.css is compiled by build/build.sh) -->
+  <link rel="stylesheet" href="css/tailwind.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+
+  <script src="js/config.js"></script>
+</head>
+<body class="font-sans">
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<div id="navDrawerOverlay" onclick="closeNavDrawer()"></div>
+
+<div id="navMobileDrawer" aria-label="Mobile menu">
+  <div class="drawer-header">
+    <a href="index.html"><img src="assets/logo/blueprint-logo.png" alt="BluePrint Environmental Services" /></a>
+    <button class="drawer-close" onclick="closeNavDrawer()" aria-label="Close menu"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="drawer-body">
+    <span class="drawer-section-title">Company</span>
+    <a href="index.html" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-home"></i></div>Home</a>
+    <a href="index.html#overview" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-building"></i></div>Company Overview</a>
+    <a href="index.html#sectors" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-industry"></i></div>Sectors We Serve</a>
+    <a href="index.html#process" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-sitemap"></i></div>Our Process</a>
+
+    <div class="drawer-divider"></div>
+    <span class="drawer-section-title">Compliance &amp; Permitting</span>
+    <a href="services.html#svc-0" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-file-signature"></i></div>Environmental Permit</a>
+<a href="services.html#svc-1" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-clipboard-check"></i></div>Impact Assessment</a>
+<a href="services.html#svc-2" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-recycle"></i></div>Waste Permit (MWAN)</a>
+<a href="services.html#svc-3" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-tasks"></i></div>Environmental Management Plan</a>
+<a href="services.html#svc-4" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-folder-open"></i></div>Environmental Register</a>
+<a href="services.html#svc-5" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-calendar-check"></i></div>Periodic Reporting</a>
+
+    <div class="drawer-divider"></div>
+    <span class="drawer-section-title">Monitoring &amp; Testing</span>
+    <a href="services.html#monitoring" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-wind"></i></div>Air Quality Monitoring</a>
+    <a href="services.html#monitoring" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-tint"></i></div>Water &amp; Wastewater Testing</a>
+    <a href="services.html#monitoring" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-volume-up"></i></div>Noise Monitoring</a>
+    <a href="services.html#monitoring" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-mountain"></i></div>Soil &amp; Sediment Testing</a>
+
+    <div class="drawer-divider"></div>
+    <span class="drawer-section-title">Laboratory</span>
+    <a href="technology.html" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-flask"></i></div>Laboratory Services</a>
+    <a href="technology.html#standards" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-stamp"></i></div>Licences &amp; Accreditations</a>
+
+    <div class="drawer-divider"></div>
+    <a href="blog.html" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-pen-nib"></i></div>Blog</a>
+    <a href="contact.html" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-envelope"></i></div>Contact</a>
+    <a href="index_arabic.html" class="drawer-link"><div class="drawer-link-icon">🌐</div>العربية (Arabic)</a>
+  </div>
+  <div class="drawer-footer">
+    <a href="contact.html" class="drawer-portal-btn"><i class="fas fa-paper-plane"></i> Free Consultation</a>
+    <a data-wa="Hello BluePrint, I would like to ask about your environmental services." class="drawer-wa-btn"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+  </div>
+</div>
+
+<nav id="navbar">
+  <div class="nav-top-strip">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <span class="nav-live-dot"></span>
+        <span>Riyadh, Saudi Arabia &middot; Sun&ndash;Thu 9:00&ndash;18:00 AST</span>
+        <span class="nav-strip-divider"></span>
+        <a data-tel><i class="fas fa-phone" style="font-size:.6rem;margin-right:4px;"></i><span data-text="phone"></span></a>
+      </div>
+      <div class="hidden md:flex items-center gap-3">
+        <span>NCEC Licensed</span>
+        <span class="nav-strip-divider"></span>
+        <span>MWAN Registered</span>
+        <span class="nav-strip-divider"></span>
+        <a data-mail><i class="fas fa-envelope" style="font-size:.6rem;margin-right:4px;"></i><span data-text="email"></span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav-inner">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between" style="height:64px;gap:16px;">
+
+        <a href="index.html" class="nav-logo-wrap js-home-link" aria-label="BluePrint — home">
+          <img src="assets/logo/blueprint-logo.png" alt="BluePrint Environmental Services" />
+        </a>
+
+        <nav class="nav-links" style="flex:1;justify-content:center;" aria-label="Primary">
+          <div class="nav-item">
+            <a href="index.html" class="nav-link" data-page="index.html">Home <i class="fas fa-chevron-down nav-chevron"></i></a>
+            <div class="nav-dropdown">
+              <div class="nav-dropdown-box" style="min-width:230px;">
+                <div class="nav-dropdown-title">About BluePrint</div>
+                <a href="index.html#overview" class="nav-dd-link">
+                  <div class="nav-dd-icon"><i class="fas fa-building"></i></div>
+                  <div class="nav-dd-text-wrap"><span class="nav-dd-label">About BluePrint</span><span class="nav-dd-sub">Mission, vision &amp; Vision 2030</span></div>
+                </a>
+                <a href="index.html#sectors" class="nav-dd-link">
+                  <div class="nav-dd-icon"><i class="fas fa-industry"></i></div>
+                  <div class="nav-dd-text-wrap"><span class="nav-dd-label">Sectors We Serve</span><span class="nav-dd-sub">Six regulated industries</span></div>
+                </a>
+                <a href="index.html#process" class="nav-dd-link">
+                  <div class="nav-dd-icon"><i class="fas fa-sitemap"></i></div>
+                  <div class="nav-dd-text-wrap"><span class="nav-dd-label">How We Work</span><span class="nav-dd-sub">Assess, plan, submit, sustain</span></div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav-item">
+            <a href="services.html" class="nav-link" data-page="services.html">Services <i class="fas fa-chevron-down nav-chevron"></i></a>
+            <div class="nav-dropdown nav-mega">
+              <div class="nav-dropdown-box nav-mega-box">
+                <div class="nav-mega-header">
+                  <span class="nav-mega-header-title">Compliance &amp; Permitting</span>
+                  <a href="services.html" class="nav-mega-cta">View All →</a>
+                </div>
+                <a href="services.html#svc-0" class="nav-dd-link">
+                  <div class="nav-dd-icon"><i class="fas fa-file-signature"></i></div>
+                  <div class="nav-dd-text-wrap"><span class="nav-dd-label">Environmental Permit</span><span class="nav-dd-sub">NCEC permit file to issuance</span></div>
+                </a>
+<a href="services.html#svc-1" class="nav-dd-link">
+                  <div class="nav-dd-icon"><i class="fas fa-clipboard-check"></i></div>
+                  <div class="nav-dd-text-wrap"><span class="nav-dd-label">Impact Assessment</span><span class="nav-dd-sub">EIA/ESIA for regulated projects</span></div>
+                </a>
+<a href="services.html#svc-2" class="nav-dd-link">
+                  <div class="nav-dd-icon"><i class="fas fa-recycle"></i></div>
+                  <div class="nav-dd-text-wrap"><span class="nav-dd-label">Waste Permit (MWAN)</span><span class="nav-dd-sub">Generators, carriers &amp; treaters</span></div>
+                </a>
+<a href="services.html#svc-3" class="nav-dd-link">
+                  <div class="nav-dd-icon"><i class="fas fa-tasks"></i></div>
+                  <div class="nav-dd-text-wrap"><span class="nav-dd-label">Environmental Management Plan</span><span class="nav-dd-sub">Permit conditions into practice</span></div>
+                </a>
+<a href="services.html#svc-4" class="nav-dd-link">
+                  <div class="nav-dd-icon"><i class="fas fa-folder-open"></i></div>
+                  <div class="nav-dd-text-wrap"><span class="nav-dd-label">Environmental Register</span><span class="nav-dd-sub">Continuous proof of compliance</span></div>
+                </a>
+<a href="services.html#svc-5" class="nav-dd-link">
+                  <div class="nav-dd-icon"><i class="fas fa-calendar-check"></i></div>
+                  <div class="nav-dd-text-wrap"><span class="nav-dd-label">Periodic Reporting</span><span class="nav-dd-sub">Filed on time, every cycle</span></div>
+                </a>
+                <div class="nav-mega-header" style="margin-top:8px;">
+                  <span class="nav-mega-header-title">Monitoring &amp; Testing</span>
+                  <a href="services.html#monitoring" class="nav-mega-cta">See all →</a>
+                </div>
+                <a href="services.html#monitoring" class="nav-dd-link">
+                  <div class="nav-dd-icon"><i class="fas fa-wind"></i></div>
+                  <div class="nav-dd-text-wrap"><span class="nav-dd-label">Air Quality Monitoring</span><span class="nav-dd-sub">Measurement &amp; assessment</span></div>
+                </a>
+<a href="services.html#monitoring" class="nav-dd-link">
+                  <div class="nav-dd-icon"><i class="fas fa-tint"></i></div>
+                  <div class="nav-dd-text-wrap"><span class="nav-dd-label">Water &amp; Wastewater Testing</span><span class="nav-dd-sub">Accredited analysis</span></div>
+                </a>
+<a href="services.html#monitoring" class="nav-dd-link">
+                  <div class="nav-dd-icon"><i class="fas fa-volume-up"></i></div>
+                  <div class="nav-dd-text-wrap"><span class="nav-dd-label">Noise Monitoring</span><span class="nav-dd-sub">Against regulated limits</span></div>
+                </a>
+<a href="services.html#monitoring" class="nav-dd-link">
+                  <div class="nav-dd-icon"><i class="fas fa-mountain"></i></div>
+                  <div class="nav-dd-text-wrap"><span class="nav-dd-label">Soil &amp; Sediment Testing</span><span class="nav-dd-sub">Contaminant levels</span></div>
+                </a>
+<a href="services.html#monitoring" class="nav-dd-link">
+                  <div class="nav-dd-icon"><i class="fas fa-vial"></i></div>
+                  <div class="nav-dd-text-wrap"><span class="nav-dd-label">Environmental Sampling</span><span class="nav-dd-sub">Chain-of-custody protocols</span></div>
+                </a>
+<a href="services.html#monitoring" class="nav-dd-link">
+                  <div class="nav-dd-icon"><i class="fas fa-microscope"></i></div>
+                  <div class="nav-dd-text-wrap"><span class="nav-dd-label">Laboratory Analysis</span><span class="nav-dd-sub">With technical interpretation</span></div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav-item">
+            <a href="technology.html" class="nav-link" data-page="technology.html">Laboratory <i class="fas fa-chevron-down nav-chevron"></i></a>
+            <div class="nav-dropdown">
+              <div class="nav-dropdown-box" style="min-width:240px;">
+                <div class="nav-dropdown-title">Measurement</div>
+                <a href="technology.html#equipment" class="nav-dd-link">
+                  <div class="nav-dd-icon"><i class="fas fa-flask"></i></div>
+                  <div class="nav-dd-text-wrap"><span class="nav-dd-label">Laboratory Services</span><span class="nav-dd-sub">Sampling, testing &amp; monitoring</span></div>
+                </a>
+                <div class="nav-dd-divider"></div>
+                <div class="nav-dropdown-title">Credentials</div>
+                <a href="technology.html#standards" class="nav-dd-link">
+                  <div class="nav-dd-icon"><i class="fas fa-stamp"></i></div>
+                  <div class="nav-dd-text-wrap"><span class="nav-dd-label">Licences &amp; Accreditations</span><span class="nav-dd-sub">NCEC, MWAN, RCJY, IAS &amp; ISO</span></div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav-item">
+            <a href="blog.html" class="nav-link" data-page="blog.html">Blog</a>
+          </div>
+
+          <div class="nav-item">
+            <a href="contact.html" class="nav-link" data-page="contact.html">Contact</a>
+          </div>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="index_arabic.html" class="nav-lang-btn">🌐 <span>العربية</span></a>
+          <a href="contact.html" class="nav-portal-btn"><i class="fas fa-paper-plane"></i> Free Consultation</a>
+          <button class="nav-hamburger" id="navHamburger" onclick="toggleNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main>
+<section class="page-header">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="crumb"><a href="index.html">Home</a><i class="fas fa-chevron-right" style="font-size:.55rem;"></i><span>Services</span></div>
+    <h1>A full spectrum of environmental services</h1>
+    <p>From pre-licensing impact assessments to continuous periodic reporting, every service is delivered by accredited consultants who know the Saudi regulatory landscape inside out.</p>
+  </div>
+</section>
+
+<section id="permitting" class="isvc-section" style="padding-top:56px;">
+  <div class="isvc-header" style="margin-bottom:44px;">
+    <div class="showcase-eyebrow">Compliance &amp; permitting</div>
+    <h2>Getting you licensed, and keeping you licensed</h2>
+    <p>The studies, permits and reporting cycles that stand between your facility and a valid environmental licence.</p>
+  </div>
+  <div class="isvc-layout">
+    <div class="isvc-tabs isvc-reveal" id="isvcTabs">
+      <div class="isvc-tab active" onclick="selectService(0)" id="svc-0">
+        <div class="isvc-tab-trigger">
+          <div class="isvc-tab-num">01</div><div class="isvc-tab-icon"><i class="fas fa-file-signature"></i></div>
+          <div class="isvc-tab-body"><div class="isvc-tab-name">Environmental Permit</div><div class="isvc-tab-short">NCEC permit file, start to issuance</div></div>
+          <div class="isvc-tab-chevron"><i class="fas fa-chevron-right"></i></div>
+        </div>
+        <div class="isvc-accordion-content">
+          <img class="isvc-acc-img" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=400&fit=crop&q=80" alt="" loading="lazy"/>
+          <div class="isvc-acc-body" id="isvc-acc-body-0"></div>
+        </div>
+      </div>
+      <div class="isvc-tab" onclick="selectService(1)" id="svc-1">
+        <div class="isvc-tab-trigger">
+          <div class="isvc-tab-num">02</div><div class="isvc-tab-icon"><i class="fas fa-clipboard-check"></i></div>
+          <div class="isvc-tab-body"><div class="isvc-tab-name">Environmental Impact Assessment</div><div class="isvc-tab-short">EIA/ESIA for high-impact projects</div></div>
+          <div class="isvc-tab-chevron"><i class="fas fa-chevron-right"></i></div>
+        </div>
+        <div class="isvc-accordion-content">
+          <img class="isvc-acc-img" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&h=400&fit=crop&q=80" alt="" loading="lazy"/>
+          <div class="isvc-acc-body" id="isvc-acc-body-1"></div>
+        </div>
+      </div>
+      <div class="isvc-tab" onclick="selectService(2)" id="svc-2">
+        <div class="isvc-tab-trigger">
+          <div class="isvc-tab-num">03</div><div class="isvc-tab-icon"><i class="fas fa-recycle"></i></div>
+          <div class="isvc-tab-body"><div class="isvc-tab-name">Waste Management Permit</div><div class="isvc-tab-short">MWAN permit for regulated waste</div></div>
+          <div class="isvc-tab-chevron"><i class="fas fa-chevron-right"></i></div>
+        </div>
+        <div class="isvc-accordion-content">
+          <img class="isvc-acc-img" src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=800&h=400&fit=crop&q=80" alt="" loading="lazy"/>
+          <div class="isvc-acc-body" id="isvc-acc-body-2"></div>
+        </div>
+      </div>
+      <div class="isvc-tab" onclick="selectService(3)" id="svc-3">
+        <div class="isvc-tab-trigger">
+          <div class="isvc-tab-num">04</div><div class="isvc-tab-icon"><i class="fas fa-tasks"></i></div>
+          <div class="isvc-tab-body"><div class="isvc-tab-name">Environmental Management Plan</div><div class="isvc-tab-short">Permit conditions into daily practice</div></div>
+          <div class="isvc-tab-chevron"><i class="fas fa-chevron-right"></i></div>
+        </div>
+        <div class="isvc-accordion-content">
+          <img class="isvc-acc-img" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=400&fit=crop&q=80" alt="" loading="lazy"/>
+          <div class="isvc-acc-body" id="isvc-acc-body-3"></div>
+        </div>
+      </div>
+      <div class="isvc-tab" onclick="selectService(4)" id="svc-4">
+        <div class="isvc-tab-trigger">
+          <div class="isvc-tab-num">05</div><div class="isvc-tab-icon"><i class="fas fa-folder-open"></i></div>
+          <div class="isvc-tab-body"><div class="isvc-tab-name">Environmental Register</div><div class="isvc-tab-short">Continuous proof of compliance</div></div>
+          <div class="isvc-tab-chevron"><i class="fas fa-chevron-right"></i></div>
+        </div>
+        <div class="isvc-accordion-content">
+          <img class="isvc-acc-img" src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=800&h=400&fit=crop&q=80" alt="" loading="lazy"/>
+          <div class="isvc-acc-body" id="isvc-acc-body-4"></div>
+        </div>
+      </div>
+      <div class="isvc-tab" onclick="selectService(5)" id="svc-5">
+        <div class="isvc-tab-trigger">
+          <div class="isvc-tab-num">06</div><div class="isvc-tab-icon"><i class="fas fa-calendar-check"></i></div>
+          <div class="isvc-tab-body"><div class="isvc-tab-name">Periodic Environmental Report</div><div class="isvc-tab-short">Keeping the permit you won</div></div>
+          <div class="isvc-tab-chevron"><i class="fas fa-chevron-right"></i></div>
+        </div>
+        <div class="isvc-accordion-content">
+          <img class="isvc-acc-img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop&q=80" alt="" loading="lazy"/>
+          <div class="isvc-acc-body" id="isvc-acc-body-5"></div>
+        </div>
+      </div>
+    </div>
+    <div class="isvc-panel-wrap isvc-reveal isvc-reveal-delay-1" id="isvcPanelWrap">
+      <div class="isvc-progress-bar" id="isvcProgressBar" style="width:16.66%"></div>
+      <div class="isvc-panel active" id="isvc-panel-0">
+        <div class="isvc-panel-img"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&h=520&fit=crop&q=80" alt="" onerror="this.src='https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&h=520&fit=crop'"/><div class="isvc-panel-img-overlay"></div><div class="isvc-panel-badge">NCEC Permit</div><div class="isvc-panel-watermark">01</div></div>
+        <div class="isvc-panel-body" id="isvc-panel-body-0"></div>
+      </div>
+      <div class="isvc-panel" id="isvc-panel-1">
+        <div class="isvc-panel-img"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&h=520&fit=crop&q=80" alt="" onerror="this.src='https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1200&h=520&fit=crop'"/><div class="isvc-panel-img-overlay"></div><div class="isvc-panel-badge olive">Pre-licensing</div><div class="isvc-panel-watermark">02</div></div>
+        <div class="isvc-panel-body" id="isvc-panel-body-1"></div>
+      </div>
+      <div class="isvc-panel" id="isvc-panel-2">
+        <div class="isvc-panel-img"><img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=1200&h=520&fit=crop&q=80" alt="" onerror="this.src='https://images.unsplash.com/photo-1610528532213-1c5f6c1e0e2f?w=1200&h=520&fit=crop'"/><div class="isvc-panel-img-overlay"></div><div class="isvc-panel-badge">MWAN</div><div class="isvc-panel-watermark">03</div></div>
+        <div class="isvc-panel-body" id="isvc-panel-body-2"></div>
+      </div>
+      <div class="isvc-panel" id="isvc-panel-3">
+        <div class="isvc-panel-img"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=520&fit=crop&q=80" alt="" onerror="this.src='https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1200&h=520&fit=crop'"/><div class="isvc-panel-img-overlay"></div><div class="isvc-panel-badge olive">EMP</div><div class="isvc-panel-watermark">04</div></div>
+        <div class="isvc-panel-body" id="isvc-panel-body-3"></div>
+      </div>
+      <div class="isvc-panel" id="isvc-panel-4">
+        <div class="isvc-panel-img"><img src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=1200&h=520&fit=crop&q=80" alt="" onerror="this.src='https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&h=520&fit=crop'"/><div class="isvc-panel-img-overlay"></div><div class="isvc-panel-badge">Register</div><div class="isvc-panel-watermark">05</div></div>
+        <div class="isvc-panel-body" id="isvc-panel-body-4"></div>
+      </div>
+      <div class="isvc-panel" id="isvc-panel-5">
+        <div class="isvc-panel-img"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=520&fit=crop&q=80" alt="" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=520&fit=crop'"/><div class="isvc-panel-img-overlay"></div><div class="isvc-panel-badge olive">Reporting</div><div class="isvc-panel-watermark">06</div></div>
+        <div class="isvc-panel-body" id="isvc-panel-body-5"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="monitoring" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14 scroll-reveal">
+      <div class="showcase-eyebrow">Monitoring &amp; testing</div>
+      <h2 class="text-4xl font-bold text-bp-ink mb-4">The measurements behind the paperwork</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">A permit is only as good as the data behind it. We carry out the sampling and testing your conditions require, to the method they require.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 scroll-reveal max-w-5xl mx-auto">
+        <a href="technology.html#equipment" class="flex items-center gap-3 px-4 py-3.5 bg-white rounded-xl border hover:border-bp-olive transition-all" style="border-color:var(--bp-border);text-decoration:none;">
+          <span class="w-9 h-9 rounded-lg flex items-center justify-center text-sm flex-shrink-0" style="background:var(--bp-olive-tint);color:var(--bp-olive);"><i class="fas fa-tint"></i></span>
+          <span class="font-display font-semibold text-bp-ink text-sm leading-snug">Water &amp; Wastewater Testing</span>
+        </a>
+        <a href="technology.html#equipment" class="flex items-center gap-3 px-4 py-3.5 bg-white rounded-xl border hover:border-bp-olive transition-all" style="border-color:var(--bp-border);text-decoration:none;">
+          <span class="w-9 h-9 rounded-lg flex items-center justify-center text-sm flex-shrink-0" style="background:var(--bp-olive-tint);color:var(--bp-olive);"><i class="fas fa-wind"></i></span>
+          <span class="font-display font-semibold text-bp-ink text-sm leading-snug">Air Quality Monitoring &amp; Testing</span>
+        </a>
+        <a href="technology.html#equipment" class="flex items-center gap-3 px-4 py-3.5 bg-white rounded-xl border hover:border-bp-olive transition-all" style="border-color:var(--bp-border);text-decoration:none;">
+          <span class="w-9 h-9 rounded-lg flex items-center justify-center text-sm flex-shrink-0" style="background:var(--bp-olive-tint);color:var(--bp-olive);"><i class="fas fa-volume-up"></i></span>
+          <span class="font-display font-semibold text-bp-ink text-sm leading-snug">Noise Monitoring &amp; Assessment</span>
+        </a>
+        <a href="technology.html#equipment" class="flex items-center gap-3 px-4 py-3.5 bg-white rounded-xl border hover:border-bp-olive transition-all" style="border-color:var(--bp-border);text-decoration:none;">
+          <span class="w-9 h-9 rounded-lg flex items-center justify-center text-sm flex-shrink-0" style="background:var(--bp-olive-tint);color:var(--bp-olive);"><i class="fas fa-mountain"></i></span>
+          <span class="font-display font-semibold text-bp-ink text-sm leading-snug">Soil &amp; Sediment Testing</span>
+        </a>
+        <a href="technology.html#equipment" class="flex items-center gap-3 px-4 py-3.5 bg-white rounded-xl border hover:border-bp-olive transition-all" style="border-color:var(--bp-border);text-decoration:none;">
+          <span class="w-9 h-9 rounded-lg flex items-center justify-center text-sm flex-shrink-0" style="background:var(--bp-olive-tint);color:var(--bp-olive);"><i class="fas fa-mobile-alt"></i></span>
+          <span class="font-display font-semibold text-bp-ink text-sm leading-snug">Field Monitoring &amp; Measurement</span>
+        </a>
+        <a href="technology.html#equipment" class="flex items-center gap-3 px-4 py-3.5 bg-white rounded-xl border hover:border-bp-olive transition-all" style="border-color:var(--bp-border);text-decoration:none;">
+          <span class="w-9 h-9 rounded-lg flex items-center justify-center text-sm flex-shrink-0" style="background:var(--bp-olive-tint);color:var(--bp-olive);"><i class="fas fa-vial"></i></span>
+          <span class="font-display font-semibold text-bp-ink text-sm leading-snug">Environmental Sampling Services</span>
+        </a>
+        <a href="technology.html#equipment" class="flex items-center gap-3 px-4 py-3.5 bg-white rounded-xl border hover:border-bp-olive transition-all" style="border-color:var(--bp-border);text-decoration:none;">
+          <span class="w-9 h-9 rounded-lg flex items-center justify-center text-sm flex-shrink-0" style="background:var(--bp-olive-tint);color:var(--bp-olive);"><i class="fas fa-chart-line"></i></span>
+          <span class="font-display font-semibold text-bp-ink text-sm leading-snug">Environmental Monitoring Programmes</span>
+        </a>
+        <a href="technology.html#equipment" class="flex items-center gap-3 px-4 py-3.5 bg-white rounded-xl border hover:border-bp-olive transition-all" style="border-color:var(--bp-border);text-decoration:none;">
+          <span class="w-9 h-9 rounded-lg flex items-center justify-center text-sm flex-shrink-0" style="background:var(--bp-olive-tint);color:var(--bp-olive);"><i class="fas fa-microscope"></i></span>
+          <span class="font-display font-semibold text-bp-ink text-sm leading-snug">Laboratory Analysis &amp; Data Interpretation</span>
+        </a>
+        <a href="technology.html#equipment" class="flex items-center gap-3 px-4 py-3.5 bg-white rounded-xl border hover:border-bp-olive transition-all" style="border-color:var(--bp-border);text-decoration:none;">
+          <span class="w-9 h-9 rounded-lg flex items-center justify-center text-sm flex-shrink-0" style="background:var(--bp-olive-tint);color:var(--bp-olive);"><i class="fas fa-satellite-dish"></i></span>
+          <span class="font-display font-semibold text-bp-ink text-sm leading-snug">Monitoring &amp; Pollution Control Equipment</span>
+        </a>
+        <a href="technology.html#equipment" class="flex items-center gap-3 px-4 py-3.5 bg-white rounded-xl border hover:border-bp-olive transition-all" style="border-color:var(--bp-border);text-decoration:none;">
+          <span class="w-9 h-9 rounded-lg flex items-center justify-center text-sm flex-shrink-0" style="background:var(--bp-olive-tint);color:var(--bp-olive);"><i class="fas fa-file-alt"></i></span>
+          <span class="font-display font-semibold text-bp-ink text-sm leading-snug">Environmental Reporting &amp; Compliance</span>
+        </a>
+    </div>
+    <div class="text-center mt-10 scroll-reveal"><a href="technology.html" class="btn-olive">Full laboratory services <i class="fas fa-arrow-right" style="font-size:.75rem;"></i></a></div>
+  </div>
+</section>
+
+<section class="py-24" style="background:var(--bp-page);">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14 scroll-reveal">
+      <div class="showcase-eyebrow">Beyond permitting</div>
+      <h2 class="text-4xl font-bold text-bp-ink mb-4">Six further service categories</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">Alongside permitting and monitoring, BluePrint delivers specialist work across sustainability, ecology, marine, remediation, modelling and laboratory services.</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 scroll-reveal">
+      <div class="bg-white rounded-2xl p-7 shadow-sm border hover:shadow-lg transition-all" style="border-color:var(--bp-border);">
+        <div class="flex items-start justify-between mb-4">
+          <div class="w-12 h-12 rounded-xl bg-bp-light flex items-center justify-center text-bp-primary text-lg"><i class="fas fa-leaf"></i></div>
+          <span class="text-xs font-semibold px-3 py-1 rounded-full" style="background:var(--bp-olive-tint);color:var(--bp-olive-deep);">17 services</span>
+        </div>
+        <h3 class="font-display font-bold text-bp-ink text-lg mb-2">Climate Change &amp; Sustainability</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">ESG strategy and reporting, carbon footprint, net zero roadmaps, GHG inventory, LEED, BREEAM and Mostadam certification support, energy efficiency and green building audits.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-7 shadow-sm border hover:shadow-lg transition-all" style="border-color:var(--bp-border);">
+        <div class="flex items-start justify-between mb-4">
+          <div class="w-12 h-12 rounded-xl bg-bp-light flex items-center justify-center text-bp-primary text-lg"><i class="fas fa-dove"></i></div>
+          <span class="text-xs font-semibold px-3 py-1 rounded-full" style="background:var(--bp-olive-tint);color:var(--bp-olive-deep);">6 services</span>
+        </div>
+        <h3 class="font-display font-bold text-bp-ink text-lg mb-2">Ecological &amp; Biological Surveys</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">Marine and terrestrial ecology, baseline studies, bird surveys, habitat mapping, and protected species surveys.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-7 shadow-sm border hover:shadow-lg transition-all" style="border-color:var(--bp-border);">
+        <div class="flex items-start justify-between mb-4">
+          <div class="w-12 h-12 rounded-xl bg-bp-light flex items-center justify-center text-bp-primary text-lg"><i class="fas fa-water"></i></div>
+          <span class="text-xs font-semibold px-3 py-1 rounded-full" style="background:var(--bp-olive-tint);color:var(--bp-olive-deep);">6 services</span>
+        </div>
+        <h3 class="font-display font-bold text-bp-ink text-lg mb-2">Marine Environment</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">Water and sediment sampling, marine habitat mapping, oceanographic surveys, in-situ water quality monitoring, marine modelling, and bathymetric surveys.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-7 shadow-sm border hover:shadow-lg transition-all" style="border-color:var(--bp-border);">
+        <div class="flex items-start justify-between mb-4">
+          <div class="w-12 h-12 rounded-xl bg-bp-light flex items-center justify-center text-bp-primary text-lg"><i class="fas fa-seedling"></i></div>
+          <span class="text-xs font-semibold px-3 py-1 rounded-full" style="background:var(--bp-olive-tint);color:var(--bp-olive-deep);">5 services</span>
+        </div>
+        <h3 class="font-display font-bold text-bp-ink text-lg mb-2">Remediation &amp; Rehabilitation</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">Site investigation and risk assessment, site characterisation, data gap assessment, and in-situ and ex-situ remediation.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-7 shadow-sm border hover:shadow-lg transition-all" style="border-color:var(--bp-border);">
+        <div class="flex items-start justify-between mb-4">
+          <div class="w-12 h-12 rounded-xl bg-bp-light flex items-center justify-center text-bp-primary text-lg"><i class="fas fa-project-diagram"></i></div>
+          <span class="text-xs font-semibold px-3 py-1 rounded-full" style="background:var(--bp-olive-tint);color:var(--bp-olive-deep);">5 services</span>
+        </div>
+        <h3 class="font-display font-bold text-bp-ink text-lg mb-2">Environmental Modelling</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">Hydrodynamic, air pollutant dispersion, groundwater, hydrology and hydraulics, and noise modelling.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-7 shadow-sm border hover:shadow-lg transition-all" style="border-color:var(--bp-border);">
+        <div class="flex items-start justify-between mb-4">
+          <div class="w-12 h-12 rounded-xl bg-bp-light flex items-center justify-center text-bp-primary text-lg"><i class="fas fa-flask"></i></div>
+          <span class="text-xs font-semibold px-3 py-1 rounded-full" style="background:var(--bp-olive-tint);color:var(--bp-olive-deep);">10 services</span>
+        </div>
+        <h3 class="font-display font-bold text-bp-ink text-lg mb-2">Environmental Laboratory Services</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">Sampling, testing, and environmental monitoring — from field data collection through analysis to technical interpretation.</p>
+      </div>
+    </div>
+    <div class="text-center mt-12 scroll-reveal"><a href="contact.html" class="btn-primary">Request a scope <i class="fas fa-arrow-right" style="font-size:.75rem;"></i></a></div>
+  </div>
+</section>
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="footer-top-rule"></div>
+
+  <div class="footer-cta-strip">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-7">
+      <div class="footer-cta-strip-inner flex flex-wrap items-center justify-between gap-5">
+        <div>
+          <p class="footer-cta-label">Start Your Project</p>
+          <p class="footer-cta-title">Ready to make compliance the easy part?</p>
+        </div>
+        <div class="footer-cta-strip-btns flex flex-wrap gap-3">
+          <a href="contact.html" class="footer-cta-strip-btn primary"><i class="fas fa-paper-plane" style="font-size:.75rem;"></i> Book a consultation</a>
+          <a data-wa="Hello BluePrint, I would like to ask about your environmental services." class="footer-cta-strip-btn wa"><i class="fab fa-whatsapp" style="font-size:.88rem;"></i> WhatsApp Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-12">
+    <div class="footer-grid">
+
+      <div class="footer-brand-col">
+        <a href="index.html" class="footer-brand-logo js-home-link" aria-label="BluePrint — back to top">
+          <img src="assets/logo/blueprint-logo-white.png" alt="BluePrint Environmental Services" />
+        </a>
+        <p class="footer-brand-desc">Accredited environmental consultancy delivering compliance, permitting, and reporting across the Kingdom of Saudi Arabia.</p>
+        <div class="footer-cert-row">
+          <span class="footer-cert-badge"><i class="fas fa-stamp"></i> NCEC</span>
+          <span class="footer-cert-badge"><i class="fas fa-recycle"></i> MWAN</span>
+          <span class="footer-cert-badge"><i class="fas fa-industry"></i> RCJY</span>
+          <span class="footer-cert-badge"><i class="fas fa-globe-americas"></i> IAS</span>
+          <span class="footer-cert-badge"><i class="fas fa-award"></i> ISO 9001</span>
+          <span class="footer-cert-badge"><i class="fas fa-leaf"></i> ISO 14001</span>
+          <span class="footer-cert-badge"><i class="fas fa-hard-hat"></i> ISO 45001</span>
+        </div>
+        <div class="footer-social-row">
+          <a href="https://www.linkedin.com/company/alemad-alarabi/" target="_blank" rel="noopener" class="footer-social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://x.com/blueprint_env" target="_blank" rel="noopener" class="footer-social-btn" aria-label="X"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/blueprint_env" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a data-wa="" class="footer-social-btn wa" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Company</h4>
+        <ul class="footer-link-list">
+          <li><a href="index.html#overview"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Overview</a></li>
+          <li><a href="technology.html"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Laboratory</a></li>
+          <li><a href="index.html#process"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Our Process</a></li>
+          <li><a href="index.html#sectors"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Sectors</a></li>
+          <li><a href="blog.html"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Blog</a></li>
+          <li><a href="index_arabic.html"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>العربية</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Permitting</h4>
+        <ul class="footer-link-list">
+          <li><a href="services.html#svc-0"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Environmental Permit</a></li>
+          <li><a href="services.html#svc-1"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Impact Assessment</a></li>
+          <li><a href="services.html#svc-2"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Permitting (MWAN)</a></li>
+          <li><a href="services.html#svc-3"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Management Plans</a></li>
+          <li><a href="services.html#svc-4"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Environmental Registers</a></li>
+          <li><a href="services.html#svc-5"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Periodic Reporting</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Monitoring</h4>
+        <ul class="footer-link-list">
+          <li><a href="services.html#monitoring"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Air Quality</a></li>
+          <li><a href="services.html#monitoring"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Water &amp; Wastewater</a></li>
+          <li><a href="services.html#monitoring"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Noise</a></li>
+          <li><a href="services.html#monitoring"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Soil &amp; Sediment</a></li>
+          <li><a href="services.html#monitoring"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Sampling</a></li>
+          <li><a href="technology.html"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Laboratory Analysis</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Resources</h4>
+        <ul class="footer-link-list">
+          <li><a href="blog.html"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Compliance Briefing</a></li>
+          <li><a href="services.html#permitting"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Permitting Guide</a></li>
+          <li><a href="technology.html#standards"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Accreditations</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact-col">
+        <h4 class="footer-col-title">Contact</h4>
+        <div class="footer-contact-row"><div class="footer-contact-icon-box"><i class="fas fa-map-marker-alt"></i></div><div><div class="footer-contact-label">Location</div><div class="footer-contact-value" data-text="address"></div></div></div>
+        <div class="footer-contact-row"><div class="footer-contact-icon-box"><i class="fas fa-envelope"></i></div><div><div class="footer-contact-label">Email</div><div class="footer-contact-value"><a data-mail data-text="email"></a></div></div></div>
+        <div class="footer-contact-row"><div class="footer-contact-icon-box"><i class="fas fa-phone"></i></div><div><div class="footer-contact-label">Phone</div><div class="footer-contact-value"><a data-tel data-text="phone"></a></div></div></div>
+        <div class="footer-contact-row"><div class="footer-contact-icon-box"><i class="fab fa-whatsapp"></i></div><div><div class="footer-contact-label">WhatsApp</div><div class="footer-contact-value"><a data-wa="" data-text="phone"></a></div></div></div>
+        <div class="footer-contact-row"><div class="footer-contact-icon-box"><i class="fas fa-clock"></i></div><div><div class="footer-contact-label">Working hours</div><div class="footer-contact-value">Sun &ndash; Thu &middot; 9:00 &ndash; 18:00 AST</div></div></div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-bottom-bar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
+      <div class="footer-bottom-inner flex flex-wrap items-center justify-between gap-4">
+        <div style="display:flex;flex-direction:column;gap:3px;">
+          <p class="footer-copy">© <span data-text="year"></span> BluePrint Environmental Services. All rights reserved.</p>
+          <p class="footer-credit">Prepared by: <span>Sikander Chishti</span>, Environmental Engineer</p>
+        </div>
+        <div style="display:flex;align-items:center;flex-wrap:wrap;gap:2px;">
+          <a href="privacy.html" class="footer-legal-btn">Privacy Policy</a>
+          <span class="footer-legal-sep"></span>
+          <a href="terms.html" class="footer-legal-btn">Terms &amp; Conditions</a>
+          <span class="footer-legal-sep"></span>
+          <a href="index_arabic.html" class="footer-legal-btn" style="color:rgba(163,181,111,.6);">🌐 العربية</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     FLOATING WIDGETS — WhatsApp, expert CTA
+     ============================================================ -->
+<div id="whatsappContainer" class="whatsapp-container">
+  <a href="#" id="whatsappBtn" class="whatsapp-btn" title="Chat with us on WhatsApp" aria-label="Chat on WhatsApp">
+    <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004c-1.025 0-2.031.313-2.896.893L4.734 5.309l.92 2.844c-.603.947-.923 2.035-.923 3.181 0 3.291 2.692 5.984 5.982 5.984 1.579 0 3.06-.616 4.181-1.732 1.122-1.117 1.742-2.598 1.742-4.181 0-3.291-2.692-5.984-5.982-5.984zm5.846 12.856c-1.196 1.195-2.786 1.852-4.48 1.852-3.491 0-6.33-2.838-6.33-6.33 0-1.1.292-2.191.847-3.144l.547-1.002-1.841-5.631 5.766.891.953-.517c.878-.478 1.877-.733 2.906-.733 3.49 0 6.33 2.838 6.33 6.33 0 1.694-.657 3.285-1.852 4.481"/></svg>
+  </a>
+  <div class="whatsapp-tooltip">Chat with us on WhatsApp</div>
+</div>
+
+<div id="expertCTA">
+  <div id="expertTab" onclick="toggleExpert()" role="button" tabindex="0" aria-label="Speak to an expert">
+    <div class="expert-photo-wrap"><img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=120&h=120&fit=crop&q=80" alt="Environmental Expert" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?w=120&h=120&fit=crop'" /></div>
+    <div class="expert-label-pill"><span>Ask an Expert</span><span>Free Consultation →</span></div>
+  </div>
+  <div id="expertPanel">
+    <div class="ep-header">
+      <div class="ep-photo"><img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=120&h=120&fit=crop&q=80" alt="Expert" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?w=120&h=120&fit=crop'" /></div>
+      <div class="ep-info"><div class="ep-name">Environmental Specialist</div><div class="ep-role">Accredited environmental consultant &middot; Riyadh</div><div class="ep-status">Available now</div></div>
+      <button class="ep-close" onclick="closeExpert()" aria-label="Close">✕</button>
+    </div>
+    <div class="ep-body">
+      <div class="ep-question">Have a question?</div>
+      <div class="ep-hint">Our team typically responds within 2 hours during business hours.</div>
+      <div class="ep-options">
+        <a data-wa="Hello BluePrint, I have a compliance question" class="ep-option whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp — fastest response</a>
+        <a data-mail class="ep-option email"><i class="fas fa-envelope"></i> Email us directly</a>
+        <a data-tel class="ep-option call"><i class="fas fa-phone"></i> Call <span data-text="phone"></span></a>
+      </div>
+      <div class="ep-divider">or send a quick message</div>
+      <div class="ep-quick-msg"><input type="text" id="expertMsgInput" placeholder="e.g. which permit does my workshop need?" maxlength="120" aria-label="Quick message" /><button onclick="sendExpertMsg()" aria-label="Send"><i class="fas fa-paper-plane"></i></button></div>
+    </div>
+    <div class="ep-footer">Free consultation · No commitment required</div>
+  </div>
+</div>
+<script src="js/main.js"></script>
+<script src="js/widgets.js"></script>
+<script src="js/services.js"></script>
+</body>
+</html>
