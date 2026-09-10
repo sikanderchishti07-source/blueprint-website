@@ -64,11 +64,11 @@ HOME = """
 </section>
 
 <!-- SERVICES — three cards, click to expand -->
-<section id="services" class="py-20" style="background:var(--bp-page);">
+<section id="services" class="svc-section" style="background:var(--bp-page);">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-10 scroll-reveal">
+    <div class="svc-head text-center scroll-reveal">
       <div class="showcase-eyebrow">What we do</div>
-      <h2 class="text-3xl lg:text-4xl font-bold text-bp-ink mb-3 tracking-tight">Take on any obligation</h2>
+      <h2 class="svc-h2 font-bold text-bp-ink mb-3 tracking-tight">Take on any obligation</h2>
       <p class="text-gray-600 text-sm max-w-lg mx-auto leading-relaxed">Three service lines covering the whole compliance lifecycle.</p>
     </div>
 
