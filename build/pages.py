@@ -12,220 +12,11 @@ def page_header(title, subtitle, crumb):
 """
 
 
-# ───────────────────────────── HOME ─────────────────────────────
-def home():
-    return """
-<!-- HERO -->
-<section class="relative min-h-screen flex items-center hero-gradient overflow-hidden">
-  <div id="particles" class="absolute inset-0 overflow-hidden" aria-hidden="true"></div>
-  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
-    <div class="grid lg:grid-cols-2 gap-12 items-center">
-      <div class="text-white space-y-8 animate-slide-up">
-        <div class="inline-flex items-center space-x-2 px-4 py-2 bg-white/10 rounded-full backdrop-blur-sm border border-white/20">
-          <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-          <span class="text-sm font-medium">Delivering Excellence Since 2014</span>
-        </div>
-        <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight">Air Quality <br><span class="text-bp-sage">Monitoring</span> &amp;<br>Environmental<br>Consultancy</h1>
-        <p class="text-xl text-gray-200 max-w-lg leading-relaxed">Delivering precision environmental monitoring solutions across the Kingdom of Saudi Arabia with cutting-edge technology and regulatory expertise.</p>
-        <div class="flex flex-wrap gap-4">
-          <a href="services.html" class="px-8 py-4 bg-white text-bp-ink rounded-full font-bold hover:bg-bp-sage hover:text-bp-ink transition-all transform hover:scale-105 shadow-xl">Explore Services</a>
-          <button onclick="openCalculator()" class="px-8 py-4 border-2 border-white text-white rounded-full font-bold hover:bg-white hover:text-bp-ink transition-all flex items-center gap-2"><i class="fas fa-calculator"></i> Free Calculator</button>
-        </div>
-        <div class="flex flex-wrap gap-2 pt-2">
-          <button onclick="openPortal()" class="flex items-center gap-2 px-4 py-2 bg-white/15 backdrop-blur-sm rounded-full text-sm border border-white/30 hover:bg-white/25 transition-all"><i class="fas fa-folder-open text-bp-sage"></i> Client Portal</button>
-          <button onclick="openCalculator('carbon')" class="flex items-center gap-2 px-4 py-2 bg-white/15 backdrop-blur-sm rounded-full text-sm border border-white/30 hover:bg-white/25 transition-all"><i class="fas fa-leaf text-green-300"></i> Carbon Calculator</button>
-          <a href="resources.html#env-news-section" class="flex items-center gap-2 px-4 py-2 bg-white/15 backdrop-blur-sm rounded-full text-sm border border-white/30 hover:bg-white/25 transition-all"><i class="fas fa-newspaper text-bp-sage"></i> News Bulletin</a>
-          <span class="flex items-center gap-2 px-4 py-2 bg-white/15 backdrop-blur-sm rounded-full text-sm border border-white/30"><i class="fas fa-robot text-bp-sage"></i> AI Chatbot Live</span>
-        </div>
-      </div>
-      <div class="relative hidden lg:block">
-        <img src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=800&h=600&fit=crop" alt="Environmental Monitoring" class="rounded-3xl shadow-2xl transform hover:scale-105 transition-transform duration-700 object-cover h-[500px] w-full" />
-        <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl p-6 shadow-2xl animate-float">
-          <div class="flex items-center space-x-4">
-            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600"><i class="fas fa-leaf text-xl"></i></div>
-            <div><p class="text-2xl font-bold text-bp-ink">1000+</p><p class="text-sm text-gray-600">Projects Completed</p></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="absolute bottom-0 left-0 right-0" aria-hidden="true">
-    <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="#f5f7fb" /></svg>
-  </div>
-</section>
-
-<!-- STATS BAR -->
-<section class="py-20 -mt-20 relative z-20">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-      <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow text-center group"><div class="text-4xl font-bold stat-number mb-2 group-hover:scale-110 transition-transform inline-block">10+</div><p class="text-gray-600 font-medium">Years Experience</p></div>
-      <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow text-center group"><div class="text-4xl font-bold stat-number mb-2 group-hover:scale-110 transition-transform inline-block">1000+</div><p class="text-gray-600 font-medium">Completed Projects</p></div>
-      <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow text-center group"><div class="text-4xl font-bold stat-number mb-2 group-hover:scale-110 transition-transform inline-block">50+</div><p class="text-gray-600 font-medium">Specialists</p></div>
-      <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow text-center group"><div class="text-4xl font-bold stat-number mb-2 group-hover:scale-110 transition-transform inline-block">5</div><p class="text-gray-600 font-medium">Regional Offices</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- COMPANY OVERVIEW -->
-<section id="overview" class="py-24 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid lg:grid-cols-2 gap-16 items-center">
-      <div class="scroll-reveal">
-        <div class="inline-block px-4 py-2 bg-bp-light rounded-full text-bp-primary font-semibold text-sm mb-6">About BluePrint</div>
-        <h2 class="text-4xl font-bold text-bp-ink mb-6 leading-tight">Environmental Excellence for a <span class="text-bp-olive">Sustainable Future</span></h2>
-        <p class="text-gray-600 text-lg leading-relaxed mb-6">BluePrint Environmental Services is a leading environmental consultancy based in Riyadh, KSA, providing integrated environmental solutions to industrial, infrastructure, and development clients.</p>
-        <div class="space-y-4 mb-8">
-          <div class="flex items-start space-x-4"><div class="w-6 h-6 rounded-full bg-bp-primary flex items-center justify-center flex-shrink-0 mt-1"><i class="fas fa-check text-white text-xs"></i></div><div><h4 class="font-bold text-bp-ink">Mission</h4><p class="text-gray-600">To deliver world-class environmental consultancy that ensures sustainable development through scientific excellence and regulatory compliance.</p></div></div>
-          <div class="flex items-start space-x-4"><div class="w-6 h-6 rounded-full bg-bp-olive flex items-center justify-center flex-shrink-0 mt-1"><i class="fas fa-check text-white text-xs"></i></div><div><h4 class="font-bold text-bp-ink">Vision</h4><p class="text-gray-600">To be the most trusted environmental partner across the Middle East.</p></div></div>
-        </div>
-        <div class="flex flex-wrap gap-3">
-          <span class="px-4 py-2 bg-bp-light text-bp-primary rounded-lg font-medium text-sm">ISO Accredited</span>
-          <span class="px-4 py-2 bg-bp-light text-bp-primary rounded-lg font-medium text-sm">NCEC Compliant</span>
-          <span class="px-4 py-2 bg-bp-light text-bp-primary rounded-lg font-medium text-sm">US EPA Methods</span>
-        </div>
-      </div>
-      <div class="relative scroll-reveal">
-        <div class="absolute -inset-4 rounded-3xl opacity-20 blur-2xl" style="background:var(--bp-grad);"></div>
-        <div class="relative bg-white rounded-3xl shadow-2xl overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=600&h=400&fit=crop" alt="Our Presence" class="w-full h-64 object-cover" />
-          <div class="p-8">
-            <h3 class="text-2xl font-bold text-bp-ink mb-6">Our Presence</h3>
-            <div class="space-y-4">
-              <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl"><div class="flex items-center space-x-3"><i class="fas fa-building text-bp-primary"></i><span class="font-medium">Head Office</span></div><span class="text-gray-600">Riyadh, KSA</span></div>
-              <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl"><div class="flex items-center space-x-3"><i class="fas fa-code-branch text-bp-olive"></i><span class="font-medium">Branches</span></div><span class="text-gray-600">Jeddah, Dammam</span></div>
-              <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl"><div class="flex items-center space-x-3"><i class="fas fa-globe text-bp-sage"></i><span class="font-medium">International</span></div><span class="text-gray-600">Cairo, Milan</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES PREVIEW -->
-<section id="services" class="py-24" style="background:var(--bp-page);">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-14 scroll-reveal">
-      <div class="showcase-eyebrow">Our Expertise</div>
-      <h2 class="text-4xl font-bold text-bp-ink mb-4">Solutions for every environmental challenge</h2>
-      <p class="text-gray-600 max-w-2xl mx-auto">Full-spectrum environmental monitoring and consultancy across the Kingdom of Saudi Arabia.</p>
-    </div>
-    <div class="svc-preview scroll-reveal">
-      <a href="services.html#svc-0" class="svc-preview-card"><div class="svc-preview-icon"><i class="fas fa-wind"></i></div><div><div class="svc-preview-name">Ambient Air Quality</div><div class="svc-preview-short">PM2.5, PM10, NO₂, SO₂ &amp; ozone</div></div></a>
-      <a href="services.html#svc-1" class="svc-preview-card"><div class="svc-preview-icon"><i class="fas fa-smog"></i></div><div><div class="svc-preview-name">Stack Emission Testing</div><div class="svc-preview-short">US EPA Method 5/9 · Industrial stacks</div></div></a>
-      <a href="services.html#svc-2" class="svc-preview-card"><div class="svc-preview-icon"><i class="fas fa-building"></i></div><div><div class="svc-preview-name">Indoor Air Quality</div><div class="svc-preview-short">TVOC, formaldehyde, CO₂ profiling</div></div></a>
-      <a href="services.html#svc-3" class="svc-preview-card"><div class="svc-preview-icon"><i class="fas fa-mountain"></i></div><div><div class="svc-preview-name">Environmental Impact Assessment</div><div class="svc-preview-short">EIA/ESIA · NCEC / IFC standards</div></div></a>
-      <a href="services.html#svc-4" class="svc-preview-card"><div class="svc-preview-icon"><i class="fas fa-tint"></i></div><div><div class="svc-preview-name">Water &amp; Soil Analysis</div><div class="svc-preview-short">Heavy metals, VOCs · ISO/IEC 17025</div></div></a>
-      <a href="services.html#svc-5" class="svc-preview-card"><div class="svc-preview-icon"><i class="fas fa-leaf"></i></div><div><div class="svc-preview-name">Environmental Management Plans</div><div class="svc-preview-short">EMP design · ISO 14001 audit support</div></div></a>
-    </div>
-    <div class="text-center mt-10 scroll-reveal"><a href="services.html" class="btn-primary">View all services <i class="fas fa-arrow-right" style="font-size:.75rem;"></i></a></div>
-  </div>
-</section>
-
-<!-- MONITORING PROCESS -->
-<section id="process" class="py-24 text-white relative overflow-hidden" style="background:var(--bp-blue-ink);">
-  <div class="absolute inset-0 opacity-10" aria-hidden="true">
-    <div class="absolute top-0 left-0 w-96 h-96 bg-bp-primary rounded-full blur-3xl"></div>
-    <div class="absolute bottom-0 right-0 w-96 h-96 bg-bp-olive rounded-full blur-3xl"></div>
-  </div>
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    <div class="text-center mb-16 scroll-reveal">
-      <div class="inline-block px-4 py-2 bg-white/10 rounded-full text-bp-sage font-semibold text-sm mb-4 backdrop-blur-sm">Our Methodology</div>
-      <h2 class="text-4xl font-bold mb-4">Data Collection &amp; Monitoring Process</h2>
-      <p class="text-gray-300 max-w-2xl mx-auto">A systematic, standards-based workflow from site mobilisation to compliance reporting</p>
-    </div>
-    <div class="relative">
-      <div class="hidden md:block absolute top-1/2 left-0 right-0 h-1 process-line rounded-full transform -translate-y-1/2"></div>
-      <div class="grid md:grid-cols-5 gap-8">
-""" + "".join(f"""        <div class="relative scroll-reveal group"><div class="w-20 h-20 mx-auto bg-white rounded-2xl flex items-center justify-center text-3xl font-bold text-bp-ink shadow-xl relative z-20 transform group-hover:scale-110 group-hover:rotate-3 transition-all">{n}</div><div class="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/20 hover:bg-white/20 transition-all" style="margin-top:-2.5rem"><div style="height:2.5rem"></div><img src="{img}" alt="{title}" class="w-full h-36 object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" onerror="this.style.display='none'" /><div class="p-6"><h4 class="font-bold text-lg mb-2 text-bp-sage">{title}</h4><p class="text-sm text-gray-300">{desc}</p></div></div></div>
-""" for n, img, title, desc in [
-    (1, "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=180&fit=crop&q=80", "Project Scoping", "Define monitoring objectives, regulatory requirements, receptor locations per NCEC/ISO"),
-    (2, "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=180&fit=crop&q=80", "Site Assessment", "Field reconnaissance, existing condition evaluation, background concentration measurement"),
-    (3, "https://images.unsplash.com/photo-1621451537084-482c73073a0f?w=400&h=180&fit=crop&q=80", "Equipment Deployment", "Installation and calibration of ambient monitors, met stations, and sampling equipment"),
-    (4, "https://images.unsplash.com/photo-1563207153-f403bf289096?w=400&h=180&fit=crop&q=80", "Sample Collection", "Systematic collection of air samples, stack test runs, and real-time data logging"),
-    (5, "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=400&h=180&fit=crop&q=80", "Lab Analysis", "Accredited lab analysis of filter samples for PM, metals, VOCs with QA/QC controls"),
-]) + """      </div>
-    </div>
-    <div class="mt-20 bg-white/5 rounded-3xl p-8 backdrop-blur-sm border border-white/10 scroll-reveal">
-      <h3 class="text-2xl font-bold mb-8 text-center">Reporting Workflow</h3>
-      <div class="flex flex-wrap justify-center gap-4">
-        <div class="flex items-center space-x-2 bg-white/10 px-6 py-3 rounded-full"><i class="fas fa-database text-bp-sage"></i><span>Data Acquisition</span></div>
-        <i class="fas fa-arrow-right text-bp-sage self-center hidden md:block"></i>
-        <div class="flex items-center space-x-2 bg-white/10 px-6 py-3 rounded-full"><i class="fas fa-search text-bp-sage"></i><span>QA/QC Validation</span></div>
-        <i class="fas fa-arrow-right text-bp-sage self-center hidden md:block"></i>
-        <div class="flex items-center space-x-2 bg-white/10 px-6 py-3 rounded-full"><i class="fas fa-chart-line text-bp-sage"></i><span>Statistical Analysis</span></div>
-        <i class="fas fa-arrow-right text-bp-sage self-center hidden md:block"></i>
-        <div class="flex items-center space-x-2 bg-white/10 px-6 py-3 rounded-full"><i class="fas fa-map-marked-alt text-bp-sage"></i><span>Spatial Mapping</span></div>
-        <i class="fas fa-arrow-right text-bp-sage self-center hidden md:block"></i>
-        <div class="flex items-center space-x-2 bg-bp-sage text-bp-ink px-6 py-3 rounded-full font-bold"><i class="fas fa-file-contract"></i><span>Report Generation</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- LOGO TICKER -->
-<section class="logo-ticker-section">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="logo-ticker-header"><h3>Trusted By Leading Organizations</h3><p>Delivering environmental excellence to industry leaders across the Middle East</p></div>
-    <div class="logo-ticker-wrapper"><div class="logo-ticker-track" id="logoTrack"></div></div>
-  </div>
-</section>
-
-<!-- KEY PROJECTS & CLIENT PORTFOLIO -->
-<section id="clients" class="py-24 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16 scroll-reveal">
-      <div class="inline-block px-4 py-2 bg-bp-light rounded-full text-bp-primary font-semibold text-sm mb-4">Trusted By Industry Leaders</div>
-      <h2 class="text-4xl font-bold text-bp-ink mb-4">Key Projects &amp; Client Portfolio</h2>
-      <p class="text-gray-600 max-w-2xl mx-auto">Proven track record across Saudi Arabia's major national development programs</p>
-    </div>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 scroll-reveal">
-""" + "".join(f"""      <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer"><img src="{img}" alt="{title}" class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500" /><div class="absolute inset-0 opacity-90" style="background:linear-gradient(to top,#04333a 0%,rgba(4, 51, 58,.5) 50%,transparent 100%);"></div><div class="absolute bottom-0 left-0 right-0 p-6 text-white"><div class="flex items-center space-x-2 mb-2"><i class="fas {icon} text-bp-sage"></i><span class="text-sm font-medium text-bp-sage">{cat}</span></div><h3 class="text-xl font-bold mb-2">{title}</h3><p class="text-sm text-gray-300">{desc}</p></div></div>
-""" for img, icon, cat, title, desc in [
-    ("https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=400&h=300&fit=crop", "fa-industry", "Industrial", "Riyadh Cement Plant", "Comprehensive ambient air and stack emission monitoring with US EPA methods"),
-    ("https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=400&h=300&fit=crop", "fa-tree", "Urban Development", "King Salman Park (KSP)", "Environmental monitoring for Riyadh's largest urban park project"),
-    ("https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=300&fit=crop", "fa-water", "Tourism", "Red Sea Project", "ESIA for mega tourism development including marine ecology and air quality"),
-    ("https://images.unsplash.com/photo-1533106958155-d2d702b46d8a?w=400&h=300&fit=crop", "fa-rocket", "Entertainment", "Qiddiya Entertainment City", "Air quality monitoring for one of the world's largest entertainment destinations"),
-    ("https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=400&h=300&fit=crop", "fa-bolt", "Energy", "Qassim Power Plant", "Combined-cycle power station environmental compliance and CEMS"),
-    ("https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop", "fa-border-all", "Infrastructure", "12 Land Border Crossings", "ESIA preparation for national border crossing facilities"),
-]) + """    </div>
-    <div class="mt-16 grid md:grid-cols-4 gap-6 scroll-reveal">
-      <div class="text-center p-6 bg-gray-50 rounded-2xl"><i class="fas fa-industry text-4xl text-bp-primary mb-4"></i><h4 class="font-bold text-bp-ink mb-2">Industrial &amp; Energy</h4><p class="text-sm text-gray-600">Riyadh Cement, Qassim Power Plant, Saudi Aramco-linked projects</p></div>
-      <div class="text-center p-6 bg-gray-50 rounded-2xl"><i class="fas fa-city text-4xl text-bp-olive mb-4"></i><h4 class="font-bold text-bp-ink mb-2">Mega Development</h4><p class="text-sm text-gray-600">Qiddiya, Red Sea Project, King Salman Park, NEOM</p></div>
-      <div class="text-center p-6 bg-gray-50 rounded-2xl"><i class="fas fa-landmark text-4xl text-bp-soft mb-4"></i><h4 class="font-bold text-bp-ink mb-2">Government</h4><p class="text-sm text-gray-600">National Water Company, NCEC, Ministry of Environment</p></div>
-      <div class="text-center p-6 bg-gray-50 rounded-2xl"><i class="fas fa-globe text-4xl text-bp-sage mb-4"></i><h4 class="font-bold text-bp-ink mb-2">International</h4><p class="text-sm text-gray-600">5 Capitals UAE, SAIL KSA, SIRC Saudi Arabia</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- WHY CHOOSE -->
-<section class="py-24" style="background:var(--bp-page);">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16 scroll-reveal"><h2 class="text-4xl font-bold text-bp-ink mb-4">Why Choose BluePrint?</h2><p class="text-gray-600">Our competitive advantage in environmental consultancy</p></div>
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 scroll-reveal">
-""" + "".join(f"""      <div class="bg-white p-8 rounded-2xl shadow text-center group hover:bg-bp-ink hover:text-white transition-all duration-300"><div class="w-16 h-16 mx-auto bg-bp-light rounded-full flex items-center justify-center text-bp-primary text-2xl mb-4 group-hover:bg-white transition-all"><i class="fas {icon}"></i></div><h4 class="font-bold text-lg mb-2">{title}</h4><p class="text-sm text-gray-600 group-hover:text-gray-300">{desc}</p></div>
-""" for icon, title, desc in [
-    ("fa-award", "Accredited Laboratory", "ISO/IEC 17025 accredited for legally defensible results"),
-    ("fa-map-marker-alt", "National Reach", "5 offices across KSA, Cairo, and Milan for full coverage"),
-    ("fa-cogs", "End-to-End Solutions", "From baseline monitoring to regulatory submissions"),
-    ("fa-users", "Specialist Team", "50+ qualified environmental engineers and scientists"),
-]) + """    </div>
-  </div>
-</section>
-"""
+from home_new import home  # noqa: E402  (real BluePrint home content)
+from content_new import SERVICE_TABS, SERVICES_JS, LAB_SERVICES, CATEGORIES, ACCREDITATIONS  # noqa: E402
 
 
 # ─────────────────────────── SERVICES ───────────────────────────
-SERVICE_TABS = [
-    ("fa-wind", "Ambient Air Quality", "PM2.5, PM10, NO₂, SO₂ &amp; ozone", "https://images.unsplash.com/photo-1611273426858-450d8e3c9fce", "https://images.unsplash.com/photo-1504711434969-e33886168f5c", "24/7 Monitoring", ""),
-    ("fa-smog", "Stack Emission Testing", "US EPA Method 5/9 · Industrial stacks", "https://images.unsplash.com/photo-1565008447742-97f6f38c985c", "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e", "EPA Certified", " olive"),
-    ("fa-building", "Indoor Air Quality", "TVOC, formaldehyde, CO₂ profiling", "https://images.unsplash.com/photo-1497366216548-37526070297c", "https://images.unsplash.com/photo-1497366754035-f200581f0b4c", "IAQ Assessment", ""),
-    ("fa-mountain", "Environmental Impact Assessment", "EIA/ESIA · NCEC / IFC standards", "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b", "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429", "NCEC / IFC", " olive"),
-    ("fa-tint", "Water &amp; Soil Analysis", "Heavy metals, VOCs · ISO/IEC 17025", "https://images.unsplash.com/photo-1505118380757-91f5f5632de0", "https://images.unsplash.com/photo-1559825481-12a05cc00344", "ISO/IEC 17025", ""),
-    ("fa-leaf", "Environmental Management Plans", "EMP design · ISO 14001 audit support", "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09", "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc", "ISO 14001", " olive"),
-]
-
-
 def services():
     tabs = "".join(f"""
       <div class="isvc-tab{' active' if i == 0 else ''}" onclick="selectService({i})" id="svc-{i}">
@@ -244,10 +35,30 @@ def services():
         <div class="isvc-panel-img"><img src="{img}?w=1200&h=520&fit=crop&q=80" alt="" onerror="this.src='{fb}?w=1200&h=520&fit=crop'"/><div class="isvc-panel-img-overlay"></div><div class="isvc-panel-badge{bcls}">{badge}</div><div class="isvc-panel-watermark">0{i+1}</div></div>
         <div class="isvc-panel-body" id="isvc-panel-body-{i}"></div>
       </div>""" for i, (icon, name, short, img, fb, badge, bcls) in enumerate(SERVICE_TABS))
-    return page_header("Environmental services built for regulatory confidence",
-                       "Six service lines covering air, emissions, water, soil, impact assessment and environmental management — delivered to NCEC, WHO, US EPA and ISO standards.",
+    mons = "".join(f'''
+      <div class="bg-white rounded-2xl p-6 shadow-sm border hover:shadow-lg hover:-translate-y-0.5 transition-all" style="border-color:var(--bp-border);">
+        <div class="w-11 h-11 rounded-xl flex items-center justify-center text-base mb-4" style="background:var(--bp-olive-tint);color:var(--bp-olive);"><i class="fas {ic}"></i></div>
+        <h3 class="font-display font-bold text-bp-ink text-base mb-2 leading-snug">{nm}</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">{d}</p>
+      </div>''' for _img, _fb, _bd, ic, nm, d in LAB_SERVICES)
+    cats = "".join(f'''
+      <div class="bg-white rounded-2xl p-7 shadow-sm border hover:shadow-lg transition-all" style="border-color:var(--bp-border);">
+        <div class="flex items-start justify-between mb-4">
+          <div class="w-12 h-12 rounded-xl bg-bp-light flex items-center justify-center text-bp-primary text-lg"><i class="fas {ic}"></i></div>
+          <span class="text-xs font-semibold px-3 py-1 rounded-full" style="background:var(--bp-olive-tint);color:var(--bp-olive-deep);">{cnt}</span>
+        </div>
+        <h3 class="font-display font-bold text-bp-ink text-lg mb-2">{nm}</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">{d}</p>
+      </div>''' for ic, nm, cnt, d in CATEGORIES)
+    return page_header("A full spectrum of environmental services",
+                       "From pre-licensing impact assessments to continuous periodic reporting, every service is delivered by accredited consultants who know the Saudi regulatory landscape inside out.",
                        "Services") + f"""
-<section class="isvc-section" style="padding-top:64px;">
+<section id="permitting" class="isvc-section" style="padding-top:56px;">
+  <div class="isvc-header" style="margin-bottom:44px;">
+    <div class="showcase-eyebrow">Compliance &amp; permitting</div>
+    <h2>Getting you licensed, and keeping you licensed</h2>
+    <p>The studies, permits and reporting cycles that stand between your facility and a valid environmental licence.</p>
+  </div>
   <div class="isvc-layout">
     <div class="isvc-tabs isvc-reveal" id="isvcTabs">{tabs}
     </div>
@@ -256,35 +67,56 @@ def services():
     </div>
   </div>
 </section>
+
+<section id="monitoring" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14 scroll-reveal">
+      <div class="showcase-eyebrow">Monitoring &amp; testing</div>
+      <h2 class="text-4xl font-bold text-bp-ink mb-4">The measurements behind the paperwork</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">A permit is only as good as the data supporting it. BluePrint carries out the sampling, testing and monitoring your conditions require &mdash; to the method they require &mdash; and reports it in the form the regulator expects.</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 scroll-reveal">{mons}
+    </div>
+    <div class="text-center mt-12 scroll-reveal"><a href="technology.html" class="btn-olive">See laboratory &amp; accreditations <i class="fas fa-arrow-right" style="font-size:.75rem;"></i></a></div>
+  </div>
+</section>
+
+<section class="py-24" style="background:var(--bp-page);">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14 scroll-reveal">
+      <div class="showcase-eyebrow">Beyond permitting</div>
+      <h2 class="text-4xl font-bold text-bp-ink mb-4">Six further service categories</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">Alongside permitting and monitoring, BluePrint delivers specialist work across sustainability, ecology, marine, remediation, modelling and laboratory services.</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 scroll-reveal">{cats}
+    </div>
+    <div class="text-center mt-12 scroll-reveal"><a href="contact.html" class="btn-primary">Request a scope <i class="fas fa-arrow-right" style="font-size:.75rem;"></i></a></div>
+  </div>
+</section>
 """
 
 
 # ─────────────────────────── TECHNOLOGY ─────────────────────────
-EQUIPMENT = [
-    ("https://images.unsplash.com/photo-1611273426858-450d8e3c9fce", "https://images.unsplash.com/photo-1504711434969-e33886168f5c", "US EPA Certified", "fa-microscope", "PM2.5/PM10 Monitors", "Beta Attenuation (BAM) and gravimetric samplers per US EPA standards"),
-    ("https://images.unsplash.com/photo-1579165466741-7f35e4755183", "https://images.unsplash.com/photo-1532187643603-ba119ca4109e", "Lab Accredited", "fa-atom", "GC/MS Systems", "VOC, SVOC, BTEX, and TPH analysis with GC-FID/MS systems"),
-    ("https://images.unsplash.com/photo-1635070041078-e363dbe005cb", "https://images.unsplash.com/photo-1518005020951-eccb494ad742", "Continuous Monitoring", "fa-wind", "Gas Analyzers", "Electrochemical &amp; UV-fluorescence sensors for NO₂, SO₂, CO, O₃"),
-    ("https://images.unsplash.com/photo-1460925895917-afdab827c52f", "https://images.unsplash.com/photo-1551288049-bebda4e38f71", "24/7 Live Feed", "fa-satellite-dish", "Real-Time Data Loggers", "Telemetric data acquisition systems transmitting live air quality indices"),
-    ("https://images.unsplash.com/photo-1504608524841-42584120d693", "https://images.unsplash.com/photo-1561553590-267fc716698a", "Auto Weather Station", "fa-cloud-sun", "Meteorological Stations", "Automatic weather stations measuring wind, temperature, humidity, solar radiation"),
-    ("https://images.unsplash.com/photo-1473341304170-971dccb5ac1e", "https://images.unsplash.com/photo-1565008447742-97f6f38c985c", "EPA Method 5/17", "fa-smog", "Stack Emission Samplers", "Isokinetic sampling trains per US EPA Method 5/17"),
-    ("https://images.unsplash.com/photo-1582719471384-894fbb16e074", "https://images.unsplash.com/photo-1576086213369-97a306d36557", "ISO/IEC 17025", "fa-vial", "ICP-MS Spectrometry", "PerkinElmer NexION for ultra-trace heavy metal analysis"),
-    ("https://images.unsplash.com/photo-1600880292203-757bb62b4baf", "https://images.unsplash.com/photo-1581094794329-c8112a89af12", "Field Ready", "fa-mobile-alt", "Portable Field Monitors", "Hand-held multi-gas detectors and personal air samplers"),
-]
-
-
 def technology():
     cards = "".join(f"""
       <div class="equipment-card bg-gray-50 rounded-2xl border-2 border-transparent hover:border-bp-primary cursor-pointer group overflow-hidden">
         <div class="relative w-full h-44 overflow-hidden bg-bp-light">
           <img src="{img}?w=600&h=380&fit=crop&q=80" alt="{title}" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='{fb}?w=600&h=380&fit=crop'" />
-          <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" style="background:linear-gradient(to top,rgba(4, 51, 58,.65),transparent);"></div>
+          <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" style="background:linear-gradient(to top,rgba(4,51,58,.65),transparent);"></div>
           <span class="absolute bottom-3 left-3 text-xs font-bold text-white bg-bp-olive px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">{badge}</span>
         </div>
         <div class="p-5"><div class="flex items-center gap-2 mb-2"><div class="w-7 h-7 bg-bp-light rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas {icon} text-bp-primary text-xs"></i></div><h4 class="font-bold text-bp-ink text-sm">{title}</h4></div><p class="text-xs text-gray-500 leading-relaxed">{desc}</p></div>
-      </div>""" for img, fb, badge, icon, title, desc in EQUIPMENT)
-    return page_header("AQMS technology &amp; equipment",
-                       "State-of-the-art instrumentation for accurate and reliable environmental data, aligned with national and international compliance frameworks.",
-                       "Technology") + f"""
+      </div>""" for img, fb, badge, icon, title, desc in LAB_SERVICES)
+    accs = "".join(f"""
+      <div class="bg-white p-7 rounded-2xl shadow-lg border-t-4 hover:-translate-y-1 transition-all" style="border-top-color:var(--bp-{'olive' if i % 2 else 'blue'});">
+        <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-xl mb-5" style="background:var(--bp-{'olive-tint' if i % 2 else 'blue-tint'});color:var(--bp-{'olive' if i % 2 else 'blue'});"><i class="fas {ic}"></i></div>
+        <h3 class="text-base font-bold text-bp-ink mb-1 leading-snug">{name}</h3>
+        <p class="text-xs font-semibold text-bp-primary mb-3">{body}</p>
+        <p class="text-sm text-gray-600 leading-relaxed">{d}</p>
+      </div>""" for i, (ic, name, body, d) in enumerate(ACCREDITATIONS))
+    return page_header("Laboratory, measurement &amp; accreditation",
+                       "Compliance claims need numbers behind them. We measure what your permit requires, to the method it requires, and report it in the form the regulator expects.",
+                       "Laboratory") + f"""
 <section id="equipment" class="py-20 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 scroll-reveal">{cards}
@@ -295,23 +127,18 @@ def technology():
 <section id="standards" class="py-24" style="background:var(--bp-page);">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16 scroll-reveal">
-      <h2 class="text-4xl font-bold text-bp-ink mb-4">Compliance &amp; Regulatory Standards</h2>
-      <p class="text-gray-600">Ensuring full regulatory alignment across national and international frameworks</p>
+      <div class="showcase-eyebrow">Licences &amp; accreditations</div>
+      <h2 class="text-4xl font-bold text-bp-ink mb-4">Accredited to do the work that counts</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">Studies and permit files are only accepted from accredited parties. BluePrint operates under full regulatory licensing in the Kingdom, holding active registration and accreditation from the following authorities.</p>
     </div>
-    <div class="grid md:grid-cols-3 gap-8 scroll-reveal">
-      <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-bp-primary hover:-translate-y-2 transition-all"><div class="w-16 h-16 bg-bp-light rounded-2xl flex items-center justify-center text-bp-primary text-2xl mb-6"><i class="fas fa-flag"></i></div><h3 class="text-xl font-bold text-bp-ink mb-4">NCEC — Saudi Arabia</h3><ul class="space-y-2 text-gray-600 text-sm"><li>• National Center for Environmental Compliance</li><li>• Ambient Air Quality Standards (SAAQS)</li><li>• Emission limits for industrial sources</li><li>• Environmental monitoring requirements</li></ul></div>
-      <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-bp-soft hover:-translate-y-2 transition-all"><div class="w-16 h-16 bg-bp-light rounded-2xl flex items-center justify-center text-bp-soft text-2xl mb-6"><i class="fas fa-globe-americas"></i></div><h3 class="text-xl font-bold text-bp-ink mb-4">International Standards</h3><ul class="space-y-2 text-gray-600 text-sm"><li>• WHO Air Quality Guidelines 2021</li><li>• US EPA NAAQS Criteria Pollutants</li><li>• IFC Environmental &amp; Social Standards</li><li>• Equator Principles (EP)</li></ul></div>
-      <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-bp-olive hover:-translate-y-2 transition-all"><div class="w-16 h-16 rounded-2xl flex items-center justify-center text-bp-olive text-2xl mb-6" style="background:var(--bp-olive-tint);"><i class="fas fa-certificate"></i></div><h3 class="text-xl font-bold text-bp-ink mb-4">ISO Certifications</h3><ul class="space-y-2 text-gray-600 text-sm"><li>• ISO/IEC 17025 — Lab Accreditation</li><li>• ISO 14001 — Environmental Management</li><li>• ISO 14644 — Cleanroom Air Standards</li><li>• ISO 9001 — Quality Management</li></ul></div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 scroll-reveal">{accs}
     </div>
     <div class="mt-12 rounded-3xl p-8 text-white scroll-reveal" style="background:var(--bp-grad);">
       <div class="grid md:grid-cols-2 gap-8 items-center">
         <div>
-          <h3 class="text-2xl font-bold mb-4">WHO Air Quality Guidelines 2021</h3>
-          <p class="text-gray-200 mb-6">BluePrint monitoring programs align with the latest WHO recommendations for protecting public health.</p>
-          <div class="flex flex-wrap gap-4">
-            <div class="bg-white/20 backdrop-blur-sm px-6 py-3 rounded-xl"><span class="block text-3xl font-bold">5 µg/m³</span><span class="text-sm text-gray-200">PM2.5 Annual</span></div>
-            <div class="bg-white/20 backdrop-blur-sm px-6 py-3 rounded-xl"><span class="block text-3xl font-bold">15 µg/m³</span><span class="text-sm text-gray-200">PM10 Annual</span></div>
-          </div>
+          <h3 class="text-2xl font-bold mb-4">Licensed across 20+ environmental activities</h3>
+          <p class="text-gray-200 mb-6">BluePrint is licensed and approved by the NCEC, the National Center for Waste Management (MWAN) and the Royal Commission for Jubail &amp; Yanbu — spanning environmental studies and consulting, sustainability and corporate governance, industrial and hazardous waste management, landfill construction and lining, emergency response and site remediation.</p>
+          <a href="contact.html" class="inline-flex items-center gap-2 px-6 py-3 bg-white text-bp-ink rounded-full font-bold text-sm hover:bg-bp-sage transition-all">Request our credentials <i class="fas fa-arrow-right" style="font-size:.7rem;"></i></a>
         </div>
         <div class="relative"><img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?w=500&h=300&fit=crop" alt="Laboratory" class="rounded-2xl shadow-2xl opacity-90" loading="lazy" /></div>
       </div>
@@ -419,48 +246,60 @@ def resources():
 
 # ─────────────────────────── CONTACT ────────────────────────────
 def contact():
-    return page_header("Contact BluePrint today",
-                       "Ready to support your environmental monitoring and compliance requirements. Request a consultation, book a site inspection, or reach the team directly.",
+    return page_header("Let&rsquo;s map your path to compliance",
+                       "Tell us about your facility and we&rsquo;ll identify the exact studies and permits you need. The initial consultation is free — and there&rsquo;s no obligation.",
                        "Contact") + """
 <section id="contact" class="py-20" style="background:var(--bp-page);">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid lg:grid-cols-2 gap-16">
       <div class="scroll-reveal">
-        <h2 class="text-3xl font-bold text-bp-ink mb-3">Reach the team directly</h2>
-        <p class="text-gray-600 text-lg mb-8">Head office in Riyadh, with branches in Jeddah and Dammam and international offices in Cairo and Milan.</p>
+        <h2 class="text-3xl font-bold text-bp-ink mb-3">Talk to us directly</h2>
+        <p class="text-gray-600 text-lg mb-8">Accredited environmental consultants based in Riyadh, working across the Kingdom.</p>
         <div class="space-y-6">
-          <div class="flex items-start space-x-4"><div class="w-12 h-12 bg-bp-light rounded-xl flex items-center justify-center text-bp-primary flex-shrink-0"><i class="fas fa-map-marker-alt text-xl"></i></div><div><h4 class="font-bold text-bp-ink mb-1">Head Office</h4><p class="text-gray-600" data-text="address"></p></div></div>
           <div class="flex items-start space-x-4"><div class="w-12 h-12 bg-bp-light rounded-xl flex items-center justify-center text-bp-primary flex-shrink-0"><i class="fas fa-envelope text-xl"></i></div><div><h4 class="font-bold text-bp-ink mb-1">Email</h4><p class="text-gray-600"><a data-mail data-text="email" class="hover:text-bp-primary transition-colors"></a></p></div></div>
           <div class="flex items-start space-x-4"><div class="w-12 h-12 bg-bp-light rounded-xl flex items-center justify-center text-bp-primary flex-shrink-0"><i class="fas fa-phone text-xl"></i></div><div><h4 class="font-bold text-bp-ink mb-1">Phone</h4><p class="text-gray-600"><a data-tel data-text="phone" class="hover:text-bp-primary transition-colors"></a></p></div></div>
-          <div class="flex items-start space-x-4"><div class="w-12 h-12 bg-bp-light rounded-xl flex items-center justify-center text-bp-primary flex-shrink-0"><i class="fab fa-whatsapp text-xl"></i></div><div><h4 class="font-bold text-bp-ink mb-1">WhatsApp</h4><p class="text-gray-600"><a data-wa="Hi BluePrint" data-text="phone" class="hover:text-bp-primary transition-colors"></a></p></div></div>
-          <div class="flex items-start space-x-4"><div class="w-12 h-12 bg-bp-light rounded-xl flex items-center justify-center text-bp-primary flex-shrink-0"><i class="fas fa-globe text-xl"></i></div><div><h4 class="font-bold text-bp-ink mb-1">Website</h4><p class="text-gray-600" data-text="website"></p></div></div>
+          <div class="flex items-start space-x-4"><div class="w-12 h-12 bg-bp-light rounded-xl flex items-center justify-center text-bp-primary flex-shrink-0"><i class="fab fa-whatsapp text-xl"></i></div><div><h4 class="font-bold text-bp-ink mb-1">WhatsApp</h4><p class="text-gray-600"><a data-wa="Hello BluePrint, I would like to ask about your environmental services." data-text="phone" class="hover:text-bp-primary transition-colors"></a></p></div></div>
+          <div class="flex items-start space-x-4"><div class="w-12 h-12 bg-bp-light rounded-xl flex items-center justify-center text-bp-primary flex-shrink-0"><i class="fas fa-map-marker-alt text-xl"></i></div><div><h4 class="font-bold text-bp-ink mb-1">Location</h4><p class="text-gray-600" data-text="address"></p></div></div>
+          <div class="flex items-start space-x-4"><div class="w-12 h-12 bg-bp-light rounded-xl flex items-center justify-center text-bp-primary flex-shrink-0"><i class="fas fa-clock text-xl"></i></div><div><h4 class="font-bold text-bp-ink mb-1">Working hours</h4><p class="text-gray-600">Sunday &ndash; Thursday &middot; 9:00 AM &ndash; 6:00 PM (AST)</p></div></div>
         </div>
         <div class="mt-10 flex flex-wrap gap-3">
-          <button onclick="openBookingModal()" class="btn-olive"><i class="fas fa-calendar-check" style="font-size:.8rem;"></i> Book a site inspection</button>
-          <button onclick="openPortal()" class="btn-ghost"><i class="fas fa-user-circle" style="font-size:.8rem;"></i> Client Portal</button>
+          <button onclick="openBookingModal()" class="btn-olive"><i class="fas fa-calendar-check" style="font-size:.8rem;"></i> Book a site visit</button>
+          <a data-wa="Hello BluePrint, I would like to ask about your environmental services." class="btn-ghost"><i class="fab fa-whatsapp" style="font-size:.9rem;"></i> Chat on WhatsApp</a>
         </div>
       </div>
       <div class="scroll-reveal">
-        <div class="bg-white rounded-3xl p-8 shadow-xl">
-          <h3 class="text-2xl font-bold text-bp-ink mb-6">Request a Consultation</h3>
+        <div class="bg-white rounded-3xl p-8 shadow-xl mb-6">
+          <h3 class="text-2xl font-bold text-bp-ink mb-6">Tell us about your facility</h3>
           <div class="space-y-4">
             <div class="grid md:grid-cols-2 gap-4">
-              <input type="text" placeholder="First Name" aria-label="First name" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-bp-primary focus:ring-2 focus:ring-bp-primary/20 outline-none transition-all" />
-              <input type="text" placeholder="Last Name" aria-label="Last name" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-bp-primary focus:ring-2 focus:ring-bp-primary/20 outline-none transition-all" />
+              <input type="text" placeholder="Full Name" aria-label="Full name" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-bp-primary focus:ring-2 focus:ring-bp-primary/20 outline-none transition-all" />
+              <input type="text" placeholder="Company" aria-label="Company" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-bp-primary focus:ring-2 focus:ring-bp-primary/20 outline-none transition-all" />
             </div>
             <input type="email" placeholder="Email Address" aria-label="Email address" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-bp-primary focus:ring-2 focus:ring-bp-primary/20 outline-none transition-all" />
             <input type="tel" placeholder="Phone Number" aria-label="Phone number" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-bp-primary focus:ring-2 focus:ring-bp-primary/20 outline-none transition-all" />
             <select aria-label="Service interest" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-bp-primary outline-none transition-all text-gray-600 bg-white">
-              <option value="">Select Service Interest</option>
-              <option>Ambient Air Quality Monitoring</option>
-              <option>Stack Emission Testing</option>
-              <option>Indoor Air Quality</option>
+              <option value="">Which service do you need?</option>
+              <option>Environmental Permit (NCEC)</option>
               <option>Environmental Impact Assessment</option>
-              <option>Other Services</option>
+              <option>Waste Management Permit (MWAN)</option>
+              <option>Environmental Management Plan</option>
+              <option>Environmental Register</option>
+              <option>Periodic Environmental Report</option>
+              <option>Environmental Measurements</option>
+              <option>Not sure yet &mdash; please advise</option>
             </select>
-            <textarea placeholder="Tell us about your project..." aria-label="Project details" rows="4" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-bp-primary outline-none transition-all resize-none"></textarea>
+            <textarea placeholder="Your activity, capacity, and roughly what you need&hellip;" aria-label="Facility details" rows="4" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-bp-primary outline-none transition-all resize-none"></textarea>
             <button onclick="sendContactMessage()" class="w-full py-4 bg-bp-primary text-white rounded-xl font-bold hover:bg-bp-dark transition-all shadow-lg">Send Message</button>
           </div>
+        </div>
+        <div class="bg-white rounded-3xl p-8 shadow-xl">
+          <h3 class="text-lg font-bold text-bp-ink mb-5">What happens when you get in touch</h3>
+          <div class="space-y-5">
+            <div class="flex items-start gap-4"><span class="w-8 h-8 rounded-lg bg-bp-light text-bp-primary font-display font-bold text-sm flex items-center justify-center flex-shrink-0">01</span><div><p class="font-semibold text-bp-ink text-sm">You reach out</p><p class="text-sm text-gray-600 mt-1">Email, call, or WhatsApp us with your activity and roughly what you need.</p></div></div>
+            <div class="flex items-start gap-4"><span class="w-8 h-8 rounded-lg bg-bp-light text-bp-primary font-display font-bold text-sm flex items-center justify-center flex-shrink-0">02</span><div><p class="font-semibold text-bp-ink text-sm">A short scoping call</p><p class="text-sm text-gray-600 mt-1">We ask about your activity, capacity, and site so we can classify it correctly.</p></div></div>
+            <div class="flex items-start gap-4"><span class="w-8 h-8 rounded-lg bg-bp-light text-bp-primary font-display font-bold text-sm flex items-center justify-center flex-shrink-0">03</span><div><p class="font-semibold text-bp-ink text-sm">You get a written scope</p><p class="text-sm text-gray-600 mt-1">Exactly which permits and studies apply, what each involves, and a realistic timeline.</p></div></div>
+          </div>
+          <p class="mt-6 pt-5 border-t text-xs text-gray-500" style="border-color:var(--bp-border);">The initial consultation is free and carries no obligation.</p>
         </div>
       </div>
     </div>

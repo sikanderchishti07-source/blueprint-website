@@ -159,3 +159,21 @@
   #chatbotWidget { bottom: 20px; right: 20px; }
   #aqiWidget { bottom: 20px; left: 20px; }
 }
+
+/* ── Article & legal body copy ─────────────────────────────── */
+.article-body { font-size: 1rem; line-height: 1.85; color: #33454b; }
+.article-body .lead { font-size: 1.12rem; line-height: 1.8; color: var(--bp-blue-ink); font-weight: 500; margin-bottom: 1.8rem; }
+.article-body h2 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--bp-blue-ink); letter-spacing: -.02em; margin: 2.4rem 0 .9rem; }
+.article-body h3 { font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--bp-blue-ink); margin: 1.8rem 0 .6rem; }
+.article-body p { margin-bottom: 1.15rem; }
+.article-body ul, .article-body ol { margin: 0 0 1.4rem 1.3rem; }
+.article-body ul { list-style: disc; }
+.article-body ol { list-style: decimal; }
+.article-body li { margin-bottom: .55rem; padding-left: .3rem; }
+.article-body li::marker { color: var(--bp-olive); font-weight: 700; }
+.article-body strong { color: var(--bp-blue-ink); font-weight: 700; }
+.article-body a { color: var(--bp-blue); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.article-body blockquote { margin: 1.8rem 0; padding: 1.1rem 1.4rem; background: var(--bp-blue-tint); border-left: 4px solid var(--bp-olive); border-radius: 0 12px 12px 0; font-size: 1.02rem; font-style: italic; color: var(--bp-blue-ink); }
+.article-body .not-prose, .article-body .not-prose * { all: revert-layer; }
+.article-body .not-prose h3 { font-family: var(--font-display); }
+@media (max-width: 640px) { .article-body { font-size: .95rem; } .article-body h2 { font-size: 1.3rem; } }

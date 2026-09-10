@@ -47,12 +47,12 @@ def head(title, description, extra_css=""):
 
 
 SERVICES_NAV = [
-    ("fa-wind", "Ambient Air Quality", "PM2.5, PM10, NO₂, SO₂ monitoring", 0),
-    ("fa-smog", "Stack Emission Testing", "US EPA Method 5/9 certified", 1),
-    ("fa-building", "Indoor Air Quality", "TVOC, formaldehyde, CO₂ profiling", 2),
-    ("fa-mountain", "Environmental Impact Assessment", "EIA/ESIA · NCEC / IFC aligned", 3),
-    ("fa-tint", "Water & Soil Analysis", "ISO/IEC 17025 accredited lab", 4),
-    ("fa-leaf", "Environmental Management Plans", "EMP design · ISO 14001 support", 5),
+    ("fa-file-signature", "Environmental Permit", "NCEC permit file to issuance", 0),
+    ("fa-clipboard-check", "Impact Assessment", "EIA/ESIA for regulated projects", 1),
+    ("fa-recycle", "Waste Permit (MWAN)", "Generators, carriers &amp; treaters", 2),
+    ("fa-tasks", "Environmental Management Plan", "Permit conditions into practice", 3),
+    ("fa-folder-open", "Environmental Register", "Continuous proof of compliance", 4),
+    ("fa-calendar-check", "Periodic Reporting", "Filed on time, every cycle", 5),
 ]
 
 
@@ -66,8 +66,19 @@ def dd_link(href, icon, label, sub, extra_icon_style="", badge=""):
 LIVE_BADGE = '<span style="font-size:.55rem;padding:1px 6px;background:#dcfce7;color:#15803d;border-radius:999px;font-weight:700;letter-spacing:.06em;margin-left:3px;">LIVE</span>'
 
 
+MONITORING_NAV = [
+    ("fa-wind", "Air Quality Monitoring", "Measurement &amp; assessment"),
+    ("fa-tint", "Water &amp; Wastewater Testing", "Accredited analysis"),
+    ("fa-volume-up", "Noise Monitoring", "Against regulated limits"),
+    ("fa-mountain", "Soil &amp; Sediment Testing", "Contaminant levels"),
+    ("fa-vial", "Environmental Sampling", "Chain-of-custody protocols"),
+    ("fa-microscope", "Laboratory Analysis", "With technical interpretation"),
+]
+
+
 def nav():
     svc_links = "\n".join(dd_link(f"services.html#svc-{i}", ic, lb, sb) for ic, lb, sb, i in SERVICES_NAV)
+    mon_links = "\n".join(dd_link("services.html#monitoring", ic, lb, sb) for ic, lb, sb in MONITORING_NAV)
     drawer_svc = "\n".join(
         f'<a href="services.html#svc-{i}" class="drawer-link"><div class="drawer-link-icon"><i class="fas {ic}"></i></div>{lb}</a>'
         for ic, lb, sb, i in SERVICES_NAV)
@@ -86,17 +97,24 @@ def nav():
     <span class="drawer-section-title">Company</span>
     <a href="index.html" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-home"></i></div>Home</a>
     <a href="index.html#overview" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-building"></i></div>Company Overview</a>
-    <a href="index.html#clients" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-handshake"></i></div>Clients &amp; Projects</a>
+    <a href="index.html#sectors" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-industry"></i></div>Sectors We Serve</a>
     <a href="index.html#process" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-sitemap"></i></div>Our Process</a>
 
     <div class="drawer-divider"></div>
-    <span class="drawer-section-title">Services</span>
+    <span class="drawer-section-title">Compliance &amp; Permitting</span>
     {drawer_svc}
 
     <div class="drawer-divider"></div>
-    <span class="drawer-section-title">Technology</span>
-    <a href="technology.html" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-microscope"></i></div>Equipment Overview</a>
-    <a href="technology.html#standards" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-shield-alt"></i></div>Compliance Standards</a>
+    <span class="drawer-section-title">Monitoring &amp; Testing</span>
+    <a href="services.html#monitoring" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-wind"></i></div>Air Quality Monitoring</a>
+    <a href="services.html#monitoring" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-tint"></i></div>Water &amp; Wastewater Testing</a>
+    <a href="services.html#monitoring" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-volume-up"></i></div>Noise Monitoring</a>
+    <a href="services.html#monitoring" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-mountain"></i></div>Soil &amp; Sediment Testing</a>
+
+    <div class="drawer-divider"></div>
+    <span class="drawer-section-title">Laboratory</span>
+    <a href="technology.html" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-flask"></i></div>Laboratory Services</a>
+    <a href="technology.html#standards" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-stamp"></i></div>Licences &amp; Accreditations</a>
 
     <div class="drawer-divider"></div>
     <span class="drawer-section-title">Resources</span>
@@ -105,13 +123,14 @@ def nav():
     <a href="resources.html#aqi" class="drawer-link"><div class="drawer-link-icon" style="background:rgba(74,222,128,.1);"><i class="fas fa-map-marked-alt" style="color:#16a34a;"></i></div><span>Live AQI {LIVE_BADGE}</span></a>
 
     <div class="drawer-divider"></div>
+    <a href="blog.html" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-pen-nib"></i></div>Blog</a>
     <a href="contact.html" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-envelope"></i></div>Contact</a>
     <a href="index_arabic.html" class="drawer-link"><div class="drawer-link-icon">🌐</div>العربية (Arabic)</a>
   </div>
   <div class="drawer-footer">
-    <button onclick="openBookingModal();closeNavDrawer();" class="drawer-portal-btn olive"><i class="fas fa-calendar-check"></i> Inspection Request</button>
+    <button onclick="openBookingModal();closeNavDrawer();" class="drawer-portal-btn olive"><i class="fas fa-calendar-check"></i> Book a Site Visit</button>
     <button onclick="openPortal();closeNavDrawer();" class="drawer-portal-btn"><i class="fas fa-user-circle"></i> Client Portal</button>
-    <a data-wa="Hi BluePrint" class="drawer-wa-btn"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+    <a data-wa="Hello BluePrint, I would like to ask about your environmental services." class="drawer-wa-btn"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
   </div>
 </div>
 
@@ -120,14 +139,14 @@ def nav():
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
       <div class="flex items-center gap-3">
         <span class="nav-live-dot"></span>
-        <span>Riyadh · Jeddah · Dammam · Cairo · Milan</span>
+        <span>Riyadh, Saudi Arabia &middot; Sun&ndash;Thu 9:00&ndash;18:00 AST</span>
         <span class="nav-strip-divider"></span>
         <a data-tel><i class="fas fa-phone" style="font-size:.6rem;margin-right:4px;"></i><span data-text="phone"></span></a>
       </div>
       <div class="hidden md:flex items-center gap-3">
-        <span>ISO/IEC 17025 Accredited</span>
+        <span>NCEC Licensed</span>
         <span class="nav-strip-divider"></span>
-        <span>NCEC Certified</span>
+        <span>MWAN Registered</span>
         <span class="nav-strip-divider"></span>
         <a data-mail><i class="fas fa-envelope" style="font-size:.6rem;margin-right:4px;"></i><span data-text="email"></span></a>
       </div>
@@ -148,9 +167,9 @@ def nav():
             <div class="nav-dropdown">
               <div class="nav-dropdown-box" style="min-width:230px;">
                 <div class="nav-dropdown-title">About BluePrint</div>
-                {dd_link("index.html#overview", "fa-building", "Company Overview", "Mission, vision &amp; presence")}
-                {dd_link("index.html#clients", "fa-handshake", "Clients &amp; Portfolio", "Key projects across KSA")}
-                {dd_link("index.html#process", "fa-sitemap", "Our Methodology", "5-step monitoring workflow")}
+                {dd_link("index.html#overview", "fa-building", "About BluePrint", "Mission, vision &amp; Vision 2030")}
+                {dd_link("index.html#sectors", "fa-industry", "Sectors We Serve", "Six regulated industries")}
+                {dd_link("index.html#process", "fa-sitemap", "How We Work", "Assess, plan, submit, sustain")}
               </div>
             </div>
           </div>
@@ -160,23 +179,28 @@ def nav():
             <div class="nav-dropdown nav-mega">
               <div class="nav-dropdown-box nav-mega-box">
                 <div class="nav-mega-header">
-                  <span class="nav-mega-header-title">All Environmental Services</span>
+                  <span class="nav-mega-header-title">Compliance &amp; Permitting</span>
                   <a href="services.html" class="nav-mega-cta">View All →</a>
                 </div>
                 {svc_links}
+                <div class="nav-mega-header" style="margin-top:8px;">
+                  <span class="nav-mega-header-title">Monitoring &amp; Testing</span>
+                  <a href="services.html#monitoring" class="nav-mega-cta">See all →</a>
+                </div>
+                {mon_links}
               </div>
             </div>
           </div>
 
           <div class="nav-item">
-            <a href="technology.html" class="nav-link" data-page="technology.html">Technology <i class="fas fa-chevron-down nav-chevron"></i></a>
+            <a href="technology.html" class="nav-link" data-page="technology.html">Laboratory <i class="fas fa-chevron-down nav-chevron"></i></a>
             <div class="nav-dropdown">
               <div class="nav-dropdown-box" style="min-width:240px;">
-                <div class="nav-dropdown-title">Instrumentation</div>
-                {dd_link("technology.html#equipment", "fa-microscope", "AQMS Technology", "Air quality monitoring systems")}
+                <div class="nav-dropdown-title">Measurement</div>
+                {dd_link("technology.html#equipment", "fa-flask", "Laboratory Services", "Sampling, testing &amp; monitoring")}
                 <div class="nav-dd-divider"></div>
-                <div class="nav-dropdown-title">Compliance</div>
-                {dd_link("technology.html#standards", "fa-shield-alt", "Compliance Standards", "NCEC, WHO, EPA &amp; ISO frameworks")}
+                <div class="nav-dropdown-title">Credentials</div>
+                {dd_link("technology.html#standards", "fa-stamp", "Licences &amp; Accreditations", "NCEC, MWAN, RCJY, IAS &amp; ISO")}
               </div>
             </div>
           </div>
@@ -190,10 +214,15 @@ def nav():
                 {dd_link("resources.html#tools", "fa-calculator", "Carbon Calculator", "Scope 1, 2 &amp; 3 emissions")}
                 <div class="nav-dd-divider"></div>
                 <div class="nav-dropdown-title">Live Data</div>
+                {dd_link("blog.html", "fa-pen-nib", "The Compliance Briefing", "Guides from our consultants")}
                 {dd_link("resources.html#env-news-section", "fa-newspaper", "News Bulletin", "KSA environmental intelligence")}
                 {dd_link("resources.html#aqi", "fa-map-marked-alt", "Live AQI", "Real-time Riyadh air quality", ' style="background:rgba(74,222,128,.12);color:#16a34a;"', LIVE_BADGE)}
               </div>
             </div>
+          </div>
+
+          <div class="nav-item">
+            <a href="blog.html" class="nav-link" data-page="blog.html">Blog</a>
           </div>
 
           <div class="nav-item">
@@ -203,9 +232,9 @@ def nav():
 
         <div class="nav-actions">
           <a href="index_arabic.html" class="nav-lang-btn">🌐 <span>العربية</span></a>
-          <a href="contact.html" class="nav-contact-btn"><i class="fas fa-phone" style="font-size:.7rem;"></i> Get a Quote</a>
+          <a href="contact.html" class="nav-contact-btn"><i class="fas fa-phone" style="font-size:.7rem;"></i> Free Consultation</a>
           <button onclick="openPortal()" class="nav-portal-btn"><i class="fas fa-user-circle"></i> Client Portal</button>
-          <button onclick="openBookingModal()" class="nav-book-btn"><i class="fas fa-calendar-check"></i><span>Inspection Request</span></button>
+          <button onclick="openBookingModal()" class="nav-book-btn"><i class="fas fa-calendar-check"></i><span>Book a Site Visit</span></button>
           <button class="nav-hamburger" id="navHamburger" onclick="toggleNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button>
         </div>
 
@@ -229,11 +258,11 @@ def footer():
       <div class="footer-cta-strip-inner flex flex-wrap items-center justify-between gap-5">
         <div>
           <p class="footer-cta-label">Start Your Project</p>
-          <p class="footer-cta-title">Ready to discuss your environmental monitoring requirements?</p>
+          <p class="footer-cta-title">Ready to make compliance the easy part?</p>
         </div>
         <div class="footer-cta-strip-btns flex flex-wrap gap-3">
-          <a href="contact.html" class="footer-cta-strip-btn primary"><i class="fas fa-paper-plane" style="font-size:.75rem;"></i> Request Consultation</a>
-          <a data-wa="Hi BluePrint, I need an environmental service quote" class="footer-cta-strip-btn wa"><i class="fab fa-whatsapp" style="font-size:.88rem;"></i> WhatsApp Us</a>
+          <a href="contact.html" class="footer-cta-strip-btn primary"><i class="fas fa-paper-plane" style="font-size:.75rem;"></i> Book a consultation</a>
+          <a data-wa="Hello BluePrint, I would like to ask about your environmental services." class="footer-cta-strip-btn wa"><i class="fab fa-whatsapp" style="font-size:.88rem;"></i> WhatsApp Us</a>
         </div>
       </div>
     </div>
@@ -246,17 +275,20 @@ def footer():
         <a href="index.html" class="footer-brand-logo js-home-link" aria-label="BluePrint — back to top">
           <img src="assets/logo/blueprint-logo-white.png" alt="BluePrint Environmental Services" />
         </a>
-        <p class="footer-brand-desc">Leading environmental consultancy in Riyadh, KSA. Delivering precision air quality monitoring, stack emission testing, EIA, and compliance services across the Kingdom and Middle East since 2014.</p>
+        <p class="footer-brand-desc">Accredited environmental consultancy delivering compliance, permitting, and reporting across the Kingdom of Saudi Arabia.</p>
         <div class="footer-cert-row">
-          <span class="footer-cert-badge"><i class="fas fa-award"></i> ISO/IEC 17025</span>
+          <span class="footer-cert-badge"><i class="fas fa-stamp"></i> NCEC</span>
+          <span class="footer-cert-badge"><i class="fas fa-recycle"></i> MWAN</span>
+          <span class="footer-cert-badge"><i class="fas fa-industry"></i> RCJY</span>
+          <span class="footer-cert-badge"><i class="fas fa-globe-americas"></i> IAS</span>
+          <span class="footer-cert-badge"><i class="fas fa-award"></i> ISO 9001</span>
           <span class="footer-cert-badge"><i class="fas fa-leaf"></i> ISO 14001</span>
-          <span class="footer-cert-badge"><i class="fas fa-globe-americas"></i> US EPA</span>
-          <span class="footer-cert-badge"><i class="fas fa-shield-alt"></i> NCEC</span>
+          <span class="footer-cert-badge"><i class="fas fa-hard-hat"></i> ISO 45001</span>
         </div>
         <div class="footer-social-row">
-          <a href="#" class="footer-social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" class="footer-social-btn" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="footer-social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/company/alemad-alarabi/" target="_blank" rel="noopener" class="footer-social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://x.com/blueprint_env" target="_blank" rel="noopener" class="footer-social-btn" aria-label="X"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/blueprint_env" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
           <a data-wa="" class="footer-social-btn wa" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
@@ -265,23 +297,35 @@ def footer():
         <h4 class="footer-col-title">Company</h4>
         <ul class="footer-link-list">
           <li><a href="index.html#overview"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Overview</a></li>
-          <li><a href="technology.html"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Technology</a></li>
+          <li><a href="technology.html"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Laboratory</a></li>
           <li><a href="index.html#process"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Our Process</a></li>
-          <li><a href="index.html#clients"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Clients</a></li>
-          <li><a href="resources.html#env-news-section"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>News</a></li>
+          <li><a href="index.html#sectors"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Sectors</a></li>
+          <li><a href="blog.html"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Blog</a></li>
           <li><a href="index_arabic.html"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>العربية</a></li>
         </ul>
       </div>
 
       <div>
-        <h4 class="footer-col-title">Services</h4>
+        <h4 class="footer-col-title">Permitting</h4>
         <ul class="footer-link-list">
-          <li><a href="services.html#svc-0"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Ambient Air Quality</a></li>
-          <li><a href="services.html#svc-1"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Stack Emission Testing</a></li>
-          <li><a href="services.html#svc-2"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Indoor Air Quality</a></li>
-          <li><a href="services.html#svc-3"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Impact Assessment</a></li>
-          <li><a href="services.html#svc-4"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Water &amp; Soil Analysis</a></li>
-          <li><a href="services.html#svc-5"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Environmental Mgmt Plans</a></li>
+          <li><a href="services.html#svc-0"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Environmental Permit</a></li>
+          <li><a href="services.html#svc-1"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Impact Assessment</a></li>
+          <li><a href="services.html#svc-2"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Permitting (MWAN)</a></li>
+          <li><a href="services.html#svc-3"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Management Plans</a></li>
+          <li><a href="services.html#svc-4"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Environmental Registers</a></li>
+          <li><a href="services.html#svc-5"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Periodic Reporting</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Monitoring</h4>
+        <ul class="footer-link-list">
+          <li><a href="services.html#monitoring"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Air Quality</a></li>
+          <li><a href="services.html#monitoring"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Water &amp; Wastewater</a></li>
+          <li><a href="services.html#monitoring"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Noise</a></li>
+          <li><a href="services.html#monitoring"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Soil &amp; Sediment</a></li>
+          <li><a href="services.html#monitoring"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Sampling</a></li>
+          <li><a href="technology.html"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Laboratory Analysis</a></li>
         </ul>
       </div>
 
@@ -291,7 +335,7 @@ def footer():
           <li><button onclick="openPortal()"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Client Portal</button></li>
           <li><button onclick="openCalculator('compliance')"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Compliance Checker</button></li>
           <li><button onclick="openCalculator('carbon')"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Carbon Calculator</button></li>
-          <li><a href="technology.html#standards"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Compliance Standards</a></li>
+          <li><a href="technology.html#standards"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Accreditations</a></li>
           <li><a href="resources.html#aqi"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Live AQI<span class="footer-live-chip">Live</span></a></li>
           <li><a href="resources.html#env-news-section"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>News Bulletin</a></li>
         </ul>
@@ -299,11 +343,11 @@ def footer():
 
       <div class="footer-contact-col">
         <h4 class="footer-col-title">Contact</h4>
-        <div class="footer-contact-row"><div class="footer-contact-icon-box"><i class="fas fa-map-marker-alt"></i></div><div><div class="footer-contact-label">Head Office</div><div class="footer-contact-value" data-text="address"></div></div></div>
+        <div class="footer-contact-row"><div class="footer-contact-icon-box"><i class="fas fa-map-marker-alt"></i></div><div><div class="footer-contact-label">Location</div><div class="footer-contact-value" data-text="address"></div></div></div>
         <div class="footer-contact-row"><div class="footer-contact-icon-box"><i class="fas fa-envelope"></i></div><div><div class="footer-contact-label">Email</div><div class="footer-contact-value"><a data-mail data-text="email"></a></div></div></div>
         <div class="footer-contact-row"><div class="footer-contact-icon-box"><i class="fas fa-phone"></i></div><div><div class="footer-contact-label">Phone</div><div class="footer-contact-value"><a data-tel data-text="phone"></a></div></div></div>
         <div class="footer-contact-row"><div class="footer-contact-icon-box"><i class="fab fa-whatsapp"></i></div><div><div class="footer-contact-label">WhatsApp</div><div class="footer-contact-value"><a data-wa="" data-text="phone"></a></div></div></div>
-        <div class="footer-contact-row"><div class="footer-contact-icon-box"><i class="fas fa-code-branch"></i></div><div><div class="footer-contact-label">Branches</div><div class="footer-contact-value">Jeddah · Dammam · Cairo · Milan</div></div></div>
+        <div class="footer-contact-row"><div class="footer-contact-icon-box"><i class="fas fa-clock"></i></div><div><div class="footer-contact-label">Working hours</div><div class="footer-contact-value">Sun &ndash; Thu &middot; 9:00 &ndash; 18:00 AST</div></div></div>
       </div>
 
     </div>
@@ -317,11 +361,9 @@ def footer():
           <p class="footer-credit">Prepared by: <span>Sikander Chishti</span>, Environmental Engineer</p>
         </div>
         <div style="display:flex;align-items:center;flex-wrap:wrap;gap:2px;">
-          <a href="#" class="footer-legal-btn">Privacy Policy</a>
+          <a href="privacy.html" class="footer-legal-btn">Privacy Policy</a>
           <span class="footer-legal-sep"></span>
-          <a href="#" class="footer-legal-btn">Terms of Use</a>
-          <span class="footer-legal-sep"></span>
-          <a href="#" class="footer-legal-btn">Sitemap</a>
+          <a href="terms.html" class="footer-legal-btn">Terms &amp; Conditions</a>
           <span class="footer-legal-sep"></span>
           <a href="index_arabic.html" class="footer-legal-btn" style="color:rgba(163,181,111,.6);">🌐 العربية</a>
         </div>
@@ -391,13 +433,13 @@ def modals():
 <!-- ============================================================
      MODAL — INSPECTION BOOKING
      ============================================================ -->
-<div id="bookingModal" class="modal-overlay" onclick="closeOnOverlay(event,'bookingModal')" role="dialog" aria-modal="true" aria-label="Book site inspection">
+<div id="bookingModal" class="modal-overlay" onclick="closeOnOverlay(event,'bookingModal')" role="dialog" aria-modal="true" aria-label="Book a site visit">
   <div class="modal-box w-full max-w-2xl mx-4">
     <div class="p-6 border-b border-gray-100">
       <div class="flex items-center justify-between">
         <div class="flex items-center gap-3">
           <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background:var(--bp-grad-blue);"><i class="fas fa-calendar-check text-white text-xl"></i></div>
-          <div><h2 class="text-xl font-bold text-bp-ink">Book Site Inspection</h2><p class="text-sm text-gray-500">Schedule an environmental monitoring visit</p></div>
+          <div><h2 class="text-xl font-bold text-bp-ink">Book a Site Visit</h2><p class="text-sm text-gray-500">Schedule a scoping visit with our consultants</p></div>
         </div>
         <button onclick="closeModal('bookingModal')" class="modal-close-btn" aria-label="Close"><i class="fas fa-times"></i></button>
       </div>
@@ -417,14 +459,15 @@ def modals():
           <label for="bkServiceType" class="block text-sm font-medium text-gray-700 mb-1">Service Type *</label>
           <select id="bkServiceType" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-bp-primary focus:border-transparent bg-white">
             <option value="">Select a service...</option>
-            <option value="ambient_air">🌬️ Ambient Air Quality Monitoring</option>
-            <option value="indoor_air">🏢 Indoor Air Quality Assessment</option>
-            <option value="noise">🔊 Noise Level Monitoring</option>
-            <option value="water">💧 Water Quality Testing</option>
-            <option value="soil">🌱 Soil Contamination Analysis</option>
-            <option value="stack_emission">🏭 Stack Emission Testing</option>
-            <option value="environmental_audit">📋 Environmental Audit</option>
-            <option value="other">📝 Other Service</option>
+            <option value="environmental_permit">📄 Environmental Permit (NCEC)</option>
+            <option value="impact_assessment">📋 Environmental Impact Assessment</option>
+            <option value="waste_permit">♻️ Waste Management Permit (MWAN)</option>
+            <option value="management_plan">🗂️ Environmental Management Plan</option>
+            <option value="register">📁 Environmental Register</option>
+            <option value="periodic_report">🗓️ Periodic Environmental Report</option>
+            <option value="measurements">🔬 Environmental Measurements</option>
+            <option value="audit">🔍 Environmental Audit</option>
+            <option value="other">📝 Other / Not sure yet</option>
           </select>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
@@ -492,12 +535,12 @@ def widgets():
       <button onclick="toggleChat()" class="text-white/70 hover:text-white" aria-label="Close chat"><i class="fas fa-times"></i></button>
     </div>
     <div id="chatMessages" class="flex-1 p-4 space-y-3 bg-white overflow-y-auto" style="min-height:300px;max-height:360px">
-      <div class="flex gap-2"><div class="w-7 h-7 bg-bp-light rounded-full flex items-center justify-center flex-shrink-0 mt-1"><i class="fas fa-robot text-bp-primary text-xs"></i></div><div class="chat-msg bot">Hello! I'm BluePrint's AI assistant. How can I help you today?</div></div>
+      <div class="flex gap-2"><div class="w-7 h-7 bg-bp-light rounded-full flex items-center justify-center flex-shrink-0 mt-1"><i class="fas fa-robot text-bp-primary text-xs"></i></div><div class="chat-msg bot">Hello! I'm BluePrint's assistant. Ask about permits, studies, or which requirements apply to your facility.</div></div>
     </div>
     <div id="quickReplies" class="px-4 py-2 bg-gray-50 border-t flex flex-wrap gap-2">
       <button onclick="sendQuick('What services do you offer?')" class="px-3 py-1.5 bg-white border border-gray-200 rounded-full text-xs text-gray-600 hover:border-bp-primary hover:text-bp-primary transition-all">Our services</button>
-      <button onclick="sendQuick('What compliance standards do you work with?')" class="px-3 py-1.5 bg-white border border-gray-200 rounded-full text-xs text-gray-600 hover:border-bp-primary hover:text-bp-primary transition-all">Compliance</button>
-      <button onclick="sendQuick('How do I request a quote?')" class="px-3 py-1.5 bg-white border border-gray-200 rounded-full text-xs text-gray-600 hover:border-bp-primary hover:text-bp-primary transition-all">Get a quote</button>
+      <button onclick="sendQuick('Which environmental permit do I need?')" class="px-3 py-1.5 bg-white border border-gray-200 rounded-full text-xs text-gray-600 hover:border-bp-primary hover:text-bp-primary transition-all">Which permit?</button>
+      <button onclick="sendQuick('How do I book a free consultation?')" class="px-3 py-1.5 bg-white border border-gray-200 rounded-full text-xs text-gray-600 hover:border-bp-primary hover:text-bp-primary transition-all">Free consultation</button>
     </div>
     <div class="p-3 border-t bg-white flex gap-2">
       <input id="chatInput" type="text" placeholder="Ask about our services…" class="flex-1 px-3 py-2 rounded-xl border border-gray-200 text-sm outline-none focus:border-bp-primary" onkeydown="if(event.key==='Enter') sendChat()" aria-label="Chat message" />
@@ -522,19 +565,19 @@ def widgets():
   <div id="expertPanel">
     <div class="ep-header">
       <div class="ep-photo"><img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=120&h=120&fit=crop&q=80" alt="Expert" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?w=120&h=120&fit=crop'" /></div>
-      <div class="ep-info"><div class="ep-name">Environmental Specialist</div><div class="ep-role">BluePrint Environmental Services · Riyadh, KSA</div><div class="ep-status">Available now</div></div>
+      <div class="ep-info"><div class="ep-name">Environmental Specialist</div><div class="ep-role">Accredited environmental consultant &middot; Riyadh</div><div class="ep-status">Available now</div></div>
       <button class="ep-close" onclick="closeExpert()" aria-label="Close">✕</button>
     </div>
     <div class="ep-body">
       <div class="ep-question">Have a question?</div>
       <div class="ep-hint">Our team typically responds within 2 hours during business hours.</div>
       <div class="ep-options">
-        <a data-wa="Hi BluePrint, I have an environmental query" class="ep-option whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp — fastest response</a>
+        <a data-wa="Hello BluePrint, I have a compliance question" class="ep-option whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp — fastest response</a>
         <a data-mail class="ep-option email"><i class="fas fa-envelope"></i> Email us directly</a>
         <a data-tel class="ep-option call"><i class="fas fa-phone"></i> Call <span data-text="phone"></span></a>
       </div>
       <div class="ep-divider">or send a quick message</div>
-      <div class="ep-quick-msg"><input type="text" id="expertMsgInput" placeholder="e.g. I need a stack test quote…" maxlength="120" aria-label="Quick message" /><button onclick="sendExpertMsg()" aria-label="Send"><i class="fas fa-paper-plane"></i></button></div>
+      <div class="ep-quick-msg"><input type="text" id="expertMsgInput" placeholder="e.g. which permit does my workshop need?" maxlength="120" aria-label="Quick message" /><button onclick="sendExpertMsg()" aria-label="Send"><i class="fas fa-paper-plane"></i></button></div>
     </div>
     <div class="ep-footer">Free consultation · No commitment required</div>
   </div>

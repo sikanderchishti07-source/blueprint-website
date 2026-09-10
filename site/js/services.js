@@ -9,42 +9,43 @@
 
   var SERVICES = [
     {
-      title: 'Ambient Air Quality Monitoring', subtitle: '24/7 real-time environmental surveillance', icon: 'fas fa-wind',
-      desc: 'BluePrint deploys state-of-the-art Beta Attenuation Monitors (BAM) and reference-grade gas analysers to continuously measure criteria pollutants across industrial, urban, and sensitive receptor zones. All data streams are telemetrically transmitted to our monitoring centre for immediate regulatory reporting and public health protection.',
-      features: ['PM2.5, PM10 & TSP via BAM/gravimetric samplers', 'NO₂, SO₂, CO & ozone — continuous gas analysers', 'Real-time telemetric data acquisition & dashboards', '24/7 alarm management & exceedance notifications', 'NCEC SAAQS & WHO AQG 2021 compliance reporting', 'Meteorological station integration (wind, temp, RH)'],
-      stats: [{ val: '300+', lbl: 'Monitoring Sites' }, { val: '24/7', lbl: 'Live Data Feed' }, { val: 'SAAQS', lbl: 'Compliant' }]
+      title: "Environmental Permit", subtitle: "NCEC \u00b7 required before you build and before you operate", icon: "fas fa-file-signature",
+      desc: "Every regulated facility in the Kingdom needs a valid environmental permit before it builds and before it operates. BluePrint prepares the whole file \u2014 classification, supporting studies, and supporting documents \u2014 and carries it through to issuance, coordinating directly with the reviewing authority.",
+      features: ["Commercial registration and municipal licence", "Site plan, coordinates, and land-use approval", "Process description and production capacity", "Activity classification against permit categories", "Supporting studies where the category requires them", "Submission handling and reviewer correspondence"],
+      stats: [{ val: "NCEC", lbl: "Aligned" }, { val: "Cat 1\u20133", lbl: "All categories" }, { val: "End-to-end", lbl: "To issuance" }]
     },
     {
-      title: 'Stack Emission Testing', subtitle: 'EPA-certified isokinetic source testing', icon: 'fas fa-smog',
-      desc: 'Our qualified stack-testing teams conduct isokinetic sampling on industrial flue gas stacks using US EPA Methods 1–17, NCEC emission protocols, and EN ISO procedures. We serve cement, power generation, oil & gas, chemicals and waste-to-energy facilities, delivering LDAR programmes, CEMS installation, and complete compliance documentation.',
-      features: ['US EPA Methods 1, 4, 5, 9, 17 & NCEC equivalent', 'Particulate matter, opacity & opacity audit (Method 9)', 'HCl, HF, SO₃, NOx, CO, CO₂, O₂ flue-gas analysis', 'CEMS calibration, validation & RATA testing', 'Mercury speciation & heavy metals (Methods 29/30B)', 'Full permit-ready reports with QA/QC documentation'],
-      stats: [{ val: '500+', lbl: 'Stack Tests Done' }, { val: 'EPA', lbl: 'Certified Methods' }, { val: 'CEMS', lbl: 'Validation' }]
+      title: "Environmental Impact Assessment", subtitle: "The study that stands between a project and its licence", icon: "fas fa-clipboard-check",
+      desc: "The EIA is the study that stands between a high-impact project and its licence. BluePrint produces assessments that reviewers accept \u2014 because they answer the questions reviewers actually ask, with a stated methodology and a field baseline behind every prediction.",
+      features: ["Scoping report and terms of reference", "Field baseline survey and measurement campaign", "Impact prediction with stated methodology", "Mitigation hierarchy and residual impact assessment", "Environmental management and monitoring plan", "Submission support through reviewer queries"],
+      stats: [{ val: "EIA", lbl: "&amp; ESIA" }, { val: "Baseline", lbl: "Field surveys" }, { val: "Reviewer", lbl: "Accepted" }]
     },
     {
-      title: 'Indoor Air Quality Assessment', subtitle: 'TVOC, microbial & comfort parameter profiling', icon: 'fas fa-building',
-      desc: 'BluePrint conducts comprehensive IAQ surveys for offices, hospitals, schools, hotels, and residential developments. We quantify TVOC, formaldehyde, CO₂, CO, temperature, humidity, particulates and biological contaminants, benchmarking against ASHRAE 62.1, WHO and NCEC IAQ guidelines to protect occupant health and productivity.',
-      features: ['TVOC & formaldehyde (ISO 16000 methods)', 'CO₂, CO, temperature, relative humidity profiling', 'PM2.5, PM10 & bioaerosol (mould/bacteria) sampling', 'Radon and volatile organic compound speciation', 'Ventilation system assessment & HVAC auditing', 'Health-risk assessment & remediation recommendations'],
-      stats: [{ val: '150+', lbl: 'IAQ Surveys' }, { val: 'ASHRAE', lbl: '62.1 Compliant' }, { val: 'WHO', lbl: 'Benchmarked' }]
+      title: "Waste Management Permit (MWAN)", subtitle: "For anyone who generates, transports, treats or disposes", icon: "fas fa-recycle",
+      desc: "Anyone who generates, transports, treats, or disposes of regulated waste in the Kingdom needs a MWAN permit. BluePrint takes facilities from unqualified to permitted \u2014 characterising the waste streams, closing the containment gaps, and preparing the file the National Center for Waste Management expects.",
+      features: ["Waste stream inventory and characterisation", "Hazard classification with lab analysis where needed", "Storage, segregation, and containment gap closure", "Contracted-carrier and disposal-route verification", "Manifest and record-keeping system setup", "Permit application preparation and submission"],
+      stats: [{ val: "MWAN", lbl: "Registered" }, { val: "Hazardous", lbl: "&amp; industrial" }, { val: "Gap-to-permit", lbl: "Full service" }]
     },
     {
-      title: 'Environmental Impact Assessment', subtitle: 'EIA/ESIA — NCEC, IFC & Equator Principles', icon: 'fas fa-mountain',
-      desc: 'BluePrint prepares statutory Environmental Impact Assessments (EIA) and Environmental & Social Impact Assessments (ESIA) for industrial plants, infrastructure corridors, coastal developments, and mega-projects aligned with Saudi Vision 2030. Our multi-disciplinary team covers air, noise, water, ecology, socio-economics and cumulative impacts through to regulatory submission.',
-      features: ['Scoping, baseline characterisation & data collection', 'Air dispersion modelling (AERMOD, CALPUFF)', 'Noise impact assessment & prediction modelling', 'Marine & freshwater ecology surveys', 'Social impact assessment & stakeholder engagement', 'Environmental Management & Monitoring Plans (EMMP)'],
-      stats: [{ val: '80+', lbl: 'EIA Projects' }, { val: 'NCEC', lbl: 'Approved' }, { val: 'IFC', lbl: 'Aligned' }]
+      title: "Environmental Management Plan", subtitle: "The document inspectors ask for first", icon: "fas fa-tasks",
+      desc: "The EMP turns permit conditions into daily practice \u2014 and it is the document inspectors ask for first. BluePrint writes plans that a site team can actually follow, tying every obligation to a named control, a monitoring parameter, and a responsible role.",
+      features: ["Legal and permit-condition register", "Impact-by-impact mitigation measures", "Monitoring programme with parameters and frequencies", "Roles, responsibilities, and reporting lines", "Incident and emergency response procedures", "Training and awareness requirements"],
+      stats: [{ val: "EMP", lbl: "&amp; EMMP" }, { val: "Site-ready", lbl: "Practical" }, { val: "Audit", lbl: "Defensible" }]
     },
     {
-      title: 'Water & Soil Analysis', subtitle: 'Accredited laboratory — ISO/IEC 17025', icon: 'fas fa-tint',
-      desc: 'Our ISO/IEC 17025-accredited laboratory analyses groundwater, surface water, marine water, wastewater, drinking water, and soil/sediment samples using internationally validated methods. We determine physical, chemical, and microbiological parameters from sub-ppb trace metals to full organic panels, supporting regulatory compliance, due diligence, and remediation projects.',
-      features: ['Heavy metals by ICP-MS (sub-ppb detection limits)', 'VOC, SVOC, PAHs & TPH by GC-MS/FID', 'Physicochemical: pH, EC, TDS, BOD, COD, nutrients', 'Microbiological: E. coli, TCC, Legionella, coliforms', 'Soil contamination & remediation baseline surveys', 'Chain-of-custody documentation & LIMS reporting'],
-      stats: [{ val: '17025', lbl: 'ISO Accredited' }, { val: '200+', lbl: 'Parameters Tested' }, { val: 'ppt', lbl: 'Detection Limits' }]
+      title: "Environmental Register", subtitle: "Proof you have been compliant every day since", icon: "fas fa-folder-open",
+      desc: "A permit proves you were compliant on the day it was issued. The environmental register proves you have been compliant every day since. BluePrint establishes the register, populates it from your existing records, and keeps it current so an inspection never becomes a document hunt.",
+      features: ["Permits, licences, and their conditions", "Waste inventory, manifests, and disposal receipts", "Emission, effluent, and noise monitoring results", "Chemical and hazardous material inventories", "Incident, complaint, and corrective action log", "Ongoing upkeep and periodic review"],
+      stats: [{ val: "Live", lbl: "Maintained" }, { val: "Inspection", lbl: "Ready" }, { val: "All records", lbl: "One place" }]
     },
     {
-      title: 'Environmental Management Plans', subtitle: 'ISO 14001 · EMP design · Emergency response', icon: 'fas fa-leaf',
-      desc: 'BluePrint develops bespoke Environmental Management Plans (EMP), Environmental Monitoring & Management Plans (EMMP), and ISO 14001 Environmental Management Systems (EMS) for clients across construction, operation, and decommissioning phases. We also prepare Emergency Response Plans (ERP), spill contingency plans, and support clients through NCEC and third-party audits.',
-      features: ['Site-specific EMP/EMMP development & implementation', 'ISO 14001:2015 gap analysis, design & certification support', 'Emergency Response Plans & spill contingency procedures', 'Environmental compliance auditing & gap reporting', 'Waste management plans & hazardous materials protocols', 'Staff environmental training & awareness programmes'],
-      stats: [{ val: '120+', lbl: 'EMP Projects' }, { val: 'ISO', lbl: '14001 Certified' }, { val: 'KSA', lbl: 'NCEC Approved' }]
+      title: "Periodic Environmental Report", subtitle: "The obligation most facilities let slip", icon: "fas fa-calendar-check",
+      desc: "Permits are kept, not just won. Periodic reporting is the obligation most facilities let slip \u2014 and the easiest violation for a regulator to spot. BluePrint builds the reporting calendar from your permit conditions, schedules the measurements it calls for, and files on time, every cycle.",
+      features: ["Reporting calendar built from permit conditions", "Scheduling and supervision of required measurements", "Data compilation and limit comparison", "Exceedance investigation and corrective actions", "Report drafting in the regulator&rsquo;s format", "Submission and follow-up on queries"],
+      stats: [{ val: "On time", lbl: "Every cycle" }, { val: "Permit-driven", lbl: "Calendar" }, { val: "Filed", lbl: "&amp; followed up" }]
     }
   ];
+
 
   function buildBody(svc) {
     var feat = svc.features.map(function (f) { return '<div class="isvc-feature-item"><div class="isvc-feature-check"><i class="fas fa-check"></i></div><span class="isvc-feature-text">' + f + '</span></div>'; }).join('');
@@ -55,7 +56,7 @@
       + '<div class="isvc-stats-row">' + stats + '</div>'
       + '<div class="isvc-cta-row">'
       + '<a href="contact.html" class="isvc-btn-primary"><i class="fas fa-paper-plane" style="font-size:.76rem;"></i> Get a Quote</a>'
-      + '<button type="button" class="isvc-btn-ghost" onclick="openBookingModal()">Request Inspection <i class="fas fa-arrow-right" style="font-size:.7rem;"></i></button>'
+      + '<button type="button" class="isvc-btn-ghost" onclick="openBookingModal()">Book a site visit <i class="fas fa-arrow-right" style="font-size:.7rem;"></i></button>'
       + '</div>';
   }
 

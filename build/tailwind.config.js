@@ -1,6 +1,6 @@
 /** Tailwind config for BluePrint — brand colours from the logo. */
 module.exports = {
-  content: ['../site/*.html', '../site/js/*.js'],
+  content: ['../site/*.html', '../site/js/*.js', './arabic.py'],
   theme: {
     extend: {
       fontFamily: { sans: ['DM Sans', 'sans-serif'], display: ['Plus Jakarta Sans', 'sans-serif'] },
