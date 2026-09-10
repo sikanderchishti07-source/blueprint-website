@@ -155,6 +155,89 @@
 .article-body .not-prose h3 { font-family: var(--font-display); }
 @media (max-width: 640px) { .article-body { font-size: .95rem; } .article-body h2 { font-size: 1.3rem; } }
 
+/* ── Hero: full-bleed video cover ──────────────────────────── */
+.hero-cover { min-height: 92vh; background: var(--bp-blue-deep); }
+.hero-cover-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+/* Scrim: keeps the headline legible over bright sky and water, and pulls
+   the footage into the teal palette so it reads as part of the brand. */
+.hero-cover-scrim { position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background:
+    linear-gradient(100deg, rgba(4,51,58,.92) 0%, rgba(4,51,58,.72) 34%, rgba(0,90,102,.30) 62%, rgba(0,113,129,.18) 100%),
+    linear-gradient(to top, rgba(4,51,58,.55) 0%, rgba(4,51,58,0) 38%); }
+@media (max-width: 1023px) {
+  .hero-cover { min-height: 88vh; }
+  .hero-cover-scrim { background:
+    linear-gradient(180deg, rgba(4,51,58,.74) 0%, rgba(4,51,58,.34) 52%, rgba(4,51,58,.72) 100%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-cover-video { display: none; }
+  .hero-cover { background: url('../assets/video/hero-poster.jpg') center/cover; }
+}
+
+/* ── Article cards (used by the blog listing) ──────────────── */
+.section-title { font-family: var(--font-display); font-weight: 800; letter-spacing: -.03em; color: var(--bp-blue-ink); }
+.live-dot { width: 8px; height: 8px; background: var(--bp-olive); border-radius: 50%; flex-shrink: 0; animation: pulse-dot 2s ease-in-out infinite; }
+@keyframes pulse-dot { 0%,100% { box-shadow: 0 0 0 0 rgba(100,117,66,.55); } 50% { box-shadow: 0 0 0 7px rgba(100,117,66,0); } }
+.news-card { background: var(--bp-card); border: 1px solid var(--bp-border); border-radius: 16px; overflow: hidden; transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease; animation: card-enter .55s ease both; position: relative; box-shadow: 0 2px 14px rgba(0, 90, 102,.07); }
+.news-card:hover { transform: translateY(-5px); box-shadow: 0 18px 50px rgba(0, 90, 102,.14), 0 0 0 1px rgba(0, 113, 129,.18); border-color: rgba(0, 113, 129,.22); }
+@keyframes card-enter { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.news-card:nth-child(1) { animation-delay: .05s; }
+.news-card:nth-child(2) { animation-delay: .12s; }
+.news-card:nth-child(3) { animation-delay: .19s; }
+.news-card:nth-child(4) { animation-delay: .26s; }
+.news-card:nth-child(5) { animation-delay: .33s; }
+.news-card:nth-child(6) { animation-delay: .40s; }
+.card-img-wrap { position: relative; height: 200px; overflow: hidden; }
+.card-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform .55s ease; }
+.news-card:hover .card-img-wrap img { transform: scale(1.05); }
+.card-img-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 45%, rgba(255,255,255,.55) 100%); }
+.card-badge { position: absolute; top: 12px; left: 12px; font-size: .67rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; padding: 4px 11px; border-radius: 999px; backdrop-filter: blur(10px); }
+.card-source { position: absolute; bottom: 10px; right: 12px; font-size: .62rem; color: rgba(255,255,255,.85); letter-spacing: .04em; text-shadow: 0 1px 4px rgba(0,0,0,.45); }
+.card-body { padding: 18px 20px 20px; }
+.card-title { font-family: var(--font-display); font-weight: 700; font-size: 1rem; line-height: 1.5; color: var(--bp-text); margin-bottom: 9px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.card-desc { font-size: .82rem; color: var(--bp-muted); line-height: 1.65; margin-bottom: 16px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.card-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 12px; border-top: 1px solid var(--bp-border); }
+.card-time { font-size: .66rem; color: var(--bp-faint); letter-spacing: .04em; }
+.read-more { display: inline-flex; align-items: center; gap: 5px; font-size: .78rem; font-weight: 600; color: var(--bp-blue); text-decoration: none; transition: gap .2s ease, color .2s ease; }
+.read-more:hover { gap: 9px; color: var(--bp-blue-deep); }
+.news-card.featured .card-img-wrap { height: 240px; }
+.news-card.featured .card-title { font-size: 1.18rem; }
+
+/* ── Responsive — floating widgets & ticker ───────────────── */
+@media (max-width: 768px) {
+  .whatsapp-container { bottom: 120px; }
+  .whatsapp-btn { width: 50px; height: 50px; }
+  .whatsapp-icon { width: 26px; height: 26px; }
+  .logo-ticker-section { padding: 2.5rem 0 1.5rem; }
+  .logo-item { min-width: 100px; height: 48px; }
+  #expertCTA { display: none; }
+}
+@media (max-width: 480px) {
+  .whatsapp-container { bottom: 110px; right: 20px; }
+  .whatsapp-btn { width: 48px; height: 48px; }
+  .whatsapp-icon { width: 24px; height: 24px; }
+  .logo-ticker-wrapper { padding: 1rem 0; }
+  .logo-item { min-width: 80px; height: 40px; padding: 0 1rem; }
+}
+
+/* ── Article & legal body copy ─────────────────────────────── */
+.article-body { font-size: 1rem; line-height: 1.85; color: #33454b; }
+.article-body .lead { font-size: 1.12rem; line-height: 1.8; color: var(--bp-blue-ink); font-weight: 500; margin-bottom: 1.8rem; }
+.article-body h2 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--bp-blue-ink); letter-spacing: -.02em; margin: 2.4rem 0 .9rem; }
+.article-body h3 { font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--bp-blue-ink); margin: 1.8rem 0 .6rem; }
+.article-body p { margin-bottom: 1.15rem; }
+.article-body ul, .article-body ol { margin: 0 0 1.4rem 1.3rem; }
+.article-body ul { list-style: disc; }
+.article-body ol { list-style: decimal; }
+.article-body li { margin-bottom: .55rem; padding-left: .3rem; }
+.article-body li::marker { color: var(--bp-olive); font-weight: 700; }
+.article-body strong { color: var(--bp-blue-ink); font-weight: 700; }
+.article-body a { color: var(--bp-blue); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.article-body blockquote { margin: 1.8rem 0; padding: 1.1rem 1.4rem; background: var(--bp-blue-tint); border-left: 4px solid var(--bp-olive); border-radius: 0 12px 12px 0; font-size: 1.02rem; font-style: italic; color: var(--bp-blue-ink); }
+.article-body .not-prose, .article-body .not-prose * { all: revert-layer; }
+.article-body .not-prose h3 { font-family: var(--font-display); }
+@media (max-width: 640px) { .article-body { font-size: .95rem; } .article-body h2 { font-size: 1.3rem; } }
+
 /* ── Hero video panel ──────────────────────────────────────── */
 .hero-media { position: relative; height: 520px; width: 100%; background: var(--bp-blue-deep); }
 @media (max-width: 1023px) { .hero-media { height: 300px; } }
