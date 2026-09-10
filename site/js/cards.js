@@ -123,14 +123,21 @@
 
     overlay.classList.add('is-open');
     overlay.setAttribute('aria-hidden', 'false');
+    // lock the page behind the overlay — html as well as body, or the
+    // page scrollbar stays visible down the right edge
+    var sbw = window.innerWidth - document.documentElement.clientWidth;
+    document.documentElement.style.overflow = 'hidden';
     document.body.style.overflow = 'hidden';
+    if (sbw > 0) document.body.style.paddingRight = sbw + 'px';
     setTimeout(function () { document.getElementById('svcOvClose').focus(); }, 380);
   }
 
   window.closeSvcOverlay = function () {
     overlay.classList.remove('is-open');
     overlay.setAttribute('aria-hidden', 'true');
+    document.documentElement.style.overflow = '';
     document.body.style.overflow = '';
+    document.body.style.paddingRight = '';
     if (lastFocus) lastFocus.focus();
   };
 
