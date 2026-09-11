@@ -24,19 +24,41 @@ MK.forEach(m=>{const d=document.createElement('div');d.className='mk';
  d.innerHTML='<span class="mk-d"></span><span class="mk-b"><span class="mk-c">'+m.c+'</span><span class="mk-v">'+m.v+'</span></span>';
  mkL.appendChild(d);m.n=d;});
 
-/* connecting network */
+/* contour lines + scanning band */
 const svg=document.getElementById('netSvg');
-for(let i=0;i<MK.length-1;i++){
-  const a=MK[i],b=MK[i+1];
-  const mx=(a.x+b.x)/2, my=(a.y+b.y)/2 - 6;
-  const p=document.createElementNS('http://www.w3.org/2000/svg','path');
-  p.setAttribute('d',`M${a.x} ${a.y} Q ${mx} ${my} ${b.x} ${b.y}`);
-  p.setAttribute('vector-effect','non-scaling-stroke');
+svg.setAttribute('viewBox','0 0 100 100');
+svg.setAttribute('preserveAspectRatio','none');
+const NS='http://www.w3.org/2000/svg';
+const el=(t,a={})=>{const e=document.createElementNS(NS,t);
+  for(const k in a)e.setAttribute(k,a[k]);
+  e.setAttribute('vector-effect','non-scaling-stroke');return e;};
+
+const defs=el('defs');
+defs.innerHTML='<linearGradient id="bpSweep" x1="0" x2="1">'
+  +'<stop offset="0" stop-color="#8fe7f7" stop-opacity="0"/>'
+  +'<stop offset=".72" stop-color="#8fe7f7" stop-opacity=".07"/>'
+  +'<stop offset="1" stop-color="#8fe7f7" stop-opacity=".16"/></linearGradient>';
+svg.appendChild(defs);
+
+[[80,2.6,1.6,'contour',11000,0],
+ [86,2.0,1.2,'contour faint',14000,1200]].forEach(([base,a1,a2,cls,dur,delay])=>{
+  let d='M-4 '+base;
+  for(let x=-4;x<=104;x+=4)
+    d+=' L'+x+' '+(base-Math.sin(x*0.105)*a1-Math.cos(x*0.047)*a2).toFixed(2);
+  const p=el('path',{d:d,class:cls});
+  p.style.strokeDasharray='300 300';
+  p.animate([{strokeDashoffset:300},{strokeDashoffset:-300}],
+    {duration:dur,iterations:Infinity,easing:'linear',delay:delay});
   svg.appendChild(p);
-  const len=p.getTotalLength?120:120;
-  p.style.setProperty('--len',len);
-  MK[i].path=p; MK[i].len=len;
-}
+});
+
+const sg=el('g',{id:'bpSweepG'});
+sg.appendChild(el('rect',{x:0,y:0,width:23,height:100,class:'sweepBand'}));
+sg.appendChild(el('line',{x1:23,y1:0,x2:23,y2:100,class:'sweepEdge'}));
+[21,45,64,84].forEach(function(y){
+  sg.appendChild(el('line',{x1:21.9,y1:y,x2:24.1,y2:y,class:'sweepTick'}));
+});
+svg.appendChild(sg);
 
 const wrap=document.getElementById('wrap'),plane=document.getElementById('plane'),net=document.getElementById('net'),
       s1=document.getElementById('s1'),s2=document.getElementById('s2'),s3=document.getElementById('s3'),
@@ -53,12 +75,12 @@ setTimeout(()=>document.querySelectorAll('#h1 .w').forEach(w=>w.classList.add('i
 
 /* inertia-smoothed scroll */
 let target=0, cur=0, running=false;
-const setScene=(el,o,dy,bl)=>{el.style.opacity=o.toFixed(3);
+/* opacity + transform only — a full-viewport blur costs ~100ms a frame */
+const setScene=(el,o,dy)=>{el.style.opacity=o.toFixed(3);
   el.style.transform='translate3d(0,'+dy.toFixed(1)+'px,0)';
-  el.style.filter=bl>0.02?'blur('+bl.toFixed(2)+'px)':'none';
   el.style.visibility=o<.02?'hidden':'visible'};
 
-let mx=0,my=0,tmx=0,tmy=0;
+let mx=0,my=0,tmx=0,tmy=0,lastScale=null;
 addEventListener('mousemove',e=>{tmx=(e.clientX/innerWidth-.5);tmy=(e.clientY/innerHeight-.5)},{passive:true});
 
 function frame(){
@@ -66,23 +88,27 @@ function frame(){
   mx  += (tmx-mx)*0.06;  my += (tmy-my)*0.06;
   const p=cur;
 
-  /* the frame stays put and clips; the picture inside is what moves */
+  /* The frame clips; the picture inside moves. Scale is quantised because a
+     scale change forces Chrome to re-rasterise the full 3840px image, which
+     costs ~14ms a frame. Translation is composited and effectively free. */
   const kb = plane.firstElementChild;
-  if (kb) kb.style.transform =
-    'scale(' + (1.10 - .08 * p).toFixed(4) + ') ' +
-    'translate3d(' + (mx * -16).toFixed(1) + 'px,' + ((1.5 - 2.5 * p) + my * -6).toFixed(2) + '%,0)';
+  if (kb) {
+    const want = Math.round((1.10 - .08 * p) * 200) / 200;   /* 0.005 steps */
+    if (want !== lastScale) { lastScale = want; kb.style.scale = want; }
+    kb.style.translate =
+      (mx * -16).toFixed(1) + 'px ' + ((1.5 - 2.5 * p) + my * -6).toFixed(2) + '%';
+  }
   net.style.transform='translate3d('+(mx*-26).toFixed(1)+'px,'+((.5-p)*-7).toFixed(2)+'%,0)';
 
-  const o1=1-sm(rmp(p,.16,.32)); setScene(s1,o1,-72*(1-o1),(1-o1)*5);
-  const o2=win(p,.28,.72);       setScene(s2,o2,(1-o2)*46,(1-o2)*5);
-  const o3=sm(rmp(p,.66,.84));   setScene(s3,o3,(1-o3)*46,(1-o3)*5);
+  const o1=1-sm(rmp(p,.16,.32)); setScene(s1,o1,-72*(1-o1));
+  const o2=win(p,.28,.72);       setScene(s2,o2,(1-o2)*46);
+  const o3=sm(rmp(p,.66,.84));   setScene(s3,o3,(1-o3)*46);
   par.classList.toggle('on',o2>.35);
   document.getElementById('liveCard').classList.toggle('on',o2>.30);
 
   MK.forEach((m,i)=>{const o=win(p,m.f,m.t,.06);
     m.n.style.opacity=o.toFixed(3);
-    m.n.style.transform='translate(-50%,-50%) scale('+(.8+.2*o).toFixed(3)+')';
-    if(m.path) m.path.style.strokeDashoffset=(m.len*(1-o)).toFixed(1);});
+    m.n.style.transform='translate(-50%,-50%) scale('+(.8+.2*o).toFixed(3)+')';});
 
   const act=p<.3?0:(p<.7?1:2);
   chs.forEach((c,i)=>c.classList.toggle('on',i===act));
@@ -137,7 +163,10 @@ function onScroll(){
   if(imgs.length<2) return;
   if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   let i=0, timer=null;
-  const load=n=>{ const el=imgs[n]; if(el && el.dataset.src){ el.src=el.dataset.src; delete el.dataset.src; } };
+  const load=n=>{ const el=imgs[n]; if(!el||!el.dataset.src) return;
+    if(el.dataset.srcset){ el.srcset=el.dataset.srcset; el.sizes=el.dataset.sizes||'100vw';
+      delete el.dataset.srcset; delete el.dataset.sizes; }
+    el.src=el.dataset.src; delete el.dataset.src; };
   load(1);                      /* have the next frame ready before the first change */
 
   /* cover-3 carries its own labelled pins, so ours step aside while it shows */

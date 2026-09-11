@@ -4,9 +4,9 @@ COVER = """<div class="wrap" id="wrap">
   <div class="stage">
     <div class="plane" id="plane">
       <div class="kb">
-        <img class="cvr on" data-i="0" src="assets/img/cover-1.webp" alt="Refinery outside Riyadh at sunrise" />
-        <img class="cvr" data-i="1" data-src="assets/img/cover-2.webp" alt="Industrial facility at blue hour" />
-        <img class="cvr" data-i="2" data-src="assets/img/cover-3.webp" alt="Saudi coastline with environmental monitoring points" />
+        <img class="cvr on" data-i="0" srcset="assets/img/cover-1-1920.webp 1920w, assets/img/cover-1-2560.webp 2560w, assets/img/cover-1.webp 3840w" sizes="100vw" src="assets/img/cover-1-2560.webp" alt="Refinery outside Riyadh at sunrise" />
+        <img class="cvr" data-i="1" data-srcset="assets/img/cover-2-1920.webp 1920w, assets/img/cover-2-2560.webp 2560w, assets/img/cover-2.webp 3840w" data-sizes="100vw" data-src="assets/img/cover-2-2560.webp" alt="Industrial facility at blue hour" />
+        <img class="cvr" data-i="2" data-srcset="assets/img/cover-3-1920.webp 1920w, assets/img/cover-3-2560.webp 2560w, assets/img/cover-3.webp 3840w" data-sizes="100vw" data-src="assets/img/cover-3-2560.webp" alt="Saudi coastline with environmental monitoring points" />
       </div>
     </div>
 
