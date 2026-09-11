@@ -29,16 +29,16 @@
       blurb: 'The numbers behind every compliance claim.',
       href: 'services.html#monitoring',
       items: [
-        ['Air Quality Monitoring &amp; Testing', 'Measurement against KSA standards', 'technology.html#equipment'],
-        ['Water &amp; Wastewater Testing', 'Accredited analysis', 'technology.html#equipment'],
-        ['Noise Monitoring &amp; Assessment', 'Against regulated limits', 'technology.html#equipment'],
-        ['Soil &amp; Sediment Testing', 'Characteristics and contaminants', 'technology.html#equipment'],
-        ['Field Monitoring &amp; Measurement', 'Precise on-site parameters', 'technology.html#equipment'],
-        ['Environmental Sampling', 'Chain-of-custody protocols', 'technology.html#equipment'],
-        ['Monitoring Programmes', 'Scheduled, tracked, reported', 'technology.html#equipment'],
-        ['Laboratory Analysis', 'With technical interpretation', 'technology.html#equipment'],
-        ['Pollution Control Equipment', 'Supply and operation', 'technology.html#equipment'],
-        ['Reporting &amp; Compliance', 'Periodic regulatory reports', 'technology.html#equipment']
+        ['Air Quality Monitoring &amp; Testing', 'Measurement against KSA standards', 'service-air-quality-monitoring.html'],
+        ['Water &amp; Wastewater Testing', 'Accredited analysis', 'service-water-wastewater-testing.html'],
+        ['Noise Monitoring &amp; Assessment', 'Against regulated limits', 'service-noise-monitoring.html'],
+        ['Soil &amp; Sediment Testing', 'Characteristics and contaminants', 'service-soil-sediment-testing.html'],
+        ['Field Monitoring &amp; Measurement', 'Precise on-site parameters', 'service-field-monitoring.html'],
+        ['Environmental Sampling', 'Chain-of-custody protocols', 'service-environmental-sampling.html'],
+        ['Monitoring Programmes', 'Scheduled, tracked, reported', 'service-monitoring-programmes.html'],
+        ['Laboratory Analysis', 'With technical interpretation', 'service-laboratory-analysis.html'],
+        ['Pollution Control Equipment', 'Supply and operation', 'service-pollution-control-equipment.html'],
+        ['Reporting &amp; Compliance', 'Periodic regulatory reports', 'service-reporting-compliance.html']
       ]
     },
     {
@@ -47,12 +47,12 @@
       blurb: 'Deeper technical work across six disciplines.',
       href: 'services.html',
       items: [
-        ['Climate Change &amp; Sustainability', 'ESG, carbon footprint, net zero &mdash; 17 services', 'services.html'],
-        ['Ecological &amp; Biological Surveys', 'Baseline, habitat, protected species &mdash; 6', 'services.html'],
-        ['Marine Environment', 'Sampling, mapping, modelling &mdash; 6', 'services.html'],
-        ['Remediation &amp; Rehabilitation', 'Investigation to in-situ works &mdash; 5', 'services.html'],
-        ['Environmental Modelling', 'Dispersion, hydrology, noise &mdash; 5', 'services.html'],
-        ['Laboratory Services', 'Sampling through interpretation &mdash; 10', 'services.html']
+        ['Climate Change &amp; Sustainability', 'ESG, carbon footprint, net zero &mdash; 17 services', 'service-climate-sustainability.html'],
+        ['Ecological &amp; Biological Surveys', 'Baseline, habitat, protected species &mdash; 6', 'service-ecological-surveys.html'],
+        ['Marine Environment', 'Sampling, mapping, modelling &mdash; 6', 'service-marine-environment.html'],
+        ['Remediation &amp; Rehabilitation', 'Investigation to in-situ works &mdash; 5', 'service-remediation-rehabilitation.html'],
+        ['Environmental Modelling', 'Dispersion, hydrology, noise &mdash; 5', 'service-environmental-modelling.html'],
+        ['Laboratory Services', 'Sampling through interpretation &mdash; 10', 'service-laboratory-services.html']
       ]
     }
   ];

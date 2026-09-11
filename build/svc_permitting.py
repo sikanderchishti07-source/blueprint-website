@@ -12,9 +12,12 @@ PERMITTING["environmental-permit"] = dict(
          "classified correctly, filed completely, and carried through review.",
     hero_img="assets/img/svc-permit.jpg",
     float_head=("fa-file-signature", "What the file contains"),
-    float_rows=[("Activity classification", "Category 1, 2 or 3"),
-                ("Supporting studies", "Scaled to the category"),
-                ("Technical description", "Process, capacity, emissions")],
+    float_rows=[
+                ("3", "Permit categories", "Classification decides the scope"),
+                ("6+", "Documents required", "Before a file is accepted"),
+                ("1", "Review cycle", "If the classification is right")
+    ],
+    float2=("fa-stamp", "NCEC aligned", "Filed to the current framework"),
     meta="NCEC environmental permit applications in Saudi Arabia — activity classification, supporting "
          "studies, technical documentation and coordination with the regulator through to issuance.",
     problem_title="Most delays are not technical",
@@ -69,6 +72,25 @@ PERMITTING["environmental-permit"] = dict(
         ("Commercial &amp; services", "Warehousing, food service and larger retail operations fall into the "
          "simplified route, but the permit remains a condition of the commercial registration."),
     ],
+    grid_title="What you get out of it",
+    caps=[
+        ("Reviewed before you commit",
+         "We read the conditions and tell you what actually applies before any scope is agreed, so you are "
+         "not paying for work the regulator never asked for.",
+         "assets/img/sector-1.jpg", "1st", "time through review"),
+        ("Defensible documentation",
+         "Everything is produced to the standard the condition references, with the method and evidence "
+         "recorded alongside the result.",
+         "assets/img/sector-2.jpg", "100%", "method-referenced"),
+        ("Nothing filed at the last minute",
+         "Work is scheduled against your obligations so the deadline is met from a maintained record "
+         "rather than a scramble.",
+         "assets/img/sector-3.jpg", "On time", "every cycle"),
+        ("One accountable team",
+         "The people who scoped the work carry it through submission and answer the reviewer's questions "
+         "directly.",
+         "assets/img/svc-air-detail.jpg", "Single", "point of contact"),
+    ],
     faqs=[
         ("How do I know which category my activity is in?",
          "Classification follows the activity, its capacity, its waste streams and the sensitivity of the site. "
@@ -98,9 +120,12 @@ PERMITTING["environmental-impact-assessment"] = dict(
          "project proceeds at all.",
     hero_img="assets/img/svc-eia.jpg",
     float_head=("fa-clipboard-check", "What an EIA covers"),
-    float_rows=[("Baseline", "Conditions before the project"),
-                ("Prediction", "Modelled impacts, quantified"),
-                ("Mitigation", "Measures, and how they are verified")],
+    float_rows=[
+                ("4", "Study stages", "Scope, baseline, assess, report"),
+                ("12", "Months typical", "Where seasonal baseline applies"),
+                ("1", "Approval", "Required before works begin")
+    ],
+    float2=("fa-clipboard-check", "EIA &amp; ESIA", "Environmental and social scope"),
     meta="Environmental and social impact assessment (EIA/ESIA) in Saudi Arabia — baseline surveys, "
          "impact prediction, modelling, mitigation design and stakeholder engagement for regulated projects.",
     problem_title="An assessment is an argument, not a description",
@@ -150,6 +175,25 @@ PERMITTING["environmental-impact-assessment"] = dict(
         ("Waste facilities", "Treatment, landfill and recycling facilities are assessed for emissions, leachate, "
          "odour and groundwater, with the containment design central to the argument."),
     ],
+    grid_title="What you get out of it",
+    caps=[
+        ("Reviewed before you commit",
+         "We read the conditions and tell you what actually applies before any scope is agreed, so you are "
+         "not paying for work the regulator never asked for.",
+         "assets/img/sector-1.jpg", "1st", "time through review"),
+        ("Defensible documentation",
+         "Everything is produced to the standard the condition references, with the method and evidence "
+         "recorded alongside the result.",
+         "assets/img/sector-2.jpg", "100%", "method-referenced"),
+        ("Nothing filed at the last minute",
+         "Work is scheduled against your obligations so the deadline is met from a maintained record "
+         "rather than a scramble.",
+         "assets/img/sector-3.jpg", "On time", "every cycle"),
+        ("One accountable team",
+         "The people who scoped the work carry it through submission and answer the reviewer's questions "
+         "directly.",
+         "assets/img/svc-air-detail.jpg", "Single", "point of contact"),
+    ],
     faqs=[
         ("Does my project need a full EIA or a simplified study?",
          "That follows the activity category. Upper-tier activities require full assessment; middle-tier "
@@ -177,9 +221,12 @@ PERMITTING["waste-management-permit"] = dict(
          "store or treat waste in the Kingdom.",
     hero_img="assets/img/svc-waste.jpg",
     float_head=("fa-recycle", "Who needs one"),
-    float_rows=[("Generators", "Beyond household quantities"),
-                ("Transporters", "Any waste classification"),
-                ("Treatment &amp; storage", "Including on-site")],
+    float_rows=[
+                ("100%", "Streams characterised", "Before the file is prepared"),
+                ("5", "Core documents", "Characterisation to response plan"),
+                ("0", "Duty transferred", "Generator obligations stay with you")
+    ],
+    float2=("fa-recycle", "MWAN framework", "Generators, carriers, treaters"),
     meta="MWAN waste management permits in Saudi Arabia — waste characterisation studies, storage and "
          "handling procedures, manifesting systems and permit applications for generators, carriers and treaters.",
     problem_title="Outsourcing collection does not transfer the obligation",
@@ -229,6 +276,25 @@ PERMITTING["waste-management-permit"] = dict(
         ("Commercial premises", "Larger commercial and food service operations generate regulated streams "
          "including waste oils and packaging, which fall under the permit regime above defined thresholds."),
     ],
+    grid_title="What you get out of it",
+    caps=[
+        ("Reviewed before you commit",
+         "We read the conditions and tell you what actually applies before any scope is agreed, so you are "
+         "not paying for work the regulator never asked for.",
+         "assets/img/sector-1.jpg", "1st", "time through review"),
+        ("Defensible documentation",
+         "Everything is produced to the standard the condition references, with the method and evidence "
+         "recorded alongside the result.",
+         "assets/img/sector-2.jpg", "100%", "method-referenced"),
+        ("Nothing filed at the last minute",
+         "Work is scheduled against your obligations so the deadline is met from a maintained record "
+         "rather than a scramble.",
+         "assets/img/sector-3.jpg", "On time", "every cycle"),
+        ("One accountable team",
+         "The people who scoped the work carry it through submission and answer the reviewer's questions "
+         "directly.",
+         "assets/img/svc-air-detail.jpg", "Single", "point of contact"),
+    ],
     faqs=[
         ("We use a licensed contractor — do we still need a permit?",
          "Almost certainly yes. Generator duties stay with you: characterising the waste, manifesting "
@@ -256,9 +322,12 @@ PERMITTING["environmental-management-plan"] = dict(
          "with named roles, defined controls and a monitoring schedule.",
     hero_img="assets/img/svc-emp.jpg",
     float_head=("fa-tasks", "What an EMP fixes"),
-    float_rows=[("Controls", "What is done, and where"),
-                ("Roles", "Who is responsible, by position"),
-                ("Monitoring", "What is checked, and how often")],
+    float_rows=[
+                ("1", "Document", "Short enough to actually be used"),
+                ("12", "Month review", "Minimum, or on any process change"),
+                ("0", "Named individuals", "Roles assigned by position")
+    ],
+    float2=("fa-tasks", "Inspection ready", "The controls, evidenced"),
     meta="Environmental management plans for Saudi facilities — turning permit conditions into documented "
          "controls, named responsibilities, monitoring schedules and emergency response arrangements.",
     problem_title="The plan that nobody follows",
@@ -308,6 +377,25 @@ PERMITTING["environmental-management-plan"] = dict(
         ("Sites with changed processes", "A new line, a new solvent or an increase in capacity changes the "
          "controls required, and the plan has to change with it."),
     ],
+    grid_title="What you get out of it",
+    caps=[
+        ("Reviewed before you commit",
+         "We read the conditions and tell you what actually applies before any scope is agreed, so you are "
+         "not paying for work the regulator never asked for.",
+         "assets/img/sector-1.jpg", "1st", "time through review"),
+        ("Defensible documentation",
+         "Everything is produced to the standard the condition references, with the method and evidence "
+         "recorded alongside the result.",
+         "assets/img/sector-2.jpg", "100%", "method-referenced"),
+        ("Nothing filed at the last minute",
+         "Work is scheduled against your obligations so the deadline is met from a maintained record "
+         "rather than a scramble.",
+         "assets/img/sector-3.jpg", "On time", "every cycle"),
+        ("One accountable team",
+         "The people who scoped the work carry it through submission and answer the reviewer's questions "
+         "directly.",
+         "assets/img/svc-air-detail.jpg", "Single", "point of contact"),
+    ],
     faqs=[
         ("Is an EMP the same as an EIA?",
          "No. The EIA predicts impacts before a project proceeds. The EMP is how you control them once you "
@@ -334,9 +422,12 @@ PERMITTING["environmental-register"] = dict(
          "week before it is needed.",
     hero_img="assets/img/svc-register.jpg",
     float_head=("fa-folder-open", "What the register holds"),
-    float_rows=[("Monitoring results", "Every measurement, dated"),
-                ("Waste manifests", "Complete transfer chain"),
-                ("Incidents &amp; actions", "What happened, what was done")],
+    float_rows=[
+                ("1st", "Document requested", "At almost every inspection"),
+                ("100%", "Period coverage", "Gaps read as non-compliance"),
+                ("0", "Reconstruction", "Maintained, not assembled")
+    ],
+    float2=("fa-folder-open", "Audit ready", "Produced on request"),
     meta="Environmental register setup and maintenance for Saudi facilities — monitoring results, waste "
          "manifests, chemical inventories, incident records and permit correspondence, kept audit-ready.",
     problem_title="The first document requested, and the least maintained",
@@ -386,6 +477,25 @@ PERMITTING["environmental-register"] = dict(
         ("Facilities changing ownership", "Buyers inherit the compliance record along with the asset, and "
          "the register is the primary evidence of what they are taking on."),
     ],
+    grid_title="What you get out of it",
+    caps=[
+        ("Reviewed before you commit",
+         "We read the conditions and tell you what actually applies before any scope is agreed, so you are "
+         "not paying for work the regulator never asked for.",
+         "assets/img/sector-1.jpg", "1st", "time through review"),
+        ("Defensible documentation",
+         "Everything is produced to the standard the condition references, with the method and evidence "
+         "recorded alongside the result.",
+         "assets/img/sector-2.jpg", "100%", "method-referenced"),
+        ("Nothing filed at the last minute",
+         "Work is scheduled against your obligations so the deadline is met from a maintained record "
+         "rather than a scramble.",
+         "assets/img/sector-3.jpg", "On time", "every cycle"),
+        ("One accountable team",
+         "The people who scoped the work carry it through submission and answer the reviewer's questions "
+         "directly.",
+         "assets/img/svc-air-detail.jpg", "Single", "point of contact"),
+    ],
     faqs=[
         ("What has to be in the register?",
          "Your permit conditions define it, but in practice: monitoring results, waste manifests, chemical "
@@ -413,9 +523,12 @@ PERMITTING["periodic-environmental-report"] = dict(
          "in the form the regulator expects.",
     hero_img="assets/img/svc-report.jpg",
     float_head=("fa-calendar-check", "Every cycle needs"),
-    float_rows=[("Results", "Against the applicable limits"),
-                ("Exceedances", "And the action taken"),
-                ("Changes", "Anything that altered on site")],
+    float_rows=[
+                ("1", "Missed cycle", "Is enough to surface at renewal"),
+                ("100%", "On-time filing", "The target, every cycle"),
+                ("3", "Report elements", "Results, exceedances, changes")
+    ],
+    float2=("fa-calendar-check", "Never late", "Calendar built from conditions"),
     meta="Periodic environmental reporting for Saudi facilities — compiling monitoring results, exceedances "
          "and corrective actions into the regulatory reports your permit conditions require.",
     problem_title="A missed cycle does not stay missed",
@@ -464,6 +577,25 @@ PERMITTING["periodic-environmental-report"] = dict(
          "both are examined at renewal."),
         ("Multi-site operators", "Coordinating cycles across sites avoids the situation where one site's late "
          "submission draws attention to the rest."),
+    ],
+    grid_title="What you get out of it",
+    caps=[
+        ("Reviewed before you commit",
+         "We read the conditions and tell you what actually applies before any scope is agreed, so you are "
+         "not paying for work the regulator never asked for.",
+         "assets/img/sector-1.jpg", "1st", "time through review"),
+        ("Defensible documentation",
+         "Everything is produced to the standard the condition references, with the method and evidence "
+         "recorded alongside the result.",
+         "assets/img/sector-2.jpg", "100%", "method-referenced"),
+        ("Nothing filed at the last minute",
+         "Work is scheduled against your obligations so the deadline is met from a maintained record "
+         "rather than a scramble.",
+         "assets/img/sector-3.jpg", "On time", "every cycle"),
+        ("One accountable team",
+         "The people who scoped the work carry it through submission and answer the reviewer's questions "
+         "directly.",
+         "assets/img/svc-air-detail.jpg", "Single", "point of contact"),
     ],
     faqs=[
         ("How often do we have to report?",

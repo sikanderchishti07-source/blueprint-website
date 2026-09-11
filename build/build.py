@@ -1,4 +1,4 @@
-import os, partials as P, pages as G, pages_extra as X, arabic as AR, service_pages as SP, svc_permitting as SPP
+import os, partials as P, pages as G, pages_extra as X, arabic as AR, service_pages as SP, svc_permitting as SPP, svc_monitoring as SPM, svc_specialist as SPS, svc_caps as SPC
 OUT = os.path.join(os.path.dirname(__file__), '..', 'site')
 PAGES = {
   'index.html':      ('Environmental Consultancy in Saudi Arabia | BluePrint', 'Accredited Saudi environmental consultancy delivering environmental studies, MWAN permitting, impact assessments, and compliance solutions aligned with KSA regulations.', G.home(), ('js/cards.js',)),
@@ -10,13 +10,22 @@ PAGES = {
   'contact.html':    ('Contact BluePrint — Free Compliance Consultation', 'Talk to BluePrint accredited environmental consultants in Riyadh. Free initial consultation to map the studies and permits your facility needs in Saudi Arabia.', G.contact(), ()),
 }
 _GROUP_LABEL = {'permitting': 'Compliance &amp; Permitting',
-                'monitoring': 'Monitoring, Testing &amp; Measurement'}
+                'monitoring': 'Monitoring, Testing &amp; Measurement',
+                'specialist': 'Specialist Disciplines'}
 
 ALL_SERVICES = {}
 ALL_SERVICES.update(SPP.PERMITTING)
 ALL_SERVICES.update(SP.SERVICES)
+ALL_SERVICES.update(SPM.MONITORING)
+ALL_SERVICES.update(SPS.SPECIALIST)
 
+_CAP_IMGS = ['assets/img/sector-1.jpg', 'assets/img/sector-2.jpg',
+             'assets/img/sector-3.jpg', 'assets/img/svc-air-detail.jpg']
 for _slug, _s in ALL_SERVICES.items():
+    # service-specific capability items replace the shared block
+    if _slug in SPC.CAPS:
+        _s['caps'] = [(t, d, _CAP_IMGS[i], b, bs)
+                      for i, (t, d, b, bs) in enumerate(SPC.CAPS[_slug])]
     _s.setdefault('group_label', _GROUP_LABEL.get(_s.get('group'), 'Services'))
     _s.setdefault('detail_img', _s['hero_img'])
     _s.setdefault('band_img', 'assets/img/svc-air-lab.jpg')

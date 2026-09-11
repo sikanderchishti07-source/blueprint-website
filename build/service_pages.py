@@ -17,9 +17,10 @@ SERVICES["air-quality-monitoring"] = dict(
     band_quote="Data that does not match the method named in your permit is not accepted &mdash; however carefully it was collected.",
     faq_title="Before you commission monitoring",
     float_head=("fa-wind", "What gets measured"),
-    float_rows=[("PM10 &middot; PM2.5", "Particulate matter"),
-                ("NO&#8322; &middot; SO&#8322; &middot; CO", "Combustion gases"),
-                ("VOCs", "Volatile organics")],
+    float_rows=[("8+", "Parameters measured", "PM, NO&#8322;, SO&#8322;, CO, O&#8323;, VOCs"),
+                ("24/7", "Campaign coverage", "Where the condition requires it"),
+                ("1", "Accredited method", "Named in your permit")],
+    float2=("fa-certificate", "Accredited", "Results the regulator accepts"),
     meta="Accredited ambient and stack air quality monitoring in Saudi Arabia — PM10, PM2.5, "
          "NOx, SO2, CO, VOCs and dust, measured to NCEC-referenced methods and reported for compliance.",
 
@@ -100,6 +101,25 @@ SERVICES["air-quality-monitoring"] = dict(
          "more weight than the instrument used."),
     ],
 
+    grid_title="What you get out of it",
+    caps=[
+        ("Reviewed before you commit",
+         "We read the conditions and tell you what actually applies before any scope is agreed, so you are "
+         "not paying for work the regulator never asked for.",
+         "assets/img/sector-1.jpg", "1st", "time through review"),
+        ("Defensible documentation",
+         "Everything is produced to the standard the condition references, with the method and evidence "
+         "recorded alongside the result.",
+         "assets/img/sector-2.jpg", "100%", "method-referenced"),
+        ("Nothing filed at the last minute",
+         "Work is scheduled against your obligations so the deadline is met from a maintained record "
+         "rather than a scramble.",
+         "assets/img/sector-3.jpg", "On time", "every cycle"),
+        ("One accountable team",
+         "The people who scoped the work carry it through submission and answer the reviewer's questions "
+         "directly.",
+         "assets/img/svc-air-detail.jpg", "Single", "point of contact"),
+    ],
     faqs=[
         ("How do I know which parameters my facility has to monitor?",
          "They are named in your environmental permit conditions. If the wording is unclear, or the "
@@ -156,8 +176,24 @@ def service_page(s, page_header, related):
           </div>
         </div>''' for i, (t, d) in enumerate(s["applies"]))
 
-    float_rows = "".join(f'<div class="svcd-float-row"><b>{a}</b><span>{b}</span></div>'
-                          for a, b in s["float_rows"])
+    def _frow(r):
+        if len(r) == 3:
+            return (f'<div class="svcd-float-row"><span class="svcd-float-num">{r[0]}</span>'
+                    f'<div><b>{r[1]}</b><span>{r[2]}</span></div></div>')
+        return f'<div class="svcd-float-row"><div><b>{r[0]}</b><span>{r[1]}</span></div></div>'
+    float_rows = "".join(_frow(r) for r in s["float_rows"])
+
+    caps = "".join(f'''
+      <div class="svcd-cap-item scroll-reveal">
+        <div class="svcd-cap-media">
+          <div class="svcd-cap-img" style="background-image:url(\'{img}\')"></div>
+          <div class="svcd-cap-badge"><b>{badge}</b><span>{badge_sub}</span></div>
+        </div>
+        <div class="svcd-cap-body">
+          <h3>{t}</h3>
+          <p>{d}</p>
+        </div>
+      </div>''' for t, d, img, badge, badge_sub in s.get("caps", []))
 
     faqs = "".join(f'''
       <details class="svcd-faq">
@@ -193,6 +229,11 @@ def service_page(s, page_header, related):
         <div class="svcd-float">
           <div class="svcd-float-head"><i class="fas {s["float_head"][0]}"></i><span>{s["float_head"][1]}</span></div>
           {float_rows}
+        </div>
+        <div class="svcd-float-2">
+          <i class="fas {s.get("float2", ("fa-check-circle","Accredited","NCEC &amp; MWAN"))[0]}"></i>
+          <div><b>{s.get("float2", ("fa-check-circle","Accredited","NCEC &amp; MWAN"))[1]}</b>
+          <span>{s.get("float2", ("fa-check-circle","Accredited","NCEC &amp; MWAN"))[2]}</span></div>
         </div>
       </div>
     </div>
@@ -248,6 +289,17 @@ def service_page(s, page_header, related):
   <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
     <p class="svcd-band-quote">{s.get("band_quote","Compliance is decided by the record, not by intention.")}</p>
     <a href="contact.html" class="svcd-band-cta">Have your conditions reviewed <i class="fas fa-arrow-right" style="font-size:.7rem;"></i></a>
+  </div>
+</section>
+
+<!-- CAPABILITY GRID — small images with data overlays -->
+<section class="py-24 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 scroll-reveal">
+      <div class="showcase-eyebrow">Why it matters</div>
+      <h2 class="text-3xl lg:text-4xl font-bold text-bp-ink tracking-tight">{s.get("grid_title","What you get out of it")}</h2>
+    </div>
+    <div class="svcd-cap">{caps}</div>
   </div>
 </section>
 
