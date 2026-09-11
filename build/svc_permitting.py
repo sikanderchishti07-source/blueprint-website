@@ -325,7 +325,7 @@ PERMITTING["environmental-management-plan"] = dict(
     float_rows=[
                 ("1", "Document", "Short enough to actually be used"),
                 ("12", "Month review", "Minimum, or on any process change"),
-                ("0", "Named individuals", "Roles assigned by position")
+                ("By role", "Not by name", "So the plan survives staff turnover")
     ],
     float2=("fa-tasks", "Inspection ready", "The controls, evidenced"),
     meta="Environmental management plans for Saudi facilities — turning permit conditions into documented "
