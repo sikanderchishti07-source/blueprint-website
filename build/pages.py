@@ -137,7 +137,7 @@ def technology():
           <p class="text-gray-200 mb-6">BluePrint is licensed and approved by the NCEC, the National Center for Waste Management (MWAN) and the Royal Commission for Jubail &amp; Yanbu — spanning environmental studies and consulting, sustainability and corporate governance, industrial and hazardous waste management, landfill construction and lining, emergency response and site remediation.</p>
           <a href="contact.html" class="inline-flex items-center gap-2 px-6 py-3 bg-white text-bp-ink rounded-full font-bold text-sm hover:bg-bp-sage transition-all">Request our credentials <i class="fas fa-arrow-right" style="font-size:.7rem;"></i></a>
         </div>
-        <div class="relative"><img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?w=500&h=300&fit=crop" alt="Laboratory" class="rounded-2xl shadow-2xl opacity-90" loading="lazy" /></div>
+        <div class="relative"><img src="assets/img/svc-permit.jpg" alt="Laboratory" class="rounded-2xl shadow-2xl opacity-90" loading="lazy" /></div>
       </div>
     </div>
   </div>

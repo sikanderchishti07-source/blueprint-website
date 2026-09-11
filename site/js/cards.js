@@ -13,21 +13,21 @@
       key: 'Compliance &amp; Permitting', short: 'Permitting', num: '01', icon: 'fa-stamp',
       img: 'assets/img/card-1.jpg', pos: '20% 30%',
       blurb: 'Getting your facility licensed &mdash; and keeping it licensed.',
-      href: 'services.html#permitting',
+      href: 'service-environmental-permit.html',
       items: [
-        ['Environmental Permit', 'NCEC permit file, start to issuance', 'services.html#svc-0'],
-        ['Environmental Impact Assessment', 'EIA/ESIA for high-impact projects', 'services.html#svc-1'],
-        ['Waste Management Permit', 'MWAN permit for regulated waste', 'services.html#svc-2'],
-        ['Environmental Management Plan', 'Permit conditions into daily practice', 'services.html#svc-3'],
-        ['Environmental Register', 'Continuous proof of compliance', 'services.html#svc-4'],
-        ['Periodic Environmental Report', 'Keeping the permit you won', 'services.html#svc-5']
+        ['Environmental Permit', 'NCEC permit file, start to issuance', 'service-environmental-permit.html'],
+        ['Environmental Impact Assessment', 'EIA/ESIA for high-impact projects', 'service-environmental-impact-assessment.html'],
+        ['Waste Management Permit', 'MWAN permit for regulated waste', 'service-waste-management-permit.html'],
+        ['Environmental Management Plan', 'Permit conditions into daily practice', 'service-environmental-management-plan.html'],
+        ['Environmental Register', 'Continuous proof of compliance', 'service-environmental-register.html'],
+        ['Periodic Environmental Report', 'Keeping the permit you won', 'service-periodic-environmental-report.html']
       ]
     },
     {
       key: 'Monitoring, Testing &amp; Measurement', short: 'Monitoring', num: '02', icon: 'fa-flask',
       img: 'assets/img/card-2.jpg', pos: '75% 60%',
       blurb: 'The numbers behind every compliance claim.',
-      href: 'services.html#monitoring',
+      href: 'service-air-quality-monitoring.html',
       items: [
         ['Air Quality Monitoring &amp; Testing', 'Measurement against KSA standards', 'service-air-quality-monitoring.html'],
         ['Water &amp; Wastewater Testing', 'Accredited analysis', 'service-water-wastewater-testing.html'],

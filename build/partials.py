@@ -346,12 +346,12 @@ def widgets():
 
 <div id="expertCTA">
   <div id="expertTab" onclick="toggleExpert()" role="button" tabindex="0" aria-label="Speak to an expert">
-    <div class="expert-photo-wrap"><img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=120&h=120&fit=crop&q=80" alt="Environmental Expert" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?w=120&h=120&fit=crop'" /></div>
+    <div class="expert-photo-wrap"><i class="fas fa-headset" aria-hidden="true"></i></div>
     <div class="expert-label-pill"><span>Ask an Expert</span><span>Free Consultation →</span></div>
   </div>
   <div id="expertPanel">
     <div class="ep-header">
-      <div class="ep-photo"><img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=120&h=120&fit=crop&q=80" alt="Expert" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?w=120&h=120&fit=crop'" /></div>
+      <div class="ep-photo"><i class="fas fa-headset" aria-hidden="true"></i></div>
       <div class="ep-info"><div class="ep-name">Environmental Specialist</div><div class="ep-role">Accredited environmental consultant &middot; Riyadh</div><div class="ep-status">Riyadh &middot; Sun&ndash;Thu</div></div>
       <button class="ep-close" onclick="closeExpert()" aria-label="Close">✕</button>
     </div>

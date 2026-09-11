@@ -240,33 +240,33 @@ SECTOR_CARDS    </div>
 """
 
 PROCESS = [
-    (1, "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=180&fit=crop&q=80", "Assess",
+    (1, "assets/img/svc-permit.jpg", "Assess",
      "We evaluate your facility, map obligations, and pinpoint every compliance gap."),
-    (2, "https://images.unsplash.com/photo-1454165833767-1a3b6ba9d4d3?w=400&h=180&fit=crop&q=80", "Plan",
+    (2, "assets/img/svc-waste.jpg", "Plan",
      "A tailored strategy with studies, timelines, and the exact permits your activity requires."),
-    (3, "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&h=180&fit=crop&q=80", "Submit",
+    (3, "assets/img/svc-air.jpg", "Submit",
      "We prepare, file, and coordinate directly with regulators to expedite approval."),
-    (4, "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=400&h=180&fit=crop&q=80", "Sustain",
+    (4, "assets/img/svc-water.jpg", "Sustain",
      "Ongoing reporting and register upkeep keep you compliant, cycle after cycle."),
 ]
 
 SECTORS = [
-    ("https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=400&h=300&fit=crop", "fa-industry", "Industrial",
+    ("assets/img/svc-lab.jpg", "fa-industry", "Industrial",
      "Factories &amp; Manufacturing",
      "Manufacturing carries the heaviest environmental obligations in the Kingdom — and the most expensive consequences for getting them wrong."),
-    ("https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=400&h=300&fit=crop", "fa-tools", "Light industry",
+    ("assets/img/svc-soil.jpg", "fa-tools", "Light industry",
      "Workshops &amp; Garages",
      "Small premises, real obligations. Most workshop owners only discover the requirement when a licence renewal gets blocked."),
-    ("https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400&h=300&fit=crop", "fa-hospital", "Healthcare",
+    ("assets/img/svc-noise.jpg", "fa-hospital", "Healthcare",
      "Healthcare &amp; Veterinary",
      "Medical waste carries the strictest handling rules in the Kingdom — and clinics are inspected against them from the day they open."),
-    ("https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=400&h=300&fit=crop", "fa-hard-hat", "Infrastructure",
+    ("assets/img/svc-field.jpg", "fa-hard-hat", "Infrastructure",
      "Construction &amp; Infrastructure",
      "Impacts are temporary but intense, and enforcement happens on the ground — where the site team either follows the plan or does not."),
-    ("https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&h=300&fit=crop", "fa-store", "Commercial",
+    ("assets/img/spec-marine.jpg", "fa-store", "Commercial",
      "Commercial &amp; Retail",
      "Retail and service premises sit on the simplified track — but the permit is still a condition of your commercial licence."),
-    ("https://images.unsplash.com/photo-1578319439584-104c94d37305?w=400&h=300&fit=crop", "fa-mountain", "Extraction",
+    ("assets/img/spec-ecology.jpg", "fa-mountain", "Extraction",
      "Quarries &amp; Mining Sites",
      "Extraction sites commit to a rehabilitation obligation years before it comes due — and it does not lapse."),
 ]
