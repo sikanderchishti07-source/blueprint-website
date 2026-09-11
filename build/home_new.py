@@ -1,32 +1,8 @@
+from cover_markup import COVER
+
 HOME = """
-<!-- HERO — full-bleed video cover -->
-<section class="hero-cover relative flex items-center overflow-hidden">
-  <video class="hero-cover-video" autoplay muted loop playsinline preload="metadata"
-         poster="assets/video/hero-poster.jpg"
-         aria-label="Aerial view of the Saudi Red Sea coastline">
-    <source src="assets/video/hero.mp4" type="video/mp4" />
-  </video>
-  <div class="hero-cover-scrim" aria-hidden="true"></div>
+""" + COVER + """
 
-  <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
-    <div class="max-w-2xl text-white animate-slide-up">
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-white/15 rounded-full backdrop-blur-sm border border-white/25 mb-8">
-        <span class="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></span>
-        <span class="text-xs font-medium tracking-wide">NCEC &amp; MWAN accredited &middot; Riyadh</span>
-      </div>
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.08] tracking-tight mb-6">Your blueprint for<br><span class="text-bp-sage">environmental compliance.</span></h1>
-      <p class="text-lg text-white/85 max-w-md leading-relaxed mb-10">Studies, permits and reporting that keep your facility compliant across the Kingdom.</p>
-      <div class="flex flex-wrap gap-4">
-        <a href="contact.html" class="px-8 py-4 bg-white text-bp-ink rounded-full font-bold hover:bg-bp-sage transition-all transform hover:scale-105 shadow-xl">Book a free consultation</a>
-        <a href="services.html" class="px-8 py-4 border border-white/50 text-white rounded-full font-bold backdrop-blur-sm hover:bg-white/15 transition-all flex items-center gap-2">Our services <i class="fas fa-arrow-right" style="font-size:.75rem;"></i></a>
-      </div>
-    </div>
-  </div>
-
-  <div class="hero-cover-fade z-10" aria-hidden="true"></div>
-</section>
-
-<!-- COMPANY OVERVIEW -->
 <section id="overview" class="py-28 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid lg:grid-cols-2 gap-12 items-center">
