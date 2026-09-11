@@ -115,8 +115,8 @@ function onScroll(){
     document.getElementById('aqiArc').style.strokeDashoffset=(255*(1-frac)).toFixed(1);
     const h=d.hourly||{};
     const take=a=>(a||[]).filter(v=>v!=null).slice(-24);
-    spark(document.getElementById('sp25'),take(h.pm2_5),'#0e93a8');
-    spark(document.getElementById('sp10'),take(h.pm10),'#647542');
+    spark(document.getElementById('sp25'),take(h.pm2_5),'#45bbce');
+    spark(document.getElementById('sp10'),take(h.pm10),'#a3b56f');
     const t=c.time? new Date(c.time):new Date();
     document.getElementById('lcSrc').textContent='AMBIENT AIR · RIYADH · PUBLIC DATA · '
       + t.toISOString().slice(11,16) + ' UTC';
@@ -134,7 +134,7 @@ function onScroll(){
   const tick=()=>{ imgs[i].classList.remove('on');
     i=(i+1)%imgs.length; imgs[i].classList.add('on');
     load((i+1)%imgs.length); }; /* always keep one frame ahead loaded */
-  const start=()=>{ if(!timer) timer=setInterval(tick,3000); };
+  const start=()=>{ if(!timer) timer=setInterval(tick,6000); };
   const stop =()=>{ clearInterval(timer); timer=null; };
   document.addEventListener('visibilitychange',()=>document.hidden?stop():start());
   start();
