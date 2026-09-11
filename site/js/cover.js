@@ -122,7 +122,6 @@ function onScroll(){
   target=c01((scrollY-wrap.offsetTop)/total);
   if(!running){running=true;requestAnimationFrame(frame)}
 }
-
 /* ── live ambient air data for Riyadh (public source, client-side) ── */
 (function(){
   const card=document.getElementById('liveCard');

@@ -1,0 +1,81 @@
+/* ============================================================
+   BluePrint — carousel.css
+   "Our services" fanned carousel, home page.
+   ============================================================ */
+.carsec{position:relative;padding:86px 0 96px;overflow:hidden;isolation:isolate;
+  background:linear-gradient(180deg,#eef5f8 0%,#f7fbfc 44%,#e9f1f5 100%)}
+.carsec-bg{position:absolute;inset:0;z-index:-2;background:url('../assets/img/svc-carousel-bg.webp') center/cover no-repeat;
+  opacity:.55}
+.carsec-wash{position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(120% 76% at 50% 0%,rgba(255,255,255,.95),rgba(255,255,255,.35) 58%,rgba(255,255,255,0) 82%),
+             linear-gradient(180deg,rgba(255,255,255,.55),rgba(233,241,245,0) 34%,rgba(222,236,242,.82))}
+
+.carsec-head{position:relative;z-index:2;text-align:center;margin-bottom:40px;padding:0 22px}
+.car-kick{display:inline-flex;align-items:center;gap:14px;font-family:var(--font-display);font-size:11px;
+  font-weight:600;letter-spacing:.32em;color:var(--bp-blue);margin-bottom:16px}
+.car-kick::before,.car-kick::after{content:'';width:46px;height:1px;background:var(--bp-blue);opacity:.55}
+.carsec-head h2{font-family:var(--font-display);font-size:clamp(1.7rem,3.4vw,2.9rem);font-weight:700;
+  letter-spacing:-.03em;color:var(--bp-blue-ink);margin-bottom:12px}
+.carsec-head p{color:var(--bp-muted);max-width:56ch;margin:0 auto;line-height:1.7;font-size:.98rem}
+
+.car-stage{position:relative;z-index:2;height:600px;perspective:2400px}
+.car-track{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  transform-style:preserve-3d;
+  /* cards sit at negative translateZ; without this the track plane
+     swallows the pointer before it reaches them */
+  pointer-events:none}
+
+.car-card{position:absolute;width:268px;height:452px;border-radius:20px;overflow:hidden;cursor:pointer;
+  pointer-events:auto;background:var(--bp-blue-ink);text-decoration:none;display:block;
+  box-shadow:0 26px 60px -24px rgba(11,47,56,.55);
+  transition:transform .72s var(--ease,cubic-bezier(.4,0,.2,1)),opacity .6s ease,box-shadow .6s ease;
+  will-change:transform,opacity}
+.car-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.car-veil{position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(11,47,56,.94) 4%,rgba(11,47,56,.5) 42%,rgba(11,47,56,.06) 78%)}
+.car-body{position:absolute;left:0;right:0;bottom:0;padding:0 20px 22px;color:#fff}
+.car-ic{width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.5);
+  display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:.95rem}
+.car-card h3{font-family:var(--font-display);font-size:1rem;font-weight:700;line-height:1.3;
+  letter-spacing:-.01em;text-shadow:0 2px 12px rgba(0,0,0,.5)}
+.car-card p{margin-top:0;font-size:.86rem;line-height:1.6;color:rgba(255,255,255,.82);
+  max-height:0;opacity:0;overflow:hidden;
+  transition:max-height .6s ease,opacity .45s ease,margin-top .6s ease}
+.car-go{margin-top:16px;width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.55);
+  display:flex;align-items:center;justify-content:center;font-size:.78rem;transition:background .3s}
+.car-card:hover .car-go{background:rgba(255,255,255,.18)}
+.car-idx{position:absolute;top:18px;right:18px;font-family:var(--font-display);font-size:10px;
+  letter-spacing:.1em;color:#fff;background:rgba(255,255,255,.22);padding:5px 11px;border-radius:999px;
+  opacity:0;transition:opacity .5s}
+.car-card.act{width:346px;height:530px;z-index:20}
+.car-card.act p{max-height:130px;opacity:1;margin-top:12px}
+.car-card.act .car-idx{opacity:1}
+.car-card.act h3{font-size:1.42rem}
+.car-card.hov{box-shadow:0 34px 76px -26px rgba(11,47,56,.62)}
+.car-card.hov h3{text-shadow:0 2px 16px rgba(0,0,0,.7)}
+
+.car-nav{position:relative;z-index:3;display:flex;align-items:center;justify-content:center;gap:22px;margin-top:36px}
+.car-btn{width:44px;height:44px;border-radius:50%;border:1px solid rgba(11,47,56,.16);
+  background:rgba(255,255,255,.85);display:flex;align-items:center;justify-content:center;cursor:pointer;
+  color:var(--bp-blue-ink);transition:background .25s,border-color .25s,color .25s}
+.car-btn:hover{background:#fff;border-color:var(--bp-blue);color:var(--bp-blue)}
+.car-dots{display:flex;gap:9px}
+.car-dot{width:8px;height:8px;padding:0;border:none;border-radius:50%;background:rgba(11,47,56,.18);
+  cursor:pointer;transition:background .3s,width .3s}
+.car-dot.on{background:var(--bp-blue);width:22px;border-radius:999px}
+
+@media(max-width:900px){
+  .carsec{padding:60px 0 66px}
+  .car-stage{height:auto;perspective:none}
+  .car-track{position:relative;inset:auto;overflow-x:auto;justify-content:flex-start;gap:14px;
+    padding:6px 18px 20px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
+    pointer-events:auto;transform-style:flat}
+  .car-card{position:relative;transform:none!important;opacity:1!important;flex:0 0 76vw;max-width:300px;
+    height:410px;scroll-snap-align:center}
+  .car-card p{max-height:130px;opacity:1;margin-top:12px}
+  .car-card.act{width:auto;height:410px}
+  .car-nav{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+  .car-card{transition:none}
+}

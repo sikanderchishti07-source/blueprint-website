@@ -1,4 +1,5 @@
 from cover_markup import COVER
+from carousel_markup import CAROUSEL
 
 HOME = """
 """ + COVER + """
@@ -40,6 +41,8 @@ HOME = """
 </section>
 
 <!-- SERVICES — three cards, click to expand -->
+""" + CAROUSEL + """
+
 <section id="services" class="svc-section" style="background:var(--bp-page);">
   <div class="svc-container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="svc-head text-center scroll-reveal">

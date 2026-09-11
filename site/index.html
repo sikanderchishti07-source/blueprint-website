@@ -37,6 +37,7 @@
   <link rel="stylesheet" href="css/components.css" />
   <link rel="stylesheet" href="css/pages.css" />
   <link rel="stylesheet" href="css/cover.css" />
+  <link rel="stylesheet" href="css/carousel.css" />
 
   <script src="js/config.js"></script>
 </head>
@@ -366,6 +367,28 @@
 </section>
 
 <!-- SERVICES — three cards, click to expand -->
+
+<!-- OUR SERVICES — fanned carousel -->
+<section class="carsec" id="major-services">
+  <div class="carsec-bg" aria-hidden="true"></div>
+  <div class="carsec-wash" aria-hidden="true"></div>
+
+  <div class="carsec-head scroll-reveal">
+    <div class="car-kick">OUR SERVICES</div>
+    <h2>Comprehensive environmental solutions</h2>
+    <p>From land to sea, accredited studies, permits and monitoring that keep facilities compliant across the Kingdom.</p>
+  </div>
+
+  <div class="car-stage"><div class="car-track" id="carTrack"></div></div>
+
+  <div class="car-nav">
+    <button class="car-btn" id="carPrev" type="button" aria-label="Previous service"><i class="fas fa-chevron-left"></i></button>
+    <div class="car-dots" id="carDots"></div>
+    <button class="car-btn" id="carNext" type="button" aria-label="Next service"><i class="fas fa-chevron-right"></i></button>
+  </div>
+</section>
+
+
 <section id="services" class="svc-section" style="background:var(--bp-page);">
   <div class="svc-container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="svc-head text-center scroll-reveal">
@@ -712,5 +735,6 @@
 <script src="js/widgets.js"></script>
 <script src="js/cards.js"></script>
 <script src="js/cover.js"></script>
+<script src="js/carousel.js"></script>
 </body>
 </html>

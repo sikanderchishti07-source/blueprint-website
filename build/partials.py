@@ -39,7 +39,8 @@ def head(title, description, extra_css=""):
   <link rel="stylesheet" href="css/layout.css" />
   <link rel="stylesheet" href="css/components.css" />
   <link rel="stylesheet" href="css/pages.css" />
-  <link rel="stylesheet" href="css/cover.css" />{extra_css}
+  <link rel="stylesheet" href="css/cover.css" />
+  <link rel="stylesheet" href="css/carousel.css" />{extra_css}
 
   <script src="js/config.js"></script>
 </head>

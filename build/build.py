@@ -1,7 +1,7 @@
 import os, partials as P, pages as G, pages_extra as X, arabic as AR, service_pages as SP, svc_permitting as SPP, svc_monitoring as SPM, svc_specialist as SPS, svc_caps as SPC
 OUT = os.path.join(os.path.dirname(__file__), '..', 'site')
 PAGES = {
-  'index.html':      ('Environmental Consultancy in Saudi Arabia | BluePrint', 'Accredited Saudi environmental consultancy delivering environmental studies, MWAN permitting, impact assessments, and compliance solutions aligned with KSA regulations.', G.home(), ('js/cards.js', 'js/cover.js')),
+  'index.html':      ('Environmental Consultancy in Saudi Arabia | BluePrint', 'Accredited Saudi environmental consultancy delivering environmental studies, MWAN permitting, impact assessments, and compliance solutions aligned with KSA regulations.', G.home(), ('js/cards.js', 'js/cover.js', 'js/carousel.js')),
   'services.html':   ('Environmental Services in Saudi Arabia | BluePrint', 'Environmental services across KSA: impact assessments, MWAN waste permits, environmental registers, management plans, rehabilitation, and reporting.', G.services(), ('js/services.js',)),
   'technology.html': ('Laboratory & Accreditations | BluePrint', 'Environmental sampling, testing and monitoring services, and the licences BluePrint holds: NCEC, MWAN, Royal Commission for Jubail & Yanbu, IAS and ISO.', G.technology(), ()),
   'blog.html':       ('Environmental Compliance Blog | BluePrint KSA', 'Guides and insights on Saudi environmental regulation: MWAN permits, impact assessments, environmental registers, waste management, and compliance best practice.', X.blog(G.page_header), ()),

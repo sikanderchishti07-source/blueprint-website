@@ -1,8 +1,9 @@
 /* ============================================================
    BluePrint — cover.css
    Scrollytelling home cover: pinned stage, three chapters,
-   rotating backdrops, live ambient readout.
+   four rotating backdrops, live ambient readout.
    ============================================================ */
+
 
 /* The cover was authored against its own variable names; map them onto the
    site's existing tokens so it inherits the real palette. */
