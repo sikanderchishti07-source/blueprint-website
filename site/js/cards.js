@@ -8,7 +8,13 @@
   var stage = document.getElementById('svcStage');
   if (!stage) return;
 
-  var GROUPS = [
+  // Arabic pages supply their own dataset
+  var GROUPS = (typeof window !== 'undefined' && window.SVC_DATA_AR)
+    ? window.SVC_DATA_AR.map(function (g) {
+        return { key: g.key, short: g.short, num: g.num, icon: g.icon, img: g.img,
+                 pos: g.pos, blurb: g.blurb, href: g.href, items: g.items };
+      })
+    : [
     {
       key: 'Compliance &amp; Permitting', short: 'Permitting', num: '01', icon: 'fa-stamp',
       img: 'assets/img/card-1.jpg', pos: '20% 30%',
@@ -57,6 +63,10 @@
     }
   ];
 
+  var T = (typeof window !== 'undefined' && window.SVC_T) || {
+    services: 'services', openList: 'Open full list', more: 'more',
+    hint: 'Hover a card to preview · click to open the full list'
+  };
   var overlay = document.getElementById('svcOverlay');
   var lastFocus = null;
 
@@ -77,7 +87,7 @@
           '<span class="svc-card-num">' + g.num + '</span>' +
           '<span class="svc-card-icon"><i class="fas ' + g.icon + '"></i></span>' +
           '<span class="svc-card-glass">' +
-            '<span class="svc-card-count">' + g.items.length + ' services</span>' +
+            '<span class="svc-card-count">' + g.items.length + ' ' + T.services + '</span>' +
             '<span class="svc-card-short">' + g.short + '</span>' +
             '<span class="svc-card-title">' + g.key + '</span>' +
             '<span class="svc-card-blurb">' + g.blurb + '</span>' +
@@ -90,7 +100,7 @@
           '<span class="svc-back-sub">' + g.blurb + '</span>' +
           '<ul class="svc-back-list">' + teaser + '</ul>' +
           
-          '<span class="svc-back-cta">Open full list <i class="fas fa-arrow-right"></i></span>' +
+          '<span class="svc-back-cta">' + T.openList + ' <i class="fas fa-arrow-right"></i></span>' +
         '</span>' +
       '</span>';
     stage.appendChild(c);
@@ -101,7 +111,7 @@
     lastFocus = trigger || null;
     document.getElementById('svcOvBg').style.backgroundImage = "url('" + g.img + "')";
     document.getElementById('svcOvBg').style.backgroundPosition = g.pos;
-    document.getElementById('svcOvKicker').innerHTML = g.num + ' &mdash; ' + g.items.length + ' services';
+    document.getElementById('svcOvKicker').innerHTML = g.num + ' &mdash; ' + g.items.length + ' ' + T.services;
     document.getElementById('svcOvTitle').innerHTML = g.key;
     document.getElementById('svcOvBlurb').innerHTML = g.blurb;
     var link = document.getElementById('svcOvLink');

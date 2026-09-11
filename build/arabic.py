@@ -1,5 +1,7 @@
 # Arabic (RTL) home page — mirrors the English home page content.
 
+from arabic_home import BODY
+
 HEAD = """<!DOCTYPE html>
 <!--
   ============================================================
@@ -39,310 +41,51 @@ NAV = """
 
 <div id="navMobileDrawer" aria-label="القائمة">
   <div class="drawer-header">
-    <a href="index_arabic.html"><img src="assets/logo/blueprint-logo.png" alt="بلوبرنت للخدمات البيئية" /></a>
-    <button class="drawer-close" onclick="closeNavDrawer()" aria-label="إغلاق القائمة"><i class="fas fa-times"></i></button>
+    <a href="index_arabic.html" class="drawer-logo"><img src="assets/logo/blueprint-logo.png" alt="بلوبرنت" /></a>
+    <button class="drawer-close" onclick="closeNavDrawer()" aria-label="إغلاق">&times;</button>
   </div>
-  <div class="drawer-body">
-    <span class="drawer-section-title">الشركة</span>
+  <div class="drawer-links">
     <a href="index_arabic.html" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-home"></i></div>الرئيسية</a>
-    <a href="#overview" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-building"></i></div>من نحن</a>
-    <a href="#sectors" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-industry"></i></div>القطاعات التي نخدمها</a>
-    <a href="#process" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-sitemap"></i></div>منهجية العمل</a>
-
-    <div class="drawer-divider"></div>
-    <span class="drawer-section-title">الامتثال والتصاريح</span>
-    <a href="#services" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-file-signature"></i></div>التصريح البيئي</a>
-    <a href="#services" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-clipboard-check"></i></div>تقييم الأثر البيئي</a>
-    <a href="#services" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-recycle"></i></div>تصريح إدارة النفايات</a>
-    <a href="#services" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-folder-open"></i></div>السجل البيئي</a>
-
-    <div class="drawer-divider"></div>
-    <span class="drawer-section-title">الرصد والقياس</span>
-    <a href="#services" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-wind"></i></div>رصد جودة الهواء</a>
-    <a href="#services" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-tint"></i></div>فحص المياه ومياه الصرف</a>
-    <a href="#services" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-volume-up"></i></div>رصد الضوضاء</a>
-
-    <div class="drawer-divider"></div>
+    <a href="services.html" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-clipboard-list"></i></div>خدماتنا</a>
+    <a href="technology.html" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-flask"></i></div>المختبر</a>
+    <a href="blog.html" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-pen-nib"></i></div>المدونة</a>
+    <a href="contact.html" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-envelope"></i></div>تواصل معنا</a>
     <a href="index.html" class="drawer-link"><div class="drawer-link-icon">🌐</div>English</a>
   </div>
   <div class="drawer-footer">
-    <a href="#contact" onclick="closeNavDrawer()" class="drawer-portal-btn olive"><i class="fas fa-calendar-check"></i> احجز استشارة</a>
-    <a data-wa="مرحباً بلوبرنت، أود الاستفسار عن خدماتكم البيئية." class="drawer-wa-btn"><i class="fab fa-whatsapp"></i> تواصل عبر واتساب</a>
+    <a href="contact.html" class="drawer-portal-btn"><i class="fas fa-paper-plane"></i> استشارة مجانية</a>
+    <a data-wa="السلام عليكم، أود الاستفسار عن خدماتكم البيئية." class="drawer-wa-btn"><i class="fab fa-whatsapp"></i> واتساب</a>
   </div>
 </div>
 
 <nav id="navbar">
-  <div class="nav-top-strip">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <span class="nav-live-dot"></span>
-        <span>الرياض، المملكة العربية السعودية &middot; الأحد &ndash; الخميس ٩:٠٠ &ndash; ١٨:٠٠</span>
-      </div>
-      <div class="hidden md:flex items-center gap-3">
-        <span>مرخّص من المركز الوطني للرقابة على الالتزام البيئي</span>
-        <span class="nav-strip-divider"></span>
-        <a data-mail><span data-text="email"></span></a>
-      </div>
-    </div>
-  </div>
-
   <div class="nav-inner">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between" style="height:64px;gap:16px;">
+
         <a href="index_arabic.html" class="nav-logo-wrap" aria-label="بلوبرنت — الرئيسية">
           <img src="assets/logo/blueprint-logo.png" alt="بلوبرنت للخدمات البيئية" />
         </a>
 
         <nav class="nav-links" style="flex:1;justify-content:center;" aria-label="القائمة الرئيسية">
-          <div class="nav-item"><a href="index_arabic.html" class="nav-link active">الرئيسية</a></div>
-          <div class="nav-item"><a href="#overview" class="nav-link">من نحن</a></div>
-          <div class="nav-item"><a href="#services" class="nav-link">خدماتنا</a></div>
-          <div class="nav-item"><a href="#sectors" class="nav-link">القطاعات</a></div>
-          <div class="nav-item"><a href="#contact" class="nav-link">تواصل معنا</a></div>
+          <div class="nav-item"><a href="index_arabic.html" class="nav-link">الرئيسية</a></div>
+          <div class="nav-item"><a href="services.html" class="nav-link">خدماتنا</a></div>
+          <div class="nav-item"><a href="technology.html" class="nav-link">المختبر</a></div>
+          <div class="nav-item"><a href="blog.html" class="nav-link">المدونة</a></div>
+          <div class="nav-item"><a href="contact.html" class="nav-link">تواصل معنا</a></div>
         </nav>
 
-        <div class="nav-actions">
-          <a href="index.html" class="nav-lang-btn">🌐 <span>English</span></a>
-          <a href="#contact" class="nav-portal-btn"><i class="fas fa-paper-plane"></i> استشارة مجانية</a>
-          <button class="nav-hamburger" id="navHamburger" onclick="toggleNavDrawer()" aria-label="القائمة"><span></span><span></span><span></span></button>
+        <div class="nav-right">
+          <a href="index.html" class="nav-lang-btn"><i class="fas fa-globe"></i> English</a>
+          <a href="contact.html" class="nav-portal-btn"><i class="fas fa-paper-plane"></i> استشارة مجانية</a>
+          <button class="nav-burger" onclick="toggleNavDrawer()" aria-label="القائمة"><span></span><span></span><span></span></button>
         </div>
+
       </div>
     </div>
   </div>
 </nav>
-"""
 
-BODY = """
-<main>
-
-<!-- البطل -->
-<section class="relative min-h-screen flex items-center hero-gradient overflow-hidden">
-  <div id="particles" class="absolute inset-0 overflow-hidden" aria-hidden="true"></div>
-  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
-    <div class="grid lg:grid-cols-2 gap-12 items-center">
-      <div class="text-white space-y-8 animate-slide-up">
-        <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full backdrop-blur-sm border border-white/20">
-          <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-          <span class="text-sm font-medium">استشارات بيئية سعودية معتمدة</span>
-        </div>
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold">مخططك نحو<br><span class="text-bp-sage">الامتثال البيئي</span><br>الكامل.</h1>
-        <p class="text-xl text-gray-200 max-w-lg">نقدّم الدراسات والتصاريح والتقارير المتكاملة التي تُبقي منشأتك متوافقة تماماً مع الأنظمة البيئية في المملكة — من التقييم الأول وحتى الامتثال المستمر.</p>
-        <div class="flex flex-wrap gap-4">
-          <a href="#contact" class="px-8 py-4 bg-white text-bp-ink rounded-full font-bold hover:bg-bp-sage transition-all transform hover:scale-105 shadow-xl">احجز استشارة</a>
-          <a href="#services" class="px-8 py-4 border-2 border-white text-white rounded-full font-bold hover:bg-white hover:text-bp-ink transition-all inline-flex items-center gap-2">تعرّف على خدماتنا <i class="fas fa-arrow-right" style="font-size:.8rem;"></i></a>
-        </div>
-        <div class="flex flex-wrap gap-2 pt-2">
-          <span class="flex items-center gap-2 px-4 py-2 bg-white/15 backdrop-blur-sm rounded-full text-sm border border-white/30"><i class="fas fa-check-circle text-bp-sage"></i> متوافق مع اشتراطات المركز الوطني</span>
-          <span class="flex items-center gap-2 px-4 py-2 bg-white/15 backdrop-blur-sm rounded-full text-sm border border-white/30"><i class="fas fa-recycle text-bp-sage"></i> متخصصون في تصاريح النفايات</span>
-        </div>
-      </div>
-      <div class="relative hidden lg:block">
-        <img src="assets/img/svc-permit.jpg" alt="طاقة متجددة ومناظر طبيعية خضراء" class="rounded-3xl shadow-2xl object-cover h-[500px] w-full" />
-      </div>
-    </div>
-  </div>
-  <div class="absolute bottom-0 left-0 right-0" aria-hidden="true">
-    <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H0Z" fill="#f5f7fb" /></svg>
-  </div>
-</section>
-
-<!-- المؤهلات -->
-<section class="py-20 -mt-20 relative z-20">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-      <div class="bg-white rounded-2xl p-8 shadow-lg text-center"><div class="text-4xl font-bold stat-number mb-2">+20</div><p class="text-gray-600 font-medium">نشاط بيئي مرخّص</p></div>
-      <div class="bg-white rounded-2xl p-8 shadow-lg text-center"><div class="text-4xl font-bold stat-number mb-2">7</div><p class="text-gray-600 font-medium">تراخيص واعتمادات</p></div>
-      <div class="bg-white rounded-2xl p-8 shadow-lg text-center"><div class="text-4xl font-bold stat-number mb-2">7</div><p class="text-gray-600 font-medium">مجالات خدمة</p></div>
-      <div class="bg-white rounded-2xl p-8 shadow-lg text-center"><div class="text-4xl font-bold stat-number mb-2">KSA</div><p class="text-gray-600 font-medium">مقرّنا الرياض، ونخدم المملكة</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- من نحن -->
-<section id="overview" class="py-20 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid lg:grid-cols-2 gap-12 items-center">
-      <div class="scroll-reveal">
-        <div class="inline-block px-4 py-2 bg-bp-light rounded-full text-bp-primary font-semibold text-sm mb-6">من نحن</div>
-        <h2 class="text-2xl lg:text-3xl font-bold text-bp-ink mb-4">استشارات بيئية من أجل <span class="text-bp-olive">مملكة أنظف</span></h2>
-        <p class="text-gray-600 text-sm leading-relaxed mb-3">بلوبرنت شركة استشارات بيئية مقرّها الرياض، تأسست استجابةً للطلب المتنامي الذي أوجدته الأنظمة البيئية المتسارعة في المملكة، وتجمع بين الكفاءات السعودية والخبرات الدولية في هذا المجال.</p>
-        <p class="text-gray-600 text-sm leading-relaxed mb-5">يشمل عملاؤنا الجهات الحكومية والمنشآت الصناعية والتجارية: النفط والغاز، والبتروكيماويات، والتصنيع، والطاقة والتحلية، والأسمنت، والأغذية، والزراعة، والتطوير العمراني.</p>
-        <div class="space-y-3 mb-6">
-          <div class="flex items-start gap-4"><div class="w-6 h-6 rounded-full bg-bp-primary flex items-center justify-center flex-shrink-0 mt-1"><i class="fas fa-check text-white text-xs"></i></div><div><h4 class="font-bold text-bp-ink">رسالتنا</h4><p class="text-gray-600">تقديم حلول بيئية مبتكرة بأعلى معايير الجودة والسلامة، ودراسات واستشارات عالية المستوى تحافظ على امتثال عملائنا الكامل.</p></div></div>
-          <div class="flex items-start gap-4"><div class="w-6 h-6 rounded-full bg-bp-olive flex items-center justify-center flex-shrink-0 mt-1"><i class="fas fa-check text-white text-xs"></i></div><div><h4 class="font-bold text-bp-ink">رؤيتنا</h4><p class="text-gray-600">دعم السياسات البيئية الوطنية والارتقاء بالقطاع البيئي السعودي ليكون مرجعاً إقليمياً في الابتكار الأخضر.</p></div></div>
-        </div>
-        <div class="flex flex-wrap gap-3">
-          <span class="px-4 py-2 bg-bp-light text-bp-primary rounded-lg font-medium text-sm">مرخّص من المركز الوطني</span>
-          <span class="px-4 py-2 bg-bp-light text-bp-primary rounded-lg font-medium text-sm">مسجّل لدى المركز الوطني لإدارة النفايات</span>
-        </div>
-      </div>
-      <div class="relative scroll-reveal">
-        <div class="absolute -inset-4 rounded-3xl opacity-20 blur-2xl" style="background:var(--bp-grad);"></div>
-        <div class="relative bg-white rounded-3xl shadow-2xl overflow-hidden">
-          <img src="assets/img/about.jpg" alt="ساحل البحر الأحمر السعودي" class="w-full h-52 object-cover" loading="lazy" />
-          <div class="p-8">
-            <h3 class="text-xl font-bold text-bp-ink mb-5">منسجمون مع رؤية 2030</h3>
-            <div class="space-y-4">
-              <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl"><span class="font-display font-extrabold text-bp-primary">٠١</span><div><p class="font-semibold text-bp-ink text-sm">مجتمع حيوي</p><p class="text-xs text-gray-600 mt-1">بيئة أنظف وأكثر صحة ترفع جودة الحياة في أنحاء المملكة.</p></div></div>
-              <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl"><span class="font-display font-extrabold text-bp-primary">٠٢</span><div><p class="font-semibold text-bp-ink text-sm">اقتصاد مزدهر</p><p class="text-xs text-gray-600 mt-1">نمو صناعي مسؤول عبر إدارة بيئية ونفايات ملتزمة بالأنظمة.</p></div></div>
-              <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl"><span class="font-display font-extrabold text-bp-primary">٠٣</span><div><p class="font-semibold text-bp-ink text-sm">وطن طموح</p><p class="text-xs text-gray-600 mt-1">تعزيز ممارسات الاقتصاد الدائري والحوكمة البيئية.</p></div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- الخدمات -->
-<section id="services" class="py-24" style="background:var(--bp-page);">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-14 scroll-reveal">
-      <div class="showcase-eyebrow">ماذا نقدّم</div>
-      <h2 class="text-4xl font-bold text-bp-ink mb-4">منظومة خدمات بيئية متكاملة</h2>
-      <p class="text-gray-600 max-w-2xl mx-auto">شقّان لخدمة واحدة: الدراسات والتصاريح التي تمنحك الترخيص، والرصد والقياس الذي يثبت استمرار امتثالك.</p>
-    </div>
-
-    <div class="scroll-reveal">
-      <div class="flex items-center gap-3 mb-5">
-        <span class="w-9 h-9 rounded-xl bg-bp-light text-bp-primary flex items-center justify-center text-sm flex-shrink-0"><i class="fas fa-stamp"></i></span>
-        <div><h3 class="font-display font-bold text-bp-ink text-lg">الامتثال والتصاريح</h3><p class="text-sm text-gray-500">ترخيص منشأتك — والحفاظ على هذا الترخيص</p></div>
-      </div>
-      <div class="svc-preview">
-        <div class="svc-preview-card"><div class="svc-preview-icon"><i class="fas fa-file-signature"></i></div><div><div class="svc-preview-name">التصريح البيئي</div><div class="svc-preview-short">إعداد ملف التصريح ومتابعته حتى الإصدار</div></div></div>
-        <div class="svc-preview-card"><div class="svc-preview-icon"><i class="fas fa-clipboard-check"></i></div><div><div class="svc-preview-name">تقييم الأثر البيئي</div><div class="svc-preview-short">دراسات تجيب على أسئلة الجهة المراجِعة</div></div></div>
-        <div class="svc-preview-card"><div class="svc-preview-icon"><i class="fas fa-recycle"></i></div><div><div class="svc-preview-name">تصريح إدارة النفايات</div><div class="svc-preview-short">للمولّدين والناقلين ومنشآت المعالجة</div></div></div>
-        <div class="svc-preview-card"><div class="svc-preview-icon"><i class="fas fa-tasks"></i></div><div><div class="svc-preview-name">خطة الإدارة البيئية</div><div class="svc-preview-short">تحويل اشتراطات التصريح إلى ممارسة يومية</div></div></div>
-        <div class="svc-preview-card"><div class="svc-preview-icon"><i class="fas fa-folder-open"></i></div><div><div class="svc-preview-name">السجل البيئي</div><div class="svc-preview-short">إثبات امتثالك في كل يوم منذ الإصدار</div></div></div>
-        <div class="svc-preview-card"><div class="svc-preview-icon"><i class="fas fa-calendar-check"></i></div><div><div class="svc-preview-name">التقرير البيئي الدوري</div><div class="svc-preview-short">الالتزام الذي تغفل عنه أغلب المنشآت</div></div></div>
-      </div>
-    </div>
-
-    <div class="scroll-reveal mt-12">
-      <div class="flex items-center gap-3 mb-5">
-        <span class="w-9 h-9 rounded-xl flex items-center justify-center text-sm flex-shrink-0" style="background:var(--bp-olive-tint);color:var(--bp-olive);"><i class="fas fa-flask"></i></span>
-        <div><h3 class="font-display font-bold text-bp-ink text-lg">الرصد والفحص والقياس</h3><p class="text-sm text-gray-500">الأرقام التي تسند كل ادعاء بالامتثال</p></div>
-      </div>
-      <div class="svc-preview">
-        <div class="svc-preview-card"><div class="svc-preview-icon" style="background:var(--bp-olive-tint);color:var(--bp-olive);"><i class="fas fa-wind"></i></div><div><div class="svc-preview-name">رصد وفحص جودة الهواء</div><div class="svc-preview-short">القياس والتقييم وفق المعايير السعودية</div></div></div>
-        <div class="svc-preview-card"><div class="svc-preview-icon" style="background:var(--bp-olive-tint);color:var(--bp-olive);"><i class="fas fa-tint"></i></div><div><div class="svc-preview-name">فحص المياه ومياه الصرف</div><div class="svc-preview-short">تحاليل معتمدة للمياه والصرف الصحي</div></div></div>
-        <div class="svc-preview-card"><div class="svc-preview-icon" style="background:var(--bp-olive-tint);color:var(--bp-olive);"><i class="fas fa-volume-up"></i></div><div><div class="svc-preview-name">رصد وتقييم الضوضاء</div><div class="svc-preview-short">قياس مستويات الضوضاء مقابل الحدود النظامية</div></div></div>
-        <div class="svc-preview-card"><div class="svc-preview-icon" style="background:var(--bp-olive-tint);color:var(--bp-olive);"><i class="fas fa-mountain"></i></div><div><div class="svc-preview-name">فحص التربة والرواسب</div><div class="svc-preview-short">تحديد الخصائص ومستويات التلوث</div></div></div>
-        <div class="svc-preview-card"><div class="svc-preview-icon" style="background:var(--bp-olive-tint);color:var(--bp-olive);"><i class="fas fa-vial"></i></div><div><div class="svc-preview-name">أخذ العينات البيئية</div><div class="svc-preview-short">جمع وتحضير وفق سلسلة العهدة</div></div></div>
-        <div class="svc-preview-card"><div class="svc-preview-icon" style="background:var(--bp-olive-tint);color:var(--bp-olive);"><i class="fas fa-microscope"></i></div><div><div class="svc-preview-name">التحاليل المخبرية</div><div class="svc-preview-short">تقارير مع تفسير فني واضح</div></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- منهجية العمل -->
-<section id="process" class="py-24 text-white relative overflow-hidden" style="background:var(--bp-blue-ink);">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    <div class="text-center mb-16 scroll-reveal">
-      <div class="inline-block px-4 py-2 bg-white/10 rounded-full text-bp-sage font-semibold text-sm mb-4 backdrop-blur-sm">منهجية العمل</div>
-      <h2 class="text-4xl font-bold mb-4">مسار واضح من التدقيق إلى الاعتماد</h2>
-      <p class="text-gray-300 max-w-2xl mx-auto">أربع مراحل، من الزيارة الميدانية الأولى وحتى التقارير التي تحافظ على امتثالك دورة بعد أخرى</p>
-    </div>
-    <div class="grid md:grid-cols-4 gap-8">
-      <div class="scroll-reveal bg-white/10 backdrop-blur-sm rounded-2xl p-7 border border-white/20"><div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-2xl font-bold text-bp-ink mb-5">٠١</div><h4 class="font-bold text-lg mb-2 text-bp-sage">التقييم</h4><p class="text-sm text-gray-300">نقيّم منشأتك، ونحصر الالتزامات، ونحدد كل فجوة في الامتثال.</p></div>
-      <div class="scroll-reveal bg-white/10 backdrop-blur-sm rounded-2xl p-7 border border-white/20"><div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-2xl font-bold text-bp-ink mb-5">٠٢</div><h4 class="font-bold text-lg mb-2 text-bp-sage">التخطيط</h4><p class="text-sm text-gray-300">استراتيجية مخصصة بالدراسات والجداول الزمنية والتصاريح المطلوبة لنشاطك.</p></div>
-      <div class="scroll-reveal bg-white/10 backdrop-blur-sm rounded-2xl p-7 border border-white/20"><div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-2xl font-bold text-bp-ink mb-5">٠٣</div><h4 class="font-bold text-lg mb-2 text-bp-sage">التقديم</h4><p class="text-sm text-gray-300">نُعدّ الملف ونقدّمه وننسّق مباشرة مع الجهات التنظيمية لتسريع الاعتماد.</p></div>
-      <div class="scroll-reveal bg-white/10 backdrop-blur-sm rounded-2xl p-7 border border-white/20"><div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-2xl font-bold text-bp-ink mb-5">٠٤</div><h4 class="font-bold text-lg mb-2 text-bp-sage">الاستدامة</h4><p class="text-sm text-gray-300">تقارير مستمرة وتحديث للسجلات يُبقيك ملتزماً دورة بعد أخرى.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- الاعتمادات -->
-<section class="logo-ticker-section">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="logo-ticker-header"><h3>معتمدون للقيام بالأعمال التي يُعتد بها</h3><p>لا تُقبل الدراسات وملفات التصاريح إلا من جهات معتمدة. تحتفظ بلوبرنت بتسجيل ساري لدى كل من الجهات التالية.</p></div>
-    <div class="flex flex-wrap justify-center gap-3">
-      <span class="px-5 py-3 bg-white border rounded-xl text-sm font-semibold text-bp-ink" style="border-color:var(--bp-border);">رخصة المركز الوطني للرقابة على الالتزام البيئي</span>
-      <span class="px-5 py-3 bg-white border rounded-xl text-sm font-semibold text-bp-ink" style="border-color:var(--bp-border);">تسجيل المركز الوطني لإدارة النفايات</span>
-      <span class="px-5 py-3 bg-white border rounded-xl text-sm font-semibold text-bp-ink" style="border-color:var(--bp-border);">الهيئة الملكية بالجبيل وينبع</span>
-      <span class="px-5 py-3 bg-white border rounded-xl text-sm font-semibold text-bp-ink" style="border-color:var(--bp-border);">اعتماد IAS الدولي</span>
-      <span class="px-5 py-3 bg-white border rounded-xl text-sm font-semibold text-bp-ink" style="border-color:var(--bp-border);">آيزو 9001:2015</span>
-      <span class="px-5 py-3 bg-white border rounded-xl text-sm font-semibold text-bp-ink" style="border-color:var(--bp-border);">آيزو 14001</span>
-      <span class="px-5 py-3 bg-white border rounded-xl text-sm font-semibold text-bp-ink" style="border-color:var(--bp-border);">آيزو 45001:2018</span>
-    </div>
-  </div>
-</section>
-
-<!-- القطاعات -->
-<section id="sectors" class="py-24 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16 scroll-reveal">
-      <div class="inline-block px-4 py-2 bg-bp-light rounded-full text-bp-primary font-semibold text-sm mb-4">من نخدم</div>
-      <h2 class="text-4xl font-bold text-bp-ink mb-4">مصمّمة لكل قطاع خاضع للتنظيم</h2>
-      <p class="text-gray-600 max-w-2xl mx-auto">من الصناعات الثقيلة إلى الرعاية الصحية، نُصمّم استراتيجية الامتثال وفق التزامات قطاعك ومخاطره ودورات التفتيش فيه.</p>
-    </div>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 scroll-reveal">
-      <div class="group relative overflow-hidden rounded-2xl shadow-lg"><img src="assets/img/svc-waste.jpg" alt="المصانع" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" /><div class="absolute inset-0" style="background:linear-gradient(to top,#0b2f38 0%,rgba(11, 47, 56,.5) 50%,transparent 100%);opacity:.9;"></div><div class="absolute bottom-0 right-0 left-0 p-6 text-white"><h3 class="text-xl font-bold mb-2">المصانع والتصنيع</h3><p class="text-sm text-gray-300">يتحمّل التصنيع أثقل الالتزامات البيئية في المملكة، وأغلى العواقب عند الإخلال بها.</p></div></div>
-      <div class="group relative overflow-hidden rounded-2xl shadow-lg"><img src="assets/img/svc-air.jpg" alt="الورش" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" /><div class="absolute inset-0" style="background:linear-gradient(to top,#0b2f38 0%,rgba(11, 47, 56,.5) 50%,transparent 100%);opacity:.9;"></div><div class="absolute bottom-0 right-0 left-0 p-6 text-white"><h3 class="text-xl font-bold mb-2">الورش والمشاغل</h3><p class="text-sm text-gray-300">مواقع صغيرة والتزامات حقيقية. يكتشف أغلب الملاك الاشتراط عند تعثّر تجديد الرخصة.</p></div></div>
-      <div class="group relative overflow-hidden rounded-2xl shadow-lg"><img src="assets/img/svc-water.jpg" alt="الرعاية الصحية" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" /><div class="absolute inset-0" style="background:linear-gradient(to top,#0b2f38 0%,rgba(11, 47, 56,.5) 50%,transparent 100%);opacity:.9;"></div><div class="absolute bottom-0 right-0 left-0 p-6 text-white"><h3 class="text-xl font-bold mb-2">الرعاية الصحية والبيطرية</h3><p class="text-sm text-gray-300">تخضع النفايات الطبية لأشد قواعد المناولة في المملكة، وتُفتَّش العيادات وفقها منذ يوم افتتاحها.</p></div></div>
-      <div class="group relative overflow-hidden rounded-2xl shadow-lg"><img src="assets/img/svc-lab.jpg" alt="الإنشاءات" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" /><div class="absolute inset-0" style="background:linear-gradient(to top,#0b2f38 0%,rgba(11, 47, 56,.5) 50%,transparent 100%);opacity:.9;"></div><div class="absolute bottom-0 right-0 left-0 p-6 text-white"><h3 class="text-xl font-bold mb-2">الإنشاءات والبنية التحتية</h3><p class="text-sm text-gray-300">آثار مؤقتة لكنها مكثّفة، والرقابة تجري في الموقع — حيث يلتزم الفريق بالخطة أو لا يلتزم.</p></div></div>
-      <div class="group relative overflow-hidden rounded-2xl shadow-lg"><img src="assets/img/svc-soil.jpg" alt="التجارة والتجزئة" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" /><div class="absolute inset-0" style="background:linear-gradient(to top,#0b2f38 0%,rgba(11, 47, 56,.5) 50%,transparent 100%);opacity:.9;"></div><div class="absolute bottom-0 right-0 left-0 p-6 text-white"><h3 class="text-xl font-bold mb-2">التجارة والتجزئة</h3><p class="text-sm text-gray-300">تندرج المنشآت التجارية والخدمية ضمن المسار المبسّط، لكن التصريح يبقى شرطاً لرخصتك التجارية.</p></div></div>
-      <div class="group relative overflow-hidden rounded-2xl shadow-lg"><img src="assets/img/svc-noise.jpg" alt="المحاجر والتعدين" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" /><div class="absolute inset-0" style="background:linear-gradient(to top,#0b2f38 0%,rgba(11, 47, 56,.5) 50%,transparent 100%);opacity:.9;"></div><div class="absolute bottom-0 right-0 left-0 p-6 text-white"><h3 class="text-xl font-bold mb-2">المحاجر ومواقع التعدين</h3><p class="text-sm text-gray-300">تلتزم مواقع الاستخراج بإعادة التأهيل قبل سنوات من استحقاقها، وهذا الالتزام لا يسقط.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- تواصل -->
-<section id="contact" class="py-24" style="background:var(--bp-page);">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid lg:grid-cols-2 gap-16">
-      <div class="scroll-reveal">
-        <div class="showcase-eyebrow">تواصل معنا</div>
-        <h2 class="text-3xl font-bold text-bp-ink mb-3">لنرسم معاً مسار امتثالك</h2>
-        <p class="text-gray-600 text-lg mb-8">أخبرنا عن منشأتك وسنحدد لك الدراسات والتصاريح المطلوبة بالضبط. الاستشارة الأولى مجانية ودون أي التزام.</p>
-        <div class="space-y-6">
-          <div class="flex items-start gap-4"><div class="w-12 h-12 bg-bp-light rounded-xl flex items-center justify-center text-bp-primary flex-shrink-0"><i class="fas fa-envelope text-xl"></i></div><div><h4 class="font-bold text-bp-ink mb-1">البريد الإلكتروني</h4><p class="text-gray-600"><a data-mail data-text="email"></a></p></div></div>
-          <div class="flex items-start gap-4"><div class="w-12 h-12 bg-bp-light rounded-xl flex items-center justify-center text-bp-primary flex-shrink-0"><i class="fas fa-phone text-xl"></i></div><div><h4 class="font-bold text-bp-ink mb-1">الهاتف</h4><p class="text-gray-600"><a data-tel data-text="phone" style="direction:ltr;display:inline-block;"></a></p></div></div>
-          <div class="flex items-start gap-4"><div class="w-12 h-12 bg-bp-light rounded-xl flex items-center justify-center text-bp-primary flex-shrink-0"><i class="fab fa-whatsapp text-xl"></i></div><div><h4 class="font-bold text-bp-ink mb-1">واتساب</h4><p class="text-gray-600"><a data-wa="مرحباً بلوبرنت، أود الاستفسار عن خدماتكم البيئية." data-text="phone" style="direction:ltr;display:inline-block;"></a></p></div></div>
-          <div class="flex items-start gap-4"><div class="w-12 h-12 bg-bp-light rounded-xl flex items-center justify-center text-bp-primary flex-shrink-0"><i class="fas fa-map-marker-alt text-xl"></i></div><div><h4 class="font-bold text-bp-ink mb-1">الموقع</h4><p class="text-gray-600">الرياض، المملكة العربية السعودية</p></div></div>
-          <div class="flex items-start gap-4"><div class="w-12 h-12 bg-bp-light rounded-xl flex items-center justify-center text-bp-primary flex-shrink-0"><i class="fas fa-clock text-xl"></i></div><div><h4 class="font-bold text-bp-ink mb-1">ساعات العمل</h4><p class="text-gray-600">الأحد &ndash; الخميس &middot; ٩:٠٠ صباحاً &ndash; ٦:٠٠ مساءً بتوقيت المملكة</p></div></div>
-        </div>
-      </div>
-      <div class="scroll-reveal">
-        <div class="bg-white rounded-3xl p-8 shadow-xl mb-6">
-          <h3 class="text-2xl font-bold text-bp-ink mb-6">أخبرنا عن منشأتك</h3>
-          <div class="space-y-4">
-            <div class="grid md:grid-cols-2 gap-4">
-              <input type="text" placeholder="الاسم الكامل" aria-label="الاسم الكامل" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-bp-primary outline-none transition-all" />
-              <input type="text" placeholder="اسم المنشأة" aria-label="اسم المنشأة" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-bp-primary outline-none transition-all" />
-            </div>
-            <input type="email" placeholder="البريد الإلكتروني" aria-label="البريد الإلكتروني" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-bp-primary outline-none transition-all" />
-            <input type="tel" placeholder="رقم الجوال" aria-label="رقم الجوال" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-bp-primary outline-none transition-all" />
-            <select aria-label="الخدمة المطلوبة" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-bp-primary outline-none transition-all text-gray-600 bg-white">
-              <option value="">ما الخدمة التي تحتاجها؟</option>
-              <option>التصريح البيئي</option>
-              <option>تقييم الأثر البيئي</option>
-              <option>تصريح إدارة النفايات</option>
-              <option>خطة الإدارة البيئية</option>
-              <option>السجل البيئي</option>
-              <option>التقرير البيئي الدوري</option>
-              <option>القياسات البيئية</option>
-              <option>غير متأكد — أرجو الإفادة</option>
-            </select>
-            <textarea placeholder="نشاطك، والطاقة الإنتاجية، وما تحتاجه تقريباً…" aria-label="تفاصيل المنشأة" rows="4" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-bp-primary outline-none transition-all resize-none"></textarea>
-            <button onclick="sendContactMessage()" class="w-full py-4 bg-bp-primary text-white rounded-xl font-bold hover:bg-bp-dark transition-all shadow-lg">إرسال الرسالة</button>
-          </div>
-        </div>
-        <div class="bg-white rounded-3xl p-8 shadow-xl">
-          <h3 class="text-lg font-bold text-bp-ink mb-5">ماذا يحدث بعد تواصلك معنا</h3>
-          <div class="space-y-5">
-            <div class="flex items-start gap-4"><span class="w-8 h-8 rounded-lg bg-bp-light text-bp-primary font-display font-bold text-sm flex items-center justify-center flex-shrink-0">٠١</span><div><p class="font-semibold text-bp-ink text-sm">تتواصل معنا</p><p class="text-sm text-gray-600 mt-1">عبر البريد أو الهاتف أو واتساب، مع ذكر نشاطك وما تحتاجه تقريباً.</p></div></div>
-            <div class="flex items-start gap-4"><span class="w-8 h-8 rounded-lg bg-bp-light text-bp-primary font-display font-bold text-sm flex items-center justify-center flex-shrink-0">٠٢</span><div><p class="font-semibold text-bp-ink text-sm">مكالمة تحديد نطاق قصيرة</p><p class="text-sm text-gray-600 mt-1">نسألك عن النشاط والطاقة والموقع لتصنيفه بشكل صحيح.</p></div></div>
-            <div class="flex items-start gap-4"><span class="w-8 h-8 rounded-lg bg-bp-light text-bp-primary font-display font-bold text-sm flex items-center justify-center flex-shrink-0">٠٣</span><div><p class="font-semibold text-bp-ink text-sm">تستلم نطاق عمل مكتوباً</p><p class="text-sm text-gray-600 mt-1">التصاريح والدراسات المنطبقة بالتحديد، وما يتضمنه كل منها، وجدول زمني واقعي.</p></div></div>
-          </div>
-          <p class="mt-6 pt-5 text-xs text-gray-500" style="border-top:1px solid var(--bp-border);">الاستشارة الأولى مجانية ولا تترتب عليها أي التزامات.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-</main>
 """
 
 FOOTER = """
@@ -452,6 +195,8 @@ FOOTER = """
   <div class="whatsapp-tooltip">تواصل معنا عبر واتساب</div>
 </div>
 
+<script src="js/cards-ar.js"></script>
+<script src="js/cards.js"></script>
 <script src="js/main.js"></script>
 <script src="js/widgets.js"></script>
 </body>

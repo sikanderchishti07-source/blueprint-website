@@ -72,3 +72,17 @@ h1, h2, h3, h4 { letter-spacing: 0; line-height: 1.45; }
 
 /* Numerals in Latin form inside stat blocks look cleaner */
 .stat-number, .isvc-tab-num, .sc-val, .ns-val { direction: ltr; unicode-bidi: embed; }
+
+/* Hero scrim is directional — mirror it so the dark side sits behind the copy */
+[dir="rtl"] .hero-cover-scrim {
+  background:
+    linear-gradient(260deg, rgba(11,47,56,.88) 0%, rgba(11,47,56,.55) 30%, rgba(11,47,56,.14) 55%, rgba(11,47,56,0) 78%),
+    linear-gradient(to top, rgba(11,47,56,.34) 0%, rgba(11,47,56,0) 32%);
+}
+@media (max-width: 1023px) {
+  [dir="rtl"] .hero-cover-video { object-position: 38% center; }
+}
+/* Two-tone service hero mirrors as well */
+[dir="rtl"] .svcd-hero::after { right: auto; left: 0; }
+[dir="rtl"] .svcd-hero::before { right: auto; left: 46%; }
+[dir="rtl"] .svcd-float { left: auto; right: -56px; }
