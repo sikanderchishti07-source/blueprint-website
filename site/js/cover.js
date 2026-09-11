@@ -108,10 +108,15 @@ function onScroll(){
   fetch(url).then(r=>r.json()).then(d=>{
     const c=d.current||{};
     const aqi=Math.round(c.us_aqi||0);
-    document.getElementById('aqiVal').textContent=aqi||'—';
+    /* the US EPA index is defined to 500; anything above is shown as 500+ */
+    document.getElementById('aqiVal').textContent = aqi ? (aqi>500 ? '500+' : aqi) : '—';
+    const band = aqi<=50?'GOOD' : aqi<=100?'MODERATE' : aqi<=150?'UNHEALTHY · SENSITIVE'
+               : aqi<=200?'UNHEALTHY' : aqi<=300?'VERY UNHEALTHY' : 'HAZARDOUS';
+    const lab=document.querySelector('.lc-val span');
+    if(lab && aqi) lab.textContent = 'AQI · ' + band;
     document.getElementById('pm25').textContent=(c.pm2_5!=null)?c.pm2_5.toFixed(1):'—';
     document.getElementById('pm10').textContent=(c.pm10!=null)?c.pm10.toFixed(1):'—';
-    const frac=Math.min(1,aqi/300);
+    const frac=Math.min(1,aqi/500);
     document.getElementById('aqiArc').style.strokeDashoffset=(255*(1-frac)).toFixed(1);
     const h=d.hourly||{};
     const take=a=>(a||[]).filter(v=>v!=null).slice(-24);
