@@ -36,9 +36,16 @@
 .car-body{position:absolute;left:0;right:0;bottom:0;padding:0 20px 22px;color:#fff}
 .car-ic{width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.5);
   display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:.95rem}
-.car-card h3{font-family:var(--font-display);font-size:1rem;font-weight:700;line-height:1.3;
-  letter-spacing:-.01em;text-shadow:0 2px 12px rgba(0,0,0,.5)}
-.car-card p{margin-top:0;font-size:.86rem;line-height:1.6;color:rgba(255,255,255,.82);
+.car-card h3{font-family:var(--font-display);font-size:.98rem;font-weight:700;line-height:1.28;
+  letter-spacing:-.01em;text-shadow:0 2px 14px rgba(0,0,0,.75),0 1px 3px rgba(0,0,0,.6)}
+
+/* keep the label inside the strip of card that is actually visible */
+.car-card.sideL .car-body{padding-right:96px}
+.car-card.sideR .car-body{padding-left:86px;text-align:right}
+.car-card.sideR .car-ic,.car-card.sideR .car-go{margin-left:auto}
+.car-card.act .car-body{padding-left:20px;padding-right:20px;text-align:left}
+.car-card.act .car-ic,.car-card.act .car-go{margin-left:0}
+.car-card p{margin-top:0;font-size:.85rem;line-height:1.6;color:rgba(255,255,255,.82);
   max-height:0;opacity:0;overflow:hidden;
   transition:max-height .6s ease,opacity .45s ease,margin-top .6s ease}
 .car-go{margin-top:16px;width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.55);

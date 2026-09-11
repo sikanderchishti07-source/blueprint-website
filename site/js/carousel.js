@@ -66,7 +66,8 @@
     S.forEach((s, n) => {
       let o = n - cur; if (o > N / 2) o -= N; if (o < -N / 2) o += N;
       const a = Math.abs(o);
-      const x = o * 212 + Math.sign(o) * Math.min(a, 1) * 40;
+      
+      const x = o * 224 + Math.sign(o) * Math.min(a, 1) * 44;
       const rot = Math.max(-26, Math.min(26, -o * 8));
       const z = -a * 95;
       const sc = a === 0 ? 1 : Math.max(.84, 1 - a * .045);
@@ -79,6 +80,10 @@
       s.el.style.pointerEvents = a > 3.5 ? 'none' : 'auto';
       s.el.classList.toggle('hov', lift);
       s.el.classList.toggle('act', a === 0);
+      /* cards left of centre are covered on their right edge and vice versa,
+         so the label hugs whichever edge is still visible */
+      s.el.classList.toggle('sideL', o < 0);
+      s.el.classList.toggle('sideR', o > 0);
       s.dot.classList.toggle('on', a === 0);
     });
   }
