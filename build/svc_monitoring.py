@@ -303,7 +303,7 @@ MONITORING["environmental-sampling"] = _S(
     "Chain-of-custody from point to laboratory",
     "Collection, preservation and transfer of environmental samples under documented chain of custody, "
     "so the result is defensible.",
-    "assets/img/svc-sampling.jpg", ("fa-vial", "What the chain records"),
+    "assets/img/svc-sampling.jpg", ("fa-vial", "The chain records"),
     [("Collection", "Who, when, where, how"),
      ("Preservation", "Method and holding time"),
      ("Transfer", "Every handover, signed")],

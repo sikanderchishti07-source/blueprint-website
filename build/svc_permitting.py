@@ -11,7 +11,7 @@ PERMITTING["environmental-permit"] = dict(
     lede="The NCEC environmental permit that stands between your activity and a valid licence — "
          "classified correctly, filed completely, and carried through review.",
     hero_img="assets/img/svc-permit.jpg",
-    float_head=("fa-file-signature", "What the file contains"),
+    float_head=("fa-file-signature", "Inside the file"),
     float_rows=[
                 ("3", "Permit categories", "Classification decides the scope"),
                 ("6+", "Documents required", "Before a file is accepted"),
@@ -421,7 +421,7 @@ PERMITTING["environmental-register"] = dict(
     lede="The record an inspector asks for first — maintained continuously rather than assembled the "
          "week before it is needed.",
     hero_img="assets/img/svc-register.jpg",
-    float_head=("fa-folder-open", "What the register holds"),
+    float_head=("fa-folder-open", "In the register"),
     float_rows=[
                 ("1st", "Document requested", "At almost every inspection"),
                 ("100%", "Period coverage", "Gaps read as non-compliance"),
