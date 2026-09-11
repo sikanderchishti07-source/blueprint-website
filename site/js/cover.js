@@ -66,8 +66,11 @@ function frame(){
   mx  += (tmx-mx)*0.06;  my += (tmy-my)*0.06;
   const p=cur;
 
-  plane.style.transform='scale('+(1.24-.20*p).toFixed(4)+') translate3d('+(mx*-14).toFixed(1)+'px,'+
-    ((3-4*p)+my*-8).toFixed(2)+'%,0)';
+  /* the frame stays put and clips; the picture inside is what moves */
+  const kb = plane.firstElementChild;
+  if (kb) kb.style.transform =
+    'scale(' + (1.10 - .08 * p).toFixed(4) + ') ' +
+    'translate3d(' + (mx * -16).toFixed(1) + 'px,' + ((1.5 - 2.5 * p) + my * -6).toFixed(2) + '%,0)';
   net.style.transform='translate3d('+(mx*-26).toFixed(1)+'px,'+((.5-p)*-7).toFixed(2)+'%,0)';
 
   const o1=1-sm(rmp(p,.16,.32)); setScene(s1,o1,-72*(1-o1),(1-o1)*5);
@@ -120,15 +123,15 @@ function onScroll(){
     document.getElementById('aqiArc').style.strokeDashoffset=(255*(1-frac)).toFixed(1);
     const h=d.hourly||{};
     const take=a=>(a||[]).filter(v=>v!=null).slice(-24);
-    spark(document.getElementById('sp25'),take(h.pm2_5),'#45bbce');
-    spark(document.getElementById('sp10'),take(h.pm10),'#a3b56f');
+    spark(document.getElementById('sp25'),take(h.pm2_5),'#8fe7f7');
+    spark(document.getElementById('sp10'),take(h.pm10),'#c3d49a');
     const t=c.time? new Date(c.time):new Date();
     document.getElementById('lcSrc').textContent='AMBIENT AIR · RIYADH · PUBLIC DATA · '
       + t.toISOString().slice(11,16) + ' UTC';
   }).catch(()=>{ card.style.display='none'; });  /* never show placeholder numbers */
 })();
 
-/* ── cover rotation: three images, 3s each, cross-faded ── */
+/* ── cover rotation: three images, 6s each, cross-faded ── */
 (function(){
   const imgs=[...document.querySelectorAll('.cvr')];
   if(imgs.length<2) return;
@@ -136,8 +139,20 @@ function onScroll(){
   let i=0, timer=null;
   const load=n=>{ const el=imgs[n]; if(el && el.dataset.src){ el.src=el.dataset.src; delete el.dataset.src; } };
   load(1);                      /* have the next frame ready before the first change */
+
+  /* cover-3 carries its own labelled pins, so ours step aside while it shows */
+  const ANNOTATED = 2;
+  const net = document.getElementById('net'), mkL = document.getElementById('mkLayer');
+  const syncOverlay = n => {
+    const hide = (n === ANNOTATED);
+    [net, mkL].forEach(el => { if (!el) return;
+      el.style.transition = 'opacity .9s ease';
+      el.style.opacity = hide ? '0' : '1'; });
+  };
+  syncOverlay(0);
+
   const tick=()=>{ imgs[i].classList.remove('on');
-    i=(i+1)%imgs.length; imgs[i].classList.add('on');
+    i=(i+1)%imgs.length; imgs[i].classList.add('on'); syncOverlay(i);
     load((i+1)%imgs.length); }; /* always keep one frame ahead loaded */
   const start=()=>{ if(!timer) timer=setInterval(tick,6000); };
   const stop =()=>{ clearInterval(timer); timer=null; };
