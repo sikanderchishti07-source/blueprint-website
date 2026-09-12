@@ -1,5 +1,5 @@
 {
-  "buildCommand": "cd build && npm install && ./build.sh",
+  "buildCommand": "cd build && npm install && bash build.sh",
   "outputDirectory": "site",
   "framework": null
 }
