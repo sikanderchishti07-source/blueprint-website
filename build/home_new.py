@@ -116,6 +116,8 @@ HOME = """
   </div>
 </section>
 
+""" + insights(_C.load_blog()) + """
+
 <!-- HOW WE WORK -->
 <section id="process" class="py-28 text-white relative overflow-hidden" style="background:var(--bp-blue-ink);">
   <div class="absolute inset-0 opacity-10" aria-hidden="true">
@@ -204,8 +206,6 @@ PROCESS_CARDS      </div>
 
   </div>
 </section>
-
-""" + insights(_C.load_blog()) + """
 
 <!-- SECTORS -->
 <section id="sectors" class="py-28" style="background:var(--bp-page);">
