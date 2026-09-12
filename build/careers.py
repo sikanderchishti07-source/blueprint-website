@@ -1,5 +1,44 @@
 # Careers pages, built from content/careers/*.md
 
+
+def _hero_facts(roles):
+    locs = []
+    for r in roles:
+        loc = (r.get('location') or '').strip()
+        if loc and loc not in locs:
+            locs.append(loc)
+    rows = [("Open roles", str(len(roles)) if roles else "None right now")]
+    if locs:
+        rows.append(("Based in", locs[0] if len(locs) == 1 else "Multiple locations"))
+    rows.append(("Work", "Field and office"))
+    return "".join(
+        f"""
+        <div class="flex items-center justify-between gap-4 py-3.5 border-b border-white/10 last:border-0">
+          <span class="text-sm text-gray-400">{k}</span>
+          <span class="text-sm font-medium text-white">{v}</span>
+        </div>""" for k, v in rows)
+
+
+def _hero(eyebrow, title, lede, crumb, facts=None):
+    side = f"""
+      <div class="lg:border-l lg:border-white/15 lg:pl-10">{facts}
+      </div>""" if facts else ""
+    return f"""
+<section class="pt-32 pb-20 text-white relative" style="background:var(--bp-blue-ink);">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="crumb crumb-dark mb-6">{crumb}</div>
+    <div class="grid lg:grid-cols-3 gap-10 lg:gap-14 items-center">
+      <div class="lg:col-span-2">
+        <div class="text-xs uppercase font-semibold mb-4 text-bp-sage" style="letter-spacing:.22em;">{eyebrow}</div>
+        <h1 class="text-3xl lg:text-5xl font-bold tracking-tight leading-tight">{title}</h1>
+        <p class="text-gray-300 text-base leading-relaxed mt-5 max-w-xl">{lede}</p>
+      </div>
+{side}
+    </div>
+  </div>
+</section>"""
+
+
 def careers_index(page_header, roles):
     if roles:
         cards = "".join(f"""
@@ -28,16 +67,20 @@ def careers_index(page_header, roles):
         <a data-mail class="btn-primary">Send your CV</a>
       </div>"""
 
+    crumb = ('<a href="index.html">Home</a>'
+             '<i class="fas fa-chevron-right" style="font-size:.55rem;"></i>'
+             '<span>Careers</span>')
+
+    hero = _hero(
+        "Careers",
+        "Work in Saudi environmental compliance",
+        "The work is varied &mdash; field monitoring one week, permit files the next.",
+        crumb,
+        _hero_facts(roles),
+    )
+
     return f"""
-<section class="page-hero">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="crumb"><a href="index.html">Home</a><i class="fas fa-chevron-right" style="font-size:.55rem;"></i><span>Careers</span></div>
-    <div class="showcase-eyebrow">Careers</div>
-    <h1 class="page-hero-h1">Work in Saudi environmental compliance</h1>
-    <p class="page-hero-lede">Environmental consultancy in the Kingdom is a growing field, and the
-      work is varied &mdash; field monitoring one week, permit files the next.</p>
-  </div>
-</section>
+{hero}
 
 <section class="py-20 bg-white">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -73,19 +116,31 @@ def career_page(page_header, r, others):
         <i class="fas fa-arrow-right"></i>
       </a>""" for o in others)
 
+    meta = "".join(
+        f"""
+        <div class="flex items-center justify-between gap-4 py-3.5 border-b border-white/10 last:border-0">
+          <span class="text-sm text-gray-400">{k}</span>
+          <span class="text-sm font-medium text-white">{v}</span>
+        </div>""" for k, v in [
+            ("Location", r.get('location', '')),
+            ("Type", r.get('type', '')),
+            ("Closes", r.get('closing', '')),
+        ] if v)
+
+    crumb = ('<a href="index.html">Home</a>'
+             '<i class="fas fa-chevron-right" style="font-size:.55rem;"></i>'
+             '<a href="careers.html">Careers</a>')
+
+    hero = _hero(
+        r.get('department') or 'Vacancy',
+        r['title'],
+        r.get('summary', ''),
+        crumb,
+        meta,
+    )
+
     return f"""
-<section class="page-hero">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="crumb"><a href="index.html">Home</a><i class="fas fa-chevron-right" style="font-size:.55rem;"></i><a href="careers.html">Careers</a></div>
-    <div class="showcase-eyebrow">{r.get('department') or 'Vacancy'}</div>
-    <h1 class="page-hero-h1">{r['title']}</h1>
-    <div class="crole-meta" style="margin-top:18px;">
-      <span><i class="fas fa-location-dot"></i> {r.get('location','')}</span>
-      <span><i class="fas fa-clock"></i> {r.get('type','')}</span>
-      {f"<span><i class='fas fa-calendar'></i> Closes {r['closing']}</span>" if r.get('closing') else ""}
-    </div>
-  </div>
-</section>
+{hero}
 
 <section class="py-20 bg-white">
   <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
