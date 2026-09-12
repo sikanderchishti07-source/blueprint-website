@@ -87,8 +87,10 @@
           '<span class="svc-card-num">' + g.num + '</span>' +
           '<span class="svc-card-icon"><i class="fas ' + g.icon + '"></i></span>' +
           '<span class="svc-card-glass">' +
-            '<span class="svc-card-count">' + g.items.length + ' ' + T.services + '</span>' +
+            '<span class="svc-card-kick">' + (T.kicker || 'OUR SERVICES') + '</span>' +
             '<span class="svc-card-short">' + g.short + '</span>' +
+            '<span class="svc-card-rule"></span>' +
+            '<span class="svc-card-count">' + g.items.length + ' ' + T.services + '</span>' +
             '<span class="svc-card-title">' + g.key + '</span>' +
             '<span class="svc-card-blurb">' + g.blurb + '</span>' +
             '<span class="svc-card-cta">View ' + g.items.length + ' services <i class="fas fa-arrow-right"></i></span>' +

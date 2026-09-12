@@ -977,7 +977,7 @@
 }
 
 /* This section runs wider than the standard container to match the reference */
-.svc-container { width: 100%; max-width: 1680px; }
+.svc-container { width: 100%; max-width: 1300px; }
 
 /* ── Service detail pages ──────────────────────────────────── */
 .svcd-hero { position: relative; padding: calc(var(--nav-height) + 42px) 0 62px;
@@ -1161,3 +1161,34 @@
     clip-path: polygon(0 46px, 100% 0, 100% 100%, 0 100%); }
   .svcd-hero::before { display: none; }
 }
+
+
+/* ── service cards restyled to the reference sheet ─────────── */
+.svc-card-num{position:absolute;top:22px;left:24px;z-index:4;
+  font-family:var(--font-display);font-size:1.05rem;font-weight:700;color:#fff;letter-spacing:.02em}
+.svc-card-num::after{content:'';display:block;width:26px;height:2px;margin-top:7px;
+  background:var(--bp-blue-soft);border-radius:2px}
+.svc-card-icon{position:absolute;top:20px;right:20px;z-index:4;
+  width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;
+  background:rgba(10,111,128,.72);border:1px solid rgba(255,255,255,.22);
+  color:#fff;font-size:1.05rem}
+.svc-card-veil{position:absolute;inset:0;z-index:2;
+  background:linear-gradient(to top,rgba(11,47,56,.92) 2%,rgba(11,47,56,.52) 34%,rgba(11,47,56,.10) 62%,rgba(11,47,56,.22) 100%)}
+.svc-card-glass{position:absolute;left:0;right:0;bottom:0;z-index:4;
+  padding:0 26px 28px;background:none;border:none;backdrop-filter:none;display:block}
+.svc-card-kick{display:block;font-family:var(--font-display);font-size:.62rem;font-weight:600;
+  letter-spacing:.26em;color:var(--bp-blue-soft);margin-bottom:9px}
+.svc-card-short{display:block;font-family:var(--font-display);
+  font-size:clamp(1.35rem,2.1vw,2rem);font-weight:800;letter-spacing:-.01em;
+  color:#fff;text-transform:uppercase;line-height:1.05;max-height:none;opacity:1}
+.svc-card-rule{display:block;width:38px;height:3px;border-radius:2px;margin-top:14px;
+  background:var(--bp-blue-soft)}
+.svc-card-count{display:block;font-family:var(--font-display);font-size:.66rem;
+  letter-spacing:.18em;color:rgba(255,255,255,.62);margin-top:12px}
+.svc-card-title{display:none}
+.svc-card-blurb{display:block;margin-top:10px;font-size:.84rem;line-height:1.6;
+  color:rgba(255,255,255,.82);max-height:0;opacity:0;overflow:hidden;
+  transition:max-height .5s var(--ease,cubic-bezier(.4,0,.2,1)),opacity .4s ease,margin-top .5s}
+.svc-card:hover .svc-card-blurb{max-height:90px;opacity:1;margin-top:14px}
+.svc-card-cta{margin-top:16px}
+.svc-face{border-radius:18px;overflow:hidden}
