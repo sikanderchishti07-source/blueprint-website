@@ -1,0 +1,53 @@
+backend:
+  name: github
+  repo: sikanderchishti07-source/blueprint-website
+  branch: main
+  base_url: https://blueprint-website-wheat.vercel.app
+  auth_endpoint: api/auth
+
+media_folder: site/assets/img
+public_folder: assets/img
+
+publish_mode: simple
+locale: en
+
+collections:
+  - name: blog
+    label: Blog articles
+    label_singular: Article
+    folder: content/blog
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: yaml-frontmatter
+    summary: "{{title}}"
+    sortable_fields: [date, title]
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: date, label: Date, widget: datetime, date_format: "MMMM D, YYYY", time_format: false, picker_utc: true }
+      - { name: category, label: Category, widget: string, default: "Insight" }
+      - { name: summary, label: Summary, widget: text, hint: "One or two sentences. Shown on the blog list and the home page." }
+      - { name: image, label: Cover image, widget: image, required: false, default: "assets/img/card-1.jpg" }
+      - { name: read, label: Reading time, widget: string, required: false, default: "3 min read" }
+      - { name: body, label: Article, widget: markdown }
+
+  - name: careers
+    label: Vacancies
+    label_singular: Vacancy
+    folder: content/careers
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: yaml-frontmatter
+    summary: "{{title}}"
+    sortable_fields: [date, title]
+    fields:
+      - { name: title, label: Job title, widget: string }
+      - { name: date, label: Date posted, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, picker_utc: true }
+      - { name: department, label: Department, widget: string, required: false }
+      - { name: location, label: Location, widget: string, default: "Riyadh, Saudi Arabia" }
+      - { name: type, label: Employment type, widget: select, options: ["Full time", "Part time", "Contract", "Internship"], default: "Full time" }
+      - { name: closing, label: Closing date, widget: string, required: false, hint: "For example: 31 October 2026. Leave empty for no deadline." }
+      - { name: status, label: Status, widget: select, options: ["open", "closed"], default: "open", hint: "Set to closed to remove it from the website." }
+      - { name: summary, label: Summary, widget: text }
+      - { name: body, label: Full description, widget: markdown }
