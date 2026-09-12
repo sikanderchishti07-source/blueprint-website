@@ -1,4 +1,4 @@
-﻿def _has_roles():
+def _has_roles():
     """Careers only appears in the menus when a vacancy is actually open."""
     try:
         import content
@@ -12,7 +12,7 @@ def head(title, description, extra_css=""):
     return f"""<!DOCTYPE html>
 <!--
   ============================================================
-  GENERATED FILE â€” DO NOT EDIT THIS HTML BY HAND.
+  GENERATED FILE — DO NOT EDIT THIS HTML BY HAND.
 
   This page is assembled by build/build.py from:
       build/partials.py   (nav, footer, modals, widgets)
@@ -131,7 +131,7 @@ def nav():
     <a href="blog.html" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-pen-nib"></i></div>Blog</a>
     """ + ('''<a href="careers.html" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-user-plus"></i></div>Careers</a>''' if _has_roles() else "") + f"""
     <a href="contact.html" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-envelope"></i></div>Contact</a>
-    <a href="index_arabic.html" class="drawer-link"><div class="drawer-link-icon">ðŸŒ</div>Ø§Ù„Ø¹Ø±Ø¨ÙŠØ© (Arabic)</a>
+    <a href="index_arabic.html" class="drawer-link"><div class="drawer-link-icon">🌐</div>العربية (Arabic)</a>
   </div>
   <div class="drawer-footer">
     <a href="contact.html" class="drawer-portal-btn"><i class="fas fa-paper-plane"></i> Free Consultation</a>
@@ -144,7 +144,7 @@ def nav():
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between" style="height:64px;gap:16px;">
 
-        <a href="index.html" class="nav-logo-wrap js-home-link" aria-label="BluePrint â€” home">
+        <a href="index.html" class="nav-logo-wrap js-home-link" aria-label="BluePrint — home">
           <img src="assets/logo/blueprint-logo.png" alt="BluePrint Environmental Services" />
         </a>
 
@@ -167,12 +167,12 @@ def nav():
               <div class="nav-dropdown-box nav-mega-box">
                 <div class="nav-mega-header">
                   <span class="nav-mega-header-title">Compliance &amp; Permitting</span>
-                  <a href="services.html" class="nav-mega-cta">View All â†’</a>
+                  <a href="services.html" class="nav-mega-cta">View All →</a>
                 </div>
                 {svc_links}
                 <div class="nav-mega-header" style="margin-top:8px;">
                   <span class="nav-mega-header-title">Monitoring &amp; Testing</span>
-                  <a href="services.html#monitoring" class="nav-mega-cta">See all â†’</a>
+                  <a href="services.html#monitoring" class="nav-mega-cta">See all →</a>
                 </div>
                 {mon_links}
               </div>
@@ -205,7 +205,7 @@ def nav():
         </nav>
 
         <div class="nav-actions">
-          <a href="index_arabic.html" class="nav-lang-btn">ðŸŒ <span>Ø§Ù„Ø¹Ø±Ø¨ÙŠØ©</span></a>
+          <a href="index_arabic.html" class="nav-lang-btn">🌐 <span>العربية</span></a>
           <a href="contact.html" class="nav-portal-btn"><i class="fas fa-paper-plane"></i> Free Consultation</a>
           <button class="nav-hamburger" id="navHamburger" onclick="toggleNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button>
         </div>
@@ -244,7 +244,7 @@ def footer():
     <div class="footer-grid">
 
       <div class="footer-brand-col">
-        <a href="index.html" class="footer-brand-logo js-home-link" aria-label="BluePrint â€” back to top">
+        <a href="index.html" class="footer-brand-logo js-home-link" aria-label="BluePrint — back to top">
           <img src="assets/logo/blueprint-logo-white.png" alt="BluePrint Environmental Services" />
         </a>
         <p class="footer-brand-desc">Accredited environmental consultancy delivering compliance, permitting, and reporting across the Kingdom of Saudi Arabia.</p>
@@ -273,8 +273,8 @@ def footer():
           <li><a href="index.html#process"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Our Process</a></li>
           <li><a href="index.html#sectors"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Sectors</a></li>
           <li><a href="blog.html"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Blog</a></li>
-          """ + ('''<li><a href="careers.html"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Careers</a></li>''' if _has_roles() else "") + """
-          <li><a href="index_arabic.html"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Ø§Ù„Ø¹Ø±Ø¨ÙŠØ©</a></li>
+          """ + ('''<li><a href="careers.html"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Careers</a></li>''' if _has_roles() else "") + f"""
+          <li><a href="index_arabic.html"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>العربية</a></li>
         </ul>
       </div>
 
@@ -327,7 +327,7 @@ def footer():
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
       <div class="footer-bottom-inner flex flex-wrap items-center justify-between gap-4">
         <div style="display:flex;flex-direction:column;gap:3px;">
-          <p class="footer-copy">Â© <span data-text="year"></span> BluePrint Environmental Services. All rights reserved.</p>
+          <p class="footer-copy">© <span data-text="year"></span> BluePrint Environmental Services. All rights reserved.</p>
           <p class="footer-credit">Prepared by: <span>Sikander Chishti</span>, Environmental Engineer</p>
         </div>
         <div style="display:flex;align-items:center;flex-wrap:wrap;gap:2px;">
@@ -335,7 +335,7 @@ def footer():
           <span class="footer-legal-sep"></span>
           <a href="terms.html" class="footer-legal-btn">Terms &amp; Conditions</a>
           <span class="footer-legal-sep"></span>
-          <a href="index_arabic.html" class="footer-legal-btn" style="color:rgba(163,181,111,.6);">ðŸŒ Ø§Ù„Ø¹Ø±Ø¨ÙŠØ©</a>
+          <a href="index_arabic.html" class="footer-legal-btn" style="color:rgba(163,181,111,.6);">🌐 العربية</a>
         </div>
       </div>
     </div>
@@ -351,7 +351,7 @@ def modals():
 def widgets():
     return """
 <!-- ============================================================
-     FLOATING WIDGETS â€” WhatsApp, expert CTA
+     FLOATING WIDGETS — WhatsApp, expert CTA
      ============================================================ -->
 <div id="whatsappContainer" class="whatsapp-container">
   <a href="#" id="whatsappBtn" class="whatsapp-btn" title="Chat with us on WhatsApp" aria-label="Chat on WhatsApp">
@@ -363,13 +363,13 @@ def widgets():
 <div id="expertCTA">
   <div id="expertTab" onclick="toggleExpert()" role="button" tabindex="0" aria-label="Speak to an expert">
     <div class="expert-photo-wrap"><i class="fas fa-headset" aria-hidden="true"></i></div>
-    <div class="expert-label-pill"><span>Ask an Expert</span><span>Free Consultation â†’</span></div>
+    <div class="expert-label-pill"><span>Ask an Expert</span><span>Free Consultation →</span></div>
   </div>
   <div id="expertPanel">
     <div class="ep-header">
       <div class="ep-photo"><i class="fas fa-headset" aria-hidden="true"></i></div>
       <div class="ep-info"><div class="ep-name">Environmental Specialist</div><div class="ep-role">Accredited environmental consultant &middot; Riyadh</div><div class="ep-status">Riyadh &middot; Sun&ndash;Thu</div></div>
-      <button class="ep-close" onclick="closeExpert()" aria-label="Close">âœ•</button>
+      <button class="ep-close" onclick="closeExpert()" aria-label="Close">✕</button>
     </div>
     <div class="ep-body">
       <div class="ep-question">Have a question?</div>
@@ -382,7 +382,7 @@ def widgets():
       <div class="ep-divider">or send a quick message</div>
       <div class="ep-quick-msg"><input type="text" id="expertMsgInput" placeholder="e.g. which permit does my workshop need?" maxlength="120" aria-label="Quick message" /><button onclick="sendExpertMsg()" aria-label="Send"><i class="fas fa-paper-plane"></i></button></div>
     </div>
-    <div class="ep-footer">Free consultation Â· No commitment required</div>
+    <div class="ep-footer">Free consultation · No commitment required</div>
   </div>
 </div>
 """
@@ -391,4 +391,3 @@ def widgets():
 def scripts(extra=()):
     base = ["js/main.js", "js/widgets.js"] + list(extra)
     return "\n".join(f'<script src="{s}"></script>' for s in base) + "\n</body>\n</html>\n"
-
