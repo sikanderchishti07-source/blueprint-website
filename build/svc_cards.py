@@ -1,4 +1,4 @@
-# Carousel service pages — one per card on the home page carousel.
+# Carousel service pages, one per card on the home page carousel.
 # Content describes capability only. Nothing about BluePrint's history,
 # clients, project counts or accreditation scope is asserted here.
 # Rows marked CONFIRM must be checked by the owner before they go live.
@@ -49,7 +49,7 @@ CARDS["environmental-studies"] = dict(
     standards=["Stated methodology for every prediction", "Field baseline behind every conclusion", "Reporting in the reviewer's format"],
     approach="Scope agreed in writing, field baseline collected to referenced methods, impacts predicted against that "
              "baseline, then reporting in the format the reviewer expects. Each stage names the standard applied.",
-    meta="Environmental impact assessment and baseline studies in Saudi Arabia — scoping, field survey, "
+    meta="Environmental impact assessment and baseline studies in Saudi Arabia, scoping, field survey, "
          "impact prediction and monitoring plans prepared for regulatory submission.",
 )
 
@@ -95,7 +95,7 @@ CARDS["marine-environment-services"] = dict(
     standards=["ISO 5667 sampling" + CONFIRM, "ISO/IEC 17025 laboratory" + CONFIRM, "Reporting in the reviewer's format"],
     approach="Scope agreed in writing, field survey to referenced methods, laboratory analysis, then reporting in the "
              "format the reviewer expects. Each stage names the standard applied.",
-    meta="Marine environmental services in Saudi Arabia — baseline surveys, water quality monitoring, "
+    meta="Marine environmental services in Saudi Arabia, baseline surveys, water quality monitoring, "
          "sediment sampling and habitat mapping for coastal and marine projects.",
 )
 
@@ -136,12 +136,12 @@ CARDS["terrestrial-environment"] = dict(
               ("fa-file-lines", "Reporting for assessment input")],
     req_rows=[("Authority", "NCEC" + CONFIRM),
               ("Usually needed", "Baseline ecology survey, protected species assessment, mitigation measures"),
-              ("Typical duration", "Seasonally dependent — some species surveys have survey windows"),
+              ("Typical duration", "Seasonally dependent, some species surveys have survey windows"),
               ("Common hold-up", "Survey window missed, delaying the whole assessment by a season")],
     standards=["Survey timing matched to species activity", "Recorded survey effort and conditions", "Reporting in the reviewer's format"],
     approach="Desk study first, then field survey timed to the species in question, then reporting that states the "
              "survey effort and conditions so the result can be assessed rather than taken on trust.",
-    meta="Terrestrial ecology services in Saudi Arabia — habitat mapping, baseline ecological survey and "
+    meta="Terrestrial ecology services in Saudi Arabia, habitat mapping, baseline ecological survey and "
          "protected species assessment for development and infrastructure projects.",
 )
 
@@ -187,7 +187,7 @@ CARDS["veterinary-biosecurity"] = dict(
     standards=[CONFIRM, "Documented procedures a site team can follow", "Records kept current rather than reconstructed"],
     approach="Site visit and gap review first, then written procedures the team can actually follow, then a record "
              "system that stays current between inspections.",
-    meta="Veterinary consultation and biosecurity planning in Saudi Arabia — site assessment, disease control "
+    meta="Veterinary consultation and biosecurity planning in Saudi Arabia, site assessment, disease control "
          "measures, animal waste handling and documentation for animal-holding operations.",
 )
 
@@ -218,7 +218,7 @@ CARDS["test-boreholes"] = dict(
     img="assets/img/svc-card-5.webp",
     chips=["Contaminated land", "Development sites", "Industrial facilities", "Landfill and waste sites"],
     overview_h="Borehole investigation services",
-    overview_p="Drilling, logging and sampling to find out what is below the surface — ground conditions, groundwater "
+    overview_p="Drilling, logging and sampling to find out what is below the surface, ground conditions, groundwater "
                "levels and whether contamination is present and how far it extends.",
     features=[("fa-ruler-vertical", "Borehole drilling and logging"),
               ("fa-vial", "Soil and groundwater sampling"),
@@ -233,7 +233,7 @@ CARDS["test-boreholes"] = dict(
     standards=["Chain of custody on every sample" + CONFIRM, "Logged to a recognised description scheme" + CONFIRM, "Factual and interpretative reports kept separate"],
     approach="Desk study and site history first, then a borehole programme sized to the actual risk, sampling under "
              "chain of custody, and reporting that separates what was found from what it means.",
-    meta="Test borehole drilling and sampling in Saudi Arabia — ground investigation, groundwater monitoring "
+    meta="Test borehole drilling and sampling in Saudi Arabia, ground investigation, groundwater monitoring "
          "wells and contamination delineation with factual and interpretative reporting.",
 )
 
@@ -279,7 +279,7 @@ CARDS["hydrogeology-geotechnics"] = dict(
     standards=[CONFIRM, "Monitoring period matched to the question being asked", "Reporting referenced to the standards applied"],
     approach="Desk study and records review, borehole programme sized to the ground risk, monitoring installed where "
              "readings are needed over time, then factual and interpretative reporting.",
-    meta="Hydrogeology and geotechnical investigation in Saudi Arabia — groundwater assessment, aquifer "
+    meta="Hydrogeology and geotechnical investigation in Saudi Arabia, groundwater assessment, aquifer "
          "characterisation, ground conditions and monitoring for development and remediation projects.",
 )
 
@@ -325,7 +325,7 @@ CARDS["treatment-rehabilitation"] = dict(
     standards=["Validation against a stated objective", "Sampling under chain of custody" + CONFIRM, "Closure evidence retained for audit"],
     approach="Investigate and delineate first, appraise the treatment options against the actual risk, design and "
              "supervise the works, then validate against a stated objective rather than an impression.",
-    meta="Remediation and land rehabilitation in Saudi Arabia — site investigation, risk assessment, "
+    meta="Remediation and land rehabilitation in Saudi Arabia, site investigation, risk assessment, "
          "treatment design and validation to closure for contaminated and disturbed land.",
 )
 
@@ -371,7 +371,7 @@ CARDS["environmental-training"] = dict(
     standards=["Built around your own permit conditions", "Attendance and content recorded", CONFIRM],
     approach="We read the facility's conditions first, build the session around what those conditions actually "
              "require, and leave behind a record of what was covered and who attended.",
-    meta="Environmental training in Saudi Arabia — practical sessions for site teams on permit conditions, "
+    meta="Environmental training in Saudi Arabia, practical sessions for site teams on permit conditions, "
          "monitoring practice, environmental registers and inspection readiness.",
 )
 

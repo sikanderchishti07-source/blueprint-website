@@ -8,7 +8,7 @@ PERMITTING["environmental-permit"] = dict(
     group="permitting", num="01", slug="environmental-permit",
     title="Environmental Permit",
     tagline="From classification to issuance",
-    lede="The NCEC environmental permit that stands between your activity and a valid licence — "
+    lede="The NCEC environmental permit that stands between your activity and a valid licence, "
          "classified correctly, filed completely, and carried through review.",
     hero_img="assets/img/svc-permit.jpg",
     float_head=("fa-file-signature", "Inside the file"),
@@ -18,14 +18,14 @@ PERMITTING["environmental-permit"] = dict(
                 ("1", "Review cycle", "If the classification is right")
     ],
     float2=("fa-stamp", "NCEC aligned", "Filed to the current framework"),
-    meta="NCEC environmental permit applications in Saudi Arabia — activity classification, supporting "
+    meta="NCEC environmental permit applications in Saudi Arabia, activity classification, supporting "
          "studies, technical documentation and coordination with the regulator through to issuance.",
     problem_title="Most delays are not technical",
     problem_body=[
         "In our experience the applications that stall are rarely the ones with a difficult process behind "
         "them. They are the ones where the activity was classified into the wrong category, or where a "
         "supporting study the category required was simply not commissioned.",
-        "Classification follows the activity itself — the process, its capacity, the waste streams it "
+        "Classification follows the activity itself, the process, its capacity, the waste streams it "
         "generates and the sensitivity of the site. It does not follow company size or floor area, which "
         "is the assumption that most often puts a file into the wrong tier.",
     ],
@@ -39,8 +39,8 @@ PERMITTING["environmental-permit"] = dict(
          "determines the entire scope and cost of what follows."),
         ("Technical documentation", "Process description, production capacity, raw materials, emissions points "
          "and waste streams, prepared in the structure reviewers expect."),
-        ("Supporting studies", "Whichever studies the category requires — impact assessment, waste "
-         "characterisation, baseline measurement — scoped to the activity rather than over-specified."),
+        ("Supporting studies", "Whichever studies the category requires, impact assessment, waste "
+         "characterisation, baseline measurement, scoped to the activity rather than over-specified."),
         ("Submission and follow-up", "The file is submitted and tracked, and reviewer queries are answered "
          "directly rather than passed back to you to interpret."),
         ("Conditions handover", "When the permit issues we walk you through its conditions, because those "
@@ -101,7 +101,7 @@ PERMITTING["environmental-permit"] = dict(
          "review time."),
         ("What happens if my application is rejected?",
          "Rejections are usually classification or completeness issues rather than refusals in principle. The "
-         "file is corrected and resubmitted, but a review cycle has been lost — which is the argument for "
+         "file is corrected and resubmitted, but a review cycle has been lost, which is the argument for "
          "getting the classification right first."),
         ("Do I need a permit if I already have a commercial licence?",
          "Yes. They are separate instruments, and the environmental permit is frequently a precondition for "
@@ -126,7 +126,7 @@ PERMITTING["environmental-impact-assessment"] = dict(
                 ("1", "Approval", "Required before works begin")
     ],
     float2=("fa-clipboard-check", "EIA &amp; ESIA", "Environmental and social scope"),
-    meta="Environmental and social impact assessment (EIA/ESIA) in Saudi Arabia — baseline surveys, "
+    meta="Environmental and social impact assessment (EIA/ESIA) in Saudi Arabia, baseline surveys, "
          "impact prediction, modelling, mitigation design and stakeholder engagement for regulated projects.",
     problem_title="An assessment is an argument, not a description",
     problem_body=[
@@ -144,8 +144,8 @@ PERMITTING["environmental-impact-assessment"] = dict(
     included=[
         ("Scoping", "Which impacts genuinely need assessment for this project, agreed early so effort is not "
          "spent on questions the reviewer will not ask."),
-        ("Baseline surveys", "Field measurement of the parameters the assessment will rely on — air, noise, "
-         "water, soil, ecology — before the project exists."),
+        ("Baseline surveys", "Field measurement of the parameters the assessment will rely on, air, noise, "
+         "water, soil, ecology, before the project exists."),
         ("Impact prediction and modelling", "Dispersion, hydrological, noise or marine modelling where the "
          "impact needs quantifying rather than describing."),
         ("Mitigation design", "Measures specified in enough detail to be built and verified, with residual "
@@ -205,7 +205,7 @@ PERMITTING["environmental-impact-assessment"] = dict(
          "No. Environmental approval is a precondition for works. Retrospective assessment carries penalties "
          "and a considerably harder review."),
         ("What is the difference between EIA and ESIA?",
-         "ESIA adds social impact — communities, livelihoods, land use — to the environmental scope. Lenders "
+         "ESIA adds social impact, communities, livelihoods, land use, to the environmental scope. Lenders "
          "and international partners commonly require it even where the regulator does not."),
         ("What if the assessment finds an unacceptable impact?",
          "Better found in the study than after construction. In most cases the answer is a design change or "
@@ -227,13 +227,13 @@ PERMITTING["waste-management-permit"] = dict(
                 ("0", "Duty transferred", "Generator obligations stay with you")
     ],
     float2=("fa-recycle", "MWAN framework", "Generators, carriers, treaters"),
-    meta="MWAN waste management permits in Saudi Arabia — waste characterisation studies, storage and "
+    meta="MWAN waste management permits in Saudi Arabia, waste characterisation studies, storage and "
          "handling procedures, manifesting systems and permit applications for generators, carriers and treaters.",
     problem_title="Outsourcing collection does not transfer the obligation",
     problem_body=[
         "The most common misunderstanding we encounter is the belief that contracting a licensed carrier "
-        "discharges the duty. It does not. Generator obligations — characterisation, manifesting, "
-        "record-keeping — remain with the facility that produced the waste.",
+        "discharges the duty. It does not. Generator obligations, characterisation, manifesting, "
+        "record-keeping, remain with the facility that produced the waste.",
         "The second is classification. The most frequent rejection reason we see is a mismatch between the "
         "declared waste classification and what the facility actually produces. Everything else in the file "
         "is built on that characterisation, so an error there invalidates the rest.",
@@ -246,7 +246,7 @@ PERMITTING["waste-management-permit"] = dict(
     included=[
         ("Waste characterisation study", "Analysis and classification of every stream the facility produces, "
          "which is the foundation the rest of the application rests on."),
-        ("Storage and handling procedures", "Documented arrangements aligned with MWAN technical guidance — "
+        ("Storage and handling procedures", "Documented arrangements aligned with MWAN technical guidance, "
          "segregation, containment, labelling and duration limits."),
         ("Contractor verification", "Confirmation that every carrier and treatment facility you use holds "
          "current authorisation for the classes you transfer."),
@@ -296,7 +296,7 @@ PERMITTING["waste-management-permit"] = dict(
          "assets/img/svc-air-detail.jpg", "Single", "point of contact"),
     ],
     faqs=[
-        ("We use a licensed contractor — do we still need a permit?",
+        ("We use a licensed contractor, do we still need a permit?",
          "Almost certainly yes. Generator duties stay with you: characterising the waste, manifesting "
          "transfers and keeping records. The contractor's licence covers the contractor's activity, not yours."),
         ("What is a waste characterisation study?",
@@ -309,7 +309,7 @@ PERMITTING["waste-management-permit"] = dict(
          "It must be characterised and declared. Producing a stream not covered by your permit is a "
          "violation, and it is a common inspection finding."),
         ("Do permits need renewing?",
-         "Yes, and renewal review examines your compliance history — manifest gaps, late reports and "
+         "Yes, and renewal review examines your compliance history, manifest gaps, late reports and "
          "unresolved findings all surface at that point."),
     ],
 )
@@ -318,7 +318,7 @@ PERMITTING["environmental-management-plan"] = dict(
     group="permitting", num="04", slug="environmental-management-plan",
     title="Environmental Management Plan",
     tagline="Permit conditions turned into daily practice",
-    lede="The document that translates what your permit requires into what your site actually does — "
+    lede="The document that translates what your permit requires into what your site actually does, "
          "with named roles, defined controls and a monitoring schedule.",
     hero_img="assets/img/svc-emp.jpg",
     float_head=("fa-tasks", "What an EMP fixes"),
@@ -328,7 +328,7 @@ PERMITTING["environmental-management-plan"] = dict(
                 ("By role", "Not by name", "So the plan survives staff turnover")
     ],
     float2=("fa-tasks", "Inspection ready", "The controls, evidenced"),
-    meta="Environmental management plans for Saudi facilities — turning permit conditions into documented "
+    meta="Environmental management plans for Saudi facilities, turning permit conditions into documented "
          "controls, named responsibilities, monitoring schedules and emergency response arrangements.",
     problem_title="The plan that nobody follows",
     problem_body=[
@@ -347,8 +347,8 @@ PERMITTING["environmental-management-plan"] = dict(
     included=[
         ("Obligations register", "Every condition your permit imposes, extracted and listed, so nothing is "
          "carried only in someone's memory."),
-        ("Operational controls", "The specific measures for each impact — emissions, discharges, waste, "
-         "noise, storage — described at the level of what a supervisor does."),
+        ("Operational controls", "The specific measures for each impact, emissions, discharges, waste, "
+         "noise, storage, described at the level of what a supervisor does."),
         ("Roles and responsibilities", "Assigned by position rather than by name, so the plan survives staff "
          "turnover."),
         ("Monitoring and inspection schedule", "What is measured or checked, how often, by whom, and where "
@@ -360,7 +360,7 @@ PERMITTING["environmental-management-plan"] = dict(
     process=[("Extract", "Permit conditions are turned into a plain register of obligations."),
              ("Walk the site", "Controls are designed against how the site actually operates, not how the "
                                "process diagram says it does."),
-             ("Write", "The plan is drafted to be usable — short, specific and assigned."),
+             ("Write", "The plan is drafted to be usable, short, specific and assigned."),
              ("Embed", "Training and the reporting calendar are set up so the plan stays live.")],
     applies_title="Where an EMP is required",
     applies=[
@@ -418,7 +418,7 @@ PERMITTING["environmental-register"] = dict(
     group="permitting", num="05", slug="environmental-register",
     title="Environmental Register",
     tagline="Proof you were compliant every day since",
-    lede="The record an inspector asks for first — maintained continuously rather than assembled the "
+    lede="The record an inspector asks for first, maintained continuously rather than assembled the "
          "week before it is needed.",
     hero_img="assets/img/svc-register.jpg",
     float_head=("fa-folder-open", "In the register"),
@@ -428,7 +428,7 @@ PERMITTING["environmental-register"] = dict(
                 ("0", "Reconstruction", "Maintained, not assembled")
     ],
     float2=("fa-folder-open", "Audit ready", "Produced on request"),
-    meta="Environmental register setup and maintenance for Saudi facilities — monitoring results, waste "
+    meta="Environmental register setup and maintenance for Saudi facilities, monitoring results, waste "
          "manifests, chemical inventories, incident records and permit correspondence, kept audit-ready.",
     problem_title="The first document requested, and the least maintained",
     problem_body=[
@@ -453,7 +453,7 @@ PERMITTING["environmental-register"] = dict(
          "chain rather than a pile."),
         ("Chemical and materials inventory", "What is held on site, in what quantity, kept current as "
          "materials change."),
-        ("Incidents and corrective actions", "What happened, what was done and what evidence closes it — the "
+        ("Incidents and corrective actions", "What happened, what was done and what evidence closes it, the "
          "part inspectors examine most closely."),
     ],
     process_title="How the register is kept",
@@ -504,7 +504,7 @@ PERMITTING["environmental-register"] = dict(
          "Yes, and it is easier to maintain and search. What matters is that it is complete, current and can "
          "be produced when asked."),
         ("How far back does it need to go?",
-         "Retention is set by your permit conditions, but renewal review looks across the whole term — so "
+         "Retention is set by your permit conditions, but renewal review looks across the whole term, so "
          "the practical answer is the full permit period."),
         ("What if there are gaps in our historical record?",
          "Better to identify and document them before an inspector does. A disclosed gap with an explanation "
@@ -519,7 +519,7 @@ PERMITTING["periodic-environmental-report"] = dict(
     group="permitting", num="06", slug="periodic-environmental-report",
     title="Periodic Environmental Report",
     tagline="The obligation most facilities let slip",
-    lede="Scheduled regulatory reporting prepared from a maintained record — filed on time, every cycle, "
+    lede="Scheduled regulatory reporting prepared from a maintained record, filed on time, every cycle, "
          "in the form the regulator expects.",
     hero_img="assets/img/svc-report.jpg",
     float_head=("fa-calendar-check", "Every cycle needs"),
@@ -529,12 +529,12 @@ PERMITTING["periodic-environmental-report"] = dict(
                 ("3", "Report elements", "Results, exceedances, changes")
     ],
     float2=("fa-calendar-check", "Never late", "Calendar built from conditions"),
-    meta="Periodic environmental reporting for Saudi facilities — compiling monitoring results, exceedances "
+    meta="Periodic environmental reporting for Saudi facilities, compiling monitoring results, exceedances "
          "and corrective actions into the regulatory reports your permit conditions require.",
     problem_title="A missed cycle does not stay missed",
     problem_body=[
         "Late or missing periodic reports are the most frequent finding we encounter, by a wide margin. "
-        "They are also the easiest to verify — an inspector can check submission dates in minutes, which is "
+        "They are also the easiest to verify, an inspector can check submission dates in minutes, which is "
         "precisely why it is checked first.",
         "The consequence arrives later. Renewal review examines the reporting record across the entire "
         "permit term, so a cycle missed two years ago surfaces at exactly the point when there is no time "

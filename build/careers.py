@@ -74,7 +74,7 @@ def careers_index(page_header, roles):
     hero = _hero(
         "Careers",
         "Work in Saudi environmental compliance",
-        "The work is varied &mdash; field monitoring one week, permit files the next.",
+        "The work is varied, field monitoring one week, permit files the next.",
         crumb,
         _hero_facts(roles),
     )
@@ -95,8 +95,7 @@ def careers_index(page_header, roles):
       <h2 class="text-3xl font-bold text-bp-ink tracking-tight">Working here</h2>
     </div>
     <div class="cwhy scroll-reveal">
-      <div><b>Varied work</b><span>Field campaigns, laboratory analysis, permit files and reporting &mdash;
-        most people touch several of these rather than one.</span></div>
+      <div><b>Varied work</b><span>Field campaigns, laboratory analysis, permit files and reporting, most people touch several of these rather than one.</span></div>
       <div><b>Accredited practice</b><span>Work is carried out to referenced methods under accreditation,
         which is a good discipline to learn early in a career.</span></div>
       <div><b>Across the Kingdom</b><span>Sites range from coastal and marine to desert industrial,

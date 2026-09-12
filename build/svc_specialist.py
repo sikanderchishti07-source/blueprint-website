@@ -37,12 +37,12 @@ SPECIALIST["climate-sustainability"] = _S(
     "climate-sustainability", "01", "Climate Change &amp; Sustainability",
     "From carbon accounting to credible strategy",
     "Carbon footprinting, ESG reporting and net zero planning built on measured data rather than "
-    "estimates — because the numbers now get audited.",
+    "estimates, because the numbers now get audited.",
     "assets/img/spec-climate.jpg", ("fa-leaf", "What we quantify"),
     [("Scope 1", "Direct emissions"),
      ("Scope 2", "Purchased energy"),
      ("Scope 3", "Value chain")],
-    "Climate change and sustainability consulting in Saudi Arabia — carbon footprinting across Scopes 1, 2 "
+    "Climate change and sustainability consulting in Saudi Arabia, carbon footprinting across Scopes 1, 2 "
     "and 3, ESG reporting, net zero roadmaps and green building certification support.",
     "Estimated numbers do not survive assurance",
     ["Carbon reporting has moved from voluntary disclosure to audited statement. Figures built on industry "
@@ -84,7 +84,7 @@ SPECIALIST["climate-sustainability"] = _S(
       "and the first inventory is the hardest.")],
     [("What are Scopes 1, 2 and 3?",
       "Scope 1 is emissions you produce directly. Scope 2 is from energy you buy. Scope 3 is everything "
-      "else in your value chain — usually the largest share and the hardest to quantify."),
+      "else in your value chain, usually the largest share and the hardest to quantify."),
      ("Do we have to report Scope 3?",
       "It depends on the framework and on who is asking. Increasingly yes, and a footprint that omits it is "
       "not comparable with one that includes it."),
@@ -101,13 +101,13 @@ SPECIALIST["climate-sustainability"] = _S(
 SPECIALIST["ecological-surveys"] = _S(
     "ecological-surveys", "02", "Ecological &amp; Biological Surveys",
     "Baseline, habitat and protected species",
-    "Terrestrial and aquatic ecology surveys establishing what is present before a project proceeds — and "
+    "Terrestrial and aquatic ecology surveys establishing what is present before a project proceeds, and "
     "what that means for it.",
     "assets/img/spec-ecology.jpg", ("fa-seedling", "What we survey"),
     [("Habitat", "Extent, condition, value"),
      ("Species", "Including protected status"),
      ("Seasonality", "Timed to when it is visible")],
-    "Ecological and biological surveys in Saudi Arabia — habitat mapping, baseline ecology, protected "
+    "Ecological and biological surveys in Saudi Arabia, habitat mapping, baseline ecology, protected "
     "species assessment and bird surveys for impact assessment and project approval.",
     "Ecology runs on the calendar, not the programme",
     ["Ecological surveys can only be done when the ecology is there to be surveyed. Breeding birds, "
@@ -124,7 +124,7 @@ SPECIALIST["ecological-surveys"] = _S(
       "the baseline every later assessment refers back to."),
      ("Protected species assessment", "Targeted survey for species with legal protection, where presence "
       "changes what a project is permitted to do."),
-     ("Bird surveys", "Breeding, wintering and migratory surveys, timed to the relevant season — "
+     ("Bird surveys", "Breeding, wintering and migratory surveys, timed to the relevant season, "
       "particularly important along migration corridors."),
      ("Aquatic and marine ecology", "Benthic, intertidal and freshwater surveys where a project affects "
       "water bodies or the coastline."),
@@ -151,7 +151,7 @@ SPECIALIST["ecological-surveys"] = _S(
       "It depends on the group. Breeding birds have a defined season, and some plants are only identifiable "
       "when flowering. Surveys done outside the window are not valid."),
      ("What happens if a protected species is found?",
-      "It does not necessarily stop a project, but it changes what is permitted — timing restrictions, "
+      "It does not necessarily stop a project, but it changes what is permitted, timing restrictions, "
       "buffer zones, mitigation or, occasionally, a design change."),
      ("How long is a survey valid?",
       "Typically one to two years depending on the receptor and how much the site has changed. Older data "
@@ -172,7 +172,7 @@ SPECIALIST["marine-environment"] = _S(
     [("Water column", "Quality and stratification"),
      ("Seabed", "Sediment and benthic habitat"),
      ("Dynamics", "Currents, waves, dispersion")],
-    "Marine environmental services in Saudi Arabia — water and sediment sampling, benthic habitat survey, "
+    "Marine environmental services in Saudi Arabia, water and sediment sampling, benthic habitat survey, "
     "oceanographic measurement and marine dispersion modelling for coastal projects.",
     "The receiving environment decides the answer",
     ["A discharge that is unremarkable in an open, well-flushed setting can be significant in a sheltered "
@@ -222,7 +222,7 @@ SPECIALIST["marine-environment"] = _S(
       "Longer than terrestrial, because tidal and seasonal variation has to be captured. Oceanographic "
       "deployment alone typically runs over weeks."),
      ("Is brine discharge always a problem?",
-      "Not inherently. The question is the receiving environment — an open coast with strong exchange "
+      "Not inherently. The question is the receiving environment, an open coast with strong exchange "
       "behaves very differently from a sheltered embayment."),
      ("Do we need ongoing marine monitoring?",
       "Frequently yes, where a permit requires confirmation that predicted impacts have not been "
@@ -237,7 +237,7 @@ SPECIALIST["remediation-rehabilitation"] = _S(
     [("Investigate", "Establish what is there"),
      ("Design", "Select the workable option"),
      ("Validate", "Prove it was achieved")],
-    "Land remediation and site rehabilitation in Saudi Arabia — contaminated land investigation, "
+    "Land remediation and site rehabilitation in Saudi Arabia, contaminated land investigation, "
     "remediation design and implementation, and quarry and extraction site rehabilitation.",
     "Remediation without validation is just earthworks",
     ["The most common failure in remediation is not technical. It is a scheme carried out without the "
@@ -258,7 +258,7 @@ SPECIALIST["remediation-rehabilitation"] = _S(
       "stands, with target criteria stated."),
      ("Implementation oversight", "Supervision during the works so that what is delivered matches what was "
       "designed and is documented as it happens."),
-     ("Validation and closure", "Post-remediation sampling demonstrating that criteria were met — the "
+     ("Validation and closure", "Post-remediation sampling demonstrating that criteria were met, the "
       "evidence that closes the liability.")],
     [("Investigate", "Extent and severity are established and the risk assessed."),
      ("Design", "A remediation approach and target criteria are selected and agreed."),
@@ -295,16 +295,16 @@ SPECIALIST["remediation-rehabilitation"] = _S(
 SPECIALIST["environmental-modelling"] = _S(
     "environmental-modelling", "05", "Environmental Modelling",
     "Prediction with the assumptions on show",
-    "Dispersion, hydrological and noise modelling that quantifies impacts before they exist — with the "
+    "Dispersion, hydrological and noise modelling that quantifies impacts before they exist, with the "
     "method and assumptions stated openly.",
     "assets/img/spec-modelling.jpg", ("fa-chart-line", "What we model"),
     [("Air dispersion", "Plumes and ground concentrations"),
      ("Hydrology", "Flow, flooding, drainage"),
      ("Noise", "Propagation to receptors")],
-    "Environmental modelling in Saudi Arabia — air dispersion, hydrological, noise propagation and marine "
+    "Environmental modelling in Saudi Arabia, air dispersion, hydrological, noise propagation and marine "
     "dispersion modelling for impact assessment and permit applications.",
     "A model is only as good as what you tell it",
-    ["Modelling output looks authoritative — contours on a map, concentrations at receptors. But the result "
+    ["Modelling output looks authoritative, contours on a map, concentrations at receptors. But the result "
      "depends entirely on the input: emission rates, meteorological data, terrain, and the assumptions "
      "chosen where data was missing.",
      "Reviewers know this, which is why they examine the inputs before the conclusions. A model presented "
@@ -359,13 +359,13 @@ SPECIALIST["environmental-modelling"] = _S(
 SPECIALIST["laboratory-services"] = _S(
     "laboratory-services", "06", "Environmental Laboratory Services",
     "Sampling through to interpretation",
-    "The full analytical chain — sampling design, collection, accredited analysis and interpretation — "
+    "The full analytical chain, sampling design, collection, accredited analysis and interpretation, "
     "handled as one service rather than three.",
     "assets/img/spec-lab.jpg", ("fa-flask", "The full chain"),
     [("Design", "What to sample, and where"),
      ("Analysis", "Under accreditation"),
      ("Meaning", "What the numbers require")],
-    "Environmental laboratory services in Saudi Arabia — sampling design, collection, accredited analysis "
+    "Environmental laboratory services in Saudi Arabia, sampling design, collection, accredited analysis "
     "and technical interpretation of water, soil, waste and air samples.",
     "Three handovers, three places to lose the thread",
     ["Splitting sampling, analysis and interpretation across different parties creates gaps at each "
@@ -378,7 +378,7 @@ SPECIALIST["laboratory-services"] = _S(
      ("Accreditation", "Covering the whole scope"),
      ("Interpretation", "Informed by the site")],
     "What the service covers",
-    [("Sampling design", "The plan that decides what the campaign can tell you — locations, frequency, "
+    [("Sampling design", "The plan that decides what the campaign can tell you, locations, frequency, "
       "technique and determinands, set against the question."),
      ("Field collection", "Sampling carried out under accreditation with chain of custody, and field "
       "observations recorded alongside."),
@@ -413,7 +413,7 @@ SPECIALIST["laboratory-services"] = _S(
      ("Can you work with samples we collected?",
       "Yes, though for regulatory submissions the sampling itself usually needs to be accredited too."),
      ("How quickly are results available?",
-      "It varies by determinand — some same-day, some five days by definition, some longer for specialist "
+      "It varies by determinand, some same-day, some five days by definition, some longer for specialist "
       "organics. The schedule is set from the slowest."),
      ("Do you keep results for trend analysis?",
       "Yes, where we run the programme. Trends usually reveal a developing problem well before any single "

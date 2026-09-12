@@ -33,7 +33,7 @@ def _to_html(md):
     """Minimal Markdown for what the CMS editor produces. Anything already
     written as HTML passes straight through untouched."""
     if '<p' in md or '<h2' in md or '<div' in md:
-        return md                                  # already HTML — leave it
+        return md                                  # already HTML, leave it
     out, para = [], []
 
     def flush():

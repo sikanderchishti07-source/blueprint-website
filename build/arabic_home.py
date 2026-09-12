@@ -1,7 +1,7 @@
-﻿# Arabic home page body — mirrors the current English home structure.
+﻿# Arabic home page body, mirrors the current English home structure.
 
 BODY = """
-<!-- HERO — full-bleed video cover -->
+<!-- HERO, full-bleed video cover -->
 <section class="hero-cover relative flex items-center overflow-hidden">
   <video class="hero-cover-video" autoplay muted loop playsinline preload="metadata"
          poster="assets/video/hero-poster.jpg"
@@ -73,7 +73,7 @@ BODY = """
   </div>
 </section>
 
-<!-- الخدمات — ثلاث بطاقات -->
+<!-- الخدمات, ثلاث بطاقات -->
 <section id="services" class="svc-section" style="background:var(--bp-page);">
   <div class="svc-container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="svc-head text-center scroll-reveal">
@@ -127,7 +127,7 @@ BODY = """
       <div class="lg:order-2">
         <div class="showcase-eyebrow">أثناء التشغيل</div>
         <h3 class="text-2xl lg:text-3xl font-bold text-bp-ink mb-4 leading-tight">لا استعجال قبل أي تفتيش</h3>
-        <p class="text-gray-600 leading-relaxed mb-5">المفتّش يطلب السجل البيئي أولاً. نُبقي سجلك محدّثاً، وننفّذ القياسات التي يحددها تصريحك، ونقدّم التقارير الدورية في موعدها &mdash; فيتحوّل التفتيش إلى مراجعة مستندات لا إلى أزمة.</p>
+        <p class="text-gray-600 leading-relaxed mb-5">المفتّش يطلب السجل البيئي أولاً. نُبقي سجلك محدّثاً، وننفّذ القياسات التي يحددها تصريحك، ونقدّم التقارير الدورية في موعدها, فيتحوّل التفتيش إلى مراجعة مستندات لا إلى أزمة.</p>
         <a href="technology.html" class="btn-ghost">الرصد والتقارير <i class="fas fa-arrow-left" style="font-size:.7rem;"></i></a>
       </div>
     </div>
@@ -136,7 +136,7 @@ BODY = """
       <div>
         <div class="showcase-eyebrow">عند التجديد</div>
         <h3 class="text-2xl lg:text-3xl font-bold text-bp-ink mb-4 leading-tight">التجديد يُحسم قبل تقديمه بوقت طويل</h3>
-        <p class="text-gray-600 leading-relaxed mb-5">مراجعة التجديد تفحص مدة التصريح كاملة لا الطلب وحده. من يلتزم بالتقارير الدورية يجدّد من سجل حُفظ طوال المدة، لا من سجل جُمّع &mdash; ودُقّق &mdash; في اللحظة الأخيرة.</p>
+        <p class="text-gray-600 leading-relaxed mb-5">مراجعة التجديد تفحص مدة التصريح كاملة لا الطلب وحده. من يلتزم بالتقارير الدورية يجدّد من سجل حُفظ طوال المدة، لا من سجل جُمّع, ودُقّق, في اللحظة الأخيرة.</p>
         <a href="blog.html" class="btn-ghost">اقرأ دليل التجديد <i class="fas fa-arrow-left" style="font-size:.7rem;"></i></a>
       </div>
       <div class="rounded-2xl overflow-hidden shadow-lg"><img src="assets/img/feature-3.jpg" alt="ساحل ونباتات محمية" class="w-full h-72 object-cover" loading="lazy" /></div>
@@ -154,22 +154,22 @@ BODY = """
       <p class="text-gray-300 text-base max-w-xl mx-auto leading-relaxed">أربع مراحل واضحة من أول مكالمة حتى التصريح الصادر.</p>
     </div>
     <div class="grid md:grid-cols-4 gap-6">
-      <div class="p-7 rounded-2xl scroll-reveal" style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);">
+      <div class="p-7 rounded-2xl scroll-reveal" style="background:rgba(255,255,255.06);border:1px solid rgba(255,255,255.12);">
         <div class="font-display text-2xl font-extrabold mb-3" style="color:var(--bp-soft);">٠١</div>
         <h3 class="font-display font-bold mb-2">التقييم</h3>
         <p class="text-sm text-white/70 leading-relaxed">نقرأ نشاطك وموقعك وطاقتك الإنتاجية، ونحدد التصنيف الصحيح قبل أي عرض سعر.</p>
       </div>
-      <div class="p-7 rounded-2xl scroll-reveal" style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);">
+      <div class="p-7 rounded-2xl scroll-reveal" style="background:rgba(255,255,255.06);border:1px solid rgba(255,255,255.12);">
         <div class="font-display text-2xl font-extrabold mb-3" style="color:var(--bp-soft);">٠٢</div>
         <h3 class="font-display font-bold mb-2">الدراسات</h3>
         <p class="text-sm text-white/70 leading-relaxed">ننفّذ ما تتطلبه الفئة من دراسات وقياسات ميدانية، لا أكثر ولا أقل.</p>
       </div>
-      <div class="p-7 rounded-2xl scroll-reveal" style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);">
+      <div class="p-7 rounded-2xl scroll-reveal" style="background:rgba(255,255,255.06);border:1px solid rgba(255,255,255.12);">
         <div class="font-display text-2xl font-extrabold mb-3" style="color:var(--bp-soft);">٠٣</div>
         <h3 class="font-display font-bold mb-2">التقديم</h3>
         <p class="text-sm text-white/70 leading-relaxed">نقدّم الملف ونتابعه، ونردّ على استفسارات المراجع مباشرة.</p>
       </div>
-      <div class="p-7 rounded-2xl scroll-reveal" style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);">
+      <div class="p-7 rounded-2xl scroll-reveal" style="background:rgba(255,255,255.06);border:1px solid rgba(255,255,255.12);">
         <div class="font-display text-2xl font-extrabold mb-3" style="color:var(--bp-soft);">٠٤</div>
         <h3 class="font-display font-bold mb-2">الاستمرارية</h3>
         <p class="text-sm text-white/70 leading-relaxed">نشرح شروط التصريح ونبني منها تقويم الرصد والتقارير الذي يليه.</p>

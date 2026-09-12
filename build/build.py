@@ -7,7 +7,7 @@ PAGES = {
   'blog.html':       ('Environmental Compliance Blog | BluePrint KSA', 'Guides and insights on Saudi environmental regulation: MWAN permits, impact assessments, environmental registers, waste management, and compliance best practice.', X.blog(G.page_header), ()),
   'privacy.html':    ('Privacy Policy | BluePrint Environmental Services', 'How BluePrint Environmental Services collects, uses, and protects your personal information.', X.legal('privacy', G.page_header), ()),
   'terms.html':      ('Terms & Conditions | BluePrint Environmental Services', 'The terms and conditions governing use of the BluePrint Environmental Services website and services.', X.legal('terms', G.page_header), ()),
-  'contact.html':    ('Contact BluePrint — Free Compliance Consultation', 'Talk to BluePrint accredited environmental consultants in Riyadh. Free initial consultation to map the studies and permits your facility needs in Saudi Arabia.', G.contact(), ()),
+  'contact.html':    ('Contact BluePrint, Free Compliance Consultation', 'Talk to BluePrint accredited environmental consultants in Riyadh. Free initial consultation to map the studies and permits your facility needs in Saudi Arabia.', G.contact(), ()),
 }
 _GROUP_LABEL = {'permitting': 'Compliance &amp; Permitting',
                 'monitoring': 'Monitoring, Testing &amp; Measurement',
@@ -47,7 +47,7 @@ for _k, _c in SVQ.CARDS.items():
 
 _roles = C.load_careers()
 PAGES['careers.html'] = ('Careers | BluePrint Environmental Services',
-  'Environmental consultancy careers in Saudi Arabia — field monitoring, laboratory analysis, permitting and reporting roles at BluePrint.',
+  'Environmental consultancy careers in Saudi Arabia, field monitoring, laboratory analysis, permitting and reporting roles at BluePrint.',
   CR.careers_index(G.page_header, _roles), ())
 for _r in _roles:
     PAGES['career-%s.html' % _r['slug']] = (

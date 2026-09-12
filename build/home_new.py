@@ -12,8 +12,8 @@ HOME = """
       <div class="scroll-reveal">
         <div class="inline-block px-4 py-2 bg-bp-light rounded-full text-bp-primary font-semibold text-sm mb-6">Who we are</div>
         <h2 class="text-2xl lg:text-3xl font-bold text-bp-ink mb-4 leading-tight">Built for the Kingdom&rsquo;s <span class="text-bp-olive">new rulebook</span></h2>
-        <p class="text-gray-600 text-sm leading-relaxed mb-3">A Riyadh-based environmental consultancy, formed to meet the demand created by the Kingdom's accelerating environmental regulation &mdash; pairing Saudi competencies with international expertise.</p>
-        <p class="text-gray-600 text-sm leading-relaxed mb-5">Clients range from government authorities to industrial and commercial operators &mdash; oil and gas, petrochemicals, manufacturing, power and desalination, cement, food, agriculture and urban development.</p>
+        <p class="text-gray-600 text-sm leading-relaxed mb-3">A Riyadh-based environmental consultancy, formed to meet the demand created by the Kingdom's accelerating environmental regulation, pairing Saudi competencies with international expertise.</p>
+        <p class="text-gray-600 text-sm leading-relaxed mb-5">Clients range from government authorities to industrial and commercial operators, oil and gas, petrochemicals, manufacturing, power and desalination, cement, food, agriculture and urban development.</p>
         <div class="space-y-3 mb-6">
           <div class="flex items-start space-x-4"><div class="w-6 h-6 rounded-full bg-bp-primary flex items-center justify-center flex-shrink-0 mt-1"><i class="fas fa-check text-white text-xs"></i></div><div><h4 class="font-bold text-bp-ink">Our mission</h4><p class="text-gray-600 text-sm leading-relaxed">Innovative environmental solutions to the highest quality and safety standards, keeping clients fully compliant.</p></div></div>
           <div class="flex items-start space-x-4"><div class="w-6 h-6 rounded-full bg-bp-olive flex items-center justify-center flex-shrink-0 mt-1"><i class="fas fa-check text-white text-xs"></i></div><div><h4 class="font-bold text-bp-ink">Our vision</h4><p class="text-gray-600 text-sm leading-relaxed">Supporting national policy and growing the Kingdom&rsquo;s environmental sector into a regional reference for green innovation.</p></div></div>
@@ -49,7 +49,7 @@ HOME = """
   </div>
 </section>
 
-<!-- SERVICES — three cards, click to expand -->
+<!-- SERVICES, three cards, click to expand -->
 """ + CAROUSEL + """
 
 <section id="services" class="svc-section" style="background:var(--bp-page);">
@@ -86,7 +86,7 @@ HOME = """
   </div>
 </div>
 
-<!-- WHAT IT MEANS FOR YOU — alternating feature blocks -->
+<!-- WHAT IT MEANS FOR YOU, alternating feature blocks -->
 <section class="py-28 bg-white">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
 
@@ -105,7 +105,7 @@ HOME = """
       <div class="lg:order-2">
         <div class="showcase-eyebrow">While you operate</div>
         <h3 class="text-2xl lg:text-3xl font-bold text-bp-ink mb-4 leading-tight">Never scramble for an inspection again</h3>
-        <p class="text-gray-600 leading-relaxed mb-5">Inspectors ask for the register first. We keep yours current, run the measurements your permit specifies, and file the periodic reports on schedule &mdash; so an inspection is a document check, not a fire drill.</p>
+        <p class="text-gray-600 leading-relaxed mb-5">Inspectors ask for the register first. We keep yours current, run the measurements your permit specifies, and file the periodic reports on schedule, so an inspection is a document check, not a fire drill.</p>
         <a href="services.html#monitoring" class="btn-ghost">Monitoring &amp; reporting <i class="fas fa-arrow-right" style="font-size:.7rem;"></i></a>
       </div>
     </div>
@@ -114,7 +114,7 @@ HOME = """
       <div>
         <div class="showcase-eyebrow">When it renews</div>
         <h3 class="text-2xl lg:text-3xl font-bold text-bp-ink mb-4 leading-tight">Renewals decided long before you apply</h3>
-        <p class="text-gray-600 leading-relaxed mb-5">Renewal review examines the whole permit term, not the application. Clients on ongoing reporting renew from a record that was maintained throughout &mdash; rather than assembled, and audited, at the last minute.</p>
+        <p class="text-gray-600 leading-relaxed mb-5">Renewal review examines the whole permit term, not the application. Clients on ongoing reporting renew from a record that was maintained throughout, rather than assembled, and audited, at the last minute.</p>
         <a href="blog-environmental-permit-renewal.html" class="btn-ghost">Read the renewal guide <i class="fas fa-arrow-right" style="font-size:.7rem;"></i></a>
       </div>
       <div class="rounded-2xl overflow-hidden shadow-lg"><img src="assets/img/feature-3.jpg" alt="Shoreline and protected vegetation" class="w-full h-72 object-cover" loading="lazy" /></div>

@@ -22,7 +22,7 @@ SERVICES_JS = [
         title='Environmental Permit',
         subtitle='NCEC · required before you build and before you operate',
         icon='fas fa-file-signature',
-        desc='Every regulated facility in the Kingdom needs a valid environmental permit before it builds and before it operates. BluePrint prepares the whole file — classification, supporting studies, and supporting documents — and carries it through to issuance, coordinating directly with the reviewing authority.',
+        desc='Every regulated facility in the Kingdom needs a valid environmental permit before it builds and before it operates. BluePrint prepares the whole file, classification, supporting studies, and supporting documents, and carries it through to issuance, coordinating directly with the reviewing authority.',
         features=['Commercial registration and municipal licence',
                   'Site plan, coordinates, and land-use approval',
                   'Process description and production capacity',
@@ -34,7 +34,7 @@ SERVICES_JS = [
         title='Environmental Impact Assessment',
         subtitle='The study that stands between a project and its licence',
         icon='fas fa-clipboard-check',
-        desc='The EIA is the study that stands between a high-impact project and its licence. BluePrint produces assessments that reviewers accept — because they answer the questions reviewers actually ask, with a stated methodology and a field baseline behind every prediction.',
+        desc='The EIA is the study that stands between a high-impact project and its licence. BluePrint produces assessments that reviewers accept, because they answer the questions reviewers actually ask, with a stated methodology and a field baseline behind every prediction.',
         features=['Scoping report and terms of reference',
                   'Field baseline survey and measurement campaign',
                   'Impact prediction with stated methodology',
@@ -46,7 +46,7 @@ SERVICES_JS = [
         title='Waste Management Permit (MWAN)',
         subtitle='For anyone who generates, transports, treats or disposes',
         icon='fas fa-recycle',
-        desc='Anyone who generates, transports, treats, or disposes of regulated waste in the Kingdom needs a MWAN permit. BluePrint takes facilities from unqualified to permitted — characterising the waste streams, closing the containment gaps, and preparing the file the National Center for Waste Management expects.',
+        desc='Anyone who generates, transports, treats, or disposes of regulated waste in the Kingdom needs a MWAN permit. BluePrint takes facilities from unqualified to permitted, characterising the waste streams, closing the containment gaps, and preparing the file the National Center for Waste Management expects.',
         features=['Waste stream inventory and characterisation',
                   'Hazard classification with lab analysis where needed',
                   'Storage, segregation, and containment gap closure',
@@ -58,7 +58,7 @@ SERVICES_JS = [
         title='Environmental Management Plan',
         subtitle='The document inspectors ask for first',
         icon='fas fa-tasks',
-        desc='The EMP turns permit conditions into daily practice — and it is the document inspectors ask for first. BluePrint writes plans that a site team can actually follow, tying every obligation to a named control, a monitoring parameter, and a responsible role.',
+        desc='The EMP turns permit conditions into daily practice, and it is the document inspectors ask for first. BluePrint writes plans that a site team can actually follow, tying every obligation to a named control, a monitoring parameter, and a responsible role.',
         features=['Legal and permit-condition register',
                   'Impact-by-impact mitigation measures',
                   'Monitoring programme with parameters and frequencies',
@@ -82,7 +82,7 @@ SERVICES_JS = [
         title='Periodic Environmental Report',
         subtitle='The obligation most facilities let slip',
         icon='fas fa-calendar-check',
-        desc='Permits are kept, not just won. Periodic reporting is the obligation most facilities let slip — and the easiest violation for a regulator to spot. BluePrint builds the reporting calendar from your permit conditions, schedules the measurements it calls for, and files on time, every cycle.',
+        desc='Permits are kept, not just won. Periodic reporting is the obligation most facilities let slip, and the easiest violation for a regulator to spot. BluePrint builds the reporting calendar from your permit conditions, schedules the measurements it calls for, and files on time, every cycle.',
         features=['Reporting calendar built from permit conditions',
                   'Scheduling and supervision of required measurements',
                   'Data compilation and limit comparison',
@@ -92,7 +92,7 @@ SERVICES_JS = [
         stats=[dict(val='On time', lbl='Every cycle'), dict(val='Permit-driven', lbl='Calendar'), dict(val='Filed', lbl='&amp; followed up')]),
 ]
 
-# Laboratory & measurement services — replaces the equipment cards on technology.html
+# Laboratory & measurement services, replaces the equipment cards on technology.html
 LAB_SERVICES = [
     ("assets/img/svc-air.jpg", "assets/img/svc-air.jpg",
      "Accredited", "fa-tint", "Water &amp; Wastewater Testing",
@@ -139,7 +139,7 @@ CATEGORIES = [
     ("fa-project-diagram", "Environmental Modelling", "5 services",
      "Hydrodynamic, air pollutant dispersion, groundwater, hydrology and hydraulics, and noise modelling."),
     ("fa-flask", "Environmental Laboratory Services", "10 services",
-     "Sampling, testing, and environmental monitoring — from field data collection through analysis to technical interpretation."),
+     "Sampling, testing, and environmental monitoring, from field data collection through analysis to technical interpretation."),
 ]
 
 ACCREDITATIONS = [

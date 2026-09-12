@@ -1,4 +1,4 @@
-# Blog and legal pages — content mirrored from the client's own site.
+# Blog and legal pages, content mirrored from the client's own site.
 
 ARTICLES = [
     dict(slug="mwan-waste-permit-guide",
@@ -7,7 +7,7 @@ ARTICLES = [
          img="assets/img/svc-permit.jpg",
          fb="assets/img/svc-waste.jpg",
          cat="Waste Permits",
-         summary="Everything facility owners need to know about National Waste Management Center permits — who needs one, the documents required, and how to avoid the delays that catch most applicants."),
+         summary="Everything facility owners need to know about National Waste Management Center permits, who needs one, the documents required, and how to avoid the delays that catch most applicants."),
     dict(slug="environmental-permit-categories",
          title="Environmental Permit Categories in Saudi Arabia: Which One Applies to You",
          date="July 22, 2026", read="3 min read",
@@ -21,14 +21,14 @@ ARTICLES = [
          img="assets/img/svc-lab.jpg",
          fb="assets/img/svc-soil.jpg",
          cat="Renewals",
-         summary="Renewal is not a formality. Reviewers examine your compliance history, and an expired permit puts you in violation immediately — with no grace period in practice."),
+         summary="Renewal is not a formality. Reviewers examine your compliance history, and an expired permit puts you in violation immediately, with no grace period in practice."),
     dict(slug="environmental-compliance-violations",
          title="The Six Environmental Violations Saudi Inspectors Find Most Often",
          date="July 26, 2026", read="3 min read",
          img="assets/img/svc-noise.jpg",
          fb="assets/img/svc-field.jpg",
          cat="Inspections",
-         summary="Almost every finding we see falls into the same handful of categories — and nearly all of them are documentation problems rather than engineering failures."),
+         summary="Almost every finding we see falls into the same handful of categories, and nearly all of them are documentation problems rather than engineering failures."),
     dict(slug="quarry-studies-and-rehabilitation",
          title="Quarry Studies and Rehabilitation: The Obligation That Outlives the Site",
          date="July 27, 2026", read="2 min read",
@@ -73,7 +73,7 @@ def blog(page_header, ARTICLES=None):
         <a href="blog-{a['slug']}.html" class="card-img-wrap block">
           <img src="{a['img']}?w=800&h=450&fit=crop&q=80" alt="{a['title']}" loading="lazy" onerror="this.onerror=null;this.src='{a['fb']}?w=800&h=450&fit=crop'" />
           <div class="card-img-overlay"></div>
-          <span class="card-badge" style="background:rgba(14, 147, 168,.14);color:var(--bp-blue-deep);">{a['cat']}</span>
+          <span class="card-badge" style="background:rgba(14, 147, 168.14);color:var(--bp-blue-deep);">{a['cat']}</span>
         </a>
         <div class="card-body">
           <div class="blog-tags">{_badges(a)}</div>
@@ -87,7 +87,7 @@ def blog(page_header, ARTICLES=None):
       </article>''' for a in rest)
 
     return page_header("The compliance briefing",
-                       "Practical guides and regulatory updates from our consultants &mdash; everything you need to keep your facility ahead of Saudi environmental requirements.",
+                       "Practical guides and regulatory updates from our consultants, everything you need to keep your facility ahead of Saudi environmental requirements.",
                        "Blog") + f"""
 <section class="py-20" style="background:var(--bp-page);">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -121,7 +121,7 @@ def blog(page_header, ARTICLES=None):
 <section class="py-20 text-white" style="background:var(--bp-grad);">
   <div class="max-w-3xl mx-auto px-4 text-center">
     <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">Ask our consultants directly.</h2>
-    <p class="text-white/80 mb-8 text-lg">Reading up is a great start &mdash; but every facility is different. Get advice specific to yours.</p>
+    <p class="text-white/80 mb-8 text-lg">Reading up is a great start, but every facility is different. Get advice specific to yours.</p>
     <div class="flex flex-wrap justify-center gap-3">
       <a data-wa="Hello BluePrint, I would like to ask about your environmental services." class="px-7 py-3.5 bg-white text-bp-ink rounded-full font-bold hover:bg-bp-sage transition-all inline-flex items-center gap-2"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
       <a data-tel class="px-7 py-3.5 border-2 border-white/60 text-white rounded-full font-bold hover:bg-white hover:text-bp-ink transition-all inline-flex items-center gap-2"><i class="fas fa-phone" style="font-size:.85rem;"></i> <span data-text="phone"></span></a>
@@ -155,7 +155,7 @@ def blog(page_header, ARTICLES=None):
 
 ARTICLE_BODIES = {
 "mwan-waste-permit-guide": """
-<p class="lead">If your facility generates, transports, treats, or stores waste in Saudi Arabia, the National Waste Management Center (MWAN) almost certainly requires you to hold a valid permit. Yet most first-time applicants underestimate the preparation involved &mdash; and pay for it in weeks of avoidable delays.</p>
+<p class="lead">If your facility generates, transports, treats, or stores waste in Saudi Arabia, the National Waste Management Center (MWAN) almost certainly requires you to hold a valid permit. Yet most first-time applicants underestimate the preparation involved, and pay for it in weeks of avoidable delays.</p>
 
 <h2>Who needs an MWAN permit?</h2>
 <p>MWAN&rsquo;s licensing framework covers the full waste lifecycle. You will need a permit if your activity involves:</p>
@@ -166,7 +166,7 @@ ARTICLE_BODIES = {
   <li>Storing waste on-site beyond short-term operational limits</li>
   <li>Handling medical or veterinary waste streams</li>
 </ul>
-<p>Even facilities that outsource waste handling to licensed contractors often still carry <strong>generator obligations</strong> &mdash; including waste characterisation, manifesting, and record-keeping.</p>
+<p>Even facilities that outsource waste handling to licensed contractors often still carry <strong>generator obligations</strong>, including waste characterisation, manifesting, and record-keeping.</p>
 
 <h2>The documents that decide your application</h2>
 <p>In our experience, the difference between a smooth approval and a rejection loop comes down to preparation of a few key documents:</p>
@@ -177,16 +177,16 @@ ARTICLE_BODIES = {
   <li>Contracts with licensed transporters and treatment facilities</li>
   <li>An emergency response plan proportionate to your waste classes</li>
 </ol>
-<blockquote>The single most common rejection reason we see is a mismatch between the declared waste classification and what the facility actually produces. Get the characterisation right first &mdash; everything else builds on it.</blockquote>
+<blockquote>The single most common rejection reason we see is a mismatch between the declared waste classification and what the facility actually produces. Get the characterisation right first, everything else builds on it.</blockquote>
 
 <h2>How long does it take?</h2>
-<p>With complete documentation, straightforward applications typically clear review in a few weeks. Complex facilities &mdash; multiple waste classes, hazardous streams, or on-site treatment &mdash; should budget longer, plus time for any site inspection MWAN schedules.</p>
+<p>With complete documentation, straightforward applications typically clear review in a few weeks. Complex facilities, multiple waste classes, hazardous streams, or on-site treatment, should budget longer, plus time for any site inspection MWAN schedules.</p>
 
 <h2>Renewals are not a formality</h2>
 <p>Permits are time-limited, and renewal reviews increasingly examine your <strong>compliance history</strong>: late periodic reports, manifest gaps, or unresolved inspection findings will surface at renewal. Treat your reporting calendar as part of the permit itself.</p>
 
 <h2>How BluePrint helps</h2>
-<p>We prepare and file MWAN applications end-to-end: characterisation studies, register updates, procedure documentation, and direct coordination with the regulator until approval. If a permit is nearing renewal, we audit your compliance record first &mdash; so the renewal file goes in clean.</p>
+<p>We prepare and file MWAN applications end-to-end: characterisation studies, register updates, procedure documentation, and direct coordination with the regulator until approval. If a permit is nearing renewal, we audit your compliance record first, so the renewal file goes in clean.</p>
 """,
 "environmental-permit-categories": """
 <p class="lead">Before anything else in the permitting process, one question decides your cost, your timeline and the studies you will need to commission: which category does your activity fall into? Get it wrong and you either overspend on studies you never needed, or lose months when a reviewer reclassifies you upward.</p>
@@ -194,19 +194,19 @@ ARTICLE_BODIES = {
 <h2>Why the category matters more than anything else</h2>
 <p>Saudi environmental permitting is tiered by potential impact. The tier your activity sits in determines three things at once:</p>
 <ul>
-  <li><strong>What you must submit</strong> &mdash; a simple declaration, or a full impact assessment with field baseline data</li>
-  <li><strong>How long review takes</strong> &mdash; weeks at the lower tier, months at the upper</li>
-  <li><strong>What it costs</strong> &mdash; the studies, not the permit fee, are the real expense</li>
+  <li><strong>What you must submit</strong>, a simple declaration, or a full impact assessment with field baseline data</li>
+  <li><strong>How long review takes</strong>, weeks at the lower tier, months at the upper</li>
+  <li><strong>What it costs</strong>, the studies, not the permit fee, are the real expense</li>
 </ul>
 
 <h2>The three tiers in practice</h2>
-<h3>Category 1 &mdash; lower impact</h3>
-<p>Small commercial and service premises: retail units, offices, small workshops, clinics. The route is simplified &mdash; activity details, site information and basic supporting documents. Most facilities here are surprised there is any requirement at all, and only discover it when a municipal or commercial licence renewal is blocked.</p>
+<h3>Category 1, lower impact</h3>
+<p>Small commercial and service premises: retail units, offices, small workshops, clinics. The route is simplified, activity details, site information and basic supporting documents. Most facilities here are surprised there is any requirement at all, and only discover it when a municipal or commercial licence renewal is blocked.</p>
 
-<h3>Category 2 &mdash; moderate impact</h3>
-<p>Medium manufacturing, food processing, larger workshops, construction projects above a threshold. This tier usually requires an environmental management plan and, depending on the activity, supporting measurement data. It is the tier most often <strong>misdeclared</strong> &mdash; operators classify themselves as Category 1 based on floor area or headcount, when the classification actually follows the <em>process</em> and its emissions.</p>
+<h3>Category 2, moderate impact</h3>
+<p>Medium manufacturing, food processing, larger workshops, construction projects above a threshold. This tier usually requires an environmental management plan and, depending on the activity, supporting measurement data. It is the tier most often <strong>misdeclared</strong>, operators classify themselves as Category 1 based on floor area or headcount, when the classification actually follows the <em>process</em> and its emissions.</p>
 
-<h3>Category 3 &mdash; higher impact</h3>
+<h3>Category 3, higher impact</h3>
 <p>Heavy industry, petrochemicals, cement, power generation, hazardous waste treatment, quarrying. A full Environmental Impact Assessment is required, with field baseline surveys, dispersion or hydrological modelling where relevant, and a detailed mitigation and monitoring programme.</p>
 
 <blockquote>The most expensive mistake we see is not under-preparing. It is preparing thoroughly for the wrong category, then having to start again when the reviewer disagrees with the classification.</blockquote>
@@ -217,32 +217,32 @@ ARTICLE_BODIES = {
   <li>The nature of the process and what it emits, discharges or generates</li>
   <li>Production capacity, measured against defined thresholds</li>
   <li>The waste streams produced, and whether any are classified hazardous</li>
-  <li>Site sensitivity &mdash; proximity to residential areas, coastline, protected habitat or groundwater</li>
+  <li>Site sensitivity, proximity to residential areas, coastline, protected habitat or groundwater</li>
   <li>Whether the activity appears on a scheduled list that fixes its category regardless of scale</li>
 </ol>
 <p>That last point catches people out. Some activities are assigned a category by name, so capacity arguments do not apply.</p>
 
 <h2>Two failure modes, both costly</h2>
-<p><strong>Declaring too low</strong> is the common one. The application is rejected or reclassified, you commission the studies you avoided, and you have lost a review cycle &mdash; often a quarter.</p>
+<p><strong>Declaring too low</strong> is the common one. The application is rejected or reclassified, you commission the studies you avoided, and you have lost a review cycle, often a quarter.</p>
 <p><strong>Declaring too high</strong> is rarer and quieter. Nobody rejects it. You simply pay for baseline surveys and modelling your activity never required, and nobody tells you.</p>
 
 <h2>How BluePrint approaches it</h2>
-<p>We classify before we quote. A short scoping call covering your activity, capacity and site location is usually enough to place you accurately, and that determines the scope of everything after it. If your activity sits near a threshold, we will tell you &mdash; and tell you what the reviewer is likely to conclude, so there are no surprises at submission.</p>
+<p>We classify before we quote. A short scoping call covering your activity, capacity and site location is usually enough to place you accurately, and that determines the scope of everything after it. If your activity sits near a threshold, we will tell you, and tell you what the reviewer is likely to conclude, so there are no surprises at submission.</p>
 """,
 
 "environmental-permit-renewal": """
-<p class="lead">Most operators treat permit renewal as an administrative formality &mdash; a form to submit shortly before expiry. It is not. Renewal review examines your compliance record across the entire permit term, and an expired permit puts you in violation from day one, with no grace period in practice.</p>
+<p class="lead">Most operators treat permit renewal as an administrative formality, a form to submit shortly before expiry. It is not. Renewal review examines your compliance record across the entire permit term, and an expired permit puts you in violation from day one, with no grace period in practice.</p>
 
 <h2>Start six months out. Here is why</h2>
 <p>Six months sounds excessive until you map what has to happen:</p>
 <ul>
-  <li><strong>Months 6&ndash;5</strong> &mdash; internal compliance audit against your existing permit conditions</li>
-  <li><strong>Months 5&ndash;4</strong> &mdash; close whatever gaps that audit finds, which is the part with no fixed duration</li>
-  <li><strong>Months 4&ndash;3</strong> &mdash; carry out any measurements the renewal requires; some parameters need seasonal or repeated sampling</li>
-  <li><strong>Months 3&ndash;2</strong> &mdash; compile the file, update the environmental register, prepare the submission</li>
-  <li><strong>Months 2&ndash;0</strong> &mdash; submission, reviewer queries, and buffer</li>
+  <li><strong>Months 6&ndash;5</strong>, internal compliance audit against your existing permit conditions</li>
+  <li><strong>Months 5&ndash;4</strong>, close whatever gaps that audit finds, which is the part with no fixed duration</li>
+  <li><strong>Months 4&ndash;3</strong>, carry out any measurements the renewal requires; some parameters need seasonal or repeated sampling</li>
+  <li><strong>Months 3&ndash;2</strong>, compile the file, update the environmental register, prepare the submission</li>
+  <li><strong>Months 2&ndash;0</strong>, submission, reviewer queries, and buffer</li>
 </ul>
-<p>Compress that into six weeks and something gives &mdash; usually the gap-closing, which is precisely what the reviewer looks at.</p>
+<p>Compress that into six weeks and something gives, usually the gap-closing, which is precisely what the reviewer looks at.</p>
 
 <h2>What reviewers actually check</h2>
 <p>A renewal is not a fresh application. The reviewer already has your file, and the questions are about the term you have just completed:</p>
@@ -257,17 +257,17 @@ ARTICLE_BODIES = {
 <blockquote>The single most common renewal problem is a reporting gap from two years earlier that nobody noticed at the time. It surfaces at renewal, when there is no longer time to fix it quietly.</blockquote>
 
 <h2>The change nobody declared</h2>
-<p>Facilities evolve. A line is added, capacity increases, a new solvent enters the process, waste volume doubles. Each of those may require notification or a permit amendment at the time &mdash; not at renewal. Presenting a materially different facility from the one described in the original permit turns a renewal into a new application, with the timeline that implies.</p>
+<p>Facilities evolve. A line is added, capacity increases, a new solvent enters the process, waste volume doubles. Each of those may require notification or a permit amendment at the time, not at renewal. Presenting a materially different facility from the one described in the original permit turns a renewal into a new application, with the timeline that implies.</p>
 
 <h2>What an expired permit means</h2>
-<p>Operating without a valid environmental permit is a violation from the day it lapses. Beyond any penalty, an expired permit can block the renewal of other licences that depend on it &mdash; commercial registration and municipal licensing among them. The operational consequence usually arrives before the environmental one.</p>
+<p>Operating without a valid environmental permit is a violation from the day it lapses. Beyond any penalty, an expired permit can block the renewal of other licences that depend on it, commercial registration and municipal licensing among them. The operational consequence usually arrives before the environmental one.</p>
 
 <h2>How BluePrint handles renewals</h2>
-<p>We audit first and apply second. That means reviewing your compliance record before the file goes anywhere, so gaps are closed on your schedule rather than discovered on the reviewer's. For clients on ongoing reporting, renewal is largely a compilation exercise &mdash; because the record was maintained throughout the term rather than assembled at the end of it.</p>
+<p>We audit first and apply second. That means reviewing your compliance record before the file goes anywhere, so gaps are closed on your schedule rather than discovered on the reviewer's. For clients on ongoing reporting, renewal is largely a compilation exercise, because the record was maintained throughout the term rather than assembled at the end of it.</p>
 """,
 
 "environmental-compliance-violations": """
-<p class="lead">Across the inspections we support, almost every finding falls into the same handful of categories. What is striking is how few are engineering failures. The overwhelming majority are documentation and record-keeping problems &mdash; which means they are avoidable at very little cost.</p>
+<p class="lead">Across the inspections we support, almost every finding falls into the same handful of categories. What is striking is how few are engineering failures. The overwhelming majority are documentation and record-keeping problems, which means they are avoidable at very little cost.</p>
 
 <h2>1. Missing or late periodic reports</h2>
 <p>The most frequent finding by a wide margin. Permit conditions set a reporting frequency, and it is easy for a cycle to slip when nobody owns the calendar. Inspectors check submission dates first because it is the fastest thing to verify.</p>
@@ -278,17 +278,17 @@ ARTICLE_BODIES = {
 <p><strong>The fix:</strong> treat the register as a live document with a review cadence, not an archive assembled when someone asks for it.</p>
 
 <h2>3. Waste handling that does not match the declaration</h2>
-<p>The permit describes certain waste streams, segregation and contracted disposal routes. The site does something slightly different &mdash; mixed storage, an uncontracted carrier, or a stream that appeared after the permit was issued and was never declared.</p>
+<p>The permit describes certain waste streams, segregation and contracted disposal routes. The site does something slightly different, mixed storage, an uncontracted carrier, or a stream that appeared after the permit was issued and was never declared.</p>
 <p><strong>The fix:</strong> reconcile actual waste streams against the declared inventory periodically, and verify that every carrier and treatment facility you use holds current authorisation.</p>
 
-<blockquote>A licensed contractor collecting your waste does not transfer your obligation. Generator duties &mdash; characterisation, manifesting, record-keeping &mdash; stay with you.</blockquote>
+<blockquote>A licensed contractor collecting your waste does not transfer your obligation. Generator duties, characterisation, manifesting, record-keeping, stay with you.</blockquote>
 
 <h2>4. Storage and containment gaps</h2>
 <p>One of the few findings that is genuinely physical. Missing secondary containment under chemical or fuel storage, deteriorated bunding, drainage from a storage area running to a stormwater drain, or incompatible materials stored together.</p>
 <p><strong>The fix:</strong> walk the site specifically against your permit's storage conditions. This is the category where a finding can become an incident.</p>
 
 <h2>5. Monitoring that does not meet the specified method</h2>
-<p>Measurements were taken, but not to the method, frequency or point the permit specifies &mdash; or by a party without the accreditation the results require. The data exists and is not accepted.</p>
+<p>Measurements were taken, but not to the method, frequency or point the permit specifies, or by a party without the accreditation the results require. The data exists and is not accepted.</p>
 <p><strong>The fix:</strong> check that every monitoring parameter names its method, location and frequency, and that whoever performs it is accredited for that work.</p>
 
 <h2>6. An environmental management plan nobody follows</h2>
@@ -300,34 +300,34 @@ ARTICLE_BODIES = {
 """,
 
 "quarry-studies-and-rehabilitation": """
-<p class="lead">Extraction sites commit to a rehabilitation obligation years before it comes due &mdash; often at the point of licensing, when closure feels remote. That obligation does not expire because the quarry stopped producing, sat idle, or changed hands.</p>
+<p class="lead">Extraction sites commit to a rehabilitation obligation years before it comes due, often at the point of licensing, when closure feels remote. That obligation does not expire because the quarry stopped producing, sat idle, or changed hands.</p>
 
 <h2>The obligation begins on day one</h2>
 <p>Rehabilitation is not something considered at closure. It is defined in the environmental approval that permitted extraction in the first place, and it usually specifies:</p>
 <ul>
   <li>Final landform and slope stability requirements</li>
-  <li>Topsoil stripping, storage and reinstatement &mdash; storage method matters, as poorly stored topsoil loses viability</li>
+  <li>Topsoil stripping, storage and reinstatement, storage method matters, as poorly stored topsoil loses viability</li>
   <li>Revegetation with specified species and survival criteria</li>
   <li>Management of any water body left in the void</li>
   <li>Removal of infrastructure and remediation of contaminated ground</li>
   <li>Post-closure monitoring for a defined period</li>
 </ul>
-<p>Sites that plan for this progressively &mdash; rehabilitating worked-out areas while extraction continues elsewhere &mdash; spend a fraction of what sites face when the whole obligation lands at once.</p>
+<p>Sites that plan for this progressively, rehabilitating worked-out areas while extraction continues elsewhere, spend a fraction of what sites face when the whole obligation lands at once.</p>
 
 <h2>Studies required while operating</h2>
 <p>Quarries and mining sites carry ongoing environmental obligations that are heavier than most operators anticipate:</p>
 <ol>
-  <li><strong>Dust monitoring</strong> &mdash; PM10 and TSP at site boundaries and nearby receptors</li>
-  <li><strong>Noise and vibration</strong> &mdash; particularly where blasting occurs near communities or structures</li>
-  <li><strong>Groundwater</strong> &mdash; monitoring where extraction approaches or intersects the water table</li>
-  <li><strong>Surface water and runoff</strong> &mdash; sediment control and discharge quality</li>
-  <li><strong>Slope and geotechnical stability</strong> &mdash; both a safety and an environmental requirement</li>
+  <li><strong>Dust monitoring</strong>, PM10 and TSP at site boundaries and nearby receptors</li>
+  <li><strong>Noise and vibration</strong>, particularly where blasting occurs near communities or structures</li>
+  <li><strong>Groundwater</strong>, monitoring where extraction approaches or intersects the water table</li>
+  <li><strong>Surface water and runoff</strong>, sediment control and discharge quality</li>
+  <li><strong>Slope and geotechnical stability</strong>, both a safety and an environmental requirement</li>
 </ol>
 
 <blockquote>Rehabilitation liability does not transfer cleanly with a site sale. Buyers who skip an environmental due diligence assessment routinely inherit an obligation far larger than the purchase discount they negotiated.</blockquote>
 
 <h2>The idle-site trap</h2>
-<p>A quarry that stops producing has not ceased to be a regulated site. Permits still require renewal, monitoring may still apply, and the rehabilitation commitment stands. Sites left dormant for years, with no monitoring record and no progressive rehabilitation, present the hardest cases we are asked to resolve &mdash; the obligation has accrued while the evidence of compliance has not.</p>
+<p>A quarry that stops producing has not ceased to be a regulated site. Permits still require renewal, monitoring may still apply, and the rehabilitation commitment stands. Sites left dormant for years, with no monitoring record and no progressive rehabilitation, present the hardest cases we are asked to resolve, the obligation has accrued while the evidence of compliance has not.</p>
 
 <h2>Progressive rehabilitation is cheaper</h2>
 <p>Three reasons operators consistently underestimate:</p>
@@ -338,7 +338,7 @@ ARTICLE_BODIES = {
 </ul>
 
 <h2>How BluePrint supports extraction sites</h2>
-<p>We prepare the impact assessments and rehabilitation plans that extraction licensing requires, run the monitoring programmes that operations demand, and carry out closure and post-closure assessment. For sites already dormant with an unresolved obligation, we start with an assessment of what is actually owed &mdash; because in our experience that figure is rarely the one the operator has been assuming.</p>
+<p>We prepare the impact assessments and rehabilitation plans that extraction licensing requires, run the monitoring programmes that operations demand, and carry out closure and post-closure assessment. For sites already dormant with an unresolved obligation, we start with an assessment of what is actually owed, because in our experience that figure is rarely the one the operator has been assuming.</p>
 """,
 
 }
@@ -350,7 +350,7 @@ def article(a, page_header):
         body = f"""
 <p class="lead">{a['summary']}</p>
 <div class="rounded-2xl p-6 my-8" style="background:var(--bp-blue-tint);border:1px solid var(--bp-border);">
-  <p style="margin:0;"><strong>This article is being prepared.</strong> Our consultants are finalising it. In the meantime, if this topic affects your facility, get in touch &mdash; the initial consultation is free.</p>
+  <p style="margin:0;"><strong>This article is being prepared.</strong> Our consultants are finalising it. In the meantime, if this topic affects your facility, get in touch, the initial consultation is free.</p>
 </div>
 """
     import content as _C

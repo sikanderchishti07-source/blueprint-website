@@ -43,11 +43,11 @@ MONITORING["water-wastewater-testing"] = _S(
     [("Physical", "pH, TDS, turbidity, temperature"),
      ("Chemical", "COD, BOD, nutrients, metals"),
      ("Biological", "Coliforms and indicator organisms")],
-    "Accredited water and wastewater testing in Saudi Arabia — physical, chemical and biological analysis "
+    "Accredited water and wastewater testing in Saudi Arabia, physical, chemical and biological analysis "
     "of process water, effluent and receiving waters against discharge limits.",
     "Discharge limits leave no room for interpretation",
     ["A discharge condition names a parameter and a number. Either the result is under it or it is not, "
-     "which makes water testing the least ambiguous of all environmental obligations — and the one where "
+     "which makes water testing the least ambiguous of all environmental obligations, and the one where "
      "sampling error does the most damage.",
      "Most disputed results trace back to how the sample was taken rather than how it was analysed. "
      "Sampling point, timing, preservation and holding time all affect the number, and all of them are "
@@ -98,7 +98,7 @@ MONITORING["water-wastewater-testing"] = _S(
       "Report it, establish the cause and record the corrective action. Repeat sampling to confirm is "
       "normal, but concealing the first result is not defensible."),
      ("Do we need groundwater monitoring?",
-      "Only if your permit requires it — typically where there is bulk chemical or fuel storage, a landfill, "
+      "Only if your permit requires it, typically where there is bulk chemical or fuel storage, a landfill, "
       "or a history of contamination on the site.")],
     band_quote="A discharge limit is a number. The only question is whether your evidence is defensible.")
 
@@ -111,7 +111,7 @@ MONITORING["noise-monitoring"] = _S(
     [("Boundary noise", "At the site perimeter"),
      ("Receptor noise", "At the nearest sensitive use"),
      ("Occupational", "Exposure inside the works")],
-    "Environmental and occupational noise monitoring in Saudi Arabia — boundary and receptor surveys, "
+    "Environmental and occupational noise monitoring in Saudi Arabia, boundary and receptor surveys, "
     "occupational exposure assessment and noise impact studies against regulated limits.",
     "The survey design carries more weight than the meter",
     ["Noise results depend on when you measure, where you stand and what else was happening at the time. "
@@ -120,7 +120,7 @@ MONITORING["noise-monitoring"] = _S(
      "Complaints complicate it further. A measurement taken after a complaint has to answer a specific "
      "question about a specific source at a specific time, and a general boundary survey rarely does that."],
     [("Position", "Boundary, receptor, or both"),
-     ("Period", "Day, evening, night — each has a limit"),
+     ("Period", "Day, evening, night, each has a limit"),
      ("Duration", "Long enough to be representative"),
      ("Source", "Which noise is actually being assessed")],
     "What the survey covers",
@@ -176,7 +176,7 @@ MONITORING["soil-sediment-testing"] = _S(
     [("Contaminants", "Metals, hydrocarbons, organics"),
      ("Characteristics", "pH, texture, organic content"),
      ("Extent", "Depth and lateral spread")],
-    "Soil and sediment testing in Saudi Arabia — contamination assessment, geotechnical characterisation "
+    "Soil and sediment testing in Saudi Arabia, contamination assessment, geotechnical characterisation "
     "and sediment analysis for site investigation, due diligence and remediation planning.",
     "The sampling plan determines the answer",
     ["Contamination is rarely uniform. A plan that samples in the wrong places produces a clean result on a "
@@ -242,7 +242,7 @@ MONITORING["field-monitoring"] = _S(
     [("Continuous", "Logged over time"),
      ("Spot readings", "At defined points"),
      ("Meteorological", "Recorded alongside")],
-    "Field environmental monitoring in Saudi Arabia — in-situ measurement, data logging and meteorological "
+    "Field environmental monitoring in Saudi Arabia, in-situ measurement, data logging and meteorological "
     "recording for parameters that must be measured at source.",
     "Some parameters cannot survive the journey",
     ["Dissolved oxygen, pH, temperature and conductivity change between the sampling point and the "
@@ -287,7 +287,7 @@ MONITORING["field-monitoring"] = _S(
       "Several parameters change between sampling and analysis. Dissolved oxygen and pH in particular are "
       "not reliable once a sample has travelled."),
      ("How long should a logger be deployed?",
-      "Long enough to capture the variation that matters — operational cycles, tidal cycles or weather "
+      "Long enough to capture the variation that matters, operational cycles, tidal cycles or weather "
       "patterns depending on what is being assessed."),
      ("Do you record weather data as well?",
       "Where it affects interpretation, yes. Air quality and noise results in particular are difficult to "
@@ -307,11 +307,11 @@ MONITORING["environmental-sampling"] = _S(
     [("Collection", "Who, when, where, how"),
      ("Preservation", "Method and holding time"),
      ("Transfer", "Every handover, signed")],
-    "Environmental sampling services in Saudi Arabia — sampling plans, collection, preservation and "
+    "Environmental sampling services in Saudi Arabia, sampling plans, collection, preservation and "
     "chain-of-custody transfer for air, water, soil and waste analysis.",
     "The result is only as strong as the chain behind it",
     ["Laboratory analysis is rarely what gets challenged. The sample is. Where it was taken, when, by whom, "
-     "how it was preserved and who handled it before it reached the bench — that is what a reviewer or an "
+     "how it was preserved and who handled it before it reached the bench, that is what a reviewer or an "
      "opposing expert examines.",
      "A break anywhere in that chain undermines the number at the end of it, however good the analysis. "
      "This is why sampling is treated as a documented procedure rather than a task."],
@@ -366,13 +366,13 @@ MONITORING["environmental-sampling"] = _S(
 MONITORING["monitoring-programmes"] = _S(
     "monitoring-programmes", "07", "Environmental Monitoring Programmes",
     "Scheduled, tracked, reported",
-    "Ongoing monitoring run as a programme rather than a series of one-off jobs — scheduled against your "
+    "Ongoing monitoring run as a programme rather than a series of one-off jobs, scheduled against your "
     "obligations and tracked to completion.",
     "assets/img/svc-programme.jpg", ("fa-calendar-alt", "Programme covers"),
     [("Schedule", "Built from your conditions"),
      ("Tracking", "Every cycle logged"),
      ("Reporting", "Filed against the deadline")],
-    "Ongoing environmental monitoring programmes for Saudi facilities — scheduled sampling, tracked "
+    "Ongoing environmental monitoring programmes for Saudi facilities, scheduled sampling, tracked "
     "completion and periodic reporting managed as a single service.",
     "One-off jobs create the gaps",
     ["Facilities that commission monitoring job by job are the ones that develop gaps in the record. A "
@@ -422,7 +422,7 @@ MONITORING["monitoring-programmes"] = _S(
       "The schedule is revised. A new line or a capacity increase can change both the parameters and their "
       "frequency, and the programme has to reflect that."),
      ("Do you handle the reporting as well?",
-      "Yes. Monitoring and reporting in one service is the point — it is the handover between the two where "
+      "Yes. Monitoring and reporting in one service is the point, it is the handover between the two where "
       "cycles usually get lost."),
      ("What happens if a result is out of limit?",
       "You are told immediately rather than at report stage, so the corrective action can begin and be "
@@ -437,7 +437,7 @@ MONITORING["laboratory-analysis"] = _S(
     [("Water &amp; effluent", "Physical, chemical, biological"),
      ("Soil &amp; waste", "Contaminants and classification"),
      ("Air samples", "Collected media analysis")],
-    "Accredited environmental laboratory analysis in Saudi Arabia — water, soil, waste and air sample "
+    "Accredited environmental laboratory analysis in Saudi Arabia, water, soil, waste and air sample "
     "analysis with technical interpretation against regulatory limits.",
     "A results table is not a finding",
     ["Most laboratory reports hand over a table and leave the reader to work out what it means. For a "
@@ -502,7 +502,7 @@ MONITORING["pollution-control-equipment"] = _S(
     [("Monitoring", "Fixed and portable instruments"),
      ("Control", "Abatement and treatment plant"),
      ("Support", "Calibration and maintenance")],
-    "Environmental monitoring instruments and pollution control equipment in Saudi Arabia — supply, "
+    "Environmental monitoring instruments and pollution control equipment in Saudi Arabia, supply, "
     "installation, calibration and ongoing operational support.",
     "Equipment that nobody calibrates produces data nobody can use",
     ["An instrument installed and then forgotten generates readings, but not defensible ones. Drift is "
@@ -568,10 +568,10 @@ MONITORING["reporting-compliance"] = _S(
     [("Register", "Current and complete"),
      ("Reports", "Filed every cycle"),
      ("Evidence", "Retrievable on request")],
-    "Environmental reporting and compliance management for Saudi facilities — register maintenance, "
+    "Environmental reporting and compliance management for Saudi facilities, register maintenance, "
     "periodic reporting, exceedance documentation and inspection readiness.",
     "Inspections are documentary before they are technical",
-    ["An inspection starts with paperwork. Register, reports, manifests, calibration records — whether "
+    ["An inspection starts with paperwork. Register, reports, manifests, calibration records, whether "
      "those are complete decides the tone of everything that follows, long before anyone walks the site.",
      "Facilities that maintain the record continuously find inspections uneventful. Facilities that "
      "assemble it on request find that the gaps they had forgotten are the first thing noticed."],
@@ -585,7 +585,7 @@ MONITORING["reporting-compliance"] = _S(
      ("Periodic report preparation", "Each reporting cycle compiled from that record and submitted against "
       "the deadline the condition sets."),
      ("Exceedance documentation", "Where a limit was breached, the cause and corrective action recorded "
-      "alongside it — which is what changes an exceedance from a finding into a handled event."),
+      "alongside it, which is what changes an exceedance from a finding into a handled event."),
      ("Inspection support", "Preparation before an inspection and support during it, so requests are "
       "answered from the record rather than from memory."),
      ("Renewal preparation", "The compliance record audited ahead of renewal, so gaps are found while there "
@@ -620,5 +620,5 @@ MONITORING["reporting-compliance"] = _S(
       "Yes. Preparation beforehand matters more, but having someone who knows the record present during "
       "the inspection helps considerably."),
      ("What happens at renewal?",
-      "The reviewer examines the compliance record across the whole permit term — reporting timeliness, "
+      "The reviewer examines the compliance record across the whole permit term, reporting timeliness, "
       "exceedances and how they were handled, and whether the register is complete.")])

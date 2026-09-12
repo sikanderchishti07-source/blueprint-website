@@ -39,25 +39,25 @@ COVER = """<div class="wrap" id="wrap">
     <div class="scene" id="s2" style="opacity:0;visibility:hidden">
       <div class="sin">
         <p class="eb"><i class="dot"></i>MEASURED TO THE METHOD YOUR PERMIT SPECIFIES</p>
-        <h2>Air, water, soil and noise &mdash; to an accredited standard.</h2>
+        <h2>Air, water, soil and noise, to an accredited standard.</h2>
         <div class="liveCard" id="liveCard">
           <div class="lc-gauge">
             <svg viewBox="0 0 120 120" class="lc-arc">
-              <path d="M18 96 A 54 54 0 1 1 102 96" fill="none" stroke="rgba(11,47,56,.10)" stroke-width="11" stroke-linecap="round"/>
+              <path d="M18 96 A 54 54 0 1 1 102 96" fill="none" stroke="rgba(11,47,56.10)" stroke-width="11" stroke-linecap="round"/>
               <path id="aqiArc" d="M18 96 A 54 54 0 1 1 102 96" fill="none" stroke="url(#aqiGrad)" stroke-width="11" stroke-linecap="round"
                     stroke-dasharray="255" stroke-dashoffset="255"/>
               <defs><linearGradient id="aqiGrad" x1="0" y1="1" x2="1" y2="0">
                 <stop offset="0" stop-color="#0e93a8"/><stop offset="1" stop-color="#a3b56f"/></linearGradient></defs>
             </svg>
-            <div class="lc-val"><b id="aqiVal">&mdash;</b><span>AQI &middot; US EPA</span></div>
+            <div class="lc-val"><b id="aqiVal">, </b><span>AQI &middot; US EPA</span></div>
           </div>
           <div class="lc-readouts">
             <div class="lc-row">
-              <div><span class="lc-k">PM2.5 &middot; &micro;g/m&sup3;</span><b id="pm25">&mdash;</b></div>
+              <div><span class="lc-k">PM2.5 &middot; &micro;g/m&sup3;</span><b id="pm25">, </b></div>
               <svg class="lc-spark" id="sp25" viewBox="0 0 120 34" preserveAspectRatio="none"></svg>
             </div>
             <div class="lc-row">
-              <div><span class="lc-k">PM10 &middot; &micro;g/m&sup3;</span><b id="pm10">&mdash;</b></div>
+              <div><span class="lc-k">PM10 &middot; &micro;g/m&sup3;</span><b id="pm10">, </b></div>
               <svg class="lc-spark" id="sp10" viewBox="0 0 120 34" preserveAspectRatio="none"></svg>
             </div>
           </div>

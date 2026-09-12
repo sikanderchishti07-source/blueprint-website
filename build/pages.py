@@ -101,7 +101,7 @@ def technology():
       <div class="equipment-card bg-gray-50 rounded-2xl border-2 border-transparent hover:border-bp-primary cursor-pointer group overflow-hidden">
         <div class="relative w-full h-44 overflow-hidden bg-bp-light">
           <img src="{img}?w=600&h=380&fit=crop&q=80" alt="{title}" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='{fb}?w=600&h=380&fit=crop'" />
-          <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" style="background:linear-gradient(to top,rgba(11, 47, 56,.65),transparent);"></div>
+          <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" style="background:linear-gradient(to top,rgba(11, 47, 56.65),transparent);"></div>
           <span class="absolute bottom-3 left-3 text-xs font-bold text-white bg-bp-olive px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">{badge}</span>
         </div>
         <div class="p-5"><div class="flex items-center gap-2 mb-2"><div class="w-7 h-7 bg-bp-light rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas {icon} text-bp-primary text-xs"></i></div><h4 class="font-bold text-bp-ink text-sm">{title}</h4></div><p class="text-xs text-gray-500 leading-relaxed">{desc}</p></div>
@@ -134,7 +134,7 @@ def technology():
       <div class="grid md:grid-cols-2 gap-8 items-center">
         <div>
           <h3 class="text-2xl font-bold mb-4">Licensed across 20+ environmental activities</h3>
-          <p class="text-gray-200 mb-6">BluePrint is licensed and approved by the NCEC, the National Center for Waste Management (MWAN) and the Royal Commission for Jubail &amp; Yanbu — spanning environmental studies and consulting, sustainability and corporate governance, industrial and hazardous waste management, landfill construction and lining, emergency response and site remediation.</p>
+          <p class="text-gray-200 mb-6">BluePrint is licensed and approved by the NCEC, the National Center for Waste Management (MWAN) and the Royal Commission for Jubail &amp; Yanbu, spanning environmental studies and consulting, sustainability and corporate governance, industrial and hazardous waste management, landfill construction and lining, emergency response and site remediation.</p>
           <a href="contact.html" class="inline-flex items-center gap-2 px-6 py-3 bg-white text-bp-ink rounded-full font-bold text-sm hover:bg-bp-sage transition-all">Request our credentials <i class="fas fa-arrow-right" style="font-size:.7rem;"></i></a>
         </div>
         <div class="relative"><img src="assets/img/svc-permit.jpg" alt="Laboratory" class="rounded-2xl shadow-2xl opacity-90" loading="lazy" /></div>
@@ -148,7 +148,7 @@ def technology():
 # ─────────────────────────── CONTACT ────────────────────────────
 def contact():
     return page_header("Let&rsquo;s map your path to compliance",
-                       "Tell us about your facility and we&rsquo;ll identify the exact studies and permits you need. The initial consultation is free — and there&rsquo;s no obligation.",
+                       "Tell us about your facility and we&rsquo;ll identify the exact studies and permits you need. The initial consultation is free, and there&rsquo;s no obligation.",
                        "Contact") + """
 <section id="contact" class="py-20" style="background:var(--bp-page);">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -187,7 +187,7 @@ def contact():
               <option>Environmental Register</option>
               <option>Periodic Environmental Report</option>
               <option>Environmental Measurements</option>
-              <option>Not sure yet &mdash; please advise</option>
+              <option>Not sure yet, please advise</option>
             </select>
             <textarea placeholder="Your activity, capacity, and roughly what you need&hellip;" aria-label="Facility details" rows="4" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-bp-primary outline-none transition-all resize-none"></textarea>
             <button onclick="sendContactMessage()" class="w-full py-4 bg-bp-primary text-white rounded-xl font-bold hover:bg-bp-dark transition-all shadow-lg">Send Message</button>

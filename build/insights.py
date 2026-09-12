@@ -1,4 +1,4 @@
-# Insights section for the home page — built from content/blog/*.md
+# Insights section for the home page, built from content/blog/*.md
 # so it stays current on its own as the owner publishes.
 
 ICONS = {
@@ -42,7 +42,7 @@ def insights(posts, limit=4):
         <div class="ikick">INSIGHTS</div>
         <h2>Practical guidance on Saudi<br>environmental <em>regulation</em></h2>
         <p>What the rules actually require, written for the people who have to comply
-           with them &mdash; permit categories, reporting deadlines, inspection findings
+           with them, permit categories, reporting deadlines, inspection findings
            and what to do about them.</p>
         <a href="blog.html" class="ibtn"><span class="circ"><i class="fas fa-arrow-right"></i></span><span>Read all articles</span></a>
       </div>

@@ -27,7 +27,7 @@ The work is a mix of field days, laboratory liaison and desk-based reporting.
 
 - A degree in environmental science, environmental engineering or a related field
 - Familiarity with the Saudi environmental framework, or a willingness to learn it properly
-- Careful record-keeping — in this work the documentation matters as much as the measurement
+- Careful record-keeping, in this work the documentation matters as much as the measurement
 - A valid Saudi driving licence, since field work means travel
 - Arabic and English
 

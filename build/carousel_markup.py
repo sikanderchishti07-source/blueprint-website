@@ -1,7 +1,7 @@
-# Fanned service carousel — home page section 3.
+# Fanned service carousel, home page section 3.
 
 CAROUSEL = """
-<!-- OUR SERVICES — fanned carousel -->
+<!-- OUR SERVICES, fanned carousel -->
 <section class="carsec" id="major-services">
   <div class="carsec-bg" aria-hidden="true"></div>
   <div class="carsec-wash" aria-hidden="true"></div>

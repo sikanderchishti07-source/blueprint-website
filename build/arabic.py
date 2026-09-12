@@ -1,11 +1,11 @@
-# Arabic (RTL) home page — mirrors the English home page content.
+# Arabic (RTL) home page, mirrors the English home page content.
 
 from arabic_home import BODY
 
 HEAD = """<!DOCTYPE html>
 <!--
   ============================================================
-  GENERATED FILE — DO NOT EDIT THIS HTML BY HAND.
+  GENERATED FILE, DO NOT EDIT THIS HTML BY HAND.
   Assembled by build/build.py from build/arabic.py.
   ============================================================
 -->
@@ -13,7 +13,7 @@ HEAD = """<!DOCTYPE html>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="بلوبرنت للخدمات البيئية — استشارات بيئية معتمدة في المملكة العربية السعودية: التصاريح البيئية، دراسات تقييم الأثر، تصاريح إدارة النفايات، السجلات البيئية، والقياسات والرصد البيئي." />
+  <meta name="description" content="بلوبرنت للخدمات البيئية, استشارات بيئية معتمدة في المملكة العربية السعودية: التصاريح البيئية، دراسات تقييم الأثر، تصاريح إدارة النفايات، السجلات البيئية، والقياسات والرصد البيئي." />
   <meta name="theme-color" content="#0e93a8" />
   <title>بلوبرنت للخدمات البيئية | استشارات بيئية معتمدة في السعودية</title>
   <link rel="icon" type="image/png" href="assets/logo/favicon.png" />
@@ -63,7 +63,7 @@ NAV = """
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between" style="height:64px;gap:16px;">
 
-        <a href="index_arabic.html" class="nav-logo-wrap" aria-label="بلوبرنت — الرئيسية">
+        <a href="index_arabic.html" class="nav-logo-wrap" aria-label="بلوبرنت, الرئيسية">
           <img src="assets/logo/blueprint-logo.png" alt="بلوبرنت للخدمات البيئية" />
         </a>
 
@@ -181,7 +181,7 @@ FOOTER = """
           <span class="footer-legal-sep"></span>
           <a href="terms.html" class="footer-legal-btn">الشروط والأحكام</a>
           <span class="footer-legal-sep"></span>
-          <a href="index.html" class="footer-legal-btn" style="color:rgba(163,181,111,.6);">🌐 English</a>
+          <a href="index.html" class="footer-legal-btn" style="color:rgba(163,181,111.6);">🌐 English</a>
         </div>
       </div>
     </div>

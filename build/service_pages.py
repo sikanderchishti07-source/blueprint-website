@@ -1,4 +1,4 @@
-# Service detail pages — one per service, English and Arabic.
+# Service detail pages, one per service, English and Arabic.
 # Content is factual about KSA environmental regulation; nothing about
 # BluePrint's history, clients or scale is asserted here.
 
@@ -14,14 +14,14 @@ SERVICES["air-quality-monitoring"] = dict(
     hero_img="assets/img/svc-air-hero.jpg",
     detail_img="assets/img/svc-air-detail.jpg",
     band_img="assets/img/svc-air-lab.jpg",
-    band_quote="Data that does not match the method named in your permit is not accepted &mdash; however carefully it was collected.",
+    band_quote="Data that does not match the method named in your permit is not accepted, however carefully it was collected.",
     faq_title="Before you commission monitoring",
     float_head=("fa-wind", "What gets measured"),
     float_rows=[("8+", "Parameters measured", "PM, NO&#8322;, SO&#8322;, CO, O&#8323;, VOCs"),
                 ("24/7", "Campaign coverage", "Where the condition requires it"),
                 ("1", "Accredited method", "Named in your permit")],
     float2=("fa-certificate", "Accredited", "Results the regulator accepts"),
-    meta="Accredited ambient and stack air quality monitoring in Saudi Arabia — PM10, PM2.5, "
+    meta="Accredited ambient and stack air quality monitoring in Saudi Arabia, PM10, PM2.5, "
          "NOx, SO2, CO, VOCs and dust, measured to NCEC-referenced methods and reported for compliance.",
 
     problem_title="What the regulator actually asks for",
@@ -38,7 +38,7 @@ SERVICES["air-quality-monitoring"] = dict(
         ("Parameter", "Exactly which pollutants your activity must report"),
         ("Method", "The sampling and analysis standard the condition references"),
         ("Frequency", "How often, and over what averaging period"),
-        ("Location", "Boundary, receptor or stack — and how many points"),
+        ("Location", "Boundary, receptor or stack, and how many points"),
     ],
 
     included_title="What we deliver",
@@ -63,7 +63,7 @@ SERVICES["air-quality-monitoring"] = dict(
     process_title="How a monitoring campaign runs",
     process=[
         ("Scope", "We read your permit conditions and identify every air parameter, method and frequency "
-                  "they require — before quoting anything."),
+                  "they require, before quoting anything."),
         ("Plan", "Measurement points are chosen against the standard, not convenience: boundary positions, "
                  "receptor locations and stack ports are fixed and documented."),
         ("Measure", "Field teams deploy calibrated instruments and follow chain-of-custody for any samples "
@@ -126,7 +126,7 @@ SERVICES["air-quality-monitoring"] = dict(
          "permit predates a change in your process, we review it and tell you what applies before "
          "any work is quoted."),
         ("Does monitoring have to be done by an accredited party?",
-         "For results submitted to a regulator, yes — accreditation is what makes the data admissible. "
+         "For results submitted to a regulator, yes, accreditation is what makes the data admissible. "
          "Measurements taken by an unaccredited party are commonly rejected at review even when the "
          "underlying work was sound."),
         ("How long does a campaign take?",
@@ -209,7 +209,7 @@ def service_page(s, page_header, related):
       </a>''' for r in related)
 
     return f'''
-<!-- HERO — split, image card with floating spec panel -->
+<!-- HERO, split, image card with floating spec panel -->
 <section class="svcd-hero">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="crumb"><a href="index.html">Home</a><i class="fas fa-chevron-right" style="font-size:.55rem;"></i><a href="services.html">Services</a></div>
@@ -240,7 +240,7 @@ def service_page(s, page_header, related):
   </div>
 </section>
 
-<!-- THE OBLIGATION — text with supporting image -->
+<!-- THE OBLIGATION, text with supporting image -->
 <section class="py-24 bg-white">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid lg:grid-cols-2 gap-16 items-center">
@@ -292,7 +292,7 @@ def service_page(s, page_header, related):
   </div>
 </section>
 
-<!-- CAPABILITY GRID — small images with data overlays -->
+<!-- CAPABILITY GRID, small images with data overlays -->
 <section class="py-24 bg-white">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16 scroll-reveal">
@@ -303,7 +303,7 @@ def service_page(s, page_header, related):
   </div>
 </section>
 
-<!-- SECTORS — tabbed, like the reference -->
+<!-- SECTORS, tabbed, like the reference -->
 <section class="py-24 bg-white">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-12 scroll-reveal">
