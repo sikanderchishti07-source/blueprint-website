@@ -1688,3 +1688,30 @@ a.svq-band-cta, a.svq-band-cta:link, a.svq-band-cta:visited, .svq-band a.svq-ban
 
 .news-card.is-update { border-top: 2px solid var(--bp-primary); }
 .blog-empty { display: none; text-align: center; color: #9aa4a8; font-size: .88rem; padding: 40px 0 10px; }
+
+/* â”€â”€ About section video â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.about-video { position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; background: #0b2f38; }
+.about-video video { width: 100%; height: 100%; object-fit: cover; display: block; }
+@media (prefers-reduced-motion: reduce) {
+  .about-video video { display: none; }
+  .about-video { background-image: url('../assets/video/about-poster.jpg'); background-size: cover; background-position: center; }
+}
+
+.about-video { aspect-ratio: 21 / 9; }
+
+.about-video { aspect-ratio: 16 / 9; }
+
+.about-video { aspect-ratio: 21 / 9; }
+
+#overview .p-7 { padding: 1.25rem !important; }
+#overview .space-y-2\.5 > div { padding: 0.75rem !important; }
+#overview .p-7 h3 { font-size: 1.05rem !important; margin-bottom: 0.75rem !important; }
+
+#overview .relative.bg-white.rounded-3xl > div:last-child { padding: 1.1rem 1.4rem 1.4rem !important; }
+#overview .relative.bg-white.rounded-3xl > div:last-child > div > div { padding: 0.7rem 0.9rem !important; }
+#overview .relative.bg-white.rounded-3xl > div:last-child h3 { margin-bottom: 0.8rem !important; }
+
+#overview .p-7 { padding: 1.1rem 1.4rem 1.3rem !important; }
+#overview .p-7 > h3 { margin-bottom: 0.8rem !important; font-size: 1.1rem !important; }
+#overview .p-3\.5 { padding: 0.7rem 0.9rem !important; }
+#overview .space-y-2\.5 > * + * { margin-top: 0.45rem !important; }
