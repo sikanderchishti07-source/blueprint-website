@@ -83,6 +83,7 @@
 
     <div class="drawer-divider"></div>
     <a href="blog.html" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-pen-nib"></i></div>Blog</a>
+    <a href="careers.html" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-user-plus"></i></div>Careers</a>
     <a href="contact.html" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-envelope"></i></div>Contact</a>
     <a href="index_arabic.html" class="drawer-link"><div class="drawer-link-icon">🌐</div>العربية (Arabic)</a>
   </div>
@@ -107,18 +108,9 @@
             <div class="nav-dropdown">
               <div class="nav-dropdown-box" style="min-width:230px;">
                 <div class="nav-dropdown-title">About BluePrint</div>
-                <a href="index.html#overview" class="nav-dd-link">
-                  <div class="nav-dd-icon"><i class="fas fa-building"></i></div>
-                  <div class="nav-dd-text-wrap"><span class="nav-dd-label">About BluePrint</span><span class="nav-dd-sub">Mission, vision &amp; Vision 2030</span></div>
-                </a>
-                <a href="index.html#sectors" class="nav-dd-link">
-                  <div class="nav-dd-icon"><i class="fas fa-industry"></i></div>
-                  <div class="nav-dd-text-wrap"><span class="nav-dd-label">Sectors We Serve</span><span class="nav-dd-sub">Six regulated industries</span></div>
-                </a>
-                <a href="index.html#process" class="nav-dd-link">
-                  <div class="nav-dd-icon"><i class="fas fa-sitemap"></i></div>
-                  <div class="nav-dd-text-wrap"><span class="nav-dd-label">How We Work</span><span class="nav-dd-sub">Assess, plan, submit, sustain</span></div>
-                </a>
+                {dd_link("index.html#overview", "fa-building", "About BluePrint", "Mission, vision &amp; Vision 2030")}
+                {dd_link("index.html#sectors", "fa-industry", "Sectors We Serve", "Six regulated industries")}
+                {dd_link("index.html#process", "fa-sitemap", "How We Work", "Assess, plan, submit, sustain")}
               </div>
             </div>
           </div>
@@ -131,58 +123,12 @@
                   <span class="nav-mega-header-title">Compliance &amp; Permitting</span>
                   <a href="services.html" class="nav-mega-cta">View All →</a>
                 </div>
-                <a href="services.html#svc-0" class="nav-dd-link">
-                  <div class="nav-dd-icon"><i class="fas fa-file-signature"></i></div>
-                  <div class="nav-dd-text-wrap"><span class="nav-dd-label">Environmental Permit</span><span class="nav-dd-sub">NCEC permit file to issuance</span></div>
-                </a>
-<a href="services.html#svc-1" class="nav-dd-link">
-                  <div class="nav-dd-icon"><i class="fas fa-clipboard-check"></i></div>
-                  <div class="nav-dd-text-wrap"><span class="nav-dd-label">Impact Assessment</span><span class="nav-dd-sub">EIA/ESIA for regulated projects</span></div>
-                </a>
-<a href="services.html#svc-2" class="nav-dd-link">
-                  <div class="nav-dd-icon"><i class="fas fa-recycle"></i></div>
-                  <div class="nav-dd-text-wrap"><span class="nav-dd-label">Waste Permit (MWAN)</span><span class="nav-dd-sub">Generators, carriers &amp; treaters</span></div>
-                </a>
-<a href="services.html#svc-3" class="nav-dd-link">
-                  <div class="nav-dd-icon"><i class="fas fa-tasks"></i></div>
-                  <div class="nav-dd-text-wrap"><span class="nav-dd-label">Environmental Management Plan</span><span class="nav-dd-sub">Permit conditions into practice</span></div>
-                </a>
-<a href="services.html#svc-4" class="nav-dd-link">
-                  <div class="nav-dd-icon"><i class="fas fa-folder-open"></i></div>
-                  <div class="nav-dd-text-wrap"><span class="nav-dd-label">Environmental Register</span><span class="nav-dd-sub">Continuous proof of compliance</span></div>
-                </a>
-<a href="services.html#svc-5" class="nav-dd-link">
-                  <div class="nav-dd-icon"><i class="fas fa-calendar-check"></i></div>
-                  <div class="nav-dd-text-wrap"><span class="nav-dd-label">Periodic Reporting</span><span class="nav-dd-sub">Filed on time, every cycle</span></div>
-                </a>
+                {svc_links}
                 <div class="nav-mega-header" style="margin-top:8px;">
                   <span class="nav-mega-header-title">Monitoring &amp; Testing</span>
                   <a href="services.html#monitoring" class="nav-mega-cta">See all →</a>
                 </div>
-                <a href="services.html#monitoring" class="nav-dd-link">
-                  <div class="nav-dd-icon"><i class="fas fa-wind"></i></div>
-                  <div class="nav-dd-text-wrap"><span class="nav-dd-label">Air Quality Monitoring</span><span class="nav-dd-sub">Measurement &amp; assessment</span></div>
-                </a>
-<a href="services.html#monitoring" class="nav-dd-link">
-                  <div class="nav-dd-icon"><i class="fas fa-tint"></i></div>
-                  <div class="nav-dd-text-wrap"><span class="nav-dd-label">Water &amp; Wastewater Testing</span><span class="nav-dd-sub">Accredited analysis</span></div>
-                </a>
-<a href="services.html#monitoring" class="nav-dd-link">
-                  <div class="nav-dd-icon"><i class="fas fa-volume-up"></i></div>
-                  <div class="nav-dd-text-wrap"><span class="nav-dd-label">Noise Monitoring</span><span class="nav-dd-sub">Against regulated limits</span></div>
-                </a>
-<a href="services.html#monitoring" class="nav-dd-link">
-                  <div class="nav-dd-icon"><i class="fas fa-mountain"></i></div>
-                  <div class="nav-dd-text-wrap"><span class="nav-dd-label">Soil &amp; Sediment Testing</span><span class="nav-dd-sub">Contaminant levels</span></div>
-                </a>
-<a href="services.html#monitoring" class="nav-dd-link">
-                  <div class="nav-dd-icon"><i class="fas fa-vial"></i></div>
-                  <div class="nav-dd-text-wrap"><span class="nav-dd-label">Environmental Sampling</span><span class="nav-dd-sub">Chain-of-custody protocols</span></div>
-                </a>
-<a href="services.html#monitoring" class="nav-dd-link">
-                  <div class="nav-dd-icon"><i class="fas fa-microscope"></i></div>
-                  <div class="nav-dd-text-wrap"><span class="nav-dd-label">Laboratory Analysis</span><span class="nav-dd-sub">With technical interpretation</span></div>
-                </a>
+                {mon_links}
               </div>
             </div>
           </div>
@@ -192,22 +138,19 @@
             <div class="nav-dropdown">
               <div class="nav-dropdown-box" style="min-width:240px;">
                 <div class="nav-dropdown-title">Measurement</div>
-                <a href="technology.html#equipment" class="nav-dd-link">
-                  <div class="nav-dd-icon"><i class="fas fa-flask"></i></div>
-                  <div class="nav-dd-text-wrap"><span class="nav-dd-label">Laboratory Services</span><span class="nav-dd-sub">Sampling, testing &amp; monitoring</span></div>
-                </a>
+                {dd_link("technology.html#equipment", "fa-flask", "Laboratory Services", "Sampling, testing &amp; monitoring")}
                 <div class="nav-dd-divider"></div>
                 <div class="nav-dropdown-title">Credentials</div>
-                <a href="technology.html#standards" class="nav-dd-link">
-                  <div class="nav-dd-icon"><i class="fas fa-stamp"></i></div>
-                  <div class="nav-dd-text-wrap"><span class="nav-dd-label">Licences &amp; Accreditations</span><span class="nav-dd-sub">NCEC, MWAN, RCJY, IAS &amp; ISO</span></div>
-                </a>
+                {dd_link("technology.html#standards", "fa-stamp", "Licences &amp; Accreditations", "NCEC, MWAN, RCJY, IAS &amp; ISO")}
               </div>
             </div>
           </div>
 
           <div class="nav-item">
             <a href="blog.html" class="nav-link" data-page="blog.html">Blog</a>
+          </div>
+          <div class="nav-item"><a href="careers.html" class="nav-link" data-page="careers.html">Careers</a></div>
+          <div class="nav-item" style="display:none">
           </div>
 
           <div class="nav-item">
@@ -241,7 +184,7 @@
     <a href="blog-quarry-studies-and-rehabilitation.html" class="block bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all mb-14 scroll-reveal group" style="text-decoration:none;">
       <div class="grid md:grid-cols-2 items-stretch">
         <div class="relative h-64 md:h-auto overflow-hidden">
-          <img src="assets/img/spec-marine.jpg?w=900&h=700&fit=crop&q=80" alt="Quarry Studies and Rehabilitation: The Obligation That Outlives the Site" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='assets/img/spec-ecology.jpg?w=900&h=700&fit=crop'" />
+          <img src="assets/img/spec-marine.jpg?w=900&h=700&fit=crop&q=80" alt="Quarry Studies and Rehabilitation: The Obligation That Outlives the Site" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='assets/img/spec-marine.jpg?w=900&h=700&fit=crop'" />
           <span class="absolute top-4 left-4 text-xs font-bold text-white px-3 py-1.5 rounded-full" style="background:var(--bp-olive);">Latest</span>
         </div>
         <div class="p-8 md:p-10 flex flex-col justify-center">
@@ -259,7 +202,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 scroll-reveal">
       <article class="news-card">
         <a href="blog-environmental-compliance-violations.html" class="card-img-wrap block">
-          <img src="assets/img/svc-noise.jpg?w=800&h=450&fit=crop&q=80" alt="The Six Environmental Violations Saudi Inspectors Find Most Often" loading="lazy" onerror="this.onerror=null;this.src='assets/img/svc-field.jpg?w=800&h=450&fit=crop'" />
+          <img src="assets/img/svc-noise.jpg?w=800&h=450&fit=crop&q=80" alt="The Six Environmental Violations Saudi Inspectors Find Most Often" loading="lazy" onerror="this.onerror=null;this.src='assets/img/svc-noise.jpg?w=800&h=450&fit=crop'" />
           <div class="card-img-overlay"></div>
           <span class="card-badge" style="background:rgba(14, 147, 168,.14);color:var(--bp-blue-deep);">Inspections</span>
         </a>
@@ -274,7 +217,7 @@
       </article>
       <article class="news-card">
         <a href="blog-environmental-permit-renewal.html" class="card-img-wrap block">
-          <img src="assets/img/svc-lab.jpg?w=800&h=450&fit=crop&q=80" alt="Renewing Your Environmental Permit: Start Six Months Early" loading="lazy" onerror="this.onerror=null;this.src='assets/img/svc-soil.jpg?w=800&h=450&fit=crop'" />
+          <img src="assets/img/svc-lab.jpg?w=800&h=450&fit=crop&q=80" alt="Renewing Your Environmental Permit: Start Six Months Early" loading="lazy" onerror="this.onerror=null;this.src='assets/img/svc-lab.jpg?w=800&h=450&fit=crop'" />
           <div class="card-img-overlay"></div>
           <span class="card-badge" style="background:rgba(14, 147, 168,.14);color:var(--bp-blue-deep);">Renewals</span>
         </a>
@@ -289,7 +232,7 @@
       </article>
       <article class="news-card">
         <a href="blog-environmental-permit-categories.html" class="card-img-wrap block">
-          <img src="assets/img/svc-air.jpg?w=800&h=450&fit=crop&q=80" alt="Environmental Permit Categories in Saudi Arabia: Which One Applies to You" loading="lazy" onerror="this.onerror=null;this.src='assets/img/svc-water.jpg?w=800&h=450&fit=crop'" />
+          <img src="assets/img/svc-air.jpg?w=800&h=450&fit=crop&q=80" alt="Environmental Permit Categories in Saudi Arabia: Which One Applies to You" loading="lazy" onerror="this.onerror=null;this.src='assets/img/svc-air.jpg?w=800&h=450&fit=crop'" />
           <div class="card-img-overlay"></div>
           <span class="card-badge" style="background:rgba(14, 147, 168,.14);color:var(--bp-blue-deep);">Permitting</span>
         </a>
@@ -304,7 +247,7 @@
       </article>
       <article class="news-card">
         <a href="blog-mwan-waste-permit-guide.html" class="card-img-wrap block">
-          <img src="assets/img/svc-permit.jpg?w=800&h=450&fit=crop&q=80" alt="The Complete Guide to MWAN Waste Management Permits in Saudi Arabia" loading="lazy" onerror="this.onerror=null;this.src='assets/img/svc-waste.jpg?w=800&h=450&fit=crop'" />
+          <img src="assets/img/svc-permit.jpg?w=800&h=450&fit=crop&q=80" alt="The Complete Guide to MWAN Waste Management Permits in Saudi Arabia" loading="lazy" onerror="this.onerror=null;this.src='assets/img/svc-permit.jpg?w=800&h=450&fit=crop'" />
           <div class="card-img-overlay"></div>
           <span class="card-badge" style="background:rgba(14, 147, 168,.14);color:var(--bp-blue-deep);">Waste Permits</span>
         </a>
@@ -387,6 +330,7 @@
           <li><a href="index.html#process"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Our Process</a></li>
           <li><a href="index.html#sectors"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Sectors</a></li>
           <li><a href="blog.html"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Blog</a></li>
+          <li><a href="careers.html"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Careers</a></li>
           <li><a href="index_arabic.html"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>العربية</a></li>
         </ul>
       </div>

@@ -39,7 +39,9 @@ ARTICLES = [
 ]
 
 
-def blog(page_header):
+def blog(page_header, ARTICLES=None):
+    import content as _C
+    ARTICLES = ARTICLES or list(reversed(_C.load_blog()))
     feat = ARTICLES[-1]
     rest = list(reversed(ARTICLES[:-1]))
     cards = "".join(f"""
@@ -300,7 +302,8 @@ def article(a, page_header):
   <p style="margin:0;"><strong>This article is being prepared.</strong> Our consultants are finalising it. In the meantime, if this topic affects your facility, get in touch &mdash; the initial consultation is free.</p>
 </div>
 """
-    others = [x for x in ARTICLES if x['slug'] != a['slug']][:3]
+    import content as _C
+    others = [x for x in _C.load_blog() if x['slug'] != a['slug']][:3]
     more = "".join(f"""
       <a href="blog-{o['slug']}.html" class="news-card block" style="text-decoration:none;">
         <div class="card-img-wrap"><img src="{o['img']}?w=600&h=340&fit=crop&q=80" alt="{o['title']}" loading="lazy" onerror="this.src='{o['fb']}?w=600&h=340&fit=crop'" /><div class="card-img-overlay"></div></div>

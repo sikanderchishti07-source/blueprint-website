@@ -1,4 +1,4 @@
-import os, partials as P, pages as G, pages_extra as X, arabic as AR, service_pages as SP, svc_permitting as SPP, svc_monitoring as SPM, svc_specialist as SPS, svc_caps as SPC
+import os, partials as P, pages as G, pages_extra as X, arabic as AR, content as C, careers as CR, service_pages as SP, svc_permitting as SPP, svc_monitoring as SPM, svc_specialist as SPS, svc_caps as SPC
 OUT = os.path.join(os.path.dirname(__file__), '..', 'site')
 PAGES = {
   'index.html':      ('Environmental Consultancy in Saudi Arabia | BluePrint', 'Accredited Saudi environmental consultancy delivering environmental studies, MWAN permitting, impact assessments, and compliance solutions aligned with KSA regulations.', G.home(), ('js/cards.js', 'js/cover.js', 'js/carousel.js')),
@@ -37,7 +37,17 @@ for _slug, _s in ALL_SERVICES.items():
         _s['title'].replace('&amp;', '&') + ' | BluePrint Environmental Services',
         _s['meta'], SP.service_page(_s, G.page_header, _rel), ())
 
-for a in X.ARTICLES:
+_roles = C.load_careers()
+PAGES['careers.html'] = ('Careers | BluePrint Environmental Services',
+  'Environmental consultancy careers in Saudi Arabia — field monitoring, laboratory analysis, permitting and reporting roles at BluePrint.',
+  CR.careers_index(G.page_header, _roles), ())
+for _r in _roles:
+    PAGES['career-%s.html' % _r['slug']] = (
+        _r['title'] + ' | Careers | BluePrint',
+        _r.get('summary','') or ('Vacancy: ' + _r['title'] + ' at BluePrint Environmental Services, Riyadh.'),
+        CR.career_page(G.page_header, _r, [o for o in _roles if o['slug'] != _r['slug']][:3]), ())
+
+for a in C.load_blog():
     PAGES['blog-%s.html' % a['slug']] = (a['title'] + ' | BluePrint', a['summary'], X.article(a, G.page_header), ())
 
 with open(os.path.join(OUT, 'index_arabic.html'), 'w', encoding='utf-8') as f:

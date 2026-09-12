@@ -1,1 +1,5 @@
-{ "outputDirectory": "site" }
+{
+  "buildCommand": "cd build && npm install && ./build.sh",
+  "outputDirectory": "site",
+  "framework": null
+}

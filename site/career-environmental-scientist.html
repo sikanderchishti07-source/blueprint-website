@@ -1,15 +1,4 @@
-def _has_roles():
-    """Careers only appears in the menus when a vacancy is actually open."""
-    try:
-        import content
-        return bool(content.load_careers())
-    except Exception:
-        return False
-
-# Shared HTML partials for the BluePrint site build.
-
-def head(title, description, extra_css=""):
-    return f"""<!DOCTYPE html>
+<!DOCTYPE html>
 <!--
   ============================================================
   GENERATED FILE — DO NOT EDIT THIS HTML BY HAND.
@@ -30,9 +19,9 @@ def head(title, description, extra_css=""):
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="{description}" />
+  <meta name="description" content="Field monitoring, impact assessment and compliance reporting for industrial clients across the Kingdom." />
   <meta name="theme-color" content="#0e93a8" />
-  <title>{title}</title>
+  <title>Environmental Scientist | Careers | BluePrint</title>
   <link rel="icon" type="image/png" href="assets/logo/favicon.png" />
 
   <!-- Fonts & icons -->
@@ -48,51 +37,12 @@ def head(title, description, extra_css=""):
   <link rel="stylesheet" href="css/components.css" />
   <link rel="stylesheet" href="css/pages.css" />
   <link rel="stylesheet" href="css/cover.css" />
-  <link rel="stylesheet" href="css/carousel.css" />{extra_css}
+  <link rel="stylesheet" href="css/carousel.css" />
 
   <script src="js/config.js"></script>
 </head>
 <body class="font-sans">
-"""
 
-
-SERVICES_NAV = [
-    ("fa-file-signature", "Environmental Permit", "NCEC permit file to issuance", 0),
-    ("fa-clipboard-check", "Impact Assessment", "EIA/ESIA for regulated projects", 1),
-    ("fa-recycle", "Waste Permit (MWAN)", "Generators, carriers &amp; treaters", 2),
-    ("fa-tasks", "Environmental Management Plan", "Permit conditions into practice", 3),
-    ("fa-folder-open", "Environmental Register", "Continuous proof of compliance", 4),
-    ("fa-calendar-check", "Periodic Reporting", "Filed on time, every cycle", 5),
-]
-
-
-def dd_link(href, icon, label, sub, extra_icon_style="", badge=""):
-    return f"""<a href="{href}" class="nav-dd-link">
-                  <div class="nav-dd-icon"{extra_icon_style}><i class="fas {icon}"></i></div>
-                  <div class="nav-dd-text-wrap"><span class="nav-dd-label">{label}{badge}</span><span class="nav-dd-sub">{sub}</span></div>
-                </a>"""
-
-
-LIVE_BADGE = '<span style="font-size:.55rem;padding:1px 6px;background:#dcfce7;color:#15803d;border-radius:999px;font-weight:700;letter-spacing:.06em;margin-left:3px;">LIVE</span>'
-
-
-MONITORING_NAV = [
-    ("fa-wind", "Air Quality Monitoring", "Measurement &amp; assessment"),
-    ("fa-tint", "Water &amp; Wastewater Testing", "Accredited analysis"),
-    ("fa-volume-up", "Noise Monitoring", "Against regulated limits"),
-    ("fa-mountain", "Soil &amp; Sediment Testing", "Contaminant levels"),
-    ("fa-vial", "Environmental Sampling", "Chain-of-custody protocols"),
-    ("fa-microscope", "Laboratory Analysis", "With technical interpretation"),
-]
-
-
-def nav():
-    svc_links = "\n".join(dd_link(f"services.html#svc-{i}", ic, lb, sb) for ic, lb, sb, i in SERVICES_NAV)
-    mon_links = "\n".join(dd_link("services.html#monitoring", ic, lb, sb) for ic, lb, sb in MONITORING_NAV)
-    drawer_svc = "\n".join(
-        f'<a href="services.html#svc-{i}" class="drawer-link"><div class="drawer-link-icon"><i class="fas {ic}"></i></div>{lb}</a>'
-        for ic, lb, sb, i in SERVICES_NAV)
-    return f"""
 <!-- ============================================================
      NAVIGATION
      ============================================================ -->
@@ -112,7 +62,12 @@ def nav():
 
     <div class="drawer-divider"></div>
     <span class="drawer-section-title">Compliance &amp; Permitting</span>
-    {drawer_svc}
+    <a href="services.html#svc-0" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-file-signature"></i></div>Environmental Permit</a>
+<a href="services.html#svc-1" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-clipboard-check"></i></div>Impact Assessment</a>
+<a href="services.html#svc-2" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-recycle"></i></div>Waste Permit (MWAN)</a>
+<a href="services.html#svc-3" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-tasks"></i></div>Environmental Management Plan</a>
+<a href="services.html#svc-4" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-folder-open"></i></div>Environmental Register</a>
+<a href="services.html#svc-5" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-calendar-check"></i></div>Periodic Reporting</a>
 
     <div class="drawer-divider"></div>
     <span class="drawer-section-title">Monitoring &amp; Testing</span>
@@ -128,7 +83,7 @@ def nav():
 
     <div class="drawer-divider"></div>
     <a href="blog.html" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-pen-nib"></i></div>Blog</a>
-    """ + ('''<a href="careers.html" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-user-plus"></i></div>Careers</a>''' if _has_roles() else "") + """
+    <a href="careers.html" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-user-plus"></i></div>Careers</a>
     <a href="contact.html" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-envelope"></i></div>Contact</a>
     <a href="index_arabic.html" class="drawer-link"><div class="drawer-link-icon">🌐</div>العربية (Arabic)</a>
   </div>
@@ -194,7 +149,7 @@ def nav():
           <div class="nav-item">
             <a href="blog.html" class="nav-link" data-page="blog.html">Blog</a>
           </div>
-          """ + ('''<div class="nav-item"><a href="careers.html" class="nav-link" data-page="careers.html">Careers</a></div>''' if _has_roles() else "") + """
+          <div class="nav-item"><a href="careers.html" class="nav-link" data-page="careers.html">Careers</a></div>
           <div class="nav-item" style="display:none">
           </div>
 
@@ -213,11 +168,55 @@ def nav():
     </div>
   </div>
 </nav>
-"""
 
+<main>
+<section class="page-hero">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="crumb"><a href="index.html">Home</a><i class="fas fa-chevron-right" style="font-size:.55rem;"></i><a href="careers.html">Careers</a></div>
+    <div class="showcase-eyebrow">Monitoring & Assessment</div>
+    <h1 class="page-hero-h1">Environmental Scientist</h1>
+    <div class="crole-meta" style="margin-top:18px;">
+      <span><i class="fas fa-location-dot"></i> Riyadh, Saudi Arabia</span>
+      <span><i class="fas fa-clock"></i> Full time</span>
+      <span><i class='fas fa-calendar'></i> Closes 31 October 2026</span>
+    </div>
+  </div>
+</section>
 
-def footer():
-    return """
+<section class="py-20 bg-white">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="article-body scroll-reveal"><h2 class="font-display text-2xl font-bold text-bp-ink mt-10 mb-4 tracking-tight">The role</h2>
+<p class="mb-5 leading-relaxed text-gray-700">You will carry out environmental monitoring campaigns, contribute to impact assessments and prepare the reports that clients submit to the regulator. The work is a mix of field days, laboratory liaison and desk-based reporting.</p>
+<h2 class="font-display text-2xl font-bold text-bp-ink mt-10 mb-4 tracking-tight">What you will do</h2>
+<ul class="list-disc pl-6 mb-5"><li class="mb-2 text-gray-700">Plan and carry out air, water, noise and soil monitoring campaigns</li>
+<li class="mb-2 text-gray-700">Prepare sampling plans and maintain chain-of-custody records</li>
+<li class="mb-2 text-gray-700">Interpret laboratory results against the limits that apply to each client</li>
+<li class="mb-2 text-gray-700">Draft impact assessments and periodic compliance reports</li>
+<li class="mb-2 text-gray-700">Liaise with regulators on submitted files</li>
+</ul><h2 class="font-display text-2xl font-bold text-bp-ink mt-10 mb-4 tracking-tight">What we are looking for</h2>
+<ul class="list-disc pl-6 mb-5"><li class="mb-2 text-gray-700">A degree in environmental science, environmental engineering or a related field</li>
+<li class="mb-2 text-gray-700">Familiarity with the Saudi environmental framework, or a willingness to learn it properly</li>
+<li class="mb-2 text-gray-700">Careful record-keeping — in this work the documentation matters as much as the measurement</li>
+<li class="mb-2 text-gray-700">A valid Saudi driving licence, since field work means travel</li>
+<li class="mb-2 text-gray-700">Arabic and English</li>
+</ul><h2 class="font-display text-2xl font-bold text-bp-ink mt-10 mb-4 tracking-tight">What we offer</h2>
+<p class="mb-5 leading-relaxed text-gray-700">Varied work across coastal, desert and industrial sites, practice carried out under accreditation, and genuine depth in a regulatory framework that is still taking shape.</p></div>
+
+    <div class="capply scroll-reveal">
+      <h3>How to apply</h3>
+      <p>Send your CV and a short note about why this role interests you. We read
+         every application and reply either way.</p>
+      <div class="flex flex-wrap gap-3 mt-5">
+        <a data-mail class="btn-primary">Apply by email</a>
+        <a data-wa="Hello BluePrint, I would like to apply for the Environmental Scientist role." class="btn-ghost"><i class="fab fa-whatsapp"></i> Ask a question</a>
+      </div>
+    </div>
+
+    
+  </div>
+</section>
+</main>
+
 <!-- ============================================================
      FOOTER
      ============================================================ -->
@@ -272,7 +271,7 @@ def footer():
           <li><a href="index.html#process"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Our Process</a></li>
           <li><a href="index.html#sectors"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Sectors</a></li>
           <li><a href="blog.html"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Blog</a></li>
-          """ + ('''<li><a href="careers.html"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Careers</a></li>''' if _has_roles() else "") + """
+          <li><a href="careers.html"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>Careers</a></li>
           <li><a href="index_arabic.html"><span class="fl-icon"><i class="fas fa-chevron-right"></i></span>العربية</a></li>
         </ul>
       </div>
@@ -340,15 +339,7 @@ def footer():
     </div>
   </div>
 </footer>
-"""
 
-
-def modals():
-    return ""
-
-
-def widgets():
-    return """
 <!-- ============================================================
      FLOATING WIDGETS — WhatsApp, expert CTA
      ============================================================ -->
@@ -384,9 +375,7 @@ def widgets():
     <div class="ep-footer">Free consultation · No commitment required</div>
   </div>
 </div>
-"""
-
-
-def scripts(extra=()):
-    base = ["js/main.js", "js/widgets.js"] + list(extra)
-    return "\n".join(f'<script src="{s}"></script>' for s in base) + "\n</body>\n</html>\n"
+<script src="js/main.js"></script>
+<script src="js/widgets.js"></script>
+</body>
+</html>
