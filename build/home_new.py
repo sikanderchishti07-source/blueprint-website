@@ -191,7 +191,20 @@ PROCESS_CARDS      </div>
   </div>
 </section>
 
-<!-- SECTORS -->
+<!-- TRUSTED BY -->
+<section id="clients" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14 scroll-reveal">
+      <div class="showcase-eyebrow">Trusted by</div>
+      <h2 class="text-4xl lg:text-5xl font-bold text-bp-ink mb-5 tracking-tight">Our partners and clients</h2>
+      <p class="text-gray-600 text-base max-w-xl mx-auto leading-relaxed">Organisations across industry, energy, infrastructure and government that rely on our environmental work.</p>
+    </div>
+  </div>
+  <div class="logo-marquee scroll-reveal" aria-label="Client logos">
+    <div class="logo-track">
+CLIENT_LOGOS    </div>
+  </div>
+</section>\n\n<!-- SECTORS -->
 <section id="sectors" class="py-28" style="background:var(--bp-page);">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16 scroll-reveal">
@@ -217,6 +230,41 @@ PROCESS = [
      "Analysis and data validation against the applicable limit values."),
     (5, "assets/img/svc-register.jpg", "Reporting",
      "A submission-ready report, then register upkeep that keeps you compliant cycle after cycle."),
+]
+
+CLIENTS = [
+    ("aramco", "Saudi Aramco"),
+    ("neom", "NEOM"),
+    ("red-sea", "The Red Sea Development Company"),
+    ("pif", "Public Investment Fund"),
+    ("zatca", "Zakat, Tax and Customs Authority"),
+    ("sabic", "SABIC"),
+    ("maaden", "Ma'aden"),
+    ("mewa", "Ministry of Environment, Water and Agriculture"),
+    ("saudi-electricity", "Saudi Electricity Company"),
+    ("national-water", "National Water Company"),
+    ("mawani", "MAWANI, Saudi Ports Authority"),
+    ("ncm", "National Center for Meteorology"),
+    ("saudi-water-authority", "Saudi Water Authority"),
+    ("gami", "General Authority for Military Industries"),
+    ("sami", "SAMI"),
+    ("kaec", "King Abdullah Economic City"),
+    ("yasref", "YASREF"),
+    ("samref", "SAMREF"),
+    ("luberef", "Luberef"),
+    ("yansab", "Yansab"),
+    ("nomac", "NOMAC"),
+    ("veolia", "Veolia"),
+    ("unilever", "Unilever"),
+    ("abdul-latif-jameel", "Abdul Latif Jameel"),
+    ("qassim-cement", "Qassim Cement"),
+    ("arabian-cement", "Arabian Cement"),
+    ("najran-cement", "Najran Cement"),
+    ("hail-cement", "Hail Cement"),
+    ("marafiq", "Marafiq"),
+    ("petro-rabigh", "Petro Rabigh"),
+    ("cruise-saudi", "Cruise Saudi"),
+    ("jeddah-airports", "Jeddah Airports"),
 ]
 
 SECTORS = [
@@ -245,7 +293,10 @@ def home():
     proc = "".join(
         f"""        <div class="relative scroll-reveal group h-full flex flex-col"><div class="w-14 h-14 ml-6 bg-white rounded-xl flex items-center justify-center text-xl font-bold text-bp-ink relative z-20 flex-shrink-0">{n}</div><div class="bg-white/5 rounded-2xl overflow-hidden border border-white/10 group-hover:border-white/30 transition-colors duration-300 flex-1" style="margin-top:-1.75rem"><div style="height:1.75rem"></div><img src="{img}" alt="{t}" loading="lazy" class="w-full h-32 object-cover opacity-85 group-hover:opacity-100 transition-opacity duration-500" onerror="this.style.display='none'" /><div class="p-6"><h4 class="font-bold text-base mb-2 text-bp-sage">{t}</h4><p class="text-sm leading-relaxed text-gray-300">{d}</p></div></div></div>\n"""
         for n, img, t, d in PROCESS)
+    clients = "".join(
+        f"""      <div class="logo-item"><img src="assets/brand/client-{slug}.png" alt="{name}" loading="lazy" /></div>\n"""
+        for slug, name in CLIENTS) * 2
     sect = "".join(
         f"""      <a href="services.html" class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer block"><img src="{img}" alt="{title}" class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500" /><div class="absolute inset-0 opacity-90" style="background:linear-gradient(to top,#0b2f38 0%,rgba(11, 47, 56,.5) 50%,transparent 100%);"></div><div class="absolute bottom-0 left-0 right-0 p-6 text-white"><div class="flex items-center space-x-2 mb-2"><i class="fas {icon} text-bp-sage"></i><span class="text-sm font-medium text-bp-sage">{cat}</span></div><h3 class="text-xl font-bold mb-2">{title}</h3><p class="text-sm text-gray-300">{desc}</p></div></a>\n"""
         for img, icon, cat, title, desc in SECTORS)
-    return HOME.replace("PROCESS_CARDS", proc).replace("SECTOR_CARDS", sect)
+    return HOME.replace("PROCESS_CARDS", proc).replace("SECTOR_CARDS", sect).replace("CLIENT_LOGOS", clients)

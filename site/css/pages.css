@@ -1,9 +1,9 @@
-/* ============================================================
-   BluePrint — pages.css
+﻿/* ============================================================
+   BluePrint â€” pages.css
    Interactive services split-panel, news bulletin, responsive.
    ============================================================ */
 
-/* ── Interactive services section ─────────────────────────── */
+/* â”€â”€ Interactive services section â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .isvc-section { padding: 90px 0 110px; background: var(--bp-page); position: relative; overflow: hidden; }
 .isvc-section::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(rgba(14, 147, 168,.06) 1px, transparent 1px); background-size: 28px 28px; pointer-events: none; }
 .isvc-header { text-align: center; padding: 0 24px; margin-bottom: 64px; position: relative; z-index: 1; }
@@ -91,7 +91,7 @@
   .isvc-btn-primary, .isvc-btn-ghost { flex: 1; justify-content: center; font-size: .78rem; }
 }
 
-/* ── Article cards (used by the blog listing) ──────────────── */
+/* â”€â”€ Article cards (used by the blog listing) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .section-title { font-family: var(--font-display); font-weight: 800; letter-spacing: -.03em; color: var(--bp-blue-ink); }
 .live-dot { width: 8px; height: 8px; background: var(--bp-olive); border-radius: 50%; flex-shrink: 0; animation: pulse-dot 2s ease-in-out infinite; }
 @keyframes pulse-dot { 0%,100% { box-shadow: 0 0 0 0 rgba(100,117,66,.55); } 50% { box-shadow: 0 0 0 7px rgba(100,117,66,0); } }
@@ -120,13 +120,23 @@
 .news-card.featured .card-img-wrap { height: 240px; }
 .news-card.featured .card-title { font-size: 1.18rem; }
 
-/* ── Responsive — floating widgets & ticker ───────────────── */
+/* â”€â”€ Responsive â€” floating widgets & ticker â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @media (max-width: 768px) {
   .whatsapp-container { bottom: 120px; }
   .whatsapp-btn { width: 50px; height: 50px; }
   .whatsapp-icon { width: 26px; height: 26px; }
   .logo-ticker-section { padding: 2.5rem 0 1.5rem; }
-  .logo-item { min-width: 100px; height: 48px; }
+  .logo-item {
+  flex: 0 0 auto;
+  width: 210px;
+  height: 104px;
+  margin: 0 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform;
+  transform-origin: center center;
+}
   #expertCTA { display: none; }
 }
 @media (max-width: 480px) {
@@ -134,10 +144,20 @@
   .whatsapp-btn { width: 48px; height: 48px; }
   .whatsapp-icon { width: 24px; height: 24px; }
   .logo-ticker-wrapper { padding: 1rem 0; }
-  .logo-item { min-width: 80px; height: 40px; padding: 0 1rem; }
+  .logo-item {
+  flex: 0 0 auto;
+  width: 210px;
+  height: 104px;
+  margin: 0 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform;
+  transform-origin: center center;
+}
 }
 
-/* ── Article & legal body copy ─────────────────────────────── */
+/* â”€â”€ Article & legal body copy â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .article-body { font-size: 1rem; line-height: 1.85; color: #33454b; }
 .article-body .lead { font-size: 1.12rem; line-height: 1.8; color: var(--bp-blue-ink); font-weight: 500; margin-bottom: 1.8rem; }
 .article-body h2 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--bp-blue-ink); letter-spacing: -.02em; margin: 2.4rem 0 .9rem; }
@@ -155,7 +175,7 @@
 .article-body .not-prose h3 { font-family: var(--font-display); }
 @media (max-width: 640px) { .article-body { font-size: .95rem; } .article-body h2 { font-size: 1.3rem; } }
 
-/* ── Hero: full-bleed video cover ──────────────────────────── */
+/* â”€â”€ Hero: full-bleed video cover â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .hero-cover { min-height: 92vh; background: var(--bp-blue-deep); }
 .hero-cover-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
 /* Scrim: keeps the headline legible over bright sky and sand, and pulls
@@ -178,7 +198,7 @@
   .hero-cover { background: url('../assets/video/hero-poster.jpg') center/cover; }
 }
 
-/* ── Article cards (used by the blog listing) ──────────────── */
+/* â”€â”€ Article cards (used by the blog listing) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .section-title { font-family: var(--font-display); font-weight: 800; letter-spacing: -.03em; color: var(--bp-blue-ink); }
 .live-dot { width: 8px; height: 8px; background: var(--bp-olive); border-radius: 50%; flex-shrink: 0; animation: pulse-dot 2s ease-in-out infinite; }
 @keyframes pulse-dot { 0%,100% { box-shadow: 0 0 0 0 rgba(100,117,66,.55); } 50% { box-shadow: 0 0 0 7px rgba(100,117,66,0); } }
@@ -207,13 +227,23 @@
 .news-card.featured .card-img-wrap { height: 240px; }
 .news-card.featured .card-title { font-size: 1.18rem; }
 
-/* ── Responsive — floating widgets & ticker ───────────────── */
+/* â”€â”€ Responsive â€” floating widgets & ticker â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @media (max-width: 768px) {
   .whatsapp-container { bottom: 120px; }
   .whatsapp-btn { width: 50px; height: 50px; }
   .whatsapp-icon { width: 26px; height: 26px; }
   .logo-ticker-section { padding: 2.5rem 0 1.5rem; }
-  .logo-item { min-width: 100px; height: 48px; }
+  .logo-item {
+  flex: 0 0 auto;
+  width: 210px;
+  height: 104px;
+  margin: 0 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform;
+  transform-origin: center center;
+}
   #expertCTA { display: none; }
 }
 @media (max-width: 480px) {
@@ -221,10 +251,20 @@
   .whatsapp-btn { width: 48px; height: 48px; }
   .whatsapp-icon { width: 24px; height: 24px; }
   .logo-ticker-wrapper { padding: 1rem 0; }
-  .logo-item { min-width: 80px; height: 40px; padding: 0 1rem; }
+  .logo-item {
+  flex: 0 0 auto;
+  width: 210px;
+  height: 104px;
+  margin: 0 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform;
+  transform-origin: center center;
+}
 }
 
-/* ── Article & legal body copy ─────────────────────────────── */
+/* â”€â”€ Article & legal body copy â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .article-body { font-size: 1rem; line-height: 1.85; color: #33454b; }
 .article-body .lead { font-size: 1.12rem; line-height: 1.8; color: var(--bp-blue-ink); font-weight: 500; margin-bottom: 1.8rem; }
 .article-body h2 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--bp-blue-ink); letter-spacing: -.02em; margin: 2.4rem 0 .9rem; }
@@ -242,10 +282,10 @@
 .article-body .not-prose h3 { font-family: var(--font-display); }
 @media (max-width: 640px) { .article-body { font-size: .95rem; } .article-body h2 { font-size: 1.3rem; } }
 
-/* ── Hero: editorial split ─────────────────────────────────── */
+/* â”€â”€ Hero: editorial split â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .hero-split { display: grid; grid-template-columns: 1.05fr .95fr; min-height: 100vh; background: #fbfbf9; }
 
-/* Left — type */
+/* Left â€” type */
 .hs-left { display: flex; align-items: center; padding: calc(var(--nav-height) + 40px) 64px 64px 0; position: relative; }
 .hs-left::after { content: ''; position: absolute; top: 0; bottom: 0; right: 0; width: 1px; background: #e3e5e0; }
 .hs-inner { max-width: 620px; margin-left: auto; padding-left: 40px; width: 100%; }
@@ -264,7 +304,7 @@
 .hs-marks { margin-top: 46px; padding-top: 22px; border-top: 1px solid #e3e5e0; display: flex; flex-wrap: wrap; gap: 8px 18px; }
 .hs-marks span { font-size: .66rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #93a0a1; }
 
-/* Right — monitoring panel */
+/* Right â€” monitoring panel */
 .hs-right { position: relative; background: var(--bp-blue-ink); overflow: hidden; }
 .hs-grid { position: absolute; inset: 0;
   background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
@@ -308,7 +348,7 @@
   .hs-glow, .hs-node { animation: none; }
 }
 
-/* ── Article cards (used by the blog listing) ──────────────── */
+/* â”€â”€ Article cards (used by the blog listing) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .section-title { font-family: var(--font-display); font-weight: 800; letter-spacing: -.03em; color: var(--bp-blue-ink); }
 .live-dot { width: 8px; height: 8px; background: var(--bp-olive); border-radius: 50%; flex-shrink: 0; animation: pulse-dot 2s ease-in-out infinite; }
 @keyframes pulse-dot { 0%,100% { box-shadow: 0 0 0 0 rgba(100,117,66,.55); } 50% { box-shadow: 0 0 0 7px rgba(100,117,66,0); } }
@@ -337,13 +377,23 @@
 .news-card.featured .card-img-wrap { height: 240px; }
 .news-card.featured .card-title { font-size: 1.18rem; }
 
-/* ── Responsive — floating widgets & ticker ───────────────── */
+/* â”€â”€ Responsive â€” floating widgets & ticker â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @media (max-width: 768px) {
   .whatsapp-container { bottom: 120px; }
   .whatsapp-btn { width: 50px; height: 50px; }
   .whatsapp-icon { width: 26px; height: 26px; }
   .logo-ticker-section { padding: 2.5rem 0 1.5rem; }
-  .logo-item { min-width: 100px; height: 48px; }
+  .logo-item {
+  flex: 0 0 auto;
+  width: 210px;
+  height: 104px;
+  margin: 0 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform;
+  transform-origin: center center;
+}
   #expertCTA { display: none; }
 }
 @media (max-width: 480px) {
@@ -351,10 +401,20 @@
   .whatsapp-btn { width: 48px; height: 48px; }
   .whatsapp-icon { width: 24px; height: 24px; }
   .logo-ticker-wrapper { padding: 1rem 0; }
-  .logo-item { min-width: 80px; height: 40px; padding: 0 1rem; }
+  .logo-item {
+  flex: 0 0 auto;
+  width: 210px;
+  height: 104px;
+  margin: 0 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform;
+  transform-origin: center center;
+}
 }
 
-/* ── Article & legal body copy ─────────────────────────────── */
+/* â”€â”€ Article & legal body copy â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .article-body { font-size: 1rem; line-height: 1.85; color: #33454b; }
 .article-body .lead { font-size: 1.12rem; line-height: 1.8; color: var(--bp-blue-ink); font-weight: 500; margin-bottom: 1.8rem; }
 .article-body h2 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--bp-blue-ink); letter-spacing: -.02em; margin: 2.4rem 0 .9rem; }
@@ -372,7 +432,7 @@
 .article-body .not-prose h3 { font-family: var(--font-display); }
 @media (max-width: 640px) { .article-body { font-size: .95rem; } .article-body h2 { font-size: 1.3rem; } }
 
-/* ── Article cards (used by the blog listing) ──────────────── */
+/* â”€â”€ Article cards (used by the blog listing) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .section-title { font-family: var(--font-display); font-weight: 800; letter-spacing: -.03em; color: var(--bp-blue-ink); }
 .live-dot { width: 8px; height: 8px; background: var(--bp-olive); border-radius: 50%; flex-shrink: 0; animation: pulse-dot 2s ease-in-out infinite; }
 @keyframes pulse-dot { 0%,100% { box-shadow: 0 0 0 0 rgba(100,117,66,.55); } 50% { box-shadow: 0 0 0 7px rgba(100,117,66,0); } }
@@ -401,13 +461,23 @@
 .news-card.featured .card-img-wrap { height: 240px; }
 .news-card.featured .card-title { font-size: 1.18rem; }
 
-/* ── Responsive — floating widgets & ticker ───────────────── */
+/* â”€â”€ Responsive â€” floating widgets & ticker â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @media (max-width: 768px) {
   .whatsapp-container { bottom: 120px; }
   .whatsapp-btn { width: 50px; height: 50px; }
   .whatsapp-icon { width: 26px; height: 26px; }
   .logo-ticker-section { padding: 2.5rem 0 1.5rem; }
-  .logo-item { min-width: 100px; height: 48px; }
+  .logo-item {
+  flex: 0 0 auto;
+  width: 210px;
+  height: 104px;
+  margin: 0 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform;
+  transform-origin: center center;
+}
   #expertCTA { display: none; }
 }
 @media (max-width: 480px) {
@@ -415,10 +485,20 @@
   .whatsapp-btn { width: 48px; height: 48px; }
   .whatsapp-icon { width: 24px; height: 24px; }
   .logo-ticker-wrapper { padding: 1rem 0; }
-  .logo-item { min-width: 80px; height: 40px; padding: 0 1rem; }
+  .logo-item {
+  flex: 0 0 auto;
+  width: 210px;
+  height: 104px;
+  margin: 0 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform;
+  transform-origin: center center;
+}
 }
 
-/* ── Article & legal body copy ─────────────────────────────── */
+/* â”€â”€ Article & legal body copy â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .article-body { font-size: 1rem; line-height: 1.85; color: #33454b; }
 .article-body .lead { font-size: 1.12rem; line-height: 1.8; color: var(--bp-blue-ink); font-weight: 500; margin-bottom: 1.8rem; }
 .article-body h2 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--bp-blue-ink); letter-spacing: -.02em; margin: 2.4rem 0 .9rem; }
@@ -436,7 +516,7 @@
 .article-body .not-prose h3 { font-family: var(--font-display); }
 @media (max-width: 640px) { .article-body { font-size: .95rem; } .article-body h2 { font-size: 1.3rem; } }
 
-/* ── Hero video panel ──────────────────────────────────────── */
+/* â”€â”€ Hero video panel â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .hero-media { position: relative; height: 520px; width: 100%; background: var(--bp-blue-deep); }
 @media (max-width: 1023px) { .hero-media { height: 300px; } }
 @media (max-width: 640px)  { .hero-media { height: 240px; border-radius: 20px; } }
@@ -451,12 +531,12 @@
   .hero-media { background: url('../assets/video/hero-poster.jpg') center/cover; } }
 
 
-/* ── Service showcase: three cards in an arc ───────────────── */
+/* â”€â”€ Service showcase: three cards in an arc â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .svc-showcase { position: relative; }
 .svc-hint { display: block; width: 100%; text-align: center; margin-top: clamp(8px, 1.4vh, 20px);
   font-size: .74rem; color: var(--bp-faint); }
 
-/* ── Panels: expand and flip together ──────────────────────── */
+/* â”€â”€ Panels: expand and flip together â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .svc-showcase { max-width: 1600px; margin: 0 auto; }
 .svc-stage { display: flex; justify-content: center; gap: clamp(12px, 1.6vw, 26px);
   height: clamp(330px, 64vh, 640px); perspective: 2600px; }
@@ -502,7 +582,7 @@
   line-height: 1.15; white-space: nowrap; }
 .svc-card-title, .svc-card-blurb, .svc-card-cta { display: none; }
 
-/* back — wider panel means the list can run in two columns */
+/* back â€” wider panel means the list can run in two columns */
 .svc-back-num { display: block; font-family: var(--font-display); font-size: .72rem; font-weight: 700;
   letter-spacing: .14em; color: var(--bp-blue-soft); margin-bottom: 10px; }
 .svc-back-title { display: block; font-family: var(--font-display);
@@ -533,7 +613,7 @@
 .svc-back > * { opacity: 0; transition: opacity .3s ease; }
 .svc-card:hover .svc-back > *, .svc-card:focus-visible .svc-back > * { opacity: 1; transition-delay: .42s; }
 
-/* ── Full-screen overlay ───────────────────────────────────── */
+/* â”€â”€ Full-screen overlay â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .svc-overlay { position: fixed; inset: 0; z-index: 10000; display: flex; align-items: center;
   justify-content: center; opacity: 0; pointer-events: none; transition: opacity .38s ease; }
 .svc-overlay.is-open { opacity: 1; pointer-events: all; }
@@ -601,7 +681,7 @@
   .svc-overlay.is-open .svc-ov-item { animation: none; opacity: 1; transform: none; }
 }
 
-/* ── Article cards (used by the blog listing) ──────────────── */
+/* â”€â”€ Article cards (used by the blog listing) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .section-title { font-family: var(--font-display); font-weight: 800; letter-spacing: -.03em; color: var(--bp-blue-ink); }
 .live-dot { width: 8px; height: 8px; background: var(--bp-olive); border-radius: 50%; flex-shrink: 0; animation: pulse-dot 2s ease-in-out infinite; }
 @keyframes pulse-dot { 0%,100% { box-shadow: 0 0 0 0 rgba(100,117,66,.55); } 50% { box-shadow: 0 0 0 7px rgba(100,117,66,0); } }
@@ -630,13 +710,23 @@
 .news-card.featured .card-img-wrap { height: 240px; }
 .news-card.featured .card-title { font-size: 1.18rem; }
 
-/* ── Responsive — floating widgets & ticker ───────────────── */
+/* â”€â”€ Responsive â€” floating widgets & ticker â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @media (max-width: 768px) {
   .whatsapp-container { bottom: 120px; }
   .whatsapp-btn { width: 50px; height: 50px; }
   .whatsapp-icon { width: 26px; height: 26px; }
   .logo-ticker-section { padding: 2.5rem 0 1.5rem; }
-  .logo-item { min-width: 100px; height: 48px; }
+  .logo-item {
+  flex: 0 0 auto;
+  width: 210px;
+  height: 104px;
+  margin: 0 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform;
+  transform-origin: center center;
+}
   #expertCTA { display: none; }
 }
 @media (max-width: 480px) {
@@ -644,10 +734,20 @@
   .whatsapp-btn { width: 48px; height: 48px; }
   .whatsapp-icon { width: 24px; height: 24px; }
   .logo-ticker-wrapper { padding: 1rem 0; }
-  .logo-item { min-width: 80px; height: 40px; padding: 0 1rem; }
+  .logo-item {
+  flex: 0 0 auto;
+  width: 210px;
+  height: 104px;
+  margin: 0 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform;
+  transform-origin: center center;
+}
 }
 
-/* ── Article & legal body copy ─────────────────────────────── */
+/* â”€â”€ Article & legal body copy â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .article-body { font-size: 1rem; line-height: 1.85; color: #33454b; }
 .article-body .lead { font-size: 1.12rem; line-height: 1.8; color: var(--bp-blue-ink); font-weight: 500; margin-bottom: 1.8rem; }
 .article-body h2 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--bp-blue-ink); letter-spacing: -.02em; margin: 2.4rem 0 .9rem; }
@@ -665,7 +765,7 @@
 .article-body .not-prose h3 { font-family: var(--font-display); }
 @media (max-width: 640px) { .article-body { font-size: .95rem; } .article-body h2 { font-size: 1.3rem; } }
 
-/* ── Hero: full-bleed video cover ──────────────────────────── */
+/* â”€â”€ Hero: full-bleed video cover â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .hero-cover { min-height: 92vh; background: var(--bp-blue-deep); }
 .hero-cover-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
 /* Scrim: keeps the headline legible over bright sky and sand, and pulls
@@ -688,7 +788,7 @@
   .hero-cover { background: url('../assets/video/hero-poster.jpg') center/cover; }
 }
 
-/* ── Article cards (used by the blog listing) ──────────────── */
+/* â”€â”€ Article cards (used by the blog listing) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .section-title { font-family: var(--font-display); font-weight: 800; letter-spacing: -.03em; color: var(--bp-blue-ink); }
 .live-dot { width: 8px; height: 8px; background: var(--bp-olive); border-radius: 50%; flex-shrink: 0; animation: pulse-dot 2s ease-in-out infinite; }
 @keyframes pulse-dot { 0%,100% { box-shadow: 0 0 0 0 rgba(100,117,66,.55); } 50% { box-shadow: 0 0 0 7px rgba(100,117,66,0); } }
@@ -717,13 +817,23 @@
 .news-card.featured .card-img-wrap { height: 240px; }
 .news-card.featured .card-title { font-size: 1.18rem; }
 
-/* ── Responsive — floating widgets & ticker ───────────────── */
+/* â”€â”€ Responsive â€” floating widgets & ticker â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @media (max-width: 768px) {
   .whatsapp-container { bottom: 120px; }
   .whatsapp-btn { width: 50px; height: 50px; }
   .whatsapp-icon { width: 26px; height: 26px; }
   .logo-ticker-section { padding: 2.5rem 0 1.5rem; }
-  .logo-item { min-width: 100px; height: 48px; }
+  .logo-item {
+  flex: 0 0 auto;
+  width: 210px;
+  height: 104px;
+  margin: 0 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform;
+  transform-origin: center center;
+}
   #expertCTA { display: none; }
 }
 @media (max-width: 480px) {
@@ -731,10 +841,20 @@
   .whatsapp-btn { width: 48px; height: 48px; }
   .whatsapp-icon { width: 24px; height: 24px; }
   .logo-ticker-wrapper { padding: 1rem 0; }
-  .logo-item { min-width: 80px; height: 40px; padding: 0 1rem; }
+  .logo-item {
+  flex: 0 0 auto;
+  width: 210px;
+  height: 104px;
+  margin: 0 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform;
+  transform-origin: center center;
+}
 }
 
-/* ── Article & legal body copy ─────────────────────────────── */
+/* â”€â”€ Article & legal body copy â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .article-body { font-size: 1rem; line-height: 1.85; color: #33454b; }
 .article-body .lead { font-size: 1.12rem; line-height: 1.8; color: var(--bp-blue-ink); font-weight: 500; margin-bottom: 1.8rem; }
 .article-body h2 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--bp-blue-ink); letter-spacing: -.02em; margin: 2.4rem 0 .9rem; }
@@ -752,10 +872,10 @@
 .article-body .not-prose h3 { font-family: var(--font-display); }
 @media (max-width: 640px) { .article-body { font-size: .95rem; } .article-body h2 { font-size: 1.3rem; } }
 
-/* ── Hero: editorial split ─────────────────────────────────── */
+/* â”€â”€ Hero: editorial split â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .hero-split { display: grid; grid-template-columns: 1.05fr .95fr; min-height: 100vh; background: #fbfbf9; }
 
-/* Left — type */
+/* Left â€” type */
 .hs-left { display: flex; align-items: center; padding: calc(var(--nav-height) + 40px) 64px 64px 0; position: relative; }
 .hs-left::after { content: ''; position: absolute; top: 0; bottom: 0; right: 0; width: 1px; background: #e3e5e0; }
 .hs-inner { max-width: 620px; margin-left: auto; padding-left: 40px; width: 100%; }
@@ -774,7 +894,7 @@
 .hs-marks { margin-top: 46px; padding-top: 22px; border-top: 1px solid #e3e5e0; display: flex; flex-wrap: wrap; gap: 8px 18px; }
 .hs-marks span { font-size: .66rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #93a0a1; }
 
-/* Right — monitoring panel */
+/* Right â€” monitoring panel */
 .hs-right { position: relative; background: var(--bp-blue-ink); overflow: hidden; }
 .hs-grid { position: absolute; inset: 0;
   background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
@@ -818,7 +938,7 @@
   .hs-glow, .hs-node { animation: none; }
 }
 
-/* ── Article cards (used by the blog listing) ──────────────── */
+/* â”€â”€ Article cards (used by the blog listing) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .section-title { font-family: var(--font-display); font-weight: 800; letter-spacing: -.03em; color: var(--bp-blue-ink); }
 .live-dot { width: 8px; height: 8px; background: var(--bp-olive); border-radius: 50%; flex-shrink: 0; animation: pulse-dot 2s ease-in-out infinite; }
 @keyframes pulse-dot { 0%,100% { box-shadow: 0 0 0 0 rgba(100,117,66,.55); } 50% { box-shadow: 0 0 0 7px rgba(100,117,66,0); } }
@@ -847,13 +967,23 @@
 .news-card.featured .card-img-wrap { height: 240px; }
 .news-card.featured .card-title { font-size: 1.18rem; }
 
-/* ── Responsive — floating widgets & ticker ───────────────── */
+/* â”€â”€ Responsive â€” floating widgets & ticker â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @media (max-width: 768px) {
   .whatsapp-container { bottom: 120px; }
   .whatsapp-btn { width: 50px; height: 50px; }
   .whatsapp-icon { width: 26px; height: 26px; }
   .logo-ticker-section { padding: 2.5rem 0 1.5rem; }
-  .logo-item { min-width: 100px; height: 48px; }
+  .logo-item {
+  flex: 0 0 auto;
+  width: 210px;
+  height: 104px;
+  margin: 0 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform;
+  transform-origin: center center;
+}
   #expertCTA { display: none; }
 }
 @media (max-width: 480px) {
@@ -861,10 +991,20 @@
   .whatsapp-btn { width: 48px; height: 48px; }
   .whatsapp-icon { width: 24px; height: 24px; }
   .logo-ticker-wrapper { padding: 1rem 0; }
-  .logo-item { min-width: 80px; height: 40px; padding: 0 1rem; }
+  .logo-item {
+  flex: 0 0 auto;
+  width: 210px;
+  height: 104px;
+  margin: 0 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform;
+  transform-origin: center center;
+}
 }
 
-/* ── Article & legal body copy ─────────────────────────────── */
+/* â”€â”€ Article & legal body copy â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .article-body { font-size: 1rem; line-height: 1.85; color: #33454b; }
 .article-body .lead { font-size: 1.12rem; line-height: 1.8; color: var(--bp-blue-ink); font-weight: 500; margin-bottom: 1.8rem; }
 .article-body h2 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--bp-blue-ink); letter-spacing: -.02em; margin: 2.4rem 0 .9rem; }
@@ -882,7 +1022,7 @@
 .article-body .not-prose h3 { font-family: var(--font-display); }
 @media (max-width: 640px) { .article-body { font-size: .95rem; } .article-body h2 { font-size: 1.3rem; } }
 
-/* ── Article cards (used by the blog listing) ──────────────── */
+/* â”€â”€ Article cards (used by the blog listing) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .section-title { font-family: var(--font-display); font-weight: 800; letter-spacing: -.03em; color: var(--bp-blue-ink); }
 .live-dot { width: 8px; height: 8px; background: var(--bp-olive); border-radius: 50%; flex-shrink: 0; animation: pulse-dot 2s ease-in-out infinite; }
 @keyframes pulse-dot { 0%,100% { box-shadow: 0 0 0 0 rgba(100,117,66,.55); } 50% { box-shadow: 0 0 0 7px rgba(100,117,66,0); } }
@@ -911,13 +1051,23 @@
 .news-card.featured .card-img-wrap { height: 240px; }
 .news-card.featured .card-title { font-size: 1.18rem; }
 
-/* ── Responsive — floating widgets & ticker ───────────────── */
+/* â”€â”€ Responsive â€” floating widgets & ticker â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @media (max-width: 768px) {
   .whatsapp-container { bottom: 120px; }
   .whatsapp-btn { width: 50px; height: 50px; }
   .whatsapp-icon { width: 26px; height: 26px; }
   .logo-ticker-section { padding: 2.5rem 0 1.5rem; }
-  .logo-item { min-width: 100px; height: 48px; }
+  .logo-item {
+  flex: 0 0 auto;
+  width: 210px;
+  height: 104px;
+  margin: 0 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform;
+  transform-origin: center center;
+}
   #expertCTA { display: none; }
 }
 @media (max-width: 480px) {
@@ -925,10 +1075,20 @@
   .whatsapp-btn { width: 48px; height: 48px; }
   .whatsapp-icon { width: 24px; height: 24px; }
   .logo-ticker-wrapper { padding: 1rem 0; }
-  .logo-item { min-width: 80px; height: 40px; padding: 0 1rem; }
+  .logo-item {
+  flex: 0 0 auto;
+  width: 210px;
+  height: 104px;
+  margin: 0 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform;
+  transform-origin: center center;
+}
 }
 
-/* ── Article & legal body copy ─────────────────────────────── */
+/* â”€â”€ Article & legal body copy â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .article-body { font-size: 1rem; line-height: 1.85; color: #33454b; }
 .article-body .lead { font-size: 1.12rem; line-height: 1.8; color: var(--bp-blue-ink); font-weight: 500; margin-bottom: 1.8rem; }
 .article-body h2 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--bp-blue-ink); letter-spacing: -.02em; margin: 2.4rem 0 .9rem; }
@@ -946,7 +1106,7 @@
 .article-body .not-prose h3 { font-family: var(--font-display); }
 @media (max-width: 640px) { .article-body { font-size: .95rem; } .article-body h2 { font-size: 1.3rem; } }
 
-/* ── Hero video panel ──────────────────────────────────────── */
+/* â”€â”€ Hero video panel â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .hero-media { position: relative; height: 520px; width: 100%; background: var(--bp-blue-deep); }
 @media (max-width: 1023px) { .hero-media { height: 300px; } }
 @media (max-width: 640px)  { .hero-media { height: 240px; border-radius: 20px; } }
@@ -979,7 +1139,7 @@
 /* This section runs wider than the standard container to match the reference */
 .svc-container { width: 100%; max-width: 1300px; }
 
-/* ── Service detail pages ──────────────────────────────────── */
+/* â”€â”€ Service detail pages â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .svcd-hero { position: relative; padding: calc(var(--nav-height) + 42px) 0 62px;
   background: #fbfbf9; color: var(--bp-blue-ink); overflow: hidden; }
 /* the second tone: a deep panel occupying the right of the band, notched at
@@ -1015,7 +1175,7 @@
 .svcd-float-2 span { display: block; font-size: .68rem; color: var(--bp-muted); margin-top: 1px; }
 .svcd-hero-img { height: 480px; border-radius: 22px; background-size: cover; background-position: center;
   box-shadow: 0 26px 70px rgba(0,0,0,.36);
-  /* notched top-right corner — the reference uses this shape throughout */
+  /* notched top-right corner â€” the reference uses this shape throughout */
   clip-path: polygon(0 0, calc(100% - 46px) 0, 100% 46px, 100% 100%, 0 100%); }
 .svcd-float { position: absolute; left: -56px; top: 50%; transform: translateY(-50%); width: 252px;
   padding: 18px 20px; border-radius: 16px; background: #fff;
@@ -1134,7 +1294,7 @@
   .svcd-tab { white-space: nowrap; }
 }
 
-/* capability grid — small image + data badge, 2x2 */
+/* capability grid â€” small image + data badge, 2x2 */
 .svcd-cap { display: grid; grid-template-columns: 1fr 1fr; gap: 48px 56px; }
 .svcd-cap-item { display: grid; grid-template-columns: 190px 1fr; gap: 26px; align-items: start; }
 .svcd-cap-media { position: relative; }
@@ -1163,7 +1323,7 @@
 }
 
 
-/* ── service cards restyled to the reference sheet ─────────── */
+/* â”€â”€ service cards restyled to the reference sheet â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .svc-card-num{position:absolute;top:22px;left:24px;z-index:4;
   font-family:var(--font-display);font-size:1.05rem;font-weight:700;color:#fff;letter-spacing:.02em}
 .svc-card-num::after{content:'';display:block;width:26px;height:2px;margin-top:7px;
@@ -1193,7 +1353,7 @@
 .svc-card-cta{margin-top:16px}
 .svc-face{border-radius:18px;overflow:hidden}
 
-/* ── careers ───────────────────────────────────────────────── */
+/* â”€â”€ careers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .croles{display:grid;gap:12px}
 .crole{display:flex;align-items:center;gap:20px;padding:26px 28px;border:1px solid var(--bp-border);
   border-radius:16px;background:#fff;text-decoration:none;transition:border-color .25s,transform .25s,box-shadow .25s}
@@ -1235,3 +1395,54 @@
 
 .crumb-dark, .crumb-dark a, .crumb-dark span { color: rgba(255,255,255,.65); }
 .crumb-dark a:hover { color: #fff; }
+
+/* Trusted by â€” client logo marquee */
+.logo-marquee {
+  overflow: hidden;
+  position: relative;
+  padding: 22px 0;
+}
+.logo-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: logo-scroll 120s linear infinite;
+}
+.logo-marquee:hover .logo-track { animation-play-state: paused; }
+.logo-item {
+  flex: 0 0 auto;
+  width: 210px;
+  height: 104px;
+  margin: 0 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform;
+  transform-origin: center center;
+}
+.logo-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+@keyframes logo-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@media (max-width: 640px) {
+  .logo-item { width: 150px; height: 76px; margin: 0 14px; }
+  .logo-track { animation-duration: 90s; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .logo-track { animation: none; }
+  .logo-marquee {
+  overflow: hidden;
+  position: relative;
+  padding: 22px 0;
+}
+}
+
+
+
+
