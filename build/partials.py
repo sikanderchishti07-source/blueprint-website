@@ -389,5 +389,5 @@ def widgets():
 
 
 def scripts(extra=()):
-    base = ["js/main.js", "js/widgets.js"] + list(extra)
+    base = ["js/main.js", "js/widgets.js", "js/scroll.js"] + list(extra)
     return "\n".join(f'<script src="{s}"></script>' for s in base) + "\n</body>\n</html>\n"

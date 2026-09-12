@@ -1720,3 +1720,29 @@ a.svq-band-cta, a.svq-band-cta:link, a.svq-band-cta:visited, .svq-band a.svq-ban
 .space-y-20 .rounded-2xl.overflow-hidden.shadow-lg img { height: 100%; object-fit: cover; }
 
 .space-y-20 .rounded-2xl.overflow-hidden.shadow-lg img { object-position: center 25%; }
+
+/* â”€â”€ Scroll reveal: less travel, slower curve â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.scroll-reveal { opacity: 0; transform: translateY(16px);
+  transition: opacity .75s cubic-bezier(.16,.84,.28,1), transform .75s cubic-bezier(.16,.84,.28,1); }
+.scroll-reveal.active { opacity: 1; transform: none; }
+
+/* children of a revealed section arrive one after another */
+.scroll-reveal.stagger > * { opacity: 0; transform: translateY(14px);
+  transition: opacity .7s cubic-bezier(.16,.84,.28,1), transform .7s cubic-bezier(.16,.84,.28,1); }
+.scroll-reveal.stagger.active > * { opacity: 1; transform: none; }
+.scroll-reveal.stagger.active > *:nth-child(1) { transition-delay: .00s }
+.scroll-reveal.stagger.active > *:nth-child(2) { transition-delay: .07s }
+.scroll-reveal.stagger.active > *:nth-child(3) { transition-delay: .14s }
+.scroll-reveal.stagger.active > *:nth-child(4) { transition-delay: .21s }
+.scroll-reveal.stagger.active > *:nth-child(5) { transition-delay: .28s }
+.scroll-reveal.stagger.active > *:nth-child(6) { transition-delay: .35s }
+.scroll-reveal.stagger.active > *:nth-child(7) { transition-delay: .42s }
+.scroll-reveal.stagger.active > *:nth-child(8) { transition-delay: .49s }
+
+/* parallax drift on section imagery */
+.px-drift { will-change: transform; }
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal, .scroll-reveal.stagger > * { transition: none !important; transform: none !important; opacity: 1 !important; }
+  .px-drift { transform: none !important; }
+}
