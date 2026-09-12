@@ -249,24 +249,30 @@ CLIENTS = [
 ]
 
 SECTORS = [
-    ("assets/img/svc-lab.jpg", "fa-industry", "Industrial",
+    ("assets/img/sector-industrial.webp", "fa-industry", "Industrial",
      "Factories &amp; Manufacturing",
-     "Manufacturing carries the heaviest environmental obligations in the Kingdom — and the most expensive consequences for getting them wrong."),
-    ("assets/img/svc-soil.jpg", "fa-tools", "Light industry",
+     "The heaviest environmental obligations in the Kingdom, and the most expensive consequences for getting them wrong.",
+     "Permit, EMP, periodic reporting", "service-environmental-permit.html"),
+    ("assets/img/sector-light-industry.webp", "fa-tools", "Light industry",
      "Workshops &amp; Garages",
-     "Small premises, real obligations. Most workshop owners only discover the requirement when a licence renewal gets blocked."),
-    ("assets/img/svc-noise.jpg", "fa-hospital", "Healthcare",
+     "Small premises, real obligations. Most owners find out when a licence renewal is blocked.",
+     "Simplified permit track", "service-environmental-permit.html"),
+    ("assets/img/sector-healthcare.webp", "fa-hospital", "Healthcare",
      "Healthcare &amp; Veterinary",
-     "Medical waste carries the strictest handling rules in the Kingdom — and clinics are inspected against them from the day they open."),
-    ("assets/img/svc-field.jpg", "fa-hard-hat", "Infrastructure",
+     "Medical waste carries the strictest handling rules, enforced from the day a clinic opens.",
+     "MWAN waste permit, manifests", "service-waste-management-permit.html"),
+    ("assets/img/sector-infrastructure.webp", "fa-hard-hat", "Infrastructure",
      "Construction &amp; Infrastructure",
-     "Impacts are temporary but intense, and enforcement happens on the ground — where the site team either follows the plan or does not."),
-    ("assets/img/spec-marine.jpg", "fa-store", "Commercial",
+     "Impacts are temporary but intense, and enforcement happens on the ground.",
+     "CEMP, dust and noise monitoring", "service-environmental-management-plan.html"),
+    ("assets/img/sector-commercial.webp", "fa-store", "Commercial",
      "Commercial &amp; Retail",
-     "Retail and service premises sit on the simplified track — but the permit is still a condition of your commercial licence."),
-    ("assets/img/spec-ecology.jpg", "fa-mountain", "Extraction",
+     "The simplified track still ties the permit to your commercial licence.",
+     "Simplified permit, waste contract", "service-environmental-permit.html"),
+    ("assets/img/sector-extraction.webp", "fa-mountain", "Extraction",
      "Quarries &amp; Mining Sites",
-     "Extraction sites commit to a rehabilitation obligation years before it comes due — and it does not lapse."),
+     "Rehabilitation is committed to years before it comes due, and does not lapse.",
+     "EIA, rehabilitation plan", "service-treatment-rehabilitation.html"),
 ]
 
 
@@ -278,6 +284,6 @@ def home():
         f"""      <div class="logo-item"><img src="assets/brand/client-{slug}.png" alt="{name}" loading="lazy" /></div>\n"""
         for slug, name in CLIENTS) * 2
     sect = "".join(
-        f"""      <a href="services.html" class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer block"><img src="{img}" alt="{title}" class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500" /><div class="absolute inset-0 opacity-90" style="background:linear-gradient(to top,#0b2f38 0%,rgba(11, 47, 56,.5) 50%,transparent 100%);"></div><div class="absolute bottom-0 left-0 right-0 p-6 text-white"><div class="flex items-center space-x-2 mb-2"><i class="fas {icon} text-bp-sage"></i><span class="text-sm font-medium text-bp-sage">{cat}</span></div><h3 class="text-xl font-bold mb-2">{title}</h3><p class="text-sm text-gray-300">{desc}</p></div></a>\n"""
-        for img, icon, cat, title, desc in SECTORS)
+        f"""      <a href="{href}" class="sect-card"><span class="sect-img" style="background-image:url(\'{img}\')"></span><span class="sect-scrim"></span><span class="sect-shine"></span><span class="sect-edge"></span><span class="sect-tag">{cat}</span><span class="sect-body"><span class="sect-t"><i class="fas {icon}"></i>{title}</span><span class="sect-d">{desc}</span><span class="sect-rev"><span class="sect-obl"><b>Typically</b>{obl}</span><span class="sect-go">See the service <i class="fas fa-arrow-right"></i></span></span></span></a>\n"""
+        for img, icon, cat, title, desc, obl, href in SECTORS)
     return HOME.replace("PROCESS_CARDS", proc).replace("SECTOR_CARDS", sect).replace("CLIENT_LOGOS", clients)
