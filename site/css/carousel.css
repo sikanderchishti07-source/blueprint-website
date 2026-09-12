@@ -30,9 +30,14 @@
   box-shadow:0 26px 60px -24px rgba(11,47,56,.55);
   transition:transform .72s var(--ease,cubic-bezier(.4,0,.2,1)),opacity .6s ease,box-shadow .6s ease;
   will-change:transform,opacity}
-.car-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.car-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  image-rendering:auto;backface-visibility:hidden;transform:translateZ(0)}
 .car-veil{position:absolute;inset:0;
   background:linear-gradient(to top,rgba(11,47,56,.94) 4%,rgba(11,47,56,.5) 42%,rgba(11,47,56,.06) 78%)}
+/* side cards recede through a light scrim, not by going transparent */
+.car-card::after{content:'';position:absolute;inset:0;pointer-events:none;
+  background:rgba(226,239,244,.34);transition:opacity .6s ease;opacity:1;z-index:1}
+.car-card.act::after,.car-card.hov::after{opacity:0}
 .car-body{position:absolute;left:0;right:0;bottom:0;padding:0 20px 22px;color:#fff}
 .car-ic{width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.5);
   display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:.95rem}

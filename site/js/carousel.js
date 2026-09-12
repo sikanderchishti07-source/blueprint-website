@@ -75,7 +75,7 @@
       s.el.style.transform =
         'translateX(' + x + 'px) translateZ(' + (lift ? z + 90 : z) + 'px) ' +
         'rotateY(' + (lift ? rot * 0.45 : rot) + 'deg) scale(' + (lift ? Math.min(1, sc + .09) : sc) + ')';
-      s.el.style.opacity = a > 3.5 ? 0 : (lift ? 1 : Math.max(.62, 1 - a * .10));
+      s.el.style.opacity = a > 3.5 ? 0 : (lift ? 1 : Math.max(.88, 1 - a * .045));
       s.el.style.zIndex = String(lift ? 25 : 30 - Math.round(a));
       s.el.style.pointerEvents = a > 3.5 ? 'none' : 'auto';
       s.el.classList.toggle('hov', lift);
