@@ -4,27 +4,31 @@ module.exports = async (req, res) => {
   const clientSecret = process.env.OAUTH_CLIENT_SECRET;
   const code = (req.query && req.query.code) || '';
 
-  const finish = (status, payload) => {
+  const reply = (status, payload) => {
+    const message = 'authorization:github:' + status + ':' + JSON.stringify(payload);
     const body =
-      '<!doctype html><html><body><script>' +
+      '<!doctype html><html><body><p>Signing you in...</p><script>' +
       '(function(){' +
-      'function post(){window.opener&&window.opener.postMessage(' +
-      JSON.stringify('authorization:github:' + status + ':' + JSON.stringify(payload)) +
-      ',"*");}' +
-      'window.addEventListener("message",post,{once:true});' +
-      'post();' +
+      'var msg=' + JSON.stringify(message) + ';' +
+      'function receive(e){' +
+      'window.removeEventListener("message",receive,false);' +
+      'window.opener.postMessage(msg, e.origin || "*");' +
+      'setTimeout(function(){window.close();},600);' +
+      '}' +
+      'window.addEventListener("message",receive,false);' +
+      'window.opener.postMessage("authorizing:github","*");' +
       '})();' +
-      '</script><p>You can close this window.</p></body></html>';
+      '</script></body></html>';
     res.setHeader('Content-Type', 'text/html');
     res.status(200).send(body);
   };
 
   if (!clientId || !clientSecret) {
-    finish('error', { message: 'OAuth environment variables are missing on Vercel.' });
+    reply('error', { message: 'OAuth environment variables are missing on Vercel.' });
     return;
   }
   if (!code) {
-    finish('error', { message: 'GitHub did not return a code.' });
+    reply('error', { message: 'GitHub did not return a code.' });
     return;
   }
 
@@ -36,11 +40,11 @@ module.exports = async (req, res) => {
     });
     const data = await r.json();
     if (data.error || !data.access_token) {
-      finish('error', { message: data.error_description || 'GitHub refused the token request.' });
+      reply('error', { message: data.error_description || 'GitHub refused the token request.' });
       return;
     }
-    finish('success', { token: data.access_token, provider: 'github' });
+    reply('success', { token: data.access_token, provider: 'github' });
   } catch (e) {
-    finish('error', { message: String(e) });
+    reply('error', { message: String(e) });
   }
 };
