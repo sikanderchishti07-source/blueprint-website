@@ -77,3 +77,5 @@
   .itrack{grid-template-columns:1fr}.icard:nth-child(n+3){display:flex}
   .ifoot{flex-direction:column;align-items:flex-start}
 }
+
+.icard:hover { box-shadow: none; }

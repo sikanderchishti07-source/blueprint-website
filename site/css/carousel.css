@@ -91,3 +91,9 @@
 @media(prefers-reduced-motion:reduce){
   .car-card{transition:none}
 }
+
+.car-card::after { background: rgba(226,239,244,.16); }
+
+.car-card .car-body::before, .car-card::before { background: linear-gradient(to top, rgba(11,47,56,.88) 2%, rgba(11,47,56,.34) 34%, rgba(11,47,56,0) 62%); }
+
+.car-veil { background: linear-gradient(to top, rgba(11,47,56,.9) 2%, rgba(11,47,56,.3) 32%, rgba(11,47,56,0) 60%); }
