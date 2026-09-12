@@ -1454,3 +1454,127 @@
   text-shadow: none;
   filter: none;
 }
+
+/* â”€â”€ Carousel service pages â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.svq-hero { position: relative; padding: 132px 0 56px; color: #fff; overflow: hidden; background: var(--bp-blue-ink); }
+.svq-hero-img { position: absolute; inset: 0; background-size: cover; background-position: center; }
+.svq-hero-scrim { position: absolute; inset: 0; background: linear-gradient(100deg, rgba(11,47,56,.95) 0%, rgba(11,47,56,.86) 46%, rgba(11,47,56,.55) 100%); }
+.svq-eyebrow { font-size: .7rem; letter-spacing: .22em; text-transform: uppercase; color: var(--bp-sage); font-weight: 600; margin-bottom: 14px; }
+.svq-h1 { font-family: var(--bp-display, inherit); font-size: clamp(1.9rem, 4vw, 3rem); font-weight: 800; line-height: 1.15; letter-spacing: -.02em; margin: 0; }
+.svq-lede { max-width: 46ch; margin: 18px 0 0; padding-left: 16px; border-left: 2px solid var(--bp-sage); color: rgba(255,255,255,.82); line-height: 1.75; font-size: .95rem; }
+.svq-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+.svq-chip { font-size: .74rem; color: #d6ece2; border: 1px solid rgba(255,255,255,.24); border-radius: 22px; padding: 6px 14px; }
+
+.svq-grid { display: grid; grid-template-columns: 1.55fr 1fr; gap: 40px; align-items: start; }
+.svq-feats { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 18px; }
+.svq-f { display: flex; gap: 10px; align-items: flex-start; font-size: .86rem; line-height: 1.5; color: #4b5563; }
+.svq-f i { color: var(--bp-primary); font-size: .95rem; margin-top: 3px; flex: 0 0 auto; }
+.svq-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 26px; }
+.svq-step { background: var(--bp-blue-tint); border-radius: 12px; padding: 13px 14px; }
+.svq-step b { display: block; font-size: .8rem; font-weight: 700; color: var(--bp-ink); margin-bottom: 4px; }
+.svq-step span { font-size: .76rem; line-height: 1.5; color: #6b7280; }
+
+.svq-side { background: var(--bp-blue-tint); border-radius: 18px; padding: 26px 24px; }
+.svq-side-ic { color: var(--bp-primary); font-size: 1.4rem; }
+.svq-side h3 { font-weight: 700; color: var(--bp-ink); font-size: 1.15rem; margin: 12px 0 8px; }
+.svq-side p { font-size: .84rem; line-height: 1.65; color: #5b6670; margin-bottom: 16px; }
+.svq-std { display: flex; gap: 10px; align-items: flex-start; font-size: .84rem; color: #4b5563; padding: 10px 0; border-top: 1px solid rgba(11,47,56,.09); }
+.svq-std i { color: var(--bp-primary); font-size: .8rem; margin-top: 4px; flex: 0 0 auto; }
+.svq-btn { display: inline-block; margin-top: 18px; background: var(--bp-ink); color: #fff; font-weight: 700; font-size: .84rem; padding: 11px 20px; border-radius: 11px; }
+.svq-btn:hover { opacity: .92; }
+
+.svq-req { background: #fff; border: 1px solid var(--bp-border); border-radius: 16px; padding: 6px 22px; }
+.svq-row { display: flex; gap: 18px; padding: 15px 0; border-top: 1px solid var(--bp-border); font-size: .88rem; line-height: 1.65; }
+.svq-row:first-child { border-top: 0; }
+.svq-row b { flex: 0 0 150px; font-weight: 700; color: var(--bp-ink); }
+.svq-row span { color: #5b6670; }
+.svq-confirm { display: inline-flex; align-items: center; gap: 5px; margin-left: 8px; font-size: .72rem; color: #9a6b00; background: #fdf3d8; border-radius: 20px; padding: 2px 9px; white-space: nowrap; }
+
+.svq-rels { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.svq-rel { background: #fff; border: 1px solid var(--bp-border); border-radius: 14px; overflow: hidden; display: block; transition: border-color .25s ease; }
+.svq-rel:hover { border-color: var(--bp-primary); }
+.svq-rel-img { display: block; height: 84px; background-size: cover; background-position: center; }
+.svq-rel-t { display: block; padding: 12px 14px; font-size: .84rem; font-weight: 700; color: var(--bp-ink); line-height: 1.35; }
+
+.svq-cta { background: var(--bp-blue-ink); color: #fff; padding: 42px 0; }
+.svq-cta-in { display: flex; align-items: center; justify-content: space-between; gap: 26px; flex-wrap: wrap; }
+.svq-cta h2 { font-size: 1.5rem; font-weight: 800; margin: 0 0 6px; }
+.svq-cta p { color: rgba(255,255,255,.7); font-size: .9rem; margin: 0; }
+.svq-cta-btn { background: var(--bp-sage); color: var(--bp-ink); font-weight: 700; font-size: .9rem; padding: 13px 24px; border-radius: 12px; white-space: nowrap; }
+.svq-cta-btn:hover { opacity: .9; }
+
+@media (max-width: 900px) {
+  .svq-grid { grid-template-columns: 1fr; gap: 28px; }
+  .svq-steps { grid-template-columns: 1fr 1fr; }
+  .svq-rels { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .svq-hero { padding: 108px 0 40px; }
+  .svq-feats { grid-template-columns: 1fr; }
+  .svq-row { flex-direction: column; gap: 4px; }
+  .svq-row b { flex: none; }
+}
+
+/* â”€â”€ Carousel service pages: button fix and added sections â”€â”€â”€â”€ */
+a.svq-btn, a.svq-btn:link, a.svq-btn:visited {
+  display: inline-block; background: #0b2f38; color: #ffffff !important;
+  font-weight: 700; font-size: .84rem; padding: 11px 20px; border-radius: 11px;
+  text-decoration: none; opacity: 1;
+}
+a.svq-btn:hover { background: #093b46; color: #ffffff !important; }
+a.svq-cta-btn, a.svq-cta-btn:link, a.svq-cta-btn:visited {
+  background: var(--bp-sage); color: #0b2f38 !important; text-decoration: none;
+}
+
+.svq-band { position: relative; padding: 84px 0; overflow: hidden; }
+.svq-band-img { position: absolute; inset: 0; background-size: cover; background-position: center; }
+.svq-band-scrim { position: absolute; inset: 0; background: rgba(11,47,56,.82); }
+.svq-band-q { position: relative; color: #fff; font-size: clamp(1.15rem, 2.4vw, 1.7rem); font-weight: 700; line-height: 1.45; letter-spacing: -.01em; margin: 0 0 22px; }
+a.svq-band-cta, a.svq-band-cta:link, a.svq-band-cta:visited {
+  display: inline-flex; align-items: center; gap: 9px; background: var(--bp-sage);
+  color: #0b2f38 !important; font-weight: 700; font-size: .86rem; padding: 12px 22px;
+  border-radius: 12px; text-decoration: none;
+}
+
+.svq-whos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.svq-who { background: var(--bp-blue-tint); border-radius: 16px; padding: 22px 22px 24px; }
+.svq-who h3 { font-weight: 700; color: var(--bp-ink); font-size: 1rem; margin-bottom: 8px; }
+.svq-who p { font-size: .86rem; line-height: 1.7; color: #5b6670; margin: 0; }
+
+.svq-faq { border-bottom: 1px solid var(--bp-border); }
+.svq-faq summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 0; font-weight: 700; color: var(--bp-ink); font-size: .95rem; }
+.svq-faq summary::-webkit-details-marker { display: none; }
+.svq-faq summary i { color: var(--bp-primary); font-size: .8rem; transition: transform .25s ease; flex: 0 0 auto; }
+.svq-faq[open] summary i { transform: rotate(45deg); }
+.svq-faq-a { padding: 0 0 20px; color: #5b6670; font-size: .88rem; line-height: 1.75; }
+
+@media (max-width: 900px) { .svq-whos { grid-template-columns: 1fr; } }
+
+/* â”€â”€ Carousel service pages: density pass â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.svq-two { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: start; }
+.svq-approach { background: #fff; border: 1px solid var(--bp-border); border-radius: 16px; padding: 26px 26px 28px; }
+.svq-whos { display: grid; grid-template-columns: 1fr; gap: 12px; }
+.svq-who { padding: 18px 20px; }
+.svq-who h3 { font-size: .95rem; margin-bottom: 6px; }
+.svq-who p { font-size: .84rem; line-height: 1.6; }
+.svq-req { padding: 4px 20px; }
+.svq-row { padding: 13px 0; font-size: .85rem; }
+.svq-row b { flex: 0 0 132px; }
+
+.svq-band { padding: 62px 0; }
+a.svq-band-cta, a.svq-band-cta:link, a.svq-band-cta:visited, .svq-band a.svq-band-cta {
+  background: #9ec8a8; color: #0b2f38 !important; border-radius: 12px;
+  padding: 12px 22px; font-weight: 700; text-decoration: none; display: inline-flex;
+  align-items: center; gap: 9px;
+}
+.svq-band a.svq-band-cta:hover { background: #b0d5b9; }
+
+.svq-hero { padding: 122px 0 48px; }
+.svq-steps { margin-top: 22px; }
+.svq-rels { gap: 12px; }
+.svq-rel-img { height: 96px; }
+.svq-cta { padding: 36px 0; }
+
+@media (max-width: 900px) {
+  .svq-two { grid-template-columns: 1fr; gap: 32px; }
+}

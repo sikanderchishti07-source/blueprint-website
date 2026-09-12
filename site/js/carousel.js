@@ -10,28 +10,28 @@
   const S = [
     {t:'Environmental Studies', i:'fa-seedling',
      d:'In-depth impact assessments and baseline studies that support informed decisions and regulatory approval.',
-     href:'service-environmental-impact-assessment.html', img:'assets/img/svc-card-1.webp'},
+     href:'service-environmental-studies.html', img:'assets/img/svc-card-1.webp'},
     {t:'Marine Environment', i:'fa-water',
      d:'Water quality, sediment, benthic habitat and oceanographic survey for coastal development and discharge.',
-     href:'service-marine-environment.html', img:'assets/img/svc-card-2.webp'},
+     href:'service-marine-environment-services.html', img:'assets/img/svc-card-2.webp'},
     {t:'Terrestrial Environment', i:'fa-leaf',
      d:'Habitat mapping, baseline ecology and protected species assessment across desert and coastal terrain.',
-     href:'service-ecological-surveys.html', img:'assets/img/svc-card-3.webp'},
+     href:'service-terrestrial-environment.html', img:'assets/img/svc-card-3.webp'},
     {t:'Veterinary Consultations &amp; Biosecurity', i:'fa-paw',
      d:'Biosecurity planning and veterinary advisory for operations where animal health and the environment meet.',
-     href:'contact.html', img:'assets/img/svc-card-4.webp'},
+     href:'service-veterinary-biosecurity.html', img:'assets/img/svc-card-4.webp'},
     {t:'Test Boreholes', i:'fa-ruler-vertical',
      d:'Borehole drilling and sampling to establish ground conditions, groundwater and the extent of contamination.',
-     href:'contact.html', img:'assets/img/svc-card-5.webp'},
+     href:'service-test-boreholes.html', img:'assets/img/svc-card-5.webp'},
     {t:'Hydrogeology &amp; Geotechnics', i:'fa-tint',
      d:'Groundwater assessment and geotechnical investigation for development, extraction and remediation.',
-     href:'contact.html', img:'assets/img/svc-card-6.webp'},
+     href:'service-hydrogeology-geotechnics.html', img:'assets/img/svc-card-6.webp'},
     {t:'Treatment &amp; Rehabilitation', i:'fa-recycle',
      d:'Remediation design and rehabilitation of contaminated and disturbed land, validated through to closure.',
-     href:'service-remediation-rehabilitation.html', img:'assets/img/svc-card-7.webp'},
+     href:'service-treatment-rehabilitation.html', img:'assets/img/svc-card-7.webp'},
     {t:'Environmental Training', i:'fa-graduation-cap',
      d:'Practical training for site teams on monitoring, permit conditions and environmental record-keeping.',
-     href:'contact.html', img:'assets/img/svc-card-8.webp'}
+     href:'service-environmental-training.html', img:'assets/img/svc-card-8.webp'}
   ];
 
   const dots = document.getElementById('carDots');

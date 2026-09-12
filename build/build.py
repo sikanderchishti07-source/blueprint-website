@@ -1,4 +1,4 @@
-import os, partials as P, pages as G, pages_extra as X, arabic as AR, content as C, careers as CR, service_pages as SP, svc_permitting as SPP, svc_monitoring as SPM, svc_specialist as SPS, svc_caps as SPC
+import os, partials as P, pages as G, pages_extra as X, arabic as AR, content as C, careers as CR, service_pages as SP, svc_cards as SVQ, svc_permitting as SPP, svc_monitoring as SPM, svc_specialist as SPS, svc_caps as SPC
 OUT = os.path.join(os.path.dirname(__file__), '..', 'site')
 PAGES = {
   'index.html':      ('Environmental Consultancy in Saudi Arabia | BluePrint', 'Accredited Saudi environmental consultancy delivering environmental studies, MWAN permitting, impact assessments, and compliance solutions aligned with KSA regulations.', G.home(), ('js/cards.js', 'js/cover.js', 'js/carousel.js')),
@@ -36,6 +36,14 @@ for _slug, _s in ALL_SERVICES.items():
     PAGES['service-%s.html' % _slug] = (
         _s['title'].replace('&amp;', '&') + ' | BluePrint Environmental Services',
         _s['meta'], SP.service_page(_s, G.page_header, _rel), ())
+
+
+# carousel service pages
+for _k, _c in SVQ.CARDS.items():
+    _rel = [o for kk, o in SVQ.CARDS.items() if kk != _k][:4]
+    PAGES['service-%s.html' % _c['slug']] = (
+        _c['title'].replace('&amp;', '&') + ' | BluePrint Environmental Services',
+        _c['meta'], SVQ.card_page(_c, _rel), ())
 
 _roles = C.load_careers()
 PAGES['careers.html'] = ('Careers | BluePrint Environmental Services',
