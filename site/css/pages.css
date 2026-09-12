@@ -1578,3 +1578,38 @@ a.svq-band-cta, a.svq-band-cta:link, a.svq-band-cta:visited, .svq-band a.svq-ban
 @media (max-width: 900px) {
   .svq-two { grid-template-columns: 1fr; gap: 32px; }
 }
+
+/* â”€â”€ Accreditations: dark panel + logo cards â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.acr-split { display: grid; grid-template-columns: .82fr 1.55fr; gap: 18px; align-items: stretch; }
+.acr-panel { background: var(--bp-blue-ink); border-radius: 18px; padding: 30px 26px; display: flex; flex-direction: column; color: #fff; }
+.acr-kick { font-size: .68rem; letter-spacing: .22em; text-transform: uppercase; color: var(--bp-sage); font-weight: 600; margin-bottom: 14px; }
+.acr-panel h2 { font-size: 1.5rem; font-weight: 800; line-height: 1.25; margin: 0 0 12px; letter-spacing: -.01em; }
+.acr-panel p { font-size: .86rem; line-height: 1.75; color: rgba(255,255,255,.72); margin: 0; }
+.acr-big { margin-top: auto; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.16); }
+.acr-big b { display: block; font-size: 2.1rem; font-weight: 800; line-height: 1; }
+.acr-big span { font-size: .78rem; color: rgba(255,255,255,.7); }
+
+.acr-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.acr-card { background: #fff; border: 1px solid var(--bp-border); border-radius: 16px; padding: 20px 16px 18px; text-align: center; display: flex; flex-direction: column; align-items: center; transition: border-color .25s ease, box-shadow .25s ease; }
+.acr-card:hover { border-color: var(--bp-primary); box-shadow: 0 10px 26px -18px rgba(11,47,56,.5); }
+.acr-card img { height: 56px; width: auto; max-width: 130px; object-fit: contain; margin-bottom: 14px; }
+.acr-card b { font-size: .82rem; font-weight: 700; color: var(--bp-ink); line-height: 1.35; margin-bottom: 4px; }
+.acr-card span { font-size: .72rem; line-height: 1.45; color: #6b7280; }
+
+@media (max-width: 1000px) {
+  .acr-split { grid-template-columns: 1fr; }
+  .acr-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 640px) {
+  .acr-grid { grid-template-columns: 1fr 1fr; }
+  .acr-card img { height: 46px; }
+}
+
+.acr-card img { height: 72px; max-width: 168px; }
+.acr-card { padding: 24px 16px 20px; }
+
+.acr-card { border-top: 2px solid var(--bp-primary); }
+.acr-card:hover { border-top-color: var(--bp-olive); }
+
+.acr-card { border: 1px solid #9CC4DF; border-top: 1px solid #9CC4DF; }
+.acr-card:hover { border-color: var(--bp-primary); }
