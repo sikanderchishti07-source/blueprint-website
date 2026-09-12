@@ -119,33 +119,17 @@ HOME = """
 """ + insights(_C.load_blog()) + """
 
 <!-- HOW WE WORK -->
-<section id="process" class="py-28 text-white relative overflow-hidden" style="background:var(--bp-blue-ink);">
-  <div class="absolute inset-0 opacity-10" aria-hidden="true">
-    <div class="absolute top-0 left-0 w-96 h-96 bg-bp-primary rounded-full blur-3xl"></div>
-    <div class="absolute bottom-0 right-0 w-96 h-96 bg-bp-olive rounded-full blur-3xl"></div>
-  </div>
+<section id="process" class="py-28 text-white relative" style="background:var(--bp-blue-ink);">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    <div class="text-center mb-16 scroll-reveal">
-      <div class="inline-block px-4 py-2 bg-white/10 rounded-full text-bp-sage font-semibold text-sm mb-4 backdrop-blur-sm">How we work</div>
+    <div class="text-center mb-20 scroll-reveal">
+      <div class="text-xs uppercase text-bp-sage font-semibold mb-4" style="letter-spacing:.22em;">How we work</div>
       <h2 class="text-4xl lg:text-5xl font-bold mb-5 tracking-tight">Compliance without the guesswork</h2>
-      <p class="text-gray-300 text-base max-w-xl mx-auto leading-relaxed">Four stages, from the first site visit through to reporting that keeps you compliant cycle after cycle</p>
+      <p class="text-gray-300 text-base max-w-2xl mx-auto leading-relaxed">A systematic workflow from the first site visit through to reporting that keeps you compliant cycle after cycle</p>
     </div>
     <div class="relative">
-      <div class="hidden md:block absolute top-1/2 left-0 right-0 h-1 process-line rounded-full transform -translate-y-1/2"></div>
-      <div class="grid md:grid-cols-4 gap-8">
+      <div class="hidden lg:block absolute left-0 right-0 h-px bg-white/15" style="top:11.5rem;"></div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
 PROCESS_CARDS      </div>
-    </div>
-    <div class="mt-20 bg-white/5 rounded-3xl p-8 backdrop-blur-sm border border-white/10 scroll-reveal">
-      <h3 class="text-2xl font-bold mb-8 text-center">From first visit to final report</h3>
-      <div class="flex flex-wrap justify-center gap-4">
-        <div class="flex items-center space-x-2 bg-white/10 px-6 py-3 rounded-full"><i class="fas fa-map-marked-alt text-bp-sage"></i><span>Site assessment</span></div>
-        <i class="fas fa-arrow-right text-bp-sage self-center hidden md:block"></i>
-        <div class="flex items-center space-x-2 bg-white/10 px-6 py-3 rounded-full"><i class="fas fa-drafting-compass text-bp-sage"></i><span>Regulatory planning</span></div>
-        <i class="fas fa-arrow-right text-bp-sage self-center hidden md:block"></i>
-        <div class="flex items-center space-x-2 bg-white/10 px-6 py-3 rounded-full"><i class="fas fa-hard-hat text-bp-sage"></i><span>Execution &amp; monitoring</span></div>
-        <i class="fas fa-arrow-right text-bp-sage self-center hidden md:block"></i>
-        <div class="flex items-center space-x-2 bg-bp-sage text-bp-ink px-6 py-3 rounded-full font-bold"><i class="fas fa-file-contract"></i><span>Reporting &amp; improvement</span></div>
-      </div>
     </div>
   </div>
 </section>
@@ -223,14 +207,16 @@ SECTOR_CARDS    </div>
 """
 
 PROCESS = [
-    (1, "assets/img/svc-permit.jpg", "Assess",
-     "We evaluate your facility, map obligations, and pinpoint every compliance gap."),
-    (2, "assets/img/svc-waste.jpg", "Plan",
-     "A tailored strategy with studies, timelines, and the exact permits your activity requires."),
-    (3, "assets/img/svc-air.jpg", "Submit",
-     "We prepare, file, and coordinate directly with regulators to expedite approval."),
-    (4, "assets/img/svc-water.jpg", "Sustain",
-     "Ongoing reporting and register upkeep keep you compliant, cycle after cycle."),
+    (1, "assets/img/svc-permit.jpg", "Project scoping",
+     "Site visit and regulatory review, then a written scope agreed before any fieldwork begins."),
+    (2, "assets/img/svc-field.jpg", "Site assessment",
+     "Field reconnaissance, existing conditions, and the receptor locations that apply to your activity."),
+    (3, "assets/img/svc-sampling.jpg", "Field measurement",
+     "Sampling and monitoring carried out to the standard your permit requires."),
+    (4, "assets/img/svc-lab.jpg", "Laboratory analysis",
+     "Analysis and data validation against the applicable limit values."),
+    (5, "assets/img/svc-reporting.jpg", "Reporting",
+     "A submission-ready report, then register upkeep that keeps you compliant cycle after cycle."),
 ]
 
 SECTORS = [
@@ -257,7 +243,7 @@ SECTORS = [
 
 def home():
     proc = "".join(
-        f"""        <div class="relative scroll-reveal group"><div class="w-20 h-20 mx-auto bg-white rounded-2xl flex items-center justify-center text-3xl font-bold text-bp-ink shadow-xl relative z-20 transform group-hover:scale-110 group-hover:rotate-3 transition-all">0{n}</div><div class="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/20 hover:bg-white/20 transition-all" style="margin-top:-2.5rem"><div style="height:2.5rem"></div><img src="{img}" alt="{t}" class="w-full h-36 object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" onerror="this.style.display='none'" /><div class="p-6"><h4 class="font-bold text-lg mb-2 text-bp-sage">{t}</h4><p class="text-sm text-gray-300">{d}</p></div></div></div>\n"""
+        f"""        <div class="relative scroll-reveal group"><div class="w-14 h-14 ml-6 bg-white rounded-xl flex items-center justify-center text-xl font-bold text-bp-ink relative z-20">{n}</div><div class="bg-white/5 rounded-2xl overflow-hidden border border-white/10 group-hover:border-white/30 transition-colors duration-300" style="margin-top:-1.75rem"><div style="height:1.75rem"></div><img src="{img}" alt="{t}" loading="lazy" class="w-full h-32 object-cover opacity-85 group-hover:opacity-100 transition-opacity duration-500" onerror="this.style.display='none'" /><div class="p-6"><h4 class="font-bold text-base mb-2 text-bp-sage">{t}</h4><p class="text-sm leading-relaxed text-gray-300">{d}</p></div></div></div>\n"""
         for n, img, t, d in PROCESS)
     sect = "".join(
         f"""      <a href="services.html" class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer block"><img src="{img}" alt="{title}" class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500" /><div class="absolute inset-0 opacity-90" style="background:linear-gradient(to top,#0b2f38 0%,rgba(11, 47, 56,.5) 50%,transparent 100%);"></div><div class="absolute bottom-0 left-0 right-0 p-6 text-white"><div class="flex items-center space-x-2 mb-2"><i class="fas {icon} text-bp-sage"></i><span class="text-sm font-medium text-bp-sage">{cat}</span></div><h3 class="text-xl font-bold mb-2">{title}</h3><p class="text-sm text-gray-300">{desc}</p></div></a>\n"""
