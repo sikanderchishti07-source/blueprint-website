@@ -1,5 +1,7 @@
 from cover_markup import COVER
 from carousel_markup import CAROUSEL
+from insights import insights
+import content as _C
 
 HOME = """
 """ + COVER + """
@@ -202,6 +204,8 @@ PROCESS_CARDS      </div>
 
   </div>
 </section>
+
+""" + insights(_C.load_blog()) + """
 
 <!-- SECTORS -->
 <section id="sectors" class="py-28" style="background:var(--bp-page);">
