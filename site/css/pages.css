@@ -1670,3 +1670,21 @@ a.svq-band-cta, a.svq-band-cta:link, a.svq-band-cta:visited, .svq-band a.svq-ban
 .sect-d { font-size: .76rem; line-height: 1.5; }
 .sect-body { padding: 13px 15px 15px; }
 @media (min-width: 1024px) { .sect-card { height: 30vh; min-height: 195px; max-height: 260px; } }
+
+/* â”€â”€ Blog category filters and update tags â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.blog-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 26px; }
+.blogf { font-size: .78rem; font-weight: 600; padding: 7px 15px; border: 1px solid var(--bp-border);
+  border-radius: 22px; background: #fff; color: #6b7280; cursor: pointer; font-family: inherit;
+  transition: border-color .2s ease, color .2s ease, background .2s ease; }
+.blogf:hover { border-color: var(--bp-primary); color: var(--bp-ink); }
+.blogf.on { background: var(--bp-ink); border-color: var(--bp-ink); color: #fff; }
+
+.blog-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+.blog-tags:empty { display: none; }
+.blog-tag { font-size: .6rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  border-radius: 20px; padding: 3px 10px; }
+.t-upd { background: var(--bp-blue-tint); color: var(--bp-blue-deep); }
+.t-act { background: #fdf3d8; color: #8a5d00; }
+
+.news-card.is-update { border-top: 2px solid var(--bp-primary); }
+.blog-empty { display: none; text-align: center; color: #9aa4a8; font-size: .88rem; padding: 40px 0 10px; }

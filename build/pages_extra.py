@@ -44,29 +44,55 @@ def blog(page_header, ARTICLES=None):
     ARTICLES = ARTICLES or list(reversed(_C.load_blog()))
     feat = ARTICLES[-1]
     rest = list(reversed(ARTICLES[:-1]))
-    cards = "".join(f"""
-      <article class="news-card">
+
+    def _is_update(a):
+        return str(a.get('type', '')).lower() == 'update' or 'update' in str(a.get('cat', '')).lower()
+
+    def _slugcat(c):
+        return ''.join(ch.lower() if ch.isalnum() else '-' for ch in str(c)).strip('-')
+
+    cats, seen = [], set()
+    for a in ARTICLES:
+        c = a.get('cat', 'Insight')
+        if c not in seen:
+            seen.add(c)
+            cats.append(c)
+    filters = '<button type="button" class="blogf on" data-c="all">All</button>' + "".join(
+        f'''<button type="button" class="blogf" data-c="{_slugcat(c)}">{c}</button>''' for c in cats)
+
+    def _badges(a):
+        b = ''
+        if _is_update(a):
+            b += '<span class="blog-tag t-upd">Regulatory update</span>'
+        if str(a.get('action', '')).lower() in ('true', 'yes', '1'):
+            b += '<span class="blog-tag t-act">Action required</span>'
+        return b
+
+    cards = "".join(f'''
+      <article class="news-card{" is-update" if _is_update(a) else ""}" data-c="{_slugcat(a.get('cat','Insight'))}">
         <a href="blog-{a['slug']}.html" class="card-img-wrap block">
           <img src="{a['img']}?w=800&h=450&fit=crop&q=80" alt="{a['title']}" loading="lazy" onerror="this.onerror=null;this.src='{a['fb']}?w=800&h=450&fit=crop'" />
           <div class="card-img-overlay"></div>
           <span class="card-badge" style="background:rgba(14, 147, 168,.14);color:var(--bp-blue-deep);">{a['cat']}</span>
         </a>
         <div class="card-body">
+          <div class="blog-tags">{_badges(a)}</div>
           <h3 class="card-title"><a href="blog-{a['slug']}.html" style="color:inherit;text-decoration:none;">{a['title']}</a></h3>
           <p class="card-desc">{a['summary']}</p>
           <div class="card-footer">
             <span class="card-time">{a['date']} &middot; {a['read']}</span>
-            <a href="blog-{a['slug']}.html" class="read-more">Read article <i class="fas fa-arrow-right" style="font-size:.65rem;"></i></a>
+            <a href="blog-{a['slug']}.html" class="read-more">Read <i class="fas fa-arrow-right" style="font-size:.65rem;"></i></a>
           </div>
         </div>
-      </article>""" for a in rest)
+      </article>''' for a in rest)
+
     return page_header("The compliance briefing",
-                       "Practical guides and regulatory insights from our consultants &mdash; everything you need to keep your facility ahead of Saudi environmental requirements.",
+                       "Practical guides and regulatory updates from our consultants &mdash; everything you need to keep your facility ahead of Saudi environmental requirements.",
                        "Blog") + f"""
 <section class="py-20" style="background:var(--bp-page);">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-    <a href="blog-{feat['slug']}.html" class="block bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all mb-14 scroll-reveal group" style="text-decoration:none;">
+    <a href="blog-{feat['slug']}.html" class="block bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all mb-10 scroll-reveal group" style="text-decoration:none;">
       <div class="grid md:grid-cols-2 items-stretch">
         <div class="relative h-64 md:h-auto overflow-hidden">
           <img src="{feat['img']}?w=900&h=700&fit=crop&q=80" alt="{feat['title']}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='{feat['fb']}?w=900&h=700&fit=crop'" />
@@ -84,8 +110,11 @@ def blog(page_header, ARTICLES=None):
       </div>
     </a>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 scroll-reveal">{cards}
+    <div class="blog-filters scroll-reveal" id="blogFilters">{filters}</div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 scroll-reveal" id="blogGrid">{cards}
     </div>
+    <p class="blog-empty" id="blogEmpty">Nothing in this category yet.</p>
   </div>
 </section>
 
@@ -99,6 +128,28 @@ def blog(page_header, ARTICLES=None):
     </div>
   </div>
 </section>
+
+<script>
+(function () {{
+  var bar = document.getElementById('blogFilters');
+  if (!bar) return;
+  var cards = document.querySelectorAll('#blogGrid .news-card');
+  var empty = document.getElementById('blogEmpty');
+  bar.addEventListener('click', function (e) {{
+    var b = e.target.closest('.blogf');
+    if (!b) return;
+    bar.querySelectorAll('.blogf').forEach(function (x) {{ x.classList.remove('on'); }});
+    b.classList.add('on');
+    var c = b.dataset.c, shown = 0;
+    cards.forEach(function (card) {{
+      var hit = (c === 'all' || card.dataset.c === c);
+      card.style.display = hit ? '' : 'none';
+      if (hit) shown++;
+    }});
+    empty.style.display = shown ? 'none' : 'block';
+  }});
+}})();
+</script>
 """
 
 
