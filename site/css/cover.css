@@ -185,3 +185,35 @@ h2{font-family:var(--disp);font-size:clamp(1.7rem,3.5vw,2.9rem);font-weight:800;
   .scene{position:relative;opacity:1!important;visibility:visible!important;transform:none!important}
   .kb{animation:none}.par div{opacity:1;transform:none}h1 .w{transform:none}
 }
+
+/* ── Cover scene 1: rule and credential strip ───────────────── */
+.cv-rule { display: block; width: 0; height: 2px; background: var(--bp-sage);
+  margin: 0 0 18px; animation: cv-grow 1s cubic-bezier(.16,.84,.28,1) .25s both; }
+@keyframes cv-grow { to { width: 62px; } }
+
+.cv-cred { display: flex; flex-wrap: wrap; gap: 0 30px; margin-top: 26px; padding-top: 16px;
+  border-top: 1px solid rgba(255,255,255,.2); animation: cv-fade .9s ease .5s both; }
+@keyframes cv-fade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.cv-cred div { padding: 4px 0; }
+.cv-cred b { display: block; color: #fff; font-size: .92rem; font-weight: 800; letter-spacing: .01em; line-height: 1.25; }
+.cv-cred span { font-size: .58rem; letter-spacing: .18em; text-transform: uppercase; color: rgba(255,255,255,.5); }
+
+@media (max-width: 700px) {
+  .cv-cred { gap: 0 18px; margin-top: 18px; }
+  .cv-cred b { font-size: .78rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cv-rule { width: 62px; animation: none; }
+  .cv-cred { animation: none; }
+}
+
+.sc-s { background: linear-gradient(100deg, rgba(6,26,28,.88) 0%, rgba(6,26,28,.72) 38%, rgba(6,26,28,.32) 68%, rgba(6,26,28,.12) 100%) !important; }
+.eb { color: rgba(255,255,255,.9) !important; letter-spacing: .16em !important; }
+.lede { color: rgba(255,255,255,.88) !important; }
+
+.sc-s { animation: cv-scrim 9s cubic-bezier(.5,0,.5,1) infinite; }
+@keyframes cv-scrim { 0% { opacity: 1 } 14% { opacity: 1 } 26% { opacity: .28 } 44% { opacity: .28 } 62% { opacity: 1 } 100% { opacity: 1 } }
+@media (prefers-reduced-motion: reduce) { .sc-s { animation: none } }
+
+.sc-s { animation: cv-scrim 4.5s cubic-bezier(.5,0,.5,1) 1 forwards !important; }
+@keyframes cv-scrim { 0%, 40% { opacity: 1 } 100% { opacity: .2 } }
