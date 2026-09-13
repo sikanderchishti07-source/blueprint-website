@@ -1825,3 +1825,11 @@ a.svq-band-cta, a.svq-band-cta:link, a.svq-band-cta:visited, .svq-band a.svq-ban
   .bp-word { height: 17px; }
   .bp-tag  { font-size: 8px; letter-spacing: .14em; margin-top: 5px; }
 }
+
+/* Logo lockup - size correction */
+#navbar .bp-lock { gap: 11px; align-items: center; }
+#navbar .bp-mark { height: 42px !important; width: auto !important; }
+#navbar .bp-word { height: 19px !important; width: auto !important; }
+#navbar .bp-tag  { font-size: 8.5px; letter-spacing: .16em; margin-top: 5px; }
+.drawer-header .bp-mark { height: 34px !important; }
+.drawer-header .bp-word { height: 15px !important; }
