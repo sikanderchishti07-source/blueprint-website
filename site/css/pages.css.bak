@@ -1792,36 +1792,3 @@ a.svq-band-cta, a.svq-band-cta:link, a.svq-band-cta:visited, .svq-band a.svq-ban
 #navbar .nav-logo-wrap img { height: 52px; }
 #navbar .nav-link { font-size: 14.5px; padding: 9px 15px; }
 #navbar.scrolled .nav-inner > div { min-height: 66px; }
-
-/* Logo lockup - mark, wordmark, live tagline */
-.bp-lock { display: flex; align-items: center; gap: 13px; }
-.bp-mark { height: 48px; width: auto; display: block; flex: 0 0 auto; }
-.bp-txt  { display: block; line-height: 1; }
-.bp-word { height: 21px; width: auto; display: block; }
-.bp-tag  {
-  display: block;
-  font-family: var(--font-body, inherit);
-  font-size: 9.5px;
-  font-weight: 600;
-  letter-spacing: .17em;
-  text-transform: uppercase;
-  color: #7c8a90;
-  margin-top: 6px;
-  white-space: nowrap;
-}
-/* the old single-image rule must not size the new pieces */
-.nav-logo-wrap img { height: auto; }
-.nav-logo-wrap:hover .bp-lock { transform: scale(1.02); }
-.bp-lock { transition: transform .25s ease; }
-
-/* mobile drawer header sits in a tighter space */
-.drawer-header .bp-mark { height: 36px; }
-.drawer-header .bp-word { height: 16px; }
-.drawer-header .bp-tag  { font-size: 8px; letter-spacing: .15em; margin-top: 5px; }
-
-@media (max-width: 640px) {
-  .bp-lock { gap: 10px; }
-  .bp-mark { height: 38px; }
-  .bp-word { height: 17px; }
-  .bp-tag  { font-size: 8px; letter-spacing: .14em; margin-top: 5px; }
-}
