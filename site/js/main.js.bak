@@ -89,12 +89,3 @@
   /* â”€â”€ Contact form (front-end only, as in the original) â”€â”€â”€â”€â”€ */
   window.sendContactMessage = function () { alert('Thank you! Our team will contact you shortly.'); };
 })();
-
-
-/* Logo unfurl runs on the home page only */
-(function () {
-  var p = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
-  if (p === '' || p === 'index.html') {
-    document.documentElement.classList.add('bp-home');
-  }
-})();

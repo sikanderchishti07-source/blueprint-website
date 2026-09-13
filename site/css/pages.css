@@ -1860,3 +1860,56 @@ a.svq-band-cta, a.svq-band-cta:link, a.svq-band-cta:visited, .svq-band a.svq-ban
 }
 #navbar.scrolled .bp-tag { color: #fff !important; text-shadow: 0 1px 4px rgba(0,0,0,.6); }
 #navbar.scrolled .nav-link { text-shadow: 0 1px 4px rgba(0,0,0,.5); }
+
+/* Logo - wave unfurl */
+/* the two layers share one box so they stack exactly */
+#navbar .bp-mark,
+.drawer-header .bp-mark {
+  position: relative;
+  display: block;
+  flex: 0 0 auto;
+  width: 35px;
+  height: 42px;
+}
+#navbar .bp-mark img,
+.drawer-header .bp-mark img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.drawer-header .bp-mark { width: 28px; height: 34px; }
+
+/* the unfurl, home page only, once per load */
+.bp-home #navbar .bp-wave {
+  transform-origin: 18% 88%;
+  animation: bpUnfurl 1.5s cubic-bezier(.34, 1.02, .36, 1) .2s both;
+}
+@keyframes bpUnfurl {
+  0%   { transform: scale(.18) rotate(-26deg); opacity: 0; }
+  55%  { opacity: 1; }
+  100% { transform: none; opacity: 1; }
+}
+.bp-home #navbar .bp-b {
+  animation: bpMarkIn .55s ease both;
+}
+@keyframes bpMarkIn {
+  from { opacity: 0; transform: scale(.94); }
+  to   { opacity: 1; transform: none; }
+}
+.bp-home #navbar .bp-txt {
+  animation: bpTextIn .7s cubic-bezier(.2, .7, .3, 1) .95s both;
+}
+@keyframes bpTextIn {
+  from { opacity: 0; transform: translateX(-10px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* visitors who asked their device to stop animations get a still logo */
+@media (prefers-reduced-motion: reduce) {
+  .bp-home #navbar .bp-wave,
+  .bp-home #navbar .bp-b,
+  .bp-home #navbar .bp-txt { animation: none; }
+}

@@ -102,7 +102,7 @@ def nav():
 
 <div id="navMobileDrawer" aria-label="Mobile menu">
   <div class="drawer-header">
-    <a href="index.html"><span class="bp-lock"><img class="bp-mark" src="assets/logo/blueprint-mark.png" alt="" /><span class="bp-txt"><img class="bp-word" src="assets/logo/blueprint-wordmark.png" alt="BluePrint" /><span class="bp-tag">Environmental Services</span></span></span></a>
+    <a href="index.html"><span class="bp-lock"><span class="bp-mark"><img class="bp-b" src="assets/logo/blueprint-b.png" alt="" /><img class="bp-wave" src="assets/logo/blueprint-wave.png" alt="" /></span><span class="bp-txt"><img class="bp-word" src="assets/logo/blueprint-wordmark.png" alt="BluePrint" /><span class="bp-tag">Environmental Services</span></span></span></a>
     <button class="drawer-close" onclick="closeNavDrawer()" aria-label="Close menu"><i class="fas fa-times"></i></button>
   </div>
   <div class="drawer-body">
@@ -146,7 +146,7 @@ def nav():
       <div class="flex items-center justify-between" style="height:64px;gap:16px;">
 
         <a href="index.html" class="nav-logo-wrap js-home-link" aria-label="BluePrint, home">
-          <span class="bp-lock"><img class="bp-mark" src="assets/logo/blueprint-mark.png" alt="" /><span class="bp-txt"><img class="bp-word" src="assets/logo/blueprint-wordmark.png" alt="BluePrint" /><span class="bp-tag">Environmental Services</span></span></span>
+          <span class="bp-lock"><span class="bp-mark"><img class="bp-b" src="assets/logo/blueprint-b.png" alt="" /><img class="bp-wave" src="assets/logo/blueprint-wave.png" alt="" /></span><span class="bp-txt"><img class="bp-word" src="assets/logo/blueprint-wordmark.png" alt="BluePrint" /><span class="bp-tag">Environmental Services</span></span></span>
         </a>
 
         <nav class="nav-links" style="flex:1;justify-content:center;" aria-label="Primary">
