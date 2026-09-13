@@ -10,9 +10,7 @@ PERMITTING["environmental-permit"] = dict(
     tagline="From classification to issuance",
     lede="The NCEC environmental permit that stands between your activity and a valid licence, "
          "classified correctly, filed completely, and carried through review.",
-    hero_img="assets/img/svc-environmental-permit-hero.webp",
-    detail_img="assets/img/svc-environmental-permit-detail.webp",
-    band_img="assets/img/svc-environmental-permit-band.webp",
+    hero_img="assets/img/svc-permit.jpg",
     float_head=("fa-file-signature", "Inside the file"),
     float_rows=[
                 ("3", "Permit categories", "Classification decides the scope"),
