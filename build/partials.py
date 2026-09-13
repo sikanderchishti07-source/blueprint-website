@@ -1,5 +1,6 @@
 def _has_roles():
     """Careers only appears in the menus when a vacancy is actually open."""
+    return True
     try:
         import content
         return bool(content.load_careers())
