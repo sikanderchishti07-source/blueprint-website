@@ -1952,3 +1952,17 @@ a.svq-band-cta, a.svq-band-cta:link, a.svq-band-cta:visited, .svq-band a.svq-ban
     rgba(11,47,56,.18) 62%,
     rgba(11,47,56,.06) 100%) !important;
 }
+/* Service hero - taller band, crop from the top, lighter scrim */
+.svq-hero { padding: 150px 0 108px !important; }
+.svq-hero-img { background-position: 32% 18% !important; }
+.svq-hero-scrim {
+  background: linear-gradient(100deg,
+    rgba(11,47,56,.70) 0%,
+    rgba(11,47,56,.44) 34%,
+    rgba(11,47,56,.14) 62%,
+    rgba(11,47,56,.04) 100%) !important;
+}
+@media (max-width: 900px) {
+  .svq-hero { padding: 120px 0 64px !important; }
+  .svq-hero-img { background-position: 45% 20% !important; }
+}
