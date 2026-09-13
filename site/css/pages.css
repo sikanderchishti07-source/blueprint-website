@@ -1941,3 +1941,14 @@ a.svq-band-cta, a.svq-band-cta:link, a.svq-band-cta:visited, .svq-band a.svq-ban
     rgba(11,47,56,.34) 68%,
     rgba(11,47,56,.20) 100%) !important;
 }
+/* Service hero - recentre and lighten further */
+.svq-hero-img {
+  background-position: 30% center !important;
+}
+.svq-hero-scrim {
+  background: linear-gradient(100deg,
+    rgba(11,47,56,.78) 0%,
+    rgba(11,47,56,.52) 34%,
+    rgba(11,47,56,.18) 62%,
+    rgba(11,47,56,.06) 100%) !important;
+}
