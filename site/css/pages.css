@@ -1774,3 +1774,8 @@ a.svq-band-cta, a.svq-band-cta:link, a.svq-band-cta:visited, .svq-band a.svq-ban
 @media (prefers-reduced-motion: reduce) {
   .logo-marquee .logo-track { animation: none; }
 }
+
+/* Trusted by - wider gap between strips, brighter logos */
+.logo-marquee { padding: 30px 0; }
+.logo-marquee .logo-track + .logo-track { margin-top: 36px; }
+.logo-item img { filter: saturate(1.3) contrast(1.08) brightness(1.02); }
