@@ -89,3 +89,34 @@
   /* â”€â”€ Contact form (front-end only, as in the original) â”€â”€â”€â”€â”€ */
   window.sendContactMessage = function () { alert('Thank you! Our team will contact you shortly.'); };
 })();
+
+/* Client logo strip - logos grow as they cross the centre of the band */
+(function () {
+  var band = document.querySelector('.logo-marquee');
+  if (!band) return;
+  var track = band.querySelector('.logo-track');
+  if (!track) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    Array.prototype.forEach.call(track.children, function (c) { c.style.opacity = 1; });
+    return;
+  }
+  var cells = track.children, RANGE = 300, MAX = 0.25, running = false;
+  function frame() {
+    var b = band.getBoundingClientRect();
+    if (b.bottom < 0 || b.top > window.innerHeight) { requestAnimationFrame(frame); return; }
+    var mid = b.left + b.width / 2;
+    for (var i = 0; i < cells.length; i++) {
+      var r = cells[i].getBoundingClientRect();
+      var d = Math.abs((r.left + r.width / 2) - mid);
+      var t = Math.max(0, 1 - d / RANGE);
+      var e = t * t * (3 - 2 * t);
+      cells[i].style.transform = 'scale(' + (1 + MAX * e).toFixed(3) + ')';
+      cells[i].style.zIndex = e > 0.5 ? 2 : 1;
+      
+    }
+    requestAnimationFrame(frame);
+  }
+  if (!running) { running = true; requestAnimationFrame(frame); }
+})();
+
+

@@ -189,7 +189,9 @@ PROCESS_CARDS      </div>
     </div>
   </div>
   <div class="logo-marquee scroll-reveal" aria-label="Client logos">
-CLIENT_LOGOS  </div>
+    <div class="logo-track">
+CLIENT_LOGOS    </div>
+  </div>
 </section>\n\n<!-- SECTORS -->
 <section id="sectors" class="py-28" style="background:var(--bp-page);">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -221,7 +223,7 @@ PROCESS = [
 CLIENTS = [
     ("aramco", "Saudi Aramco"),
     ("neom", "NEOM"),
-    ("red-sea", "Red Sea Global"),
+    ("red-sea", "The Red Sea Development Company"),
     ("pif", "Public Investment Fund"),
     ("zatca", "Zakat, Tax and Customs Authority"),
     ("sabic", "SABIC"),
@@ -235,8 +237,6 @@ CLIENTS = [
     ("gami", "General Authority for Military Industries"),
     ("sami", "SAMI"),
     ("kaec", "King Abdullah Economic City"),
-    ("diriyah", "Diriyah"),
-    ("qiddiya", "Qiddiya"),
     ("yasref", "YASREF"),
     ("samref", "SAMREF"),
     ("luberef", "Luberef"),
@@ -253,9 +253,6 @@ CLIENTS = [
     ("petro-rabigh", "Petro Rabigh"),
     ("cruise-saudi", "Cruise Saudi"),
     ("jeddah-airports", "Jeddah Airports"),
-    ("man-enterprise", "MAN Enterprise"),
-    ("el-seif", "El Seif"),
-    ("al-bawani", "Al Bawani"),
 ]
 
 SECTORS = [
@@ -290,14 +287,9 @@ def home():
     proc = "".join(
         f"""        <div class="relative scroll-reveal group h-full flex flex-col"><div class="w-14 h-14 ml-6 bg-white rounded-xl flex items-center justify-center text-xl font-bold text-bp-ink relative z-20 flex-shrink-0">{n}</div><div class="bg-white/5 rounded-2xl overflow-hidden border border-white/10 group-hover:border-white/30 transition-colors duration-300 flex-1" style="margin-top:-1.75rem"><div style="height:1.75rem"></div><img src="{img}" alt="{t}" loading="lazy" class="w-full h-32 object-cover opacity-85 group-hover:opacity-100 transition-opacity duration-500" onerror="this.style.display='none'" /><div class="p-6"><h4 class="font-bold text-base mb-2 text-bp-sage">{t}</h4><p class="text-sm leading-relaxed text-gray-300">{d}</p></div></div></div>\n"""
         for n, img, t, d in PROCESS)
-    def _logo_row(items, cls=""):
-        cells = "".join(
-            f"""      <div class="logo-item"><img src="assets/brand/client-{slug}.png" alt="{name}" loading="lazy" /></div>\n"""
-            for slug, name in items)
-        return f'    <div class="logo-track{cls}">\n' + cells * 2 + "    </div>\n"
-
-    _half = (len(CLIENTS) + 1) // 2
-    clients = _logo_row(CLIENTS[:_half]) + _logo_row(CLIENTS[_half:], " rev")
+    clients = "".join(
+        f"""      <div class="logo-item"><img src="assets/brand/client-{slug}.png" alt="{name}" loading="lazy" /></div>\n"""
+        for slug, name in CLIENTS) * 2
     sect = "".join(
         f"""      <a href="{href}" class="sect-card"><span class="sect-img" style="background-image:url(\'{img}\')"></span><span class="sect-scrim"></span><span class="sect-shine"></span><span class="sect-edge"></span><span class="sect-tag">{cat}</span><span class="sect-body"><span class="sect-t"><i class="fas {icon}"></i>{title}</span><span class="sect-d">{desc}</span><span class="sect-rev"><span class="sect-obl"><b>Typically</b>{obl}</span><span class="sect-go">See the service <i class="fas fa-arrow-right"></i></span></span></span></a>\n"""
         for img, icon, cat, title, desc, obl, href in SECTORS)
