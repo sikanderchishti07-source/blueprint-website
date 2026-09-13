@@ -1928,3 +1928,16 @@ a.svq-band-cta, a.svq-band-cta:link, a.svq-band-cta:visited, .svq-band a.svq-ban
   object-fit: contain; display: block;
 }
 .drawer-header .bp-mark { width: 28px !important; height: 34px !important; }
+/* Service page hero - lighter scrim, better crop */
+.svq-hero-img {
+  background-size: cover;
+  background-position: center 42%;
+  background-repeat: no-repeat;
+}
+.svq-hero-scrim {
+  background: linear-gradient(100deg,
+    rgba(11,47,56,.86) 0%,
+    rgba(11,47,56,.68) 38%,
+    rgba(11,47,56,.34) 68%,
+    rgba(11,47,56,.20) 100%) !important;
+}
