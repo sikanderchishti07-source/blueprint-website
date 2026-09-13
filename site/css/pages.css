@@ -1913,3 +1913,18 @@ a.svq-band-cta, a.svq-band-cta:link, a.svq-band-cta:visited, .svq-band a.svq-ban
   .bp-home #navbar .bp-b,
   .bp-home #navbar .bp-txt { animation: none; }
 }
+
+/* Logo mark wrapper needs a real width, overriding the earlier img rule */
+#navbar .bp-mark {
+  width: 35px !important;
+  height: 42px !important;
+  position: relative;
+  display: block;
+  flex: 0 0 auto;
+}
+#navbar .bp-mark img {
+  position: absolute; inset: 0;
+  width: 100% !important; height: 100% !important;
+  object-fit: contain; display: block;
+}
+.drawer-header .bp-mark { width: 28px !important; height: 34px !important; }
