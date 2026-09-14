@@ -36,7 +36,7 @@ def services():
         <div class="isvc-panel-body" id="isvc-panel-body-{i}"></div>
       </div>""" for i, (icon, name, short, img, fb, badge, bcls) in enumerate(SERVICE_TABS))
     mons = "".join(f'''
-        <a href="technology.html#equipment" class="flex items-center gap-3 px-4 py-3.5 bg-white rounded-xl border hover:border-bp-olive transition-all" style="border-color:var(--bp-border);text-decoration:none;">
+        <a href="{_fb}" class="flex items-center gap-3 px-4 py-3.5 bg-white rounded-xl border hover:border-bp-olive transition-all" style="border-color:var(--bp-border);text-decoration:none;">
           <span class="w-9 h-9 rounded-lg flex items-center justify-center text-sm flex-shrink-0" style="background:var(--bp-olive-tint);color:var(--bp-olive);"><i class="fas {ic}"></i></span>
           <span class="font-display font-semibold text-bp-ink text-sm leading-snug">{nm}</span>
         </a>''' for _img, _fb, _bd, ic, nm, _d in LAB_SERVICES)
@@ -99,14 +99,14 @@ def services():
 # ─────────────────────────── TECHNOLOGY ─────────────────────────
 def technology():
     cards = "".join(f"""
-      <div class="equipment-card bg-gray-50 rounded-2xl border-2 border-transparent hover:border-bp-primary cursor-pointer group overflow-hidden">
+      <a href="{href}" class="equipment-card bg-gray-50 rounded-2xl border-2 border-transparent hover:border-bp-primary cursor-pointer group overflow-hidden block no-underline">
         <div class="relative w-full h-44 overflow-hidden bg-bp-light">
-          <img src="{img}?w=600&h=380&fit=crop&q=80" alt="{title}" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='{fb}?w=600&h=380&fit=crop'" />
-          <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" style="background:linear-gradient(to top,rgba(11, 47, 56.65),transparent);"></div>
+          <img src="{img}" alt="{title}" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" style="background:linear-gradient(to top,rgba(11,47,56,.65),transparent);"></div>
           <span class="absolute bottom-3 left-3 text-xs font-bold text-white bg-bp-olive px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">{badge}</span>
         </div>
         <div class="p-5"><div class="flex items-center gap-2 mb-2"><div class="w-7 h-7 bg-bp-light rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas {icon} text-bp-primary text-xs"></i></div><h4 class="font-bold text-bp-ink text-sm">{title}</h4></div><p class="text-xs text-gray-500 leading-relaxed">{desc}</p></div>
-      </div>""" for img, fb, badge, icon, title, desc in LAB_SERVICES)
+      </a>""" for img, href, badge, icon, title, desc in LAB_SERVICES)
     _unused_accs = "".join(f"""
       <div class="bg-white p-7 rounded-2xl shadow-lg border-t-4 hover:-translate-y-1 transition-all" style="border-top-color:var(--bp-{'olive' if i % 2 else 'blue'});">
         <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-xl mb-5" style="background:var(--bp-{'olive-tint' if i % 2 else 'blue-tint'});color:var(--bp-{'olive' if i % 2 else 'blue'});"><i class="fas {ic}"></i></div>
