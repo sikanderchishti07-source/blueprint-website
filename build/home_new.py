@@ -206,15 +206,15 @@ SECTOR_CARDS    </div>
 """
 
 PROCESS = [
-    (1, "assets/img/svc-permit.jpg", "Project scoping",
+    (1, "assets/img/process-scoping.webp", "Project scoping",
      "Site visit and regulatory review, then a written scope agreed before any fieldwork begins."),
-    (2, "assets/img/svc-field.jpg", "Site assessment",
+    (2, "assets/img/process-assessment.webp", "Site assessment",
      "Field reconnaissance, existing conditions, and the receptor locations that apply to your activity."),
-    (3, "assets/img/svc-sampling.jpg", "Field measurement",
+    (3, "assets/img/process-measurement.webp", "Field measurement",
      "Sampling and monitoring carried out to the standard your permit requires."),
-    (4, "assets/img/svc-report.jpg", "Laboratory analysis",
+    (4, "assets/img/process-lab.webp", "Laboratory analysis",
      "Analysis and data validation against the applicable limit values."),
-    (5, "assets/img/svc-register.jpg", "Reporting",
+    (5, "assets/img/process-reporting.webp", "Reporting",
      "A submission-ready report, then register upkeep that keeps you compliant cycle after cycle."),
 ]
 
