@@ -5,9 +5,8 @@ SPECIALIST = {}
 def _S(slug, num, title, tagline, lede, img, fh, fr, meta,
        ptitle, pbody, ppoints, inc_title, inc, proc, app_title, app, faqs, band_quote=None):
     return dict(group="specialist", num=num, slug=slug, title=title, tagline=tagline, lede=lede,
-                hero_img=f"assets/img/svc-{slug}-hero.webp",
-                detail_img=f"assets/img/svc-{slug}-detail.webp",
-                band_img=f"assets/img/svc-{slug}-band.webp",
+                hero_img=img, detail_img="assets/img/svc-air-detail.jpg",
+                band_img="assets/img/svc-air-lab.jpg",
                 band_quote=band_quote or "Specialist work is judged on method, not on volume.",
                 grid_title="What you get out of it",
                 float_head=fh, float_rows=fr, meta=meta,
