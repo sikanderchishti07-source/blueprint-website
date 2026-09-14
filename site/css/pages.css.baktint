@@ -2020,18 +2020,14 @@ a.svq-band-cta, a.svq-band-cta:link, a.svq-band-cta:visited, .svq-band a.svq-ban
 /* ==== end svcd floating boxes ==== */
 
 /* ==== svcd band scrim, lighter and less blue ==== */
-/* A very light teal. The flat layer is barely there, the radial adds a touch
-   behind the sentence, and the text shadow still does most of the work. */
-.svcd-band-scrim {
-  background:
-    linear-gradient(rgba(11,47,56,0.12), rgba(11,47,56,0.12)),
-    radial-gradient(ellipse 58% 88% at 50% 50%,
-      rgba(9,38,46,0.22) 0%, rgba(9,38,46,0.10) 62%, rgba(9,38,46,0) 100%);
-}
+/* No overlay. The photograph is untouched and the text carries its own
+   contrast, a tight shadow for edge definition and a wide soft one to lift
+   it off bright sky. */
+.svcd-band-scrim { background: none; }
 .svcd-band-quote {
-  text-shadow: 0 1px 2px rgba(0,0,0,.5),
-               0 2px 12px rgba(0,0,0,.5),
-               0 8px 40px rgba(0,0,0,.4);
+  text-shadow: 0 1px 2px rgba(0,0,0,.55),
+               0 2px 12px rgba(0,0,0,.55),
+               0 8px 40px rgba(0,0,0,.45);
 }
-.svcd-band-cta { box-shadow: 0 8px 30px rgba(0,0,0,.32); }
+.svcd-band-cta { box-shadow: 0 8px 30px rgba(0,0,0,.35); }
 /* ==== end svcd band scrim ==== */
