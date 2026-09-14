@@ -186,9 +186,12 @@ _TPL = """
          <i class="fas fa-arrow-right" style="font-size:.7rem;"></i></a>
     </div>
     <figure class="abt-story-media">
-      <img src="{story_img}" alt="Analytical instruments and sample vials on a laboratory bench"
-           loading="lazy" />
-      <figcaption>Accurate data.<br />Defensible method.<br />Accepted submissions.</figcaption>
+      <video class="abt-story-video" autoplay muted loop playsinline preload="metadata"
+             poster="assets/img/about-story.jpg"
+             aria-label="Saudi coastline, from open water through to the desert interior">
+        <source src="assets/video/about-story.webm" type="video/webm" />
+        <source src="assets/video/about-story.mp4" type="video/mp4" />
+      </video>
     </figure>
   </div>
 </section>

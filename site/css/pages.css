@@ -2080,12 +2080,10 @@ a.svq-band-cta, a.svq-band-cta:link, a.svq-band-cta:visited, .svq-band a.svq-ban
 
 /* ---- Story ---- */
 .abt-story { padding: 88px 0; background: #fff; }
-.abt-story-grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: 56px; align-items: center; }
-.abt-story-media { position: relative; margin: 0; border-radius: 16px; overflow: hidden; }
-.abt-story-media img { width: 100%; height: 400px; object-fit: cover; display: block; }
-.abt-story-media figcaption { position: absolute; top: 28px; right: 28px; text-align: right;
-  font-size: .78rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; line-height: 1.9;
-  color: #fff; text-shadow: 0 2px 10px rgba(0,0,0,.55); border-right: 2px solid #4fc3cd; padding-right: 14px; }
+.abt-story-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: center; }
+.abt-story-media { position: relative; margin: 0; border-radius: 16px; overflow: hidden;
+  aspect-ratio: 1 / 1; background: #0b2f38; box-shadow: 0 18px 40px rgba(11,47,56,.14); }
+.abt-story-media img, .abt-story-video { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 /* ---- What sets us apart ---- */
 .abt-ap-sec { padding: 88px 0; background: var(--bp-light, #f2f9fa); }
@@ -2191,7 +2189,7 @@ a.svq-band-cta, a.svq-band-cta:link, a.svq-band-cta:visited, .svq-band a.svq-ban
   .abt-hero-veil { background: linear-gradient(180deg, rgba(11,47,56,.94), rgba(11,47,56,.86)); }
   .abt-story, .abt-ap-sec, .abt-disc-sec, .abt-proc-sec,
   .abt-mdl-sec, .abt-cred-sec, .abt-reg-sec, .abt-cta { padding: 64px 0; }
-  .abt-story-media img { height: 320px; }
+  .abt-story-media { max-width: 520px; margin: 0 auto; }
 }
 @media (max-width: 560px) {
   .abt-hero { padding: 108px 0 52px; }
