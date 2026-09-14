@@ -155,11 +155,15 @@ def nav():
             <div class="nav-dropdown">
               <div class="nav-dropdown-box" style="min-width:230px;">
                 <div class="nav-dropdown-title">About BluePrint</div>
-                {dd_link("index.html#overview", "fa-building", "About BluePrint", "Mission, vision &amp; Vision 2030")}
+                {dd_link("about.html", "fa-building", "About BluePrint", "Who we are &amp; how we work")}
                 {dd_link("index.html#sectors", "fa-industry", "Sectors We Serve", "Six regulated industries")}
                 {dd_link("index.html#process", "fa-sitemap", "How We Work", "Assess, plan, submit, sustain")}
               </div>
             </div>
+          </div>
+
+          <div class="nav-item">
+            <a href="about.html" class="nav-link" data-page="about.html">About</a>
           </div>
 
           <div class="nav-item">
