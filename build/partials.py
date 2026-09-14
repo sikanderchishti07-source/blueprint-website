@@ -166,7 +166,16 @@ def nav():
             <a href="about.html" class="nav-link" data-page="about.html">About</a>
           </div>
           <div class="nav-item">
-            <a href="equipment.html" class="nav-link" data-page="equipment.html">Technology</a>
+            <a href="equipment.html" class="nav-link" data-page="equipment.html">Technology <i class="fas fa-chevron-down nav-chevron"></i></a>
+            <div class="nav-dropdown">
+              <div class="nav-dropdown-box" style="min-width:250px;">
+                <div class="nav-dropdown-title">Instrumentation</div>
+                {dd_link("equipment.html", "fa-screwdriver-wrench", "Equipment Catalogue", "Instrument types by domain")}
+                <div class="nav-dd-divider"></div>
+                <div class="nav-dropdown-title">Compliance</div>
+                {dd_link("compliance.html", "fa-shield-halved", "Compliance Hub", "Saudi regulations, searchable")}
+              </div>
+            </div>
           </div>
 
           <div class="nav-item">
