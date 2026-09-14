@@ -99,3 +99,9 @@
   background: var(--bp-grad-blue); color: #fff; }
 .expert-photo-wrap i { font-size: 1.25rem; }
 .ep-photo i { font-size: 1.05rem; }
+
+/* WhatsApp floating button uses the Font Awesome brand mark */
+.whatsapp-icon { width:auto; height:auto; font-size:31px; line-height:1; color:#fff; }
+@media (max-width:768px){ .whatsapp-icon { font-size:26px; } }
+@media (max-width:480px){ .whatsapp-icon { font-size:24px; } }
+
