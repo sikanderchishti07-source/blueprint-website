@@ -59,12 +59,12 @@ def head(title, description, extra_css=""):
 
 
 SERVICES_NAV = [
-    ("fa-file-signature", "Environmental Permit", "NCEC permit file to issuance", 0),
-    ("fa-clipboard-check", "Impact Assessment", "EIA/ESIA for regulated projects", 1),
-    ("fa-recycle", "Waste Permit (MWAN)", "Generators, carriers &amp; treaters", 2),
-    ("fa-tasks", "Environmental Management Plan", "Permit conditions into practice", 3),
-    ("fa-folder-open", "Environmental Register", "Continuous proof of compliance", 4),
-    ("fa-calendar-check", "Periodic Reporting", "Filed on time, every cycle", 5),
+    ("fa-file-signature", "Environmental Permit", "NCEC permit file to issuance", "service-environmental-permit.html"),
+    ("fa-clipboard-check", "Impact Assessment", "EIA/ESIA for regulated projects", "service-environmental-impact-assessment.html"),
+    ("fa-recycle", "Waste Permit (MWAN)", "Generators, carriers &amp; treaters", "service-waste-management-permit.html"),
+    ("fa-tasks", "Environmental Management Plan", "Permit conditions into practice", "service-environmental-management-plan.html"),
+    ("fa-folder-open", "Environmental Register", "Continuous proof of compliance", "service-environmental-register.html"),
+    ("fa-calendar-check", "Periodic Reporting", "Filed on time, every cycle", "service-periodic-environmental-report.html"),
 ]
 
 
@@ -79,21 +79,21 @@ LIVE_BADGE = '<span style="font-size:.55rem;padding:1px 6px;background:#dcfce7;c
 
 
 MONITORING_NAV = [
-    ("fa-wind", "Air Quality Monitoring", "Measurement &amp; assessment"),
-    ("fa-tint", "Water &amp; Wastewater Testing", "Accredited analysis"),
-    ("fa-volume-up", "Noise Monitoring", "Against regulated limits"),
-    ("fa-mountain", "Soil &amp; Sediment Testing", "Contaminant levels"),
-    ("fa-vial", "Environmental Sampling", "Chain-of-custody protocols"),
-    ("fa-microscope", "Laboratory Analysis", "With technical interpretation"),
+    ("fa-wind", "Air Quality Monitoring", "Measurement &amp; assessment", "service-air-quality-monitoring.html"),
+    ("fa-tint", "Water &amp; Wastewater Testing", "Accredited analysis", "service-water-wastewater-testing.html"),
+    ("fa-volume-up", "Noise Monitoring", "Against regulated limits", "service-noise-monitoring.html"),
+    ("fa-mountain", "Soil &amp; Sediment Testing", "Contaminant levels", "service-soil-sediment-testing.html"),
+    ("fa-vial", "Environmental Sampling", "Chain-of-custody protocols", "service-environmental-sampling.html"),
+    ("fa-microscope", "Laboratory Analysis", "With technical interpretation", "service-laboratory-analysis.html"),
 ]
 
 
 def nav():
-    svc_links = "\n".join(dd_link(f"services.html#svc-{i}", ic, lb, sb) for ic, lb, sb, i in SERVICES_NAV)
-    mon_links = "\n".join(dd_link("services.html#monitoring", ic, lb, sb) for ic, lb, sb in MONITORING_NAV)
+    svc_links = "\n".join(dd_link(pg, ic, lb, sb) for ic, lb, sb, pg in SERVICES_NAV)
+    mon_links = "\n".join(dd_link(pg, ic, lb, sb) for ic, lb, sb, pg in MONITORING_NAV)
     drawer_svc = "\n".join(
-        f'<a href="services.html#svc-{i}" class="drawer-link"><div class="drawer-link-icon"><i class="fas {ic}"></i></div>{lb}</a>'
-        for ic, lb, sb, i in SERVICES_NAV)
+        f'<a href="{pg}" class="drawer-link"><div class="drawer-link-icon"><i class="fas {ic}"></i></div>{lb}</a>'
+        for ic, lb, sb, pg in SERVICES_NAV)
     return f"""
 <!-- ============================================================
      NAVIGATION
