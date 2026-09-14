@@ -70,11 +70,11 @@ MODELS = [
 ]
 
 CREDS = [
-    ("NCEC", "National Center for Environmental Compliance"),
-    ("MWAN", "National Center for Waste Management"),
-    ("RCJY", "Royal Commission for Jubail &amp; Yanbu"),
-    ("IAS", "International Accreditation Service"),
-    ("ISO", "Quality, environment &amp; safety management"),
+    ("accred-ncec.png", "NCEC", "National Center for Environmental Compliance"),
+    ("accred-mwan.png", "MWAN", "National Center for Waste Management"),
+    ("accred-rcjy.png", "RCJY", "Royal Commission for Jubail &amp; Yanbu"),
+    ("accred-ias.png", "IAS", "International Accreditation Service"),
+    ("accred-iso.png", "ISO", "Quality, environment &amp; safety management"),
 ]
 
 REGISTRY = [
@@ -124,9 +124,9 @@ def _models():
 def _creds():
     return "\n".join(
         '<a href="technology.html#standards" class="abt-cred">'
-        '<span class="abt-cred-abbr">' + s + '</span>'
-        '<span class="abt-cred-full">' + f + '</span></a>'
-        for s, f in CREDS)
+        '<img src="assets/accred/' + img + '" alt="' + name + '" loading="lazy" />'
+        '<span class="abt-cred-full">' + full + '</span></a>'
+        for img, name, full in CREDS)
 
 
 def _regcards():

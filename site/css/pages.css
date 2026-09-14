@@ -2199,3 +2199,7 @@ a.svq-band-cta, a.svq-band-cta:link, a.svq-band-cta:visited, .svq-band a.svq-ban
   .abt-reg-cards { position: static; width: 100%; }
   .abt-reg-media img { height: 230px; }
 }
+
+.abt-cred { justify-content: center; min-height: 128px; }
+.abt-cred img { height: 46px; width: auto; max-width: 84%; object-fit: contain; }
+.abt-cred-abbr { display: none; }
