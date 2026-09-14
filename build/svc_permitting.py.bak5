@@ -531,7 +531,7 @@ PERMITTING["periodic-environmental-report"] = dict(
     tagline="The obligation most facilities let slip",
     lede="Scheduled regulatory reporting prepared from a maintained record, filed on time, every cycle, "
          "in the form the regulator expects.",
-    hero_img="assets/img/svc-periodic-environmental-report-hero.webp",
+    hero_img="assets/img/svc-report.jpg",
     float_head=("fa-calendar-check", "Every cycle needs"),
     float_rows=[
                 ("1", "Missed cycle", "Is enough to surface at renewal"),
