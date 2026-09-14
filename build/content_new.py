@@ -94,16 +94,16 @@ SERVICES_JS = [
 
 # Laboratory & measurement services, replaces the equipment cards on technology.html
 LAB_SERVICES = [
-    ("assets/img/svc-water.jpg", "service-water-wastewater-testing.html",
+    ("assets/img/lab-water.webp", "service-water-wastewater-testing.html",
      "Accredited", "fa-tint", "Water &amp; Wastewater Testing",
      "Comprehensive analysis of water and sewage samples against accredited standards."),
-    ("assets/img/svc-soil.jpg", "service-soil-sediment-testing.html",
+    ("assets/img/lab-soil.webp", "service-soil-sediment-testing.html",
      "Contamination", "fa-mountain", "Soil &amp; Sediment Testing",
      "Analysis of soil and sediment characteristics and determination of contaminant levels."),
-    ("assets/img/svc-sampling.jpg", "service-environmental-sampling.html",
+    ("assets/img/lab-sampling.webp", "service-environmental-sampling.html",
      "Chain of custody", "fa-vial", "Environmental Sampling Services",
      "Precise collection and preparation of environmental samples under chain-of-custody protocols."),
-    ("assets/img/svc-lab.jpg", "service-laboratory-analysis.html",
+    ("assets/img/lab-analysis.webp", "service-laboratory-analysis.html",
      "Interpretation", "fa-microscope", "Laboratory Analysis &amp; Data Interpretation",
      "Laboratory reporting with technical interpretation and a clear summary of what the data means."),
 ]
