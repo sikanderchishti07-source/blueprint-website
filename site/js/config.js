@@ -14,7 +14,7 @@ window.BP_CONFIG = {
   PHONE_TEL:      '+966543470109',
   WHATSAPP:       '966543470109',          // digits only, country code first
   EMAIL:          'info@blueprint-env.com',
-  ADDRESS_LINE1:  'Riyadh, Saudi Arabia',
+  ADDRESS_LINE1:  '3704 Abi Jafar Al Mansur, Al Yarmouk District, Riyadh 13251-7669, Saudi Arabia',
   ADDRESS_LINE2:  'Sunday &ndash; Thursday, 9:00&ndash;18:00 AST',
   WEBSITE:        'www.blueprint-env.com'
 
