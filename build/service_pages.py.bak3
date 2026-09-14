@@ -11,9 +11,9 @@ SERVICES["air-quality-monitoring"] = dict(
     tagline="Measurement that stands up to review",
     lede="Ambient and stack air quality measured to the method your permit specifies, "
          "reported in the form the regulator expects.",
-    hero_img="assets/img/svc-air-quality-monitoring-hero.webp",
-    detail_img="assets/img/svc-air-quality-monitoring-detail.webp",
-    band_img="assets/img/svc-air-quality-monitoring-band.webp",
+    hero_img="assets/img/svc-air-hero.jpg",
+    detail_img="assets/img/svc-air-detail.jpg",
+    band_img="assets/img/svc-air-lab.jpg",
     band_quote="Data that does not match the method named in your permit is not accepted, however carefully it was collected.",
     faq_title="Before you commission monitoring",
     float_head=("fa-wind", "What gets measured"),
