@@ -19,19 +19,19 @@ def _S(slug, num, title, tagline, lede, img, fh, fr, meta,
                     ("Scoped to the question",
                      "Specialist studies go wrong when the scope is set before the question is clear. We "
                      "agree what the study has to answer first.",
-                     "assets/img/cap-scoped.webp", "1st", "time through review"),
+                     "assets/img/sector-1.jpg", "1st", "time through review"),
                     ("Method stated openly",
                      "Every prediction carries its method and its assumptions, because that is what a "
                      "reviewer examines rather than the conclusion.",
-                     "assets/img/cap-accredited.webp", "100%", "method-referenced"),
+                     "assets/img/sector-2.jpg", "100%", "method-referenced"),
                     ("Delivered to the programme",
                      "Specialist work sits on a project critical path, so the timetable is agreed against "
                      "your milestones rather than ours.",
-                     "assets/img/cap-schedule.webp", "On time", "to your milestones"),
+                     "assets/img/sector-3.jpg", "On time", "to your milestones"),
                     ("Findings you can act on",
                      "Results arrive with their implications stated, not as a technical report requiring "
                      "translation before it can be used.",
-                     "assets/img/cap-interpreted.webp", "Clear", "plain findings"),
+                     "assets/img/svc-air-detail.jpg", "Clear", "plain findings"),
                 ])
 
 SPECIALIST["climate-sustainability"] = _S(

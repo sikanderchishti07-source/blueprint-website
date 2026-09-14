@@ -2,8 +2,6 @@
 # Content is factual about KSA environmental regulation; nothing about
 # BluePrint's history, clients or scale is asserted here.
 
-_PANE_IMGS = ['assets/img/cap-scoped.webp', 'assets/img/cap-accredited.webp',
-              'assets/img/cap-schedule.webp', 'assets/img/cap-interpreted.webp']
 SERVICES = {}
 
 SERVICES["air-quality-monitoring"] = dict(

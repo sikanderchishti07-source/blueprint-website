@@ -2018,16 +2018,3 @@ a.svq-band-cta, a.svq-band-cta:link, a.svq-band-cta:visited, .svq-band a.svq-ban
   .svcd-figure-card { position: static; margin: -30px 16px 0; width: auto; }
 }
 /* ==== end svcd floating boxes ==== */
-
-/* ==== svcd band scrim, lighter and less blue ==== */
-/* A flat neutral layer keeps the sentence legible everywhere, a soft radial
-   adds weight behind it only, and the text shadow carries the contrast the
-   scrim used to. Both layers shift off teal toward a neutral dark. */
-.svcd-band-scrim {
-  background:
-    linear-gradient(rgba(14,36,40,.30), rgba(14,36,40,.30)),
-    radial-gradient(ellipse 60% 90% at 50% 50%,
-      rgba(10,30,34,.62) 0%, rgba(10,30,34,.34) 60%, rgba(10,30,34,.12) 100%);
-}
-.svcd-band-quote { text-shadow: 0 2px 26px rgba(6,20,24,.75); }
-/* ==== end svcd band scrim ==== */

@@ -20,19 +20,19 @@ def _S(slug, num, title, tagline, lede, img, fh, fr, meta,
                     ("Scoped against your permit",
                      "We read the conditions first and confirm the parameters, methods and frequencies that "
                      "actually apply before any scope is agreed.",
-                     "assets/img/cap-scoped.webp", "1st", "time through review"),
+                     "assets/img/sector-1.jpg", "1st", "time through review"),
                     ("Accredited and admissible",
                      "Work is carried out under accreditation, because results from an unaccredited party are "
                      "routinely rejected at review however sound the underlying work.",
-                     "assets/img/cap-accredited.webp", "100%", "method-referenced"),
+                     "assets/img/sector-2.jpg", "100%", "method-referenced"),
                     ("Reported on schedule",
                      "Fieldwork is booked against your reporting calendar so results are ready before the "
                      "submission date, not after it.",
-                     "assets/img/cap-schedule.webp", "On time", "every cycle"),
+                     "assets/img/sector-3.jpg", "On time", "every cycle"),
                     ("Interpreted, not just measured",
                      "Results arrive compared against the limits that apply to you, with exceedances and "
                      "corrective actions stated plainly.",
-                     "assets/img/cap-interpreted.webp", "Clear", "plain findings"),
+                     "assets/img/svc-air-detail.jpg", "Clear", "plain findings"),
                 ])
 
 MONITORING["water-wastewater-testing"] = _S(

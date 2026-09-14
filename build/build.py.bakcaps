@@ -19,8 +19,8 @@ ALL_SERVICES.update(SP.SERVICES)
 ALL_SERVICES.update(SPM.MONITORING)
 ALL_SERVICES.update(SPS.SPECIALIST)
 
-_CAP_IMGS = ['assets/img/cap-scoped.webp', 'assets/img/cap-accredited.webp',
-             'assets/img/cap-schedule.webp', 'assets/img/cap-interpreted.webp']
+_CAP_IMGS = ['assets/img/sector-1.jpg', 'assets/img/sector-2.jpg',
+             'assets/img/sector-3.jpg', 'assets/img/svc-air-detail.jpg']
 for _slug, _s in ALL_SERVICES.items():
     # service-specific capability items replace the shared block
     if _slug in SPC.CAPS:

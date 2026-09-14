@@ -79,19 +79,19 @@ PERMITTING["environmental-permit"] = dict(
         ("Reviewed before you commit",
          "We read the conditions and tell you what actually applies before any scope is agreed, so you are "
          "not paying for work the regulator never asked for.",
-         "assets/img/cap-scoped.webp", "1st", "time through review"),
+         "assets/img/sector-1.jpg", "1st", "time through review"),
         ("Defensible documentation",
          "Everything is produced to the standard the condition references, with the method and evidence "
          "recorded alongside the result.",
-         "assets/img/cap-accredited.webp", "100%", "method-referenced"),
+         "assets/img/sector-2.jpg", "100%", "method-referenced"),
         ("Nothing filed at the last minute",
          "Work is scheduled against your obligations so the deadline is met from a maintained record "
          "rather than a scramble.",
-         "assets/img/cap-schedule.webp", "On time", "every cycle"),
+         "assets/img/sector-3.jpg", "On time", "every cycle"),
         ("One accountable team",
          "The people who scoped the work carry it through submission and answer the reviewer's questions "
          "directly.",
-         "assets/img/cap-interpreted.webp", "Single", "point of contact"),
+         "assets/img/svc-air-detail.jpg", "Single", "point of contact"),
     ],
     faqs=[
         ("How do I know which category my activity is in?",
@@ -184,19 +184,19 @@ PERMITTING["environmental-impact-assessment"] = dict(
         ("Reviewed before you commit",
          "We read the conditions and tell you what actually applies before any scope is agreed, so you are "
          "not paying for work the regulator never asked for.",
-         "assets/img/cap-scoped.webp", "1st", "time through review"),
+         "assets/img/sector-1.jpg", "1st", "time through review"),
         ("Defensible documentation",
          "Everything is produced to the standard the condition references, with the method and evidence "
          "recorded alongside the result.",
-         "assets/img/cap-accredited.webp", "100%", "method-referenced"),
+         "assets/img/sector-2.jpg", "100%", "method-referenced"),
         ("Nothing filed at the last minute",
          "Work is scheduled against your obligations so the deadline is met from a maintained record "
          "rather than a scramble.",
-         "assets/img/cap-schedule.webp", "On time", "every cycle"),
+         "assets/img/sector-3.jpg", "On time", "every cycle"),
         ("One accountable team",
          "The people who scoped the work carry it through submission and answer the reviewer's questions "
          "directly.",
-         "assets/img/cap-interpreted.webp", "Single", "point of contact"),
+         "assets/img/svc-air-detail.jpg", "Single", "point of contact"),
     ],
     faqs=[
         ("Does my project need a full EIA or a simplified study?",
@@ -287,19 +287,19 @@ PERMITTING["waste-management-permit"] = dict(
         ("Reviewed before you commit",
          "We read the conditions and tell you what actually applies before any scope is agreed, so you are "
          "not paying for work the regulator never asked for.",
-         "assets/img/cap-scoped.webp", "1st", "time through review"),
+         "assets/img/sector-1.jpg", "1st", "time through review"),
         ("Defensible documentation",
          "Everything is produced to the standard the condition references, with the method and evidence "
          "recorded alongside the result.",
-         "assets/img/cap-accredited.webp", "100%", "method-referenced"),
+         "assets/img/sector-2.jpg", "100%", "method-referenced"),
         ("Nothing filed at the last minute",
          "Work is scheduled against your obligations so the deadline is met from a maintained record "
          "rather than a scramble.",
-         "assets/img/cap-schedule.webp", "On time", "every cycle"),
+         "assets/img/sector-3.jpg", "On time", "every cycle"),
         ("One accountable team",
          "The people who scoped the work carry it through submission and answer the reviewer's questions "
          "directly.",
-         "assets/img/cap-interpreted.webp", "Single", "point of contact"),
+         "assets/img/svc-air-detail.jpg", "Single", "point of contact"),
     ],
     faqs=[
         ("We use a licensed contractor, do we still need a permit?",
@@ -390,19 +390,19 @@ PERMITTING["environmental-management-plan"] = dict(
         ("Reviewed before you commit",
          "We read the conditions and tell you what actually applies before any scope is agreed, so you are "
          "not paying for work the regulator never asked for.",
-         "assets/img/cap-scoped.webp", "1st", "time through review"),
+         "assets/img/sector-1.jpg", "1st", "time through review"),
         ("Defensible documentation",
          "Everything is produced to the standard the condition references, with the method and evidence "
          "recorded alongside the result.",
-         "assets/img/cap-accredited.webp", "100%", "method-referenced"),
+         "assets/img/sector-2.jpg", "100%", "method-referenced"),
         ("Nothing filed at the last minute",
          "Work is scheduled against your obligations so the deadline is met from a maintained record "
          "rather than a scramble.",
-         "assets/img/cap-schedule.webp", "On time", "every cycle"),
+         "assets/img/sector-3.jpg", "On time", "every cycle"),
         ("One accountable team",
          "The people who scoped the work carry it through submission and answer the reviewer's questions "
          "directly.",
-         "assets/img/cap-interpreted.webp", "Single", "point of contact"),
+         "assets/img/svc-air-detail.jpg", "Single", "point of contact"),
     ],
     faqs=[
         ("Is an EMP the same as an EIA?",
@@ -492,19 +492,19 @@ PERMITTING["environmental-register"] = dict(
         ("Reviewed before you commit",
          "We read the conditions and tell you what actually applies before any scope is agreed, so you are "
          "not paying for work the regulator never asked for.",
-         "assets/img/cap-scoped.webp", "1st", "time through review"),
+         "assets/img/sector-1.jpg", "1st", "time through review"),
         ("Defensible documentation",
          "Everything is produced to the standard the condition references, with the method and evidence "
          "recorded alongside the result.",
-         "assets/img/cap-accredited.webp", "100%", "method-referenced"),
+         "assets/img/sector-2.jpg", "100%", "method-referenced"),
         ("Nothing filed at the last minute",
          "Work is scheduled against your obligations so the deadline is met from a maintained record "
          "rather than a scramble.",
-         "assets/img/cap-schedule.webp", "On time", "every cycle"),
+         "assets/img/sector-3.jpg", "On time", "every cycle"),
         ("One accountable team",
          "The people who scoped the work carry it through submission and answer the reviewer's questions "
          "directly.",
-         "assets/img/cap-interpreted.webp", "Single", "point of contact"),
+         "assets/img/svc-air-detail.jpg", "Single", "point of contact"),
     ],
     faqs=[
         ("What has to be in the register?",
@@ -595,19 +595,19 @@ PERMITTING["periodic-environmental-report"] = dict(
         ("Reviewed before you commit",
          "We read the conditions and tell you what actually applies before any scope is agreed, so you are "
          "not paying for work the regulator never asked for.",
-         "assets/img/cap-scoped.webp", "1st", "time through review"),
+         "assets/img/sector-1.jpg", "1st", "time through review"),
         ("Defensible documentation",
          "Everything is produced to the standard the condition references, with the method and evidence "
          "recorded alongside the result.",
-         "assets/img/cap-accredited.webp", "100%", "method-referenced"),
+         "assets/img/sector-2.jpg", "100%", "method-referenced"),
         ("Nothing filed at the last minute",
          "Work is scheduled against your obligations so the deadline is met from a maintained record "
          "rather than a scramble.",
-         "assets/img/cap-schedule.webp", "On time", "every cycle"),
+         "assets/img/sector-3.jpg", "On time", "every cycle"),
         ("One accountable team",
          "The people who scoped the work carry it through submission and answer the reviewer's questions "
          "directly.",
-         "assets/img/cap-interpreted.webp", "Single", "point of contact"),
+         "assets/img/svc-air-detail.jpg", "Single", "point of contact"),
     ],
     faqs=[
         ("How often do we have to report?",
