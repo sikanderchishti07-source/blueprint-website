@@ -2203,3 +2203,21 @@ a.svq-band-cta, a.svq-band-cta:link, a.svq-band-cta:visited, .svq-band a.svq-ban
 .abt-cred { justify-content: center; min-height: 128px; }
 .abt-cred img { height: 46px; width: auto; max-width: 84%; object-fit: contain; }
 .abt-cred-abbr { display: none; }
+
+/* Permitting service cards on services.html */
+.psvc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px;
+  max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+.psvc-card { display: flex; align-items: center; gap: 16px; padding: 22px 22px; background: #fff;
+  border: 1px solid var(--bp-border, #dde9eb); border-radius: 16px; text-decoration: none;
+  transition: all .24s ease; scroll-margin-top: 110px; }
+.psvc-card:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(11,47,56,.1);
+  border-color: rgba(0,113,129,.35); }
+.psvc-num { font-size: .82rem; font-weight: 800; color: #9fb3ba; letter-spacing: .04em; }
+.psvc-ic { width: 44px; height: 44px; border-radius: 12px; background: var(--bp-light, #eef7f8);
+  color: var(--bp-primary, #007181); display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; flex-shrink: 0; }
+.psvc-body { display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 0; }
+.psvc-name { font-size: .95rem; font-weight: 800; color: var(--bp-ink, #0b2f38); line-height: 1.3; }
+.psvc-short { font-size: .81rem; color: #6c7d84; line-height: 1.45; }
+.psvc-go { color: var(--bp-primary, #007181); font-size: .82rem; flex-shrink: 0; transition: transform .24s ease; }
+.psvc-card:hover .psvc-go { transform: translateX(4px); }

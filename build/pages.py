@@ -58,12 +58,13 @@ def services():
     <h2>Getting you licensed, and keeping you licensed</h2>
     <p>The studies, permits and reporting cycles that stand between your facility and a valid environmental licence.</p>
   </div>
-  <div class="isvc-layout">
-    <div class="isvc-tabs isvc-reveal" id="isvcTabs">{tabs}
-    </div>
-    <div class="isvc-panel-wrap isvc-reveal isvc-reveal-delay-1" id="isvcPanelWrap">
-      <div class="isvc-progress-bar" id="isvcProgressBar" style="width:16.66%"></div>{panels}
-    </div>
+  <div class="psvc-grid">
+    <a id="svc-0" href="service-environmental-permit.html" class="psvc-card"><span class="psvc-num">01</span><span class="psvc-ic"><i class="fas fa-stamp"></i></span><span class="psvc-body"><span class="psvc-name">Environmental Permit</span><span class="psvc-short">NCEC permit file, start to issuance</span></span><span class="psvc-go"><i class="fas fa-arrow-right"></i></span></a>
+    <a id="svc-1" href="service-environmental-impact-assessment.html" class="psvc-card"><span class="psvc-num">02</span><span class="psvc-ic"><i class="fas fa-clipboard-check"></i></span><span class="psvc-body"><span class="psvc-name">Environmental Impact Assessment</span><span class="psvc-short">EIA and ESIA for high-impact projects</span></span><span class="psvc-go"><i class="fas fa-arrow-right"></i></span></a>
+    <a id="svc-2" href="service-waste-management-permit.html" class="psvc-card"><span class="psvc-num">03</span><span class="psvc-ic"><i class="fas fa-recycle"></i></span><span class="psvc-body"><span class="psvc-name">Waste Management Permit</span><span class="psvc-short">MWAN permit for regulated waste</span></span><span class="psvc-go"><i class="fas fa-arrow-right"></i></span></a>
+    <a id="svc-3" href="service-environmental-management-plan.html" class="psvc-card"><span class="psvc-num">04</span><span class="psvc-ic"><i class="fas fa-list-check"></i></span><span class="psvc-body"><span class="psvc-name">Environmental Management Plan</span><span class="psvc-short">Permit conditions into daily practice</span></span><span class="psvc-go"><i class="fas fa-arrow-right"></i></span></a>
+    <a id="svc-4" href="service-environmental-register.html" class="psvc-card"><span class="psvc-num">05</span><span class="psvc-ic"><i class="fas fa-folder-open"></i></span><span class="psvc-body"><span class="psvc-name">Environmental Register</span><span class="psvc-short">Continuous proof of compliance</span></span><span class="psvc-go"><i class="fas fa-arrow-right"></i></span></a>
+    <a id="svc-5" href="service-periodic-environmental-report.html" class="psvc-card"><span class="psvc-num">06</span><span class="psvc-ic"><i class="fas fa-calendar-check"></i></span><span class="psvc-body"><span class="psvc-name">Periodic Environmental Report</span><span class="psvc-short">Keeping the permit you won</span></span><span class="psvc-go"><i class="fas fa-arrow-right"></i></span></a>
   </div>
 </section>
 
