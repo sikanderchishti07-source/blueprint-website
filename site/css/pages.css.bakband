@@ -2020,15 +2020,14 @@ a.svq-band-cta, a.svq-band-cta:link, a.svq-band-cta:visited, .svq-band a.svq-ban
 /* ==== end svcd floating boxes ==== */
 
 /* ==== svcd band scrim, lighter and less blue ==== */
-/* Near neutral, low opacity. The flat layer stops the text dropping out over
-   bright sky, the radial adds a little weight behind the sentence only, and
-   the shadow does the rest. */
+/* A flat neutral layer keeps the sentence legible everywhere, a soft radial
+   adds weight behind it only, and the text shadow carries the contrast the
+   scrim used to. Both layers shift off teal toward a neutral dark. */
 .svcd-band-scrim {
   background:
-    linear-gradient(rgba(8,14,16,.18), rgba(8,14,16,.18)),
-    radial-gradient(ellipse 56% 86% at 50% 50%,
-      rgba(6,12,14,.46) 0%, rgba(6,12,14,.20) 62%, rgba(6,12,14,.04) 100%);
+    linear-gradient(rgba(14,36,40,.30), rgba(14,36,40,.30)),
+    radial-gradient(ellipse 60% 90% at 50% 50%,
+      rgba(10,30,34,.62) 0%, rgba(10,30,34,.34) 60%, rgba(10,30,34,.12) 100%);
 }
-.svcd-band-quote { text-shadow: 0 2px 10px rgba(4,10,12,.85), 0 6px 34px rgba(4,10,12,.7); }
-.svcd-band-cta { box-shadow: 0 10px 34px rgba(4,10,12,.4); }
+.svcd-band-quote { text-shadow: 0 2px 26px rgba(6,20,24,.75); }
 /* ==== end svcd band scrim ==== */
