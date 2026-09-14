@@ -120,9 +120,7 @@ PERMITTING["environmental-impact-assessment"] = dict(
     tagline="Answering the questions reviewers actually ask",
     lede="EIA and ESIA studies for projects where the environmental approval decides whether the "
          "project proceeds at all.",
-    hero_img="assets/img/svc-environmental-impact-assessment-hero.webp",
-    detail_img="assets/img/svc-environmental-impact-assessment-detail.webp",
-    band_img="assets/img/svc-environmental-impact-assessment-band.webp",
+    hero_img="assets/img/svc-eia.jpg",
     float_head=("fa-clipboard-check", "What an EIA covers"),
     float_rows=[
                 ("4", "Study stages", "Scope, baseline, assess, report"),
@@ -223,9 +221,7 @@ PERMITTING["waste-management-permit"] = dict(
     tagline="MWAN permits for generators, carriers and treaters",
     lede="Waste characterisation, procedures and permit files for facilities that generate, transport, "
          "store or treat waste in the Kingdom.",
-    hero_img="assets/img/svc-waste-management-permit-hero.webp",
-    detail_img="assets/img/svc-waste-management-permit-detail.webp",
-    band_img="assets/img/svc-waste-management-permit-band.webp",
+    hero_img="assets/img/svc-waste.jpg",
     float_head=("fa-recycle", "Who needs one"),
     float_rows=[
                 ("100%", "Streams characterised", "Before the file is prepared"),
@@ -326,9 +322,7 @@ PERMITTING["environmental-management-plan"] = dict(
     tagline="Permit conditions turned into daily practice",
     lede="The document that translates what your permit requires into what your site actually does, "
          "with named roles, defined controls and a monitoring schedule.",
-    hero_img="assets/img/svc-environmental-management-plan-hero.webp",
-    detail_img="assets/img/svc-environmental-management-plan-detail.webp",
-    band_img="assets/img/svc-environmental-management-plan-band.webp",
+    hero_img="assets/img/svc-emp.jpg",
     float_head=("fa-tasks", "What an EMP fixes"),
     float_rows=[
                 ("1", "Document", "Short enough to actually be used"),
@@ -428,9 +422,7 @@ PERMITTING["environmental-register"] = dict(
     tagline="Proof you were compliant every day since",
     lede="The record an inspector asks for first, maintained continuously rather than assembled the "
          "week before it is needed.",
-    hero_img="assets/img/svc-environmental-register-hero.webp",
-    detail_img="assets/img/svc-environmental-register-detail.webp",
-    band_img="assets/img/svc-environmental-register-band.webp",
+    hero_img="assets/img/svc-register.jpg",
     float_head=("fa-folder-open", "In the register"),
     float_rows=[
                 ("1st", "Document requested", "At almost every inspection"),
