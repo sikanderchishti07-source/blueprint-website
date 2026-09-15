@@ -240,3 +240,60 @@ h2{font-family:var(--disp);font-size:clamp(1.7rem,3.5vw,2.9rem);font-weight:800;
   #expertCTA { display: none !important; }
   .whatsapp-container { bottom: 22px; right: 16px; }
 }
+
+
+/* ==== approved mobile cover ==== */
+@media (max-width: 900px) {
+  /* the scroll scenes do not run here, so the stage must not reserve their height */
+  .wrap { height: auto; }
+  .stage { position: relative; height: auto; padding-top: 0; }
+
+  /* photo becomes a banner across the top */
+  .plane, .kb { position: relative; height: 230px; inset: auto; }
+  .plane { width: 100%; }
+  .kb img, .cvr { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .net, .vig, .grain, .rail, .hud, .sc-t { display: none !important; }
+
+  /* one scrim, fading into the solid panel below */
+  .sc-s { position: absolute; left: 0; right: 0; top: 0; height: 230px; animation: none !important;
+    background: linear-gradient(to bottom, rgba(11,47,56,.30) 0%, rgba(11,47,56,.14) 42%,
+      rgba(11,47,56,.97) 100%) !important; }
+
+  /* only scene one is shown, on solid colour */
+  #s2, #s3 { display: none !important; }
+  .scene { position: relative; opacity: 1 !important; visibility: visible !important;
+    transform: none !important; filter: none !important; }
+  #s1 { background: var(--bp-blue-ink, #0b2f38); }
+  .sin { padding: 0 22px 32px; margin-top: -36px; position: relative; z-index: 3;
+    justify-content: flex-start; max-width: 100%; }
+  .sin > * { max-width: 100%; box-sizing: border-box; }
+
+  .eb { font-size: .6rem; letter-spacing: .13em; line-height: 1.5; margin-bottom: 14px; }
+  .cv-rule { margin-bottom: 16px; }
+  .sin h1 { font-size: clamp(1.85rem, 8.4vw, 2.3rem); line-height: 1.08; letter-spacing: -.035em;
+    margin-bottom: 14px; }
+  .sin h1 .ln { display: block; }
+  .sin h1 .w { transform: none !important; }
+  .lede { font-size: .93rem; line-height: 1.62; margin-bottom: 22px; }
+
+  /* accreditations: two columns, the long ISO line spans both */
+  .cv-cred { display: grid !important; grid-template-columns: 1fr 1fr; gap: 12px 14px;
+    padding: 16px 0 20px; margin: 0 0 22px;
+    border-top: 1px solid rgba(255,255,255,.16); border-bottom: 1px solid rgba(255,255,255,.16); }
+  .cv-cred > div:last-child { grid-column: 1 / -1; }
+  .cv-cred b { font-size: .84rem; line-height: 1.2; }
+  .cv-cred span { font-size: .58rem; letter-spacing: .13em; margin-top: 4px; }
+
+  /* full width stacked buttons */
+  .cta { display: flex; flex-direction: column; gap: 10px; }
+  .cta .b1, .cta .b2 { display: flex; align-items: center; justify-content: center; gap: 9px;
+    width: 100%; padding: 15px 20px; border-radius: 12px; font-size: .88rem; }
+
+  /* floating widgets clear of the copy */
+  #expertCTA { display: none !important; }
+  .whatsapp-container { bottom: 16px; right: 14px; }
+}
+@media (max-width: 400px) {
+  .plane, .kb, .sc-s { height: 200px; }
+  .sin { padding: 0 18px 28px; }
+}
