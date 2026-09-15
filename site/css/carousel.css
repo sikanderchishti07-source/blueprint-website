@@ -155,3 +155,9 @@
   .car-card,.car-card.act{width:auto;height:430px}
   .car-stage{height:auto}
 }
+
+
+/* pale background image, shown nearly full strength with a lighter wash */
+.carsec-bg{opacity:1}
+.carsec-wash{background:radial-gradient(120% 70% at 50% 0%,rgba(255,255,255,.55),rgba(255,255,255,.12) 62%,rgba(255,255,255,0) 84%)}
+.carsec{background:#fbfeff}
