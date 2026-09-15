@@ -152,8 +152,9 @@
   .car-badges{padding-left:0;border-left:none;border-top:1px solid rgba(11,47,56,.16);padding-top:20px}
 }
 @media(max-width:900px){
-  .car-card,.car-card.act{width:auto;height:430px}
+  .car-card,.car-card.act{flex:0 0 76vw;max-width:300px;width:auto;height:430px}
   .car-stage{height:auto}
+  .carsec-head{padding:0 20px}
 }
 
 

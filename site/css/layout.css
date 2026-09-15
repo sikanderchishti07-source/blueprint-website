@@ -96,8 +96,9 @@
 .drawer-wa-btn { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 11px; border-radius: 11px; background: #25D366; color: #fff; font-size: .83rem; font-weight: 700; border: none; cursor: pointer; text-decoration: none; transition: background .2s; }
 .drawer-wa-btn:hover { background: #20ba5a; }
 
-@media (max-width: 1100px) { .nav-links .nav-item:nth-child(n+5) { display: none; } }
-@media (max-width: 900px)  { .nav-links { display: none; } .nav-hamburger { display: flex; } .nav-contact-btn { display: none; } }
+/* the full menu, or the drawer, never a half menu */
+@media (max-width: 1240px) { .nav-links .nav-item > .nav-link { padding: 9px 11px; font-size: 13.5px; } }
+@media (max-width: 1100px) { .nav-links { display: none; } .nav-hamburger { display: flex; } .nav-contact-btn { display: none; } }
 @media (max-width: 640px)  { .nav-lang-btn, .nav-portal-btn { display: none; } .nav-logo-wrap img { height: 38px; } }
 
 /* ============================================================
