@@ -217,3 +217,26 @@ h2{font-family:var(--disp);font-size:clamp(1.7rem,3.5vw,2.9rem);font-weight:800;
 
 .sc-s { animation: cv-scrim 4.5s cubic-bezier(.5,0,.5,1) 1 forwards !important; }
 @keyframes cv-scrim { 0%, 40% { opacity: 1 } 100% { opacity: .2 } }
+
+
+/* ---- mobile cover: keep copy inside the screen ---- */
+@media (max-width: 900px) {
+  .stage { padding-top: 200px; }
+  .sin { padding: 40px 22px 56px; }
+  .sin > * { max-width: 100%; box-sizing: border-box; }
+  .sin h1, .sin .lede, .sin .eb, .sin .cv-cred { max-width: 100%; overflow-wrap: break-word; }
+  .cv-cred { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 18px; }
+}
+@media (max-width: 560px) {
+  .stage { padding-top: 176px; }
+  .sin { padding: 32px 20px 48px; }
+  .sin h1 { font-size: clamp(1.9rem, 8.6vw, 2.5rem); line-height: 1.1; }
+  .sin .lede { font-size: .94rem; line-height: 1.6; }
+  .cv-cred { grid-template-columns: 1fr 1fr; }
+  .cv-cred b { font-size: .8rem; }
+}
+/* floating widgets clear of the hero copy */
+@media (max-width: 900px) {
+  #expertCTA { display: none !important; }
+  .whatsapp-container { bottom: 22px; right: 16px; }
+}
