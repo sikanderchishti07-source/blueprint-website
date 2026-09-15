@@ -1566,3 +1566,23 @@ a.svq-band-cta, a.svq-band-cta:link, a.svq-band-cta:visited, .svq-band a.svq-ban
   .cmp-more { margin-left: 0; }
   .cmp-countbar { flex-direction: column; align-items: flex-start; gap: 6px; }
 }
+
+
+/* scrolled navbar keeps a solid background so links read over light sections */
+#navbar.scrolled .nav-inner {
+  background: rgba(255,255,255,.96) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  box-shadow: 0 1px 0 rgba(11,47,56,.08), 0 6px 22px rgba(11,47,56,.06) !important;
+  border-bottom-color: rgba(11,47,56,.08) !important;
+}
+#navbar.scrolled .nav-link,
+#navbar.scrolled .nav-lang-btn { color: var(--bp-blue-ink, #0b2f38) !important; text-shadow: none !important; }
+#navbar.scrolled .nav-link .nav-chevron { color: rgba(11,47,56,.45) !important; }
+#navbar.scrolled .nav-link:hover,
+#navbar.scrolled .nav-link.active { color: var(--bp-blue, #0e7c8a) !important;
+  background: rgba(14,124,138,.08) !important; }
+#navbar.scrolled .nav-lang-btn { border-color: rgba(11,47,56,.18) !important; }
+#navbar.scrolled .bp-tag { color: #7c8a90 !important; text-shadow: none !important; }
+#navbar.scrolled .bp-word { filter: none !important; }
+#navbar.scrolled .bp-lock { filter: none !important; }
