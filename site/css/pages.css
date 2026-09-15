@@ -1586,3 +1586,21 @@ a.svq-band-cta, a.svq-band-cta:link, a.svq-band-cta:visited, .svq-band a.svq-ban
 #navbar.scrolled .bp-tag { color: #7c8a90 !important; text-shadow: none !important; }
 #navbar.scrolled .bp-word { filter: none !important; }
 #navbar.scrolled .bp-lock { filter: none !important; }
+
+
+/* over a dark section the scrolled navbar goes transparent again */
+#navbar.scrolled.on-dark .nav-inner {
+  background: transparent !important;
+  box-shadow: none !important;
+  border-bottom-color: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+#navbar.scrolled.on-dark .nav-link,
+#navbar.scrolled.on-dark .nav-lang-btn { color: #fff !important; text-shadow: 0 1px 4px rgba(0,0,0,.5) !important; }
+#navbar.scrolled.on-dark .nav-link .nav-chevron { color: rgba(255,255,255,.7) !important; }
+#navbar.scrolled.on-dark .nav-link:hover,
+#navbar.scrolled.on-dark .nav-link.active { color: #fff !important; background: rgba(255,255,255,.14) !important; }
+#navbar.scrolled.on-dark .nav-lang-btn { border-color: rgba(255,255,255,.35) !important; }
+#navbar.scrolled.on-dark .bp-tag { color: #fff !important; text-shadow: 0 1px 4px rgba(0,0,0,.6) !important; }
+#navbar.scrolled.on-dark .bp-lock { filter: drop-shadow(0 1px 6px rgba(0,0,0,.55)) !important; }

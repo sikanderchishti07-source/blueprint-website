@@ -26,9 +26,34 @@
 
   /* â”€â”€ Navbar scrolled state â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   var nav = document.getElementById('navbar');
-  window.addEventListener('scroll', function () {
-    if (nav) nav.classList.toggle('scrolled', window.scrollY > 20);
-  }, { passive: true });
+
+  /* the nav goes transparent over dark sections and solid over light ones.
+     a section counts as dark if it carries .bp-dark or is one of the known
+     dark blocks below. */
+  var DARK = '.bp-dark, .wrap, .carsec-head ~ *, .abt-hero, .abt-mdl-sec, .abt-cta, ' +
+             '.eqp-hero, .cmp-hero, .svq-hero, .svcd-hero, .svq-cta, .svq-band, ' +
+             '.svcd-band, .page-header, .site-footer, .footer-cta-strip';
+
+  function overDark() {
+    if (!nav) return false;
+    var probe = nav.getBoundingClientRect().height * 0.55;
+    var els = document.querySelectorAll(DARK);
+    for (var i = 0; i < els.length; i++) {
+      var r = els[i].getBoundingClientRect();
+      if (r.top <= probe && r.bottom >= probe) return true;
+    }
+    return false;
+  }
+
+  function syncNav() {
+    if (!nav) return;
+    nav.classList.toggle('scrolled', window.scrollY > 20);
+    nav.classList.toggle('on-dark', overDark());
+  }
+
+  window.addEventListener('scroll', syncNav, { passive: true });
+  window.addEventListener('resize', syncNav);
+  syncNav();
 
   /* â”€â”€ Active nav link for current page â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   var page = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
