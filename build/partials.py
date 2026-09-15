@@ -262,7 +262,7 @@ def footer():
 
       <div class="footer-brand-col">
         <a href="index.html" class="footer-brand-logo js-home-link" aria-label="BluePrint, back to top">
-          <img src="assets/logo/blueprint-logo-white.png" alt="BluePrint Environmental Services" />
+          <span class="bp-lock"><span class="bp-mark"><img class="bp-b" src="assets/logo/blueprint-b.png" alt="" /><img class="bp-wave" src="assets/logo/blueprint-wave.png" alt="" /></span><span class="bp-txt"><img class="bp-word" src="assets/logo/blueprint-wordmark.png" alt="BluePrint" /><span class="bp-tag">Environmental Services</span></span></span>
         </a>
         <p class="footer-brand-desc">Accredited environmental consultancy delivering compliance, permitting, and reporting across the Kingdom of Saudi Arabia.</p>
         <div class="footer-cert-row">
