@@ -97,3 +97,61 @@
 .car-card .car-body::before, .car-card::before { background: linear-gradient(to top, rgba(11,47,56,.88) 2%, rgba(11,47,56,.34) 34%, rgba(11,47,56,0) 62%); }
 
 .car-veil { background: linear-gradient(to top, rgba(11,47,56,.9) 2%, rgba(11,47,56,.3) 32%, rgba(11,47,56,0) 60%); }
+
+
+/* ==== approved polish ==== */
+/* full colour cards, no wash */
+.car-card::after{background:transparent;opacity:0}
+.car-card img{filter:none}
+.car-idx{display:none}
+.car-veil{background:linear-gradient(to top,rgba(11,47,56,.93) 2%,rgba(11,47,56,.55) 34%,rgba(11,47,56,.08) 72%)}
+
+/* text on every card, same alignment throughout */
+.car-card p{max-height:none;opacity:1;margin-top:10px;
+  display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.car-card.act p{-webkit-line-clamp:5;margin-top:12px;max-height:none;opacity:1}
+.car-card.sideL .car-body,.car-card.sideR .car-body{padding-left:18px;padding-right:18px;text-align:left}
+.car-card.sideR .car-ic,.car-card.sideR .car-go{margin-left:0}
+
+/* heading, left aligned with the trust badges */
+.carsec-head{text-align:left;margin-bottom:14px;padding:0 44px;max-width:1500px;
+  margin-left:auto;margin-right:auto;display:flex;align-items:flex-start;
+  justify-content:space-between;gap:48px;flex-wrap:wrap}
+.carsec-headL{max-width:660px}
+.car-kick{margin-bottom:14px;letter-spacing:.24em;font-size:11.5px}
+.car-kick::after{display:none}
+.carsec-head h2{margin-bottom:13px;line-height:1.14;letter-spacing:-.025em;
+  font-size:clamp(1.4rem,2.6vw,2.15rem)}
+.carsec-head h2 em{font-style:normal;color:var(--bp-blue)}
+.carsec-head p{margin:0;max-width:62ch;font-size:.88rem;line-height:1.55}
+.car-badges{display:flex;gap:30px;padding-left:44px;border-left:1px solid rgba(11,47,56,.16);
+  flex-shrink:0;margin-top:6px}
+.car-badge{display:flex;gap:12px;align-items:flex-start;max-width:152px}
+.car-badge>i{font-size:1.32rem;color:var(--bp-blue);margin-top:2px}
+.car-badge b{display:block;font-family:var(--font-display);font-size:.82rem;font-weight:700;
+  line-height:1.3;margin-bottom:5px;color:var(--bp-blue-ink)}
+.car-badge span{font-size:.72rem;line-height:1.5;color:var(--bp-muted)}
+
+/* sized to sit inside one screen */
+.carsec{padding:26px 0 30px}
+.car-stage{height:534px}
+.car-card{width:224px;height:424px;border-radius:16px}
+.car-card.act{width:292px;height:492px}
+.car-body{padding:0 18px 19px}
+.car-ic{width:33px;height:33px;margin-bottom:10px;font-size:.84rem}
+.car-card h3{font-size:.94rem;line-height:1.26}
+.car-card.act h3{font-size:1.22rem}
+.car-card p{font-size:.775rem;line-height:1.52}
+.car-card.act p{font-size:.84rem}
+.car-go{margin-top:11px;width:32px;height:32px;font-size:.72rem}
+.car-nav{margin-top:14px;gap:18px}
+.car-btn{width:38px;height:38px}
+
+@media(max-width:1000px){
+  .carsec-head{flex-direction:column;gap:24px;padding:0 24px}
+  .car-badges{padding-left:0;border-left:none;border-top:1px solid rgba(11,47,56,.16);padding-top:20px}
+}
+@media(max-width:900px){
+  .car-card,.car-card.act{width:auto;height:430px}
+  .car-stage{height:auto}
+}

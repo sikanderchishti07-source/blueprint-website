@@ -43,7 +43,6 @@
     a.href = s.href;
     a.innerHTML =
       '<img src="' + s.img + '" alt="" loading="lazy"><span class="car-veil"></span>' +
-      '<span class="car-idx">' + String(n + 1).padStart(2, '0') + ' / 08</span>' +
       '<span class="car-body"><span class="car-ic"><i class="fas ' + s.i + '"></i></span>' +
       '<h3>' + s.t + '</h3><p>' + s.d + '</p>' +
       '<span class="car-go"><i class="fas fa-arrow-right"></i></span></span>';
@@ -67,7 +66,7 @@
       let o = n - cur; if (o > N / 2) o -= N; if (o < -N / 2) o += N;
       const a = Math.abs(o);
       
-      const x = o * 224 + Math.sign(o) * Math.min(a, 1) * 44;
+      const x = o * 232 + Math.sign(o) * Math.min(a, 1) * 46;
       const rot = Math.max(-26, Math.min(26, -o * 8));
       const z = -a * 95;
       const sc = a === 0 ? 1 : Math.max(.84, 1 - a * .045);
@@ -75,7 +74,7 @@
       s.el.style.transform =
         'translateX(' + x + 'px) translateZ(' + (lift ? z + 90 : z) + 'px) ' +
         'rotateY(' + (lift ? rot * 0.45 : rot) + 'deg) scale(' + (lift ? Math.min(1, sc + .09) : sc) + ')';
-      s.el.style.opacity = a > 3.5 ? 0 : (lift ? 1 : Math.max(.88, 1 - a * .045));
+      s.el.style.opacity = a > 3.5 ? 0 : (lift ? 1 : Math.max(.96, 1 - a * .015));
       s.el.style.zIndex = String(lift ? 25 : 30 - Math.round(a));
       s.el.style.pointerEvents = a > 3.5 ? 'none' : 'auto';
       s.el.classList.toggle('hov', lift);
