@@ -180,3 +180,17 @@
   filter: brightness(0) invert(1); }
 .footer-brand-logo .bp-tag { font-size: 8.5px; letter-spacing: .17em;
   color: rgba(255,255,255,.62); margin-top: 6px; }
+
+
+/* footer lockup, overriding the old flat-image sizing */
+.footer-brand-logo .bp-lock { display: flex !important; align-items: center; gap: 12px; }
+.footer-brand-logo .bp-mark { position: relative !important; display: block !important;
+  flex: 0 0 auto; width: 40px !important; height: 48px !important; margin: 0 !important; }
+.footer-brand-logo .bp-mark img { position: absolute !important; inset: 0 !important;
+  width: 100% !important; height: 100% !important; object-fit: contain; margin: 0 !important; }
+.footer-brand-logo .bp-txt { display: block; line-height: 1; }
+.footer-brand-logo .bp-word { height: 22px !important; width: auto !important; margin: 0 !important;
+  filter: brightness(0) invert(1); }
+.footer-brand-logo .bp-tag { display: block; font-size: 9px !important; font-weight: 600;
+  letter-spacing: .17em; text-transform: uppercase; color: rgba(255,255,255,.66) !important;
+  margin-top: 7px !important; white-space: nowrap; }
