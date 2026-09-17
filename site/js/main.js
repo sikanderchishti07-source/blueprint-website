@@ -34,25 +34,36 @@
              '.eqp-hero, .cmp-hero, .svq-hero, .svcd-hero, .svq-cta, .svq-band, ' +
              '.svcd-band, .page-header, .site-footer, .footer-cta-strip';
 
+  /* the element list is fixed for the page, so query it once */
+  var darkEls = [];
+  var navH = 84;
+  function cacheDark() {
+    darkEls = Array.prototype.slice.call(document.querySelectorAll(DARK));
+    if (nav) navH = nav.getBoundingClientRect().height * 0.55;
+  }
+
   function overDark() {
-    if (!nav) return false;
-    var probe = nav.getBoundingClientRect().height * 0.55;
-    var els = document.querySelectorAll(DARK);
-    for (var i = 0; i < els.length; i++) {
-      var r = els[i].getBoundingClientRect();
-      if (r.top <= probe && r.bottom >= probe) return true;
+    for (var i = 0; i < darkEls.length; i++) {
+      var r = darkEls[i].getBoundingClientRect();
+      if (r.top <= navH && r.bottom >= navH) return true;
     }
     return false;
   }
 
+  var ticking = false;
   function syncNav() {
-    if (!nav) return;
-    nav.classList.toggle('scrolled', window.scrollY > 20);
-    nav.classList.toggle('on-dark', overDark());
+    if (!nav || ticking) return;
+    ticking = true;
+    requestAnimationFrame(function () {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+      nav.classList.toggle('on-dark', overDark());
+      ticking = false;
+    });
   }
 
+  cacheDark();
   window.addEventListener('scroll', syncNav, { passive: true });
-  window.addEventListener('resize', syncNav);
+  window.addEventListener('resize', function () { cacheDark(); syncNav(); });
   syncNav();
 
   /* â”€â”€ Active nav link for current page â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
@@ -122,4 +133,35 @@
   if (p === '' || p === 'index.html') {
     document.documentElement.classList.add('bp-home');
   }
+
+
+  /* videos below the fold only start downloading when they come near */
+  (function () {
+    var vids = document.querySelectorAll('video[data-lazy], .about-video video, .abt-story-video');
+    if (!vids.length || !('IntersectionObserver' in window)) return;
+    vids.forEach(function (v) {
+      var srcs = Array.prototype.slice.call(v.querySelectorAll('source'));
+      srcs.forEach(function (s) {
+        if (s.src) { s.setAttribute('data-src', s.src); s.removeAttribute('src'); }
+      });
+      v.removeAttribute('autoplay');
+      v.preload = 'none';
+      v.load();
+    });
+    var io2 = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var v = e.target;
+        v.querySelectorAll('source[data-src]').forEach(function (s) {
+          s.src = s.getAttribute('data-src'); s.removeAttribute('data-src');
+        });
+        v.preload = 'auto';
+        v.load();
+        v.play().catch(function () {});
+        io2.unobserve(v);
+      });
+    }, { rootMargin: '300px' });
+    vids.forEach(function (v) { io2.observe(v); });
+  })();
+
 })();
