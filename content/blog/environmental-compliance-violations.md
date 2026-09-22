@@ -3,7 +3,7 @@ title: "The Six Environmental Violations Saudi Inspectors Find Most Often"
 date: July 26, 2026
 category: "Inspections"
 summary: "Almost every finding we see falls into the same handful of categories, and nearly all of them are documentation problems rather than engineering failures."
-image: "assets/img/svc-noise.jpg"
+image: "assets/img/blog-violations.webp"
 read: "3 min read"
 ---
 

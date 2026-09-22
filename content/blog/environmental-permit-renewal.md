@@ -3,7 +3,7 @@ title: "Renewing Your Environmental Permit: Start Six Months Early"
 date: July 24, 2026
 category: "Renewals"
 summary: "Renewal is not a formality. Reviewers examine your compliance history, and an expired permit puts you in violation immediately, with no grace period in practice."
-image: "assets/img/svc-lab.jpg"
+image: "assets/img/blog-renewal.webp"
 read: "2 min read"
 ---
 

@@ -3,7 +3,7 @@ title: "Environmental Permit Categories in Saudi Arabia: Which One Applies to Yo
 date: July 22, 2026
 category: "Permitting"
 summary: "Category 1, 2, or 3 determines the studies you need, what you will pay, and how long licensing takes. Misclassifying your activity is the most expensive mistake we see."
-image: "assets/img/svc-air.jpg"
+image: "assets/img/blog-categories.webp"
 read: "3 min read"
 ---
 

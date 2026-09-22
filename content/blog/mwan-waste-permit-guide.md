@@ -3,7 +3,7 @@ title: "The Complete Guide to MWAN Waste Management Permits in Saudi Arabia"
 date: July 20, 2026
 category: "Waste Permits"
 summary: "Everything facility owners need to know about National Waste Management Center permits, who needs one, the documents required, and how to avoid the delays that catch most applicants."
-image: "assets/img/svc-permit.jpg"
+image: "assets/img/blog-mwan.webp"
 read: "2 min read"
 ---
 

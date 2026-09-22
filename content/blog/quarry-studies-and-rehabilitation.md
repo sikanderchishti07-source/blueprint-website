@@ -3,7 +3,7 @@ title: "Quarry Studies and Rehabilitation: The Obligation That Outlives the Site
 date: July 27, 2026
 category: "Quarries & Mining"
 summary: "Extraction sites commit to a rehabilitation obligation years before it comes due. It does not expire because the quarry closed, sat idle, or changed hands."
-image: "assets/img/spec-marine.jpg"
+image: "assets/img/blog-quarry.webp"
 read: "2 min read"
 ---
 
