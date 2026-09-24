@@ -64,11 +64,22 @@ for _r in _roles:
 for a in C.load_blog():
     PAGES['blog-%s.html' % a['slug']] = (a['title'] + ' | BluePrint', a['summary'], X.article(a, G.page_header), ())
 
-with open(os.path.join(OUT, 'index_arabic.html'), 'w', encoding='utf-8') as f:
-    f.write(AR.arabic())
-print('index_arabic.html')
+import ar_pages as ARP
+P.AR_AVAILABLE = set(ARP.AR_PAGES)
 
 for fname, (title, desc, body, extra) in PAGES.items():
-    html = P.head(title, desc) + P.nav() + '\n<main>' + body + '</main>\n' + P.footer() + P.modals() + P.widgets() + P.scripts(extra)
+    html = P.head(title, desc, page=fname) + P.nav(page=fname) + '\n<main>' + body + '</main>\n' + P.footer(page=fname) + P.modals() + P.widgets() + P.scripts(extra)
     with open(os.path.join(OUT, fname), 'w', encoding='utf-8') as f: f.write(html)
     print(fname, len(html))
+
+
+# ---- Arabic pages, written to site/ar/ -------------------------------------
+AR_OUT = os.path.join(OUT, 'ar')
+os.makedirs(AR_OUT, exist_ok=True)
+for fname, (title, desc, body, extra) in ARP.AR_PAGES.items():
+    html = (P.head(title, desc, lang='ar', page=fname) + P.nav('ar', fname)
+            + '\n<main>' + body + '</main>\n' + P.footer('ar', fname) + P.modals()
+            + P.widgets('ar') + P.scripts(extra, 'ar'))
+    html = P.ar_paths(html, P.AR_AVAILABLE)
+    with open(os.path.join(AR_OUT, fname), 'w', encoding='utf-8') as f: f.write(html)
+    print('ar/' + fname, len(html))

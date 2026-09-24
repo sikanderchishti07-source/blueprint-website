@@ -1,5 +1,26 @@
 {
   "buildCommand": "cd build && npm install && bash build.sh",
   "outputDirectory": "site",
-  "framework": null
+  "framework": null,
+  "rewrites": [
+    {
+      "source": "/ar/assets/:path*",
+      "destination": "/assets/:path*"
+    },
+    {
+      "source": "/ar/css/:path*",
+      "destination": "/css/:path*"
+    },
+    {
+      "source": "/ar/js/:path*",
+      "destination": "/js/:path*"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/index_arabic.html",
+      "destination": "/ar/",
+      "permanent": true
+    }
+  ]
 }

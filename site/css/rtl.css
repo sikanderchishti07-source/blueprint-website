@@ -86,3 +86,12 @@ h1, h2, h3, h4 { letter-spacing: 0; line-height: 1.45; }
 [dir="rtl"] .svcd-hero::after { right: auto; left: 0; }
 [dir="rtl"] .svcd-hero::before { right: auto; left: 46%; }
 [dir="rtl"] .svcd-float { left: auto; right: -56px; }
+
+/* ==== arabic stage 1 ==== */
+/* the logo is a Latin wordmark, so it keeps its left-to-right order */
+.bp-lock { direction: ltr; }
+/* phone numbers and codes read left to right inside Arabic text */
+[dir="ltr"] { unicode-bidi: isolate; }
+.footer-cert-badge { direction: ltr; }
+/* dropdown text starts from the right */
+.nav-dd-text-wrap, .nav-dropdown-title, .nav-mega-header-title { text-align: right; }
