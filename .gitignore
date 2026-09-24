@@ -1,2 +1,4 @@
 ﻿build/node_modules/
 build/__pycache__/
+
+_backup_*
