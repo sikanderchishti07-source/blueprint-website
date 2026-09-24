@@ -204,3 +204,19 @@ html[dir="rtl"] .svq-eyebrow, html[dir="rtl"] .eqp-eyebrow { font-size: 12px !im
 html[dir="rtl"] span[dir="ltr"], html[dir="rtl"] bdi[dir="ltr"] { white-space: nowrap; }
 /* compliance hub: the English reference title is a quiet secondary line */
 html[dir="rtl"] .cmp-en-ref { font-size: .8rem; line-height: 1.45; opacity: .8; margin-top: 2px; }
+
+/* ==== arabic stage 6: service page hero and figure mirrored ==== */
+/* wide screens: the floating panels sit on the mirror-image side, so the
+   accreditation badge no longer lands on top of the fact card */
+@media (min-width: 1024px) {
+  html[dir="rtl"] .svcd-float { left: auto; right: -46px; }
+  html[dir="rtl"] .svcd-float-2 { right: auto; left: -28px; }
+  html[dir="rtl"] .svcd-figure-card { right: 40px; left: -24px; }
+  html[dir="rtl"] .svcd-cap-badge { left: auto; right: -12px; }
+}
+@media (max-width: 1023px) {
+  html[dir="rtl"] .svcd-cap-badge { right: auto; left: 14px; }
+}
+/* the notched corner of the photos moves to the top-left */
+html[dir="rtl"] .svcd-hero-img { clip-path: polygon(46px 0, 100% 0, 100% 100%, 0 100%, 0 46px); }
+html[dir="rtl"] .svcd-figure-img { clip-path: polygon(40px 0, 100% 0, 100% 100%, 0 100%, 0 40px); }

@@ -31,7 +31,9 @@
      a section counts as dark if it carries .bp-dark or is one of the known
      dark blocks below. */
   var DARK = '.bp-dark, .wrap, .carsec-head ~ *, .abt-hero, .abt-mdl-sec, .abt-cta, ' +
-             '.eqp-hero, .cmp-hero, .svq-hero, .svcd-hero, .svq-cta, .svq-band, ' +
+             /* .svcd-hero is left out: only its photo side is dark, and the menu
+                sits over the light side, so white menu text would vanish there */
+             '.eqp-hero, .cmp-hero, .svq-hero, .svq-cta, .svq-band, ' +
              '.svcd-band, .page-header, .site-footer, .footer-cta-strip';
 
   /* the element list is fixed for the page, so query it once */
