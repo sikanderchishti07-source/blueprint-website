@@ -6,6 +6,7 @@
 (function () {
   'use strict';
   if (!document.getElementById('wrap')) return;
+  const CT = window.COVER_T || {}; /* lang-aware */
 
 const MK=[
  {x:22,y:36,c:'AIR QUALITY',v:'boundary &amp; stack',f:.08,t:.50},
@@ -13,6 +14,7 @@ const MK=[
  {x:80,y:58,c:'WATER',v:'effluent &amp; discharge',f:.30,t:.78},
  {x:38,y:70,c:'NOISE',v:'boundary &amp; receptor',f:.42,t:.92},
  {x:56,y:45,c:'SOIL',v:'contaminants',f:.54,t:1.04}];
+if(CT.mk){CT.mk.forEach(function(m,i){if(MK[i]){MK[i].c=m[0];MK[i].v=m[1];if(m[2]!=null)MK[i].x=m[2];if(m[3]!=null)MK[i].y=m[3];}});}
 
 const c01=v=>Math.max(0,Math.min(1,v)), rmp=(p,a,b)=>c01((p-a)/(b-a)), sm=v=>v*v*(3-2*v),
       win=(p,a,b,f=.09)=>sm(rmp(p,a,a+f))*(1-sm(rmp(p,b-f,b)));
@@ -113,7 +115,7 @@ function frame(){
   const act=p<.3?0:(p<.7?1:2);
   chs.forEach((c,i)=>c.classList.toggle('on',i===act));
   hudBar.style.transform='scaleX('+p.toFixed(3)+')';
-  hudTxt.textContent=(p<.02?'SCROLL':'CHAPTER '+(act+1)+' OF 3')+' · '+String(Math.round(p*100)).padStart(2,'0')+'%';
+  hudTxt.textContent=(p<.02?(CT.scroll||'SCROLL'):(CT.chapter?CT.chapter.replace('{n}',act+1):'CHAPTER '+(act+1)+' OF 3'))+' · '+String(Math.round(p*100)).padStart(2,'0')+'%';
 
   if(Math.abs(target-cur)>0.0004||Math.abs(tmx-mx)>0.001){requestAnimationFrame(frame)}else{running=false}
 }
@@ -139,10 +141,11 @@ function onScroll(){
     const aqi=Math.round(c.us_aqi||0);
     /* the US EPA index is defined to 500; anything above is shown as 500+ */
     document.getElementById('aqiVal').textContent = aqi ? (aqi>500 ? '500+' : aqi) : '—';
-    const band = aqi<=50?'GOOD' : aqi<=100?'MODERATE' : aqi<=150?'UNHEALTHY · SENSITIVE'
-               : aqi<=200?'UNHEALTHY' : aqi<=300?'VERY UNHEALTHY' : 'HAZARDOUS';
+    const BD = CT.bands || ['GOOD','MODERATE','UNHEALTHY · SENSITIVE','UNHEALTHY','VERY UNHEALTHY','HAZARDOUS'];
+    const band = aqi<=50?BD[0] : aqi<=100?BD[1] : aqi<=150?BD[2]
+               : aqi<=200?BD[3] : aqi<=300?BD[4] : BD[5];
     const lab=document.querySelector('.lc-val span');
-    if(lab && aqi) lab.textContent = 'AQI · ' + band;
+    if(lab && aqi) lab.textContent = (CT.aqi||'AQI · ') + band;
     document.getElementById('pm25').textContent=(c.pm2_5!=null)?c.pm2_5.toFixed(1):'—';
     document.getElementById('pm10').textContent=(c.pm10!=null)?c.pm10.toFixed(1):'—';
     const frac=Math.min(1,aqi/500);
@@ -152,7 +155,7 @@ function onScroll(){
     spark(document.getElementById('sp25'),take(h.pm2_5),'#8fe7f7');
     spark(document.getElementById('sp10'),take(h.pm10),'#c3d49a');
     const t=c.time? new Date(c.time):new Date();
-    document.getElementById('lcSrc').textContent='AMBIENT AIR · RIYADH · PUBLIC DATA · '
+    document.getElementById('lcSrc').textContent=(CT.src||'AMBIENT AIR · RIYADH · PUBLIC DATA · ')
       + t.toISOString().slice(11,16) + ' UTC';
   }).catch(()=>{ card.style.display='none'; });  /* never show placeholder numbers */
 })();

@@ -117,7 +117,7 @@ STR = {
   "f_accred": "الاعتمادات",
   "f_location": "الموقع", "f_email": "البريد الإلكتروني", "f_phone": "الهاتف", "f_wa": "واتساب",
   "f_hours": "ساعات العمل", "f_hours_v": "الأحد &ndash; الخميس &middot; 9:00 &ndash; 18:00",
-  "address": '<div class="footer-contact-value">3704 أبي جعفر المنصور، حي اليرموك، الرياض 13251-7669، المملكة العربية السعودية</div>',
+  "address": '<div class="footer-contact-value">3704 أبي جعفر المنصور، حي اليرموك، الرياض <span dir="ltr">13251-7669</span>، المملكة العربية السعودية</div>',
   "copy": "بلوبرنت للخدمات البيئية. جميع الحقوق محفوظة.",
   "credit": 'إعداد: <span>Sikander Chishti</span>، مهندس بيئي',
   "privacy": "سياسة الخصوصية", "terms": "الشروط والأحكام",

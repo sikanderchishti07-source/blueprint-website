@@ -74,7 +74,8 @@
     var c = document.createElement('button');
     c.type = 'button';
     c.className = 'svc-card';
-    c.setAttribute('aria-label', 'View ' + g.key.replace(/&amp;/g, 'and') + ' services');
+    c.setAttribute('aria-label', T.view ? T.view.replace('{k}', g.key.replace(/&amp;/g, '&')) /* lang-aware */
+                                  : 'View ' + g.key.replace(/&amp;/g, 'and') + ' services');
     c.addEventListener('click', function () { openOverlay(i, c); });
     var teaser = g.items.map(function (it) {
       return '<li><span class="svc-bl-t">' + it[0] + '</span>' +

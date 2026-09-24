@@ -7,7 +7,8 @@
   const track = document.getElementById('carTrack');
   if (!track) return;
 
-  const S = [
+  /* lang-aware: an Arabic page supplies window.CAR_S */
+  const S = window.CAR_S || [
     {t:'Environmental Studies', i:'fa-seedling',
      d:'In-depth impact assessments and baseline studies that support informed decisions and regulatory approval.',
      href:'service-environmental-studies.html', img:'assets/img/svc-card-1.webp'},
@@ -55,7 +56,7 @@
 
     const d = document.createElement('button');
     d.className = 'car-dot'; d.type = 'button';
-    d.setAttribute('aria-label', 'Go to service ' + (n + 1));
+    d.setAttribute('aria-label', ((window.CAR_T && window.CAR_T.go) || 'Go to service ') + (n + 1));
     d.addEventListener('click', () => { go(n); pause(); resume(); });
     dots.appendChild(d); s.dot = d;
   });

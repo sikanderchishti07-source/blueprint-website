@@ -1,11 +1,12 @@
 # Arabic pages, built into site/ar/.
 #
-# Each entry: file name -> (title, meta description, body HTML, extra scripts).
-# The file name must match the English page it translates, so the language
-# button can pair them. Add a page here once its Arabic body is written;
-# until then, Arabic links to it fall back to the English page.
+# AR_FILES lists the pages that have an Arabic version. Each must match the
+# English file name it translates, so the language button can pair them.
+# A link to a page not listed here falls back to the English page.
 
-from arabic_home import BODY as HOME_BODY
+AR_FILES = ["index.html"]
+
+import home_ar
 
 AR_PAGES = {
     "index.html": (
@@ -13,7 +14,7 @@ AR_PAGES = {
         "بلوبرنت للخدمات البيئية، استشارات بيئية معتمدة في المملكة العربية السعودية: "
         "التراخيص البيئية، ودراسات تقييم الأثر البيئي، وتراخيص إدارة النفايات، "
         "والسجلات البيئية، والرصد البيئي.",
-        HOME_BODY,
-        ("js/cards-ar.js", "js/cards.js"),
+        home_ar.home(set(AR_FILES)),
+        ("js/cards.js", "js/cover.js", "js/carousel.js"),
     ),
 }

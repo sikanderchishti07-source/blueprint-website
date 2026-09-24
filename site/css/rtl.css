@@ -95,3 +95,66 @@ h1, h2, h3, h4 { letter-spacing: 0; line-height: 1.45; }
 .footer-cert-badge { direction: ltr; }
 /* dropdown text starts from the right */
 .nav-dd-text-wrap, .nav-dropdown-title, .nav-mega-header-title { text-align: right; }
+
+/* ==== arabic stage 2: home ==== */
+/* Arabic letters join to each other; letter-spacing pulls them apart */
+html[dir="rtl"] body * { letter-spacing: 0 !important; }
+
+/* Tailwind's space-x puts the gap on the left; in Arabic it belongs on the right */
+html[dir="rtl"] [class*="space-x-"] > :not([hidden]) ~ :not([hidden]) { --tw-space-x-reverse: 1; }
+
+/* cover: the shading sits behind the copy, which is now on the right */
+@media (min-width: 901px) {
+  html[dir="rtl"] .sc-s {
+    background: linear-gradient(260deg, rgba(6,26,28,.88) 0%, rgba(6,26,28,.72) 38%,
+      rgba(6,26,28,.32) 68%, rgba(6,26,28,.12) 100%) !important; }
+}
+/* chapter labels move to the free side */
+html[dir="rtl"] .rail { right: auto; left: clamp(16px, 2.4vw, 38px); }
+
+/* services carousel */
+html[dir="rtl"] .carsec-head { text-align: right; }
+@media (min-width: 1001px) {
+  html[dir="rtl"] .car-badges { padding-left: 0; border-left: none;
+    padding-right: 44px; border-right: 1px solid rgba(11,47,56,.16); }
+}
+html[dir="rtl"] .car-card .car-body,
+html[dir="rtl"] .car-card.sideL .car-body,
+html[dir="rtl"] .car-card.sideR .car-body { text-align: right !important; }
+
+/* three service cards */
+html[dir="rtl"] .svc-card { text-align: right; }
+html[dir="rtl"] .svc-card-num { left: auto; right: 24px; }
+html[dir="rtl"] .svc-card-icon { right: auto; left: 20px; }
+html[dir="rtl"] .svc-back-list li { padding-left: 0; padding-right: 24px; }
+html[dir="rtl"] .svc-back-list li::before { left: auto; right: 0; }
+
+/* sectors */
+html[dir="rtl"] .sect-tag { left: auto; right: 13px; }
+
+/* insights */
+html[dir="rtl"] .ipanel-tag { left: auto; right: 84px; border-left: none; padding-left: 0;
+  border-right: 2px solid var(--bp-blue); padding-right: 16px; }
+html[dir="rtl"] .icard-n { left: auto; right: 14px; direction: ltr; }
+html[dir="rtl"] .icard-ic { left: auto; right: 16px; }
+@media (max-width: 900px) { html[dir="rtl"] .ipanel-tag { right: 26px; } }
+
+/* cover labels: the monospace face has no Arabic letters, so use the Arabic
+   face, and give Arabic the size it needs to stay legible */
+html[dir="rtl"] .stage, html[dir="rtl"] .wrap, html[dir="rtl"] .after {
+  --mono: 'IBM Plex Sans Arabic', 'IBM Plex Mono', ui-monospace, monospace; }
+html[dir="rtl"] .eb { font-size: 12.5px; }
+html[dir="rtl"] .mk-c { font-size: 9.5px; }
+html[dir="rtl"] .mk-v { font-size: 11.5px; }
+html[dir="rtl"] .ch span { font-size: 11px; }
+html[dir="rtl"] .hud { font-size: 11px; }
+html[dir="rtl"] .lc-val span { font-size: 9px; }
+html[dir="rtl"] .lc-k { font-size: 10px; }
+html[dir="rtl"] .lc-src { font-size: 9px; }
+html[dir="rtl"] .par span { font-size: 10.5px; }
+html[dir="rtl"] .cr span { font-size: 11px; }
+html[dir="rtl"] .cv-cred span { font-size: .72rem; }
+/* credential dividers sit on the reading-start side */
+html[dir="rtl"] .cr div { border-left: none; padding-left: 0;
+  border-right: 2px solid rgba(120,224,240,.6); padding-right: 17px; }
+html[dir="rtl"] .par b { direction: ltr; unicode-bidi: isolate; }
