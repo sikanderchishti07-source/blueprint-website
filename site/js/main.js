@@ -123,7 +123,7 @@
   });
 
   /* â”€â”€ Contact form (front-end only, as in the original) â”€â”€â”€â”€â”€ */
-  window.sendContactMessage = function () { alert('Thank you! Our team will contact you shortly.'); };
+  window.sendContactMessage = function () { /* lang-aware */ alert(document.documentElement.lang === 'ar' ? 'شكراً لك! سيتواصل معك فريقنا قريباً.' : 'Thank you! Our team will contact you shortly.'); };
 })();
 
 

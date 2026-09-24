@@ -158,3 +158,24 @@ html[dir="rtl"] .cv-cred span { font-size: .72rem; }
 html[dir="rtl"] .cr div { border-left: none; padding-left: 0;
   border-right: 2px solid rgba(120,224,240,.6); padding-right: 17px; }
 html[dir="rtl"] .par b { direction: ltr; unicode-bidi: isolate; }
+
+/* client logos are pictures, not text: keep the strip left to right so the
+   scrolling animation stays seamless */
+html[dir="rtl"] .logo-marquee, html[dir="rtl"] .logo-track { direction: ltr; }
+
+/* ==== arabic stage 3: inner pages ==== */
+/* About hero: photo on the left, shading behind the Arabic copy on the right */
+@media (min-width: 1001px) {
+  html[dir="rtl"] .abt-hero-media { inset: 0 38% 0 0; }
+  html[dir="rtl"] .abt-hero-veil {
+    background: linear-gradient(260deg, #0b2f38 0%, #0b2f38 46%, rgba(11,47,56,.86) 60%, rgba(11,47,56,.42) 100%); }
+}
+html[dir="rtl"] .abt-lede { border-left: none; border-right: 3px solid #4fc3cd; padding: 4px 20px 4px 0; }
+html[dir="rtl"] .abt-hero-facts > div { padding-right: 0; margin-right: 0; border-right: none;
+  padding-left: 40px; margin-left: 40px; border-left: 1px solid rgba(255,255,255,.16); }
+html[dir="rtl"] .abt-hero-facts > div:last-child { border-left: none; margin-left: 0; padding-left: 0; }
+@media (max-width: 560px) {
+  html[dir="rtl"] .abt-hero-facts > div { border-left: none; padding-left: 0; margin: 0 0 16px 34px; }
+}
+html[dir="rtl"] .abt-reg-cards { right: auto; left: 0; }
+html[dir="rtl"] .abt-mdl-tools, html[dir="rtl"] .abt-reg dd { text-align: left; }

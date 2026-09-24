@@ -65,6 +65,7 @@ for a in C.load_blog():
     PAGES['blog-%s.html' % a['slug']] = (a['title'] + ' | BluePrint', a['summary'], X.article(a, G.page_header), ())
 
 import ar_pages as ARP
+ARP.setup(PAGES)
 P.AR_AVAILABLE = set(ARP.AR_PAGES)
 
 for fname, (title, desc, body, extra) in PAGES.items():
