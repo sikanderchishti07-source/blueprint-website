@@ -147,6 +147,68 @@ def _lang_href(lang, page):
     return "ar/" + (page if page in AR_AVAILABLE else "index.html")
 
 
+# ---- link previews, icons and language links -------------------------------
+# The site's public address. Change this one line when the site moves to its
+# own domain: preview links, canonical addresses and language links follow.
+SITE_URL = "https://blueprint-website-wheat.vercel.app"
+
+import os as _os
+_OG_DIR = _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "..", "site", "assets", "og")
+
+
+def _q(s):
+    return str(s).replace('"', "&quot;")
+
+
+def _url(lang, page):
+    path = "" if page == "index.html" else page
+    return SITE_URL + ("/ar/" if lang == "ar" else "/") + path
+
+
+def _alternates(lang, page):
+    """hreflang links, only when the page exists in both languages."""
+    if lang == "en" and page not in AR_AVAILABLE:
+        return ""
+    return (f'\n  <link rel="alternate" hreflang="en" href="{_url("en", page)}" />'
+            f'\n  <link rel="alternate" hreflang="ar" href="{_url("ar", page)}" />'
+            f'\n  <link rel="alternate" hreflang="x-default" href="{_url("en", page)}" />')
+
+
+def _head_meta(title, description, lang, page):
+    stem = page[:-5]
+    img = stem + ".jpg" if _os.path.exists(_os.path.join(_OG_DIR, stem + ".jpg")) else "default.jpg"
+    img_url = SITE_URL + "/assets/og/" + img
+    ar = lang == "ar"
+    site = "بلوبرنت للخدمات البيئية" if ar else "BluePrint Environmental Services"
+    locale, other = ("ar_SA", "en_US") if ar else ("en_US", "ar_SA")
+    twin = ar or page in AR_AVAILABLE
+    kind = "article" if page.startswith("blog-") else "website"
+    t, d, u = _q(title), _q(description), _url(lang, page)
+    alt_locale = f'\n  <meta property="og:locale:alternate" content="{other}" />' if twin else ""
+    return f"""
+  <link rel="icon" href="/favicon.ico" sizes="48x48" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="canonical" href="{u}" />
+
+  <!-- Link previews (WhatsApp, LinkedIn, X, iMessage) -->
+  <meta property="og:type" content="{kind}" />
+  <meta property="og:site_name" content="{site}" />
+  <meta property="og:title" content="{t}" />
+  <meta property="og:description" content="{d}" />
+  <meta property="og:url" content="{u}" />
+  <meta property="og:image" content="{img_url}" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="{t}" />
+  <meta property="og:locale" content="{locale}" />{alt_locale}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{t}" />
+  <meta name="twitter:description" content="{d}" />
+  <meta name="twitter:image" content="{img_url}" />"""
+
+
 def head(title, description, extra_css="", lang="en", page=None):
     s = STR[lang]
     page = page or "index.html"
@@ -155,16 +217,12 @@ def head(title, description, extra_css="", lang="en", page=None):
                  '&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600'
                  '&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />')
         rtl = '\n  <link rel="stylesheet" href="css/rtl.css" />'
-        alt = (f'\n  <link rel="alternate" hreflang="ar" href="{page}" />'
-               f'\n  <link rel="alternate" hreflang="en" href="../{page}" />')
+        alt = _alternates(lang, page)
     else:
         fonts = ('<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800'
                  '&family=DM+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />')
         rtl = ""
-        alt = ""
-        if page in AR_AVAILABLE:
-            alt = (f'\n  <link rel="alternate" hreflang="en" href="{page}" />'
-                   f'\n  <link rel="alternate" hreflang="ar" href="ar/{page}" />')
+        alt = _alternates(lang, page)
     return f"""<!DOCTYPE html>
 <!--
   ============================================================
@@ -189,7 +247,7 @@ def head(title, description, extra_css="", lang="en", page=None):
   <meta name="description" content="{description}" />
   <meta name="theme-color" content="#0e93a8" />
   <title>{title}</title>
-  <link rel="icon" type="image/png" href="assets/logo/favicon.png" />{alt}
+{_head_meta(title, description, lang, page)}{alt}
 
   <!-- Fonts & icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />

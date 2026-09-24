@@ -28,15 +28,30 @@ def _gloss(s):
     return s
 
 
+# phrases used only in page titles, not on the pages themselves
+_TITLE_ONLY = {"Environmental Compliance Blog": "مدونة الالتزام البيئي"}
+_ALL = None
+
+
+def _all_text():
+    """Every English-to-Arabic phrase the site has, from all the maps."""
+    global _ALL
+    if _ALL is None:
+        _ALL = dict(home_ar.TEXT)
+        for _t, _a, _r in T.PAGES.values():
+            _ALL.update(dict(_t))
+        _ALL.update(dict(T.COMMON_TEXT))
+        _ALL.update(T2.TEXT)
+        _ALL.update(_TITLE_ONLY)
+    return _ALL
+
+
 def _lookup(s):
     """English phrase to Arabic from any map, or None."""
+    d = _all_text()
     for key in (s, s.replace("&", "&amp;"), " ".join(s.split())):
-        if key in T2.TEXT:
-            return T2.TEXT[key]
-        for lst in (T.COMMON_TEXT,):
-            for en, ar in lst:
-                if en == key:
-                    return ar
+        if key in d:
+            return d[key]
     return None
 
 
