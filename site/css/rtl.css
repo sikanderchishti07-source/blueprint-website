@@ -187,3 +187,20 @@ html[dir="rtl"] .abt-mdl-tools, html[dir="rtl"] .abt-reg dd { text-align: left; 
 }
 /* compliance hub: English reference title under the Arabic one */
 html[dir="rtl"] .cmp-en-ref { direction: ltr; text-align: right; font-family: var(--font-body, inherit); }
+
+/* ==== arabic stage 5: readable small labels ==== */
+/* Arabic letterforms need more size than Latin small caps to stay legible;
+   these labels sit at 9.6-11.4px in the shared design, so Arabic gets 12px */
+html[dir="rtl"] .drawer-section-title, html[dir="rtl"] .footer-contact-label,
+html[dir="rtl"] .footer-col-title, html[dir="rtl"] .footer-cta-label, html[dir="rtl"] .footer-credit,
+html[dir="rtl"] .icard-cat, html[dir="rtl"] .svc-card-kick, html[dir="rtl"] .svc-card-count,
+html[dir="rtl"] .sect-obl b, html[dir="rtl"] .acr-kick, html[dir="rtl"] .showcase-eyebrow,
+html[dir="rtl"] .ikick, html[dir="rtl"] .abt-cred-full, html[dir="rtl"] .abt-eyebrow,
+html[dir="rtl"] .svcd-figure-k, html[dir="rtl"] .svcd-cap-badge span, html[dir="rtl"] .svcd-float-row span, html[dir="rtl"] .svcd-float-2 span,
+html[dir="rtl"] .svcd-kicker, html[dir="rtl"] .cmp-sev, html[dir="rtl"] .cmp-ref, html[dir="rtl"] .cmp-tag,
+html[dir="rtl"] .cmp-eyebrow, html[dir="rtl"] .card-time, html[dir="rtl"] .card-badge,
+html[dir="rtl"] .svq-eyebrow, html[dir="rtl"] .eqp-eyebrow { font-size: 12px !important; }
+/* number runs (postcodes, phone numbers) never break across lines */
+html[dir="rtl"] span[dir="ltr"], html[dir="rtl"] bdi[dir="ltr"] { white-space: nowrap; }
+/* compliance hub: the English reference title is a quiet secondary line */
+html[dir="rtl"] .cmp-en-ref { font-size: .8rem; line-height: 1.45; opacity: .8; margin-top: 2px; }

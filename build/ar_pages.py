@@ -96,6 +96,17 @@ def _data_wa(html, lookup):
     return re.sub(r'data-wa="([^"]*[A-Za-z][^"]*)"', fix, html)
 
 
+# A number followed by "+" (8+, 20+) flips to "+8" inside Arabic text unless it
+# is isolated as left-to-right.
+def _ltr_numbers(html):
+    parts = re.split(r"(<script\b.*?</script>)", html, flags=re.S)
+    for i in range(0, len(parts), 2):
+        parts[i] = re.sub(r">(\s*)(\d[\d,.]*\+)(\s*)<",
+                          lambda m: ">" + m.group(1) + '<bdi dir="ltr">' + m.group(2) + "</bdi>" + m.group(3) + "<",
+                          parts[i])
+    return "".join(parts)
+
+
 def setup(PAGES):
     """Called by build.py once every English page is known."""
     AR_FILES[:] = list(PAGES)
@@ -128,4 +139,4 @@ def setup(PAGES):
         AR_PAGES[f] = (title, desc, html, extra)
     lookup = dict(common); lookup.update(T2.TEXT)
     for f, (title, desc, html, extra) in list(AR_PAGES.items()):
-        AR_PAGES[f] = (title, desc, _data_wa(html, lookup), extra)
+        AR_PAGES[f] = (title, desc, _ltr_numbers(_data_wa(html, lookup)), extra)
