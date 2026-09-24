@@ -1610,3 +1610,11 @@ a.svq-band-cta, a.svq-band-cta:link, a.svq-band-cta:visited, .svq-band a.svq-ban
 .logo-item { opacity: 1 !important; }
 .logo-item:hover { opacity: 1 !important; transform: none !important; }
 .logo-item img { opacity: 1 !important; filter: saturate(1.3) contrast(1.08) brightness(1.02) !important; }
+
+/* ==== headings: no shadow except over photos ==== */
+/* cover.css styles bare h1/h2 with a shadow meant for white text on the cover
+   photos; since it loads site-wide, every heading picked it up and dark
+   headings looked blurred. Keep it only where headings sit on a photo. */
+main h1, main h2 { text-shadow: none; }
+main .wrap h1, main .wrap h2,
+main .svq-hero h1, main .svq-hero h2 { text-shadow: 0 2px 30px rgba(0,0,0,.35); }
