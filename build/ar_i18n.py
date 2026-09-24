@@ -22,6 +22,10 @@ ALLOWED = {
     "BluePrint", "LEED", "BREEAM", "AERMOD", "CALPUFF", "DHI", "MIKE", "CORMIX", "HEC", "RAS", "HMS",
     "WMS", "Civil", "3D", "ArcGIS", "MODFLOW", "SoundPlan", "RFYB3704", "GCC", "KSA", "Sikander", "Chishti",
     "info", "blueprint", "env", "com",
+    # standards, conventions and instrument names kept in Latin inside Arabic text
+    "AIS", "CEMS", "CTD", "E.coli", "EN", "Ekman", "GAMEP", "GHS", "GRI", "HDPE", "IBAT", "IEC",
+    "IEMA", "IFC", "II", "IOPP", "IP", "LDAR", "MARPOL", "MEWA", "NEBOSH", "PM2.5", "PS1", "TSP",
+    "TSS", "UN", "VOC", "Van", "Veen", "ouE", "CadnaA",
 }
 
 
@@ -53,6 +57,8 @@ def untranslated(html, extra_allowed=()):
     allowed = ALLOWED | set(extra_allowed)
     body = re.sub(r"<script.*?</script>", "", html, flags=re.S)
     body = re.sub(r"<!--.*?-->", "", body, flags=re.S)
+    # text deliberately marked as English (e.g. reference titles) is not a leftover
+    body = re.sub(r'<(\w+)[^>]*\blang="en"[^>]*>.*?</\1>', "", body, flags=re.S)
     left = []
     for m in re.finditer(r">([^<>]+)<", body):
         s = " ".join(_html.unescape(m.group(1)).split())
@@ -83,3 +89,46 @@ AR_ADDRESS = ('3704 أبي جعفر المنصور، حي اليرموك، ال�
 def fill_runtime_text(html):
     return re.sub(r'(<(\w+)[^>]*?) data-text="address"([^>]*)></\2>',
                   lambda m: m.group(1) + m.group(3) + ">" + AR_ADDRESS + "</" + m.group(2) + ">", html)
+
+
+# ---------------------------------------------------------------------------
+# Fast path for large maps: one pass over the page, dictionary lookup per text
+# node. Script and style blocks are skipped so code is never touched.
+_CODE = re.compile(r"(<script\b.*?</script>|<style\b.*?</style>)", re.S | re.I)
+_NODE = re.compile(r">([^<>]+)<")
+_ATTR = re.compile(r'((?:alt|aria-label|title|placeholder)=")([^"]*)"')
+
+
+def _norm(s):
+    return " ".join(s.split())
+
+
+def translate_map(html, text_map, attr_map=None):
+    text_map = {_norm(k): v for k, v in text_map.items()}
+    attr_map = attr_map or {}
+
+    def node(m):
+        raw = m.group(1)
+        ar = text_map.get(_norm(raw))
+        if ar is None:
+            return m.group(0)
+        lead = raw[:len(raw) - len(raw.lstrip())]
+        trail = raw[len(raw.rstrip()):]
+        return ">" + lead + ar + trail + "<"
+
+    parts = _CODE.split(html)
+    for i in range(0, len(parts), 2):
+        parts[i] = _NODE.sub(node, parts[i])
+        parts[i] = _ATTR.sub(lambda m: m.group(1) + attr_map.get(m.group(2), m.group(2)) + '"', parts[i])
+    return "".join(parts)
+
+
+def build_map(name, en_html, text_map, attr_map=None, raw=(), extra_allowed=()):
+    html = en_html
+    for en, ar in raw:
+        html = html.replace(en, ar)
+    html = translate_map(html, text_map, attr_map)
+    html = fill_runtime_text(html)
+    for s in untranslated(html, extra_allowed):
+        print("  [%s] untranslated: %s" % (name, s[:90]))
+    return html

@@ -179,3 +179,11 @@ html[dir="rtl"] .abt-hero-facts > div:last-child { border-left: none; margin-lef
 }
 html[dir="rtl"] .abt-reg-cards { right: auto; left: 0; }
 html[dir="rtl"] .abt-mdl-tools, html[dir="rtl"] .abt-reg dd { text-align: left; }
+
+/* ==== arabic stage 4: all remaining pages ==== */
+/* equipment catalogue, phone layout: the row label comes from CSS */
+@media (max-width: 860px) {
+  html[dir="rtl"] .eqp-meas::before { content: "يقيس: "; }
+}
+/* compliance hub: English reference title under the Arabic one */
+html[dir="rtl"] .cmp-en-ref { direction: ltr; text-align: right; font-family: var(--font-body, inherit); }
