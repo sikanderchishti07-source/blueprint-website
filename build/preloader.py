@@ -18,6 +18,7 @@
 ENABLED = True
 IMG = "/assets/img/preloader.webp"
 RATIO = 1672 / 941                  # artwork proportions
+SCALE = 0.80                        # size on computer screens: 1.0 = as large as fits, 0.8 = 80%
 # the progress bar drawn in the artwork, as % of the artwork
 BAR = dict(left=39.72, top=60.55, width=20.49, height=1.40)
 
@@ -31,7 +32,7 @@ html.bp-pre-on{overflow:hidden}
   transition:opacity .75s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
 #bpPre.bpp-out{opacity:0;transform:scale(1.035);pointer-events:none}
 .bpp-stage{position:absolute;left:50%;top:50%;
-  width:min(100vw,calc(100vh * __R__));height:min(100vh,calc(100vw / __R__));
+  width:calc(min(100vw,calc(100vh * __R__)) * __S__);height:calc(min(100vh,calc(100vw / __R__)) * __S__);
   -webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent),linear-gradient(180deg,transparent,#000 5%,#000 95%,transparent);
   -webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent),linear-gradient(180deg,transparent,#000 5%,#000 95%,transparent);
   mask-composite:intersect;
@@ -63,7 +64,7 @@ html.bp-pre-on{overflow:hidden}
   .bpp-stage{transform:translate(-50%,-50%)}}
 </style>
 """
-_CSS = (_CSS.replace("__R__", "%.5f" % RATIO).replace("__IMG__", IMG)
+_CSS = (_CSS.replace("__S__", "%.3f" % SCALE).replace("__R__", "%.5f" % RATIO).replace("__IMG__", IMG)
         .replace("__BL__", str(BAR["left"])).replace("__BT__", str(BAR["top"]))
         .replace("__BW__", str(BAR["width"])).replace("__BH__", str(BAR["height"])))
 
