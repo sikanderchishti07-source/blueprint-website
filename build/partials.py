@@ -270,7 +270,7 @@ def head(title, description, extra_css="", lang="en", page=None):
   <script src="js/config.js"></script>
 {PL.HEAD}</head>
 <body class="font-sans">
-{PL.BODY}"""
+{PL.body(lang)}"""
 
 
 # (icon, English label, English sub, page, Arabic label, Arabic sub)
