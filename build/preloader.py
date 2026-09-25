@@ -31,10 +31,13 @@ html.bp-pre-on{overflow:hidden}
   transition:opacity .75s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
 #bpPre.bpp-out{opacity:0;transform:scale(1.035);pointer-events:none}
 .bpp-stage{position:absolute;left:50%;top:50%;
-  width:max(100vw,calc(100vh * __R__));height:max(100vh,calc(100vw / __R__));
+  width:min(100vw,calc(100vh * __R__));height:min(100vh,calc(100vw / __R__));
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent),linear-gradient(180deg,transparent,#000 5%,#000 95%,transparent);
+  -webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent),linear-gradient(180deg,transparent,#000 5%,#000 95%,transparent);
+  mask-composite:intersect;
   transform:translate(-50%,-50%);background:url(__IMG__) center/100% 100% no-repeat;
   animation:bppZoom 7s cubic-bezier(.2,.6,.2,1) forwards}
-@media (max-aspect-ratio:1/1){.bpp-stage{width:calc(100vw * 3.215);height:calc(100vw * 3.215 / __R__)}}
+@media (max-aspect-ratio:1/1){.bpp-stage{width:calc(100vw * 3.215);height:calc(100vw * 3.215 / __R__);-webkit-mask-image:none;mask-image:none}}
 #bpPre::before{content:"";position:absolute;inset:-40px;background:url(__IMG__) center/cover no-repeat;
   filter:blur(28px) saturate(1.1);opacity:.9}
 .bpp-bar{position:absolute;left:__BL__%;top:__BT__%;width:__BW__%;height:__BH__%;
@@ -52,7 +55,7 @@ html.bp-pre-on{overflow:hidden}
 .bpp-sweep::before{content:"";position:absolute;top:-20%;bottom:-20%;width:35%;left:-40%;
   background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);
   animation:bppSweep 2.6s ease-in-out .5s infinite}
-@keyframes bppZoom{from{transform:translate(-50%,-50%) scale(1.06)}to{transform:translate(-50%,-50%) scale(1)}}
+@keyframes bppZoom{from{transform:translate(-50%,-50%) scale(1.025)}to{transform:translate(-50%,-50%) scale(1)}}
 @keyframes bppShine{to{transform:translateX(100%)}}
 @keyframes bppGlow{to{opacity:.8}}
 @keyframes bppSweep{0%{left:-40%}60%,100%{left:110%}}
