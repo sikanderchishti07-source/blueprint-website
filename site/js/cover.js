@@ -95,7 +95,7 @@ function frame(){
      costs ~14ms a frame. Translation is composited and effectively free. */
   const kb = plane.firstElementChild;
   if (kb) {
-    const want = Math.round((1.10 - .08 * p) * 200) / 200;   /* 0.005 steps */
+    const want = Math.round((1.04 - .03 * p) * 200) / 200;   /* 0.005 steps; gentle zoom keeps the photo sharp */
     if (want !== lastScale) { lastScale = want; kb.style.scale = want; }
     kb.style.translate =
       (mx * -16).toFixed(1) + 'px ' + ((1.5 - 2.5 * p) + my * -6).toFixed(2) + '%';
