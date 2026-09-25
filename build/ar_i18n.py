@@ -28,6 +28,12 @@ ALLOWED = {
     "TSS", "UN", "VOC", "Van", "Veen", "ouE", "CadnaA",
 }
 
+try:
+    import eqp_details as _EQD
+    ALLOWED |= _EQD.LATIN
+except ImportError:
+    pass
+
 
 def _node_pattern(en):
     words = en.split()

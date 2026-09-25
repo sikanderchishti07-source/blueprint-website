@@ -2709,3 +2709,12 @@ ATTR = {
     'Share on X': 'شارك على إكس',
     'The Complete Guide to MWAN Waste Management Permits in Saudi Arabia': 'الدليل الشامل لتراخيص إدارة النفايات من MWAN في المملكة العربية السعودية',
 }
+
+# Equipment catalogue detail panel (photos feature)
+import eqp_details as _EQD
+TEXT.update(_EQD.AR_TEXT)
+import equipment as _EQ
+for _d in _EQ.DOMAINS:
+    for _n, _m, _w in _d[5]:
+        if _n in TEXT:
+            ATTR[_n] = TEXT[_n]

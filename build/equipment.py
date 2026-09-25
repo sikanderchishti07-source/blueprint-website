@@ -172,6 +172,9 @@ DOMAINS = [
 ]
 
 
+import eqp_details as EQD
+
+
 def _nav():
     return "\n".join(
         '<a href="#eq-' + key + '" class="eqp-chip"><i class="fas ' + icon + '"></i>'
@@ -182,13 +185,25 @@ def _nav():
 def _sections():
     out = []
     for key, icon, name, sub, href, items in DOMAINS:
+        def _ph(i, n):
+            if key == "modelling":
+                return '<div class="eqp-ph eqp-ph-sw"><i class="fas ' + icon + '"></i></div>'
+            spec = EQD.D[key][i]
+            dl = ('<dl class="eqp-spec" hidden>'
+                  + ''.join('<div><dt>' + EQD.LABELS[k + 1][0] + '</dt><dd>' + spec[k] + '</dd></div>'
+                            for k in range(3)) + '</dl>')
+            base = 'assets/img/eq/' + key + '-' + str(i + 1)
+            return ('<button type="button" class="eqp-ph" data-full="' + base + '.webp">'
+                    '<img src="' + base + '-t.webp" alt="' + n + '" loading="lazy" width="320" height="240" />'
+                    '<span class="eqp-ph-z"><i class="fas fa-magnifying-glass-plus"></i></span></button>' + dl)
         rows = "\n".join(
             '<div class="eqp-row">'
+            + _ph(i, n) +
             '<div class="eqp-name">' + n + '</div>'
             '<div class="eqp-meas">' + m + '</div>'
             '<div class="eqp-note">' + d + '</div>'
             '</div>'
-            for n, m, d in items)
+            for i, (n, m, d) in enumerate(items))
         out.append(
             '<section class="eqp-sec" id="eq-' + key + '">'
             '<div class="eqp-sec-head">'
@@ -198,7 +213,7 @@ def _sections():
             '<i class="fas fa-arrow-right" style="font-size:.68rem;"></i></a>'
             '</div>'
             '<div class="eqp-table">'
-            '<div class="eqp-row eqp-head"><div>Instrument</div><div>What it measures</div>'
+            '<div class="eqp-row eqp-head"><div></div><div>Instrument</div><div>What it measures</div>'
             '<div>Why it is used</div></div>'
             + rows +
             '</div></section>')
@@ -223,6 +238,15 @@ _TPL = """
 <div class="eqp-body">
   <div class="eqp-wrap">
     {sections}
+    <div class="eqp-lb" id="eqpLb" hidden>
+      <button type="button" class="eqp-lb-x" aria-label="Close"><i class="fas fa-xmark"></i></button>
+      <button type="button" class="eqp-lb-nav eqp-lb-prev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+      <figure><div class="eqp-lb-stage"><img id="eqpLbImg" alt="" /></div><figcaption>
+        <span class="eqp-lb-cat" id="eqpLbCat"></span><b id="eqpLbName"></b>
+        <p class="eqp-lb-why" id="eqpLbWhy"></p><dl id="eqpLbSpec"></dl>
+        <p class="eqp-lb-count" id="eqpLbCount"></p><span id="eqpLbMeasLbl" hidden>Measures</span></figcaption></figure>
+      <button type="button" class="eqp-lb-nav eqp-lb-next" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+    </div>
     <aside class="eqp-note-box">
       <h3>A note on specification</h3>
       <p>Instruments are selected against the parameter, range and method your conditions reference,
