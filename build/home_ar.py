@@ -241,7 +241,7 @@ TEXT = [
 ATTR = [
  ("Refinery outside Riyadh at sunrise", "مصفاة خارج الرياض عند شروق الشمس"),
  ("Industrial facility at blue hour", "منشأة صناعية عند الغسق"),
- ("Saudi coastline with environmental monitoring points", "الساحل السعودي مع نقاط رصد بيئي"),
+ ("Aerial view of a river winding through misty forest at sunrise", "منظر جوي لنهر يتعرج بين غابة يلفها الضباب عند شروق الشمس"),
  ("Refinery and storage tanks in the desert at golden hour", "مصفاة وخزانات في الصحراء وقت الغروب"),
  ("Aerial view of the Saudi Red Sea coastline where desert meets protected shoreline",
   "منظر جوي لساحل البحر الأحمر حيث تلتقي الصحراء بالشاطئ المحمي"),

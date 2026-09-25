@@ -173,7 +173,7 @@ function onScroll(){
   load(1);                      /* have the next frame ready before the first change */
 
   /* cover-3 carries its own labelled pins, so ours step aside while it shows */
-  const ANNOTATED = 2;
+  const ANNOTATED = -1;  /* cover-3 is now a clean photo, so the live labels show on every image */
   const net = document.getElementById('net'), mkL = document.getElementById('mkLayer');
   const syncOverlay = n => {
     const hide = (n === ANNOTATED);
