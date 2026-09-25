@@ -209,6 +209,8 @@ def _head_meta(title, description, lang, page):
   <meta name="twitter:image" content="{img_url}" />"""
 
 
+import preloader as PL
+
 def head(title, description, extra_css="", lang="en", page=None):
     s = STR[lang]
     page = page or "index.html"
@@ -266,9 +268,9 @@ def head(title, description, extra_css="", lang="en", page=None):
   <link rel="stylesheet" href="css/insights.css" />{extra_css}{rtl}
 
   <script src="js/config.js"></script>
-</head>
+{PL.HEAD}</head>
 <body class="font-sans">
-"""
+{PL.BODY}"""
 
 
 # (icon, English label, English sub, page, Arabic label, Arabic sub)
