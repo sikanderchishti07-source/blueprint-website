@@ -1711,7 +1711,11 @@ html[dir=rtl] #navbar .nav-link, html[dir=rtl] #navbar .nav-lang-btn, html[dir=r
 
 /* ==== Live environmental map (home) ==== */
 .lm-sec { padding: clamp(20px, 3.5vh, 44px) 0; background: #fff; min-height: calc(100vh - 80px); min-height: calc(100svh - 80px); display: flex; align-items: center; }
-.lm-sec > div { width: 100%; }
+.lm-sec > div { width: 100%; position: relative; }
+.lm-sec { position: relative; background: #fff url(../assets/img/livemap-bg-2560.webp) center / cover no-repeat; }
+.lm-sec::before { content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(90deg, rgba(255,255,255,.72), rgba(255,255,255,.35) 55%, rgba(255,255,255,.2)); }
+[dir=rtl] .lm-sec::before { background: linear-gradient(270deg, rgba(255,255,255,.72), rgba(255,255,255,.35) 55%, rgba(255,255,255,.2)); }
 .lm-grid { --lm-mw: min(60%, max(460px, calc((100vh - 190px) * 1.172))); display: grid; grid-template-columns: minmax(0, 1fr) var(--lm-mw); gap: clamp(32px, 4vw, 64px); align-items: center; }
 .lm-eb { display: inline-flex; align-items: center; gap: 10px; font: 600 12px/1 'Inter', system-ui, sans-serif; letter-spacing: .1em;
   text-transform: uppercase; color: #0a6f80; padding-bottom: 10px; border-bottom: 1px solid #0e93a8; margin-bottom: 14px; }
@@ -1733,8 +1737,8 @@ html[dir=rtl] #navbar .nav-link, html[dir=rtl] #navbar .nav-lang-btn, html[dir=r
 .lm-src { margin-top: 10px; font-size: .75rem; color: #8a969a; line-height: 1.5; }
 
 .lm-map { position: relative; }
-.lm-svg { width: 100%; height: auto; display: block; overflow: hidden; border-radius: 12px; background: #fbfcfc; }
-.lm-others path { fill: #f3f5f6; stroke: #e2e7e9; stroke-width: 1; }
+.lm-svg { width: 100%; height: auto; display: block; overflow: hidden; border-radius: 12px; background: rgba(255,255,255,.55); -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px); }
+.lm-others path { fill: rgba(243,245,246,.8); stroke: #e2e7e9; stroke-width: 1; }
 .lm-sa { fill: #eaf4f6; stroke: #9fcbd3; stroke-width: 1.4; }
 .lm-sa-dots { fill: url(#lmDots); pointer-events: none; }
 .lm-pin { cursor: pointer; }
@@ -1774,6 +1778,7 @@ html[dir=rtl] #navbar .nav-link, html[dir=rtl] #navbar .nav-lang-btn, html[dir=r
 [dir=rtl] .lm-sec, [dir=rtl] .lm-card { font-family: 'IBM Plex Sans Arabic', system-ui, sans-serif; }
 [dir=rtl] .lm-sec h2 { font-family: 'IBM Plex Sans Arabic', system-ui, sans-serif; font-weight: 400; letter-spacing: 0; }
 [dir=rtl] .lm-pin text { font-family: 'IBM Plex Sans Arabic', system-ui, sans-serif; }
+@media (max-width: 1280px) { .lm-sec { background-image: url(../assets/img/livemap-bg-1280.webp); } }
 @media (max-width: 960px) { .lm-grid { grid-template-columns: 1fr; gap: 28px; } .lm-map { order: -1; } .lm-sec { padding: 64px 0; min-height: 0; display: block; }
-  .lm-card { position: static; width: 100%; margin-top: 12px; display: none; } .lm-card.on { display: block; } .lm-pin text { font-size: 24px; } }
+  .lm-card { position: relative; left: auto !important; top: auto !important; width: 100%; margin-top: 12px; display: none; } .lm-card.on { display: block; } .lm-pin text { font-size: 24px; } }
 @media (prefers-reduced-motion: reduce) { .lm-pin .lm-halo, .lm-live { animation: none; } }
