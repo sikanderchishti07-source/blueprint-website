@@ -7,9 +7,9 @@
 # No founding year, team size, project count, client name or affiliation
 # appears, because none of those have been evidenced.
 
-HERO_IMG  = "assets/img/card-1.jpg"
+HERO_IMG  = "assets/img/card-1.webp"
 STORY_IMG = "assets/img/process-lab.webp"
-REG_IMG   = "assets/img/card-2.jpg"
+REG_IMG   = "assets/img/card-2.webp"
 
 APART = [
     ("fa-stamp", "Regulatory expertise",

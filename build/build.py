@@ -66,12 +66,20 @@ for _r in _roles:
 for a in C.load_blog():
     PAGES['blog-%s.html' % a['slug']] = (a['title'] + ' | BluePrint', a['summary'], X.article(a, G.page_header), ())
 
+import seo as SEO
+_BLOG = {a['slug']: a for a in C.load_blog()}
 import ar_pages as ARP
 ARP.setup(PAGES)
+import notfound as NF
+PAGES['404.html'] = (NF.TEXT['en']['title'], NF.TEXT['en']['desc'], NF.body('en'), ())
+ARP.AR_PAGES['404.html'] = (NF.TEXT['ar']['title'], NF.TEXT['ar']['desc'], NF.body('ar'), ())
 P.AR_AVAILABLE = set(ARP.AR_PAGES)
 
 for fname, (title, desc, body, extra) in PAGES.items():
-    html = P.head(title, desc, page=fname) + P.nav(page=fname) + '\n<main>' + body + '</main>\n' + P.footer(page=fname) + P.modals() + P.widgets() + P.scripts(extra)
+    title = SEO.short_title(title)
+    html = P.head(title, desc, page=fname) + P.nav(page=fname) + '\n<main id="main" tabindex="-1">' + body + '</main>\n' + P.footer(page=fname) + P.modals() + P.widgets() + P.scripts(extra)
+    html = SEO.add_schema(html, 'en', fname, title, desc, _BLOG)
+    if fname == '404.html': html = NF.finish(html, 'en')
     with open(os.path.join(OUT, fname), 'w', encoding='utf-8') as f: f.write(html)
     print(fname, len(html))
 
@@ -80,9 +88,22 @@ for fname, (title, desc, body, extra) in PAGES.items():
 AR_OUT = os.path.join(OUT, 'ar')
 os.makedirs(AR_OUT, exist_ok=True)
 for fname, (title, desc, body, extra) in ARP.AR_PAGES.items():
+    title = SEO.short_title(title)
     html = (P.head(title, desc, lang='ar', page=fname) + P.nav('ar', fname)
-            + '\n<main>' + body + '</main>\n' + P.footer('ar', fname) + P.modals()
+            + '\n<main id="main" tabindex="-1">' + body + '</main>\n' + P.footer('ar', fname) + P.modals()
             + P.widgets('ar') + P.scripts(extra, 'ar'))
     html = P.ar_paths(html, P.AR_AVAILABLE)
+    html = SEO.add_schema(html, 'ar', fname, title, desc, _BLOG)
+    if fname == '404.html': html = NF.finish(html, 'ar')
+    if fname.startswith('blog-'):   # share buttons on Arabic articles point to the Arabic page
+        from urllib.parse import quote as _qt
+        html = html.replace(_qt(P._url('en', fname), safe=''), _qt(P._url('ar', fname), safe=''))
     with open(os.path.join(AR_OUT, fname), 'w', encoding='utf-8') as f: f.write(html)
     print('ar/' + fname, len(html))
+
+
+# ---- One small stylesheet: join and minify the hand-written CSS files ------
+# Edit the source files (base.css, pages.css, ...); site.css is rebuilt every time.
+import css_bundle
+SEO.write_files(OUT, list(PAGES), list(ARP.AR_PAGES))
+css_bundle.make(os.path.join(OUT, 'css'))

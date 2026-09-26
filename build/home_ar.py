@@ -317,7 +317,7 @@ def _script_data(available):
                 "blurb": blurb, "href": pg(href), "items": [[a, b, pg(c)] for a, b, c in items]}
 
     SVC = [
-     grp("الالتزام البيئي والتراخيص", "التراخيص", "01", "fa-stamp", "assets/img/card-1.jpg", "20% 30%",
+     grp("الالتزام البيئي والتراخيص", "التراخيص", "01", "fa-stamp", "assets/img/card-1.webp", "20% 30%",
          "ترخيص منشأتك، والمحافظة عليه.", "service-environmental-permit.html", [
          ("الترخيص البيئي", "ملف الترخيص من البداية حتى الإصدار", "service-environmental-permit.html"),
          ("دراسة تقييم الأثر البيئي", "للمشاريع عالية الأثر (EIA/ESIA)", "service-environmental-impact-assessment.html"),
@@ -325,7 +325,7 @@ def _script_data(available):
          ("خطة الإدارة البيئية", "اشتراطات الترخيص في الممارسة اليومية", "service-environmental-management-plan.html"),
          ("السجل البيئي", "إثبات مستمر للالتزام", "service-environmental-register.html"),
          ("التقرير البيئي الدوري", "للمحافظة على الترخيص الذي حصلت عليه", "service-periodic-environmental-report.html")]),
-     grp("الرصد والفحص والقياس", "الرصد", "02", "fa-flask", "assets/img/card-2.jpg", "75% 60%",
+     grp("الرصد والفحص والقياس", "الرصد", "02", "fa-flask", "assets/img/card-2.webp", "75% 60%",
          "الأرقام التي يقوم عليها كل إثبات للالتزام.", "service-air-quality-monitoring.html", [
          ("رصد جودة الهواء وفحصه", "القياس وفق المعايير السعودية", "service-air-quality-monitoring.html"),
          ("فحص المياه ومياه الصرف", "تحليل معتمد", "service-water-wastewater-testing.html"),
@@ -337,7 +337,7 @@ def _script_data(available):
          ("التحليل المختبري", "مع تفسير فني للنتائج", "service-laboratory-analysis.html"),
          ("معدات مكافحة التلوث", "التوريد والتشغيل", "service-pollution-control-equipment.html"),
          ("التقارير والالتزام البيئي", "التقارير التنظيمية الدورية", "service-reporting-compliance.html")]),
-     grp("التخصصات المتقدمة", "التخصصات", "03", "fa-layer-group", "assets/img/card-3.jpg", "50% 75%",
+     grp("التخصصات المتقدمة", "التخصصات", "03", "fa-layer-group", "assets/img/card-3.webp", "50% 75%",
          "أعمال فنية متعمقة في ستة تخصصات.", "services.html", [
          ("التغير المناخي والاستدامة", "الحوكمة البيئية والبصمة الكربونية والحياد الكربوني، 17 خدمة", "service-climate-sustainability.html"),
          ("المسوحات البيئية والأحيائية", "دراسة الوضع القائم والموائل والأنواع المحمية، 6 خدمات", "service-ecological-surveys.html"),

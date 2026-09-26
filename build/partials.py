@@ -259,19 +259,15 @@ def head(title, description, extra_css="", lang="en", page=None):
   {fonts}
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
 
-  <!-- Site styles (css/tailwind.css is compiled by build/build.sh) -->
+  <!-- Site styles: tailwind.css is compiled by build/build.sh; site.css is made by build.py from
+       base, layout, components, pages, cover, carousel and insights .css (edit those, not site.css) -->
   <link rel="stylesheet" href="css/tailwind.css" />
-  <link rel="stylesheet" href="css/base.css" />
-  <link rel="stylesheet" href="css/layout.css" />
-  <link rel="stylesheet" href="css/components.css" />
-  <link rel="stylesheet" href="css/pages.css" />
-  <link rel="stylesheet" href="css/cover.css" />
-  <link rel="stylesheet" href="css/carousel.css" />
-  <link rel="stylesheet" href="css/insights.css" />{extra_css}{rtl}
+  <link rel="stylesheet" href="css/site.css" />{extra_css}{rtl}
 
   <script src="js/config.js"></script>
 {PL.HEAD}</head>
 <body class="font-sans{'' if page in ('index.html', 'ar/index.html') else ' bp-inner'}">
+<a class="skip-link" href="#main">{'تخطَّ إلى المحتوى الرئيسي' if lang == 'ar' else 'Skip to main content'}</a>
 {PL.body(lang)}"""
 
 

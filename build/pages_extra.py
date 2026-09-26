@@ -384,9 +384,9 @@ def article(a, page_header):
       <a href="blog.html" class="btn-ghost"><i class="fas fa-arrow-left" style="font-size:.75rem;"></i> All articles</a>
       <div class="flex items-center gap-2">
         <span class="text-sm text-gray-400 mr-1">Share</span>
-        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fblueprint-env.com%2Fblog%2F{a['slug']}" target="_blank" rel="noopener" class="w-9 h-9 rounded-lg bg-white border flex items-center justify-center text-bp-primary hover:bg-bp-light transition-all" style="border-color:var(--bp-border);" aria-label="Share on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fblueprint-env.com%2Fblog%2F{a['slug']}" target="_blank" rel="noopener" class="w-9 h-9 rounded-lg bg-white border flex items-center justify-center text-bp-primary hover:bg-bp-light transition-all" style="border-color:var(--bp-border);" aria-label="Share on X"><i class="fab fa-twitter"></i></a>
-        <a data-wa="{a['title']}" class="w-9 h-9 rounded-lg bg-white border flex items-center justify-center hover:bg-bp-light transition-all" style="border-color:var(--bp-border);color:#25D366;" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url={_share_url(a['slug'])}" target="_blank" rel="noopener" class="w-9 h-9 rounded-lg bg-white border flex items-center justify-center text-bp-primary hover:bg-bp-light transition-all" style="border-color:var(--bp-border);" aria-label="Share on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://twitter.com/intent/tweet?url={_share_url(a['slug'])}" target="_blank" rel="noopener" class="w-9 h-9 rounded-lg bg-white border flex items-center justify-center text-bp-primary hover:bg-bp-light transition-all" style="border-color:var(--bp-border);" aria-label="Share on X"><i class="fab fa-twitter"></i></a>
+        <a href="https://wa.me/?text={_share_url(a['slug'])}" target="_blank" rel="noopener" class="w-9 h-9 rounded-lg bg-white border flex items-center justify-center hover:bg-bp-light transition-all" style="border-color:var(--bp-border);color:#25D366;" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
       </div>
     </div>
   </div>
@@ -467,3 +467,10 @@ def legal(key, page_header):
   </div>
 </section>
 """
+
+
+def _share_url(slug):
+    """Address used by the LinkedIn and X share buttons: the article's real page."""
+    from urllib.parse import quote
+    import partials as P
+    return quote(P._url("en", "blog-%s.html" % slug), safe="")

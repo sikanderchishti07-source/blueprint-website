@@ -29,11 +29,11 @@ LIVE_MAP
         <div class="absolute -inset-4 rounded-3xl opacity-20 blur-2xl" style="background:var(--bp-grad);"></div>
         <div class="relative bg-white rounded-3xl shadow-2xl overflow-hidden">
           <div class="about-video">
-            <video autoplay muted loop playsinline preload="metadata"
+            <video muted loop playsinline preload="none"
                    poster="assets/video/about-poster.jpg"
                    aria-label="Aerial view of the Saudi Red Sea coastline where desert meets protected shoreline">
-              <source src="assets/video/about.webm" type="video/webm" />
-              <source src="assets/video/about.mp4" type="video/mp4" />
+              <source data-src="assets/video/about.webm" type="video/webm" />
+              <source data-src="assets/video/about.mp4" type="video/mp4" />
             </video>
           </div>
           <div class="p-7">

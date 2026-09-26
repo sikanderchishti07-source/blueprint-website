@@ -3,7 +3,7 @@ window.SVC_T = { services: 'خدمات', openList: 'عرض القائمة كام
 /* Arabic service data for the home showcase. Loaded before cards.js. */
 window.SVC_DATA_AR = [
   { key:'الامتثال والتصاريح', short:'التصاريح', num:'٠١', icon:'fa-stamp',
-    img:'assets/img/card-1.jpg', pos:'20% 30%',
+    img:'assets/img/card-1.webp', pos:'20% 30%',
     blurb:'ترخيص منشأتك &mdash; والحفاظ عليه.',
     href:'services.html',
     items:[
@@ -14,7 +14,7 @@ window.SVC_DATA_AR = [
       ['السجل البيئي','إثبات متواصل للامتثال','services.html'],
       ['التقرير البيئي الدوري','الحفاظ على التصريح الذي حصلت عليه','services.html']]},
   { key:'الرصد والقياس والاختبار', short:'الرصد', num:'٠٢', icon:'fa-flask',
-    img:'assets/img/card-2.jpg', pos:'75% 60%',
+    img:'assets/img/card-2.webp', pos:'75% 60%',
     blurb:'الأرقام التي يقوم عليها كل ادعاء بالامتثال.',
     href:'technology.html',
     items:[
@@ -29,7 +29,7 @@ window.SVC_DATA_AR = [
       ['معدات مكافحة التلوث','التوريد والتشغيل','technology.html'],
       ['التقارير والامتثال','تقارير تنظيمية دورية','technology.html']]},
   { key:'التخصصات الدقيقة', short:'التخصصات', num:'٠٣', icon:'fa-layer-group',
-    img:'assets/img/card-3.jpg', pos:'50% 75%',
+    img:'assets/img/card-3.webp', pos:'50% 75%',
     blurb:'أعمال فنية أعمق في ستة تخصصات.',
     href:'services.html',
     items:[

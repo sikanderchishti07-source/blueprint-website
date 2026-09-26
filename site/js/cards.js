@@ -17,7 +17,7 @@
     : [
     {
       key: 'Compliance &amp; Permitting', short: 'Permitting', num: '01', icon: 'fa-stamp',
-      img: 'assets/img/card-1.jpg', pos: '20% 30%',
+      img: 'assets/img/card-1.webp', pos: '20% 30%',
       blurb: 'Getting your facility licensed &mdash; and keeping it licensed.',
       href: 'service-environmental-permit.html',
       items: [
@@ -31,7 +31,7 @@
     },
     {
       key: 'Monitoring, Testing &amp; Measurement', short: 'Monitoring', num: '02', icon: 'fa-flask',
-      img: 'assets/img/card-2.jpg', pos: '75% 60%',
+      img: 'assets/img/card-2.webp', pos: '75% 60%',
       blurb: 'The numbers behind every compliance claim.',
       href: 'service-air-quality-monitoring.html',
       items: [
@@ -49,7 +49,7 @@
     },
     {
       key: 'Specialist Disciplines', short: 'Specialist', num: '03', icon: 'fa-layer-group',
-      img: 'assets/img/card-3.jpg', pos: '50% 75%',
+      img: 'assets/img/card-3.webp', pos: '50% 75%',
       blurb: 'Deeper technical work across six disciplines.',
       href: 'services.html',
       items: [

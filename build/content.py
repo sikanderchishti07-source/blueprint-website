@@ -89,7 +89,7 @@ def load_blog():
         i.setdefault('category', 'Insight')
         i.setdefault('read', '')
         i.setdefault('summary', '')
-        i.setdefault('image', 'assets/img/card-1.jpg')
+        i.setdefault('image', 'assets/img/card-1.webp')
         # the page templates were written against these key names
         i['img']     = i['image']
         i['fb']      = i['image']

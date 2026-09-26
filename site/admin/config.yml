@@ -27,7 +27,7 @@ collections:
       - { name: date, label: Date, widget: datetime, date_format: "MMMM D, YYYY", time_format: false, picker_utc: true }
       - { name: category, label: Category, widget: string, default: "Insight" }
       - { name: summary, label: Summary, widget: text, hint: "One or two sentences. Shown on the blog list and the home page." }
-      - { name: image, label: Cover image, widget: image, required: false, default: "assets/img/card-1.jpg" }
+      - { name: image, label: Cover image, widget: image, required: false, default: "assets/img/card-1.webp" }
       - { name: read, label: Reading time, widget: string, required: false, default: "3 min read" }
       - { name: body, label: Article, widget: markdown }
 
