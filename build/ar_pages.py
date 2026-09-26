@@ -15,7 +15,7 @@ import ar_text2 as T2
 AR_FILES = []          # filled by setup(); kept for older callers
 AR_PAGES = {}
 
-_HOME_EXTRA = ("js/cards.js", "js/cover.js", "js/carousel.js")
+_HOME_EXTRA = ("js/cards.js", "js/cover.js", "js/carousel.js", "js/livemap.js")
 _BRAND = "بلوبرنت للخدمات البيئية"
 
 # glossary: the permit is ترخيص, never تصريح

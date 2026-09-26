@@ -5,7 +5,7 @@ import finder as FD
 import os, partials as P, pages as G, pages_extra as X, arabic as AR, content as C, careers as CR, service_pages as SP, svc_cards as SVQ, svc_permitting as SPP, svc_monitoring as SPM, svc_specialist as SPS, svc_caps as SPC
 OUT = os.path.join(os.path.dirname(__file__), '..', 'site')
 PAGES = {
-  'index.html':      ('Environmental Consultancy in Saudi Arabia | BluePrint', 'Accredited Saudi environmental consultancy delivering environmental studies, MWAN permitting, impact assessments, and compliance solutions aligned with KSA regulations.', G.home(), ('js/cards.js', 'js/cover.js', 'js/carousel.js')),
+  'index.html':      ('Environmental Consultancy in Saudi Arabia | BluePrint', 'Accredited Saudi environmental consultancy delivering environmental studies, MWAN permitting, impact assessments, and compliance solutions aligned with KSA regulations.', G.home(), ('js/cards.js', 'js/cover.js', 'js/carousel.js', 'js/livemap.js')),
   'about.html':      ('About BluePrint | Environmental Consultancy in Saudi Arabia', 'BluePrint Environmental Services, a registered Saudi environmental consultancy in Riyadh delivering permitting, monitoring, modelling and laboratory services across the Kingdom and the GCC.', AB.about(), ()),
   'equipment.html':  ('Equipment Catalogue | BluePrint Environmental Services', 'The instrument types BluePrint uses across air quality, noise, water, soil, marine, laboratory analysis and environmental modelling, with what each measures.', EQ.equipment(), ('js/eqp-lightbox.js',)),
   'compliance.html': ('Compliance Hub | Saudi Environmental Regulations | BluePrint', 'Searchable summaries of the Saudi environmental obligations that apply to regulated facilities, by category, authority and severity.', CP.compliance(), ()),

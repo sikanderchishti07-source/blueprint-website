@@ -414,3 +414,10 @@ def home(available):
 # Compliance Finder promo block on the home page
 import finder as _FD
 TEXT.extend(_FD.PROMO_AR.items())
+
+
+# Live environmental map section
+import livemap as _LM
+TEXT.extend(_LM.AR_TEXT)
+ATTR.extend(_LM.AR_ATTR)
+ALLOWED |= {"Open", "Meteo", "Open-Meteo", "CAMS"}

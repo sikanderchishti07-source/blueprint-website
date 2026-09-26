@@ -1708,3 +1708,68 @@ html[dir=rtl] body.bp-inner main h1, html[dir=rtl] body.bp-inner main h2 { font-
 #navbar.scrolled.on-dark .nav-link .nav-chevron { color: rgba(255,255,255,.75) !important; }
 #navbar.scrolled.on-dark .nav-actions::before { background: rgba(255,255,255,.35); }
 html[dir=rtl] #navbar .nav-link, html[dir=rtl] #navbar .nav-lang-btn, html[dir=rtl] #navbar .nav-portal-btn { font-family: 'IBM Plex Sans Arabic', system-ui, sans-serif; font-size: 15px !important; }
+
+/* ==== Live environmental map (home) ==== */
+.lm-sec { padding: 96px 0; background: #fff; }
+.lm-grid { display: grid; grid-template-columns: .9fr 1.25fr; gap: 56px; align-items: center; }
+.lm-eb { display: inline-flex; align-items: center; gap: 10px; font: 600 12px/1 'Inter', system-ui, sans-serif; letter-spacing: .1em;
+  text-transform: uppercase; color: #0a6f80; padding-bottom: 12px; border-bottom: 1px solid #0e93a8; margin-bottom: 22px; }
+.lm-live { width: 8px; height: 8px; border-radius: 50%; background: #1aa39a; box-shadow: 0 0 0 0 rgba(26,163,154,.6); animation: lmPulse 2s infinite; }
+@keyframes lmPulse { 70% { box-shadow: 0 0 0 9px rgba(26,163,154,0); } 100% { box-shadow: 0 0 0 0 rgba(26,163,154,0); } }
+.lm-sec h2 { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-weight: 300; font-size: clamp(2rem, 3.2vw, 2.8rem);
+  line-height: 1.15; letter-spacing: -.015em; color: #0b2f38; margin: 0 0 16px; }
+.lm-sec h2 em { font-style: normal; color: #0e93a8; }
+.lm-lede { color: #5b676c; line-height: 1.7; margin: 0 0 26px; max-width: 46ch; }
+.lm-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid #e6ecee; }
+.lm-list li button { width: 100%; display: grid; grid-template-columns: 12px 1fr auto auto; align-items: center; gap: 14px; padding: 13px 4px;
+  background: none; border: 0; border-bottom: 1px solid #e6ecee; cursor: pointer; font: inherit; text-align: start; color: #1d2327; transition: background .2s; }
+.lm-list li button:hover, .lm-list li button.on { background: #f5f9fa; }
+.lm-list .lm-dot { width: 10px; height: 10px; border-radius: 50%; background: #cfd8db; }
+.lm-list b { font-weight: 600; font-size: .95rem; }
+.lm-list small { display: block; font-size: .78rem; color: #7b878c; margin-top: 2px; font-weight: 400; }
+.lm-list .lm-v { font: 600 1.05rem/1 'Inter', system-ui, sans-serif; color: #0b2f38; min-width: 2.5ch; text-align: end; }
+.lm-list .lm-t { font-size: .72rem; font-weight: 600; padding: 4px 9px; border-radius: 999px; background: #eef2f3; color: #5b676c; min-width: 92px; text-align: center; white-space: nowrap; }
+.lm-src { margin-top: 14px; font-size: .75rem; color: #8a969a; line-height: 1.5; }
+
+.lm-map { position: relative; }
+.lm-svg { width: 100%; height: auto; display: block; overflow: hidden; border-radius: 12px; background: #fbfcfc; }
+.lm-others path { fill: #f3f5f6; stroke: #e2e7e9; stroke-width: 1; }
+.lm-sa { fill: #eaf4f6; stroke: #9fcbd3; stroke-width: 1.4; }
+.lm-sa-dots { fill: url(#lmDots); pointer-events: none; }
+.lm-pin { cursor: pointer; }
+.lm-pin .lm-halo, .lm-pin text { pointer-events: none; }
+.lm-pin .lm-halo { fill: currentColor; opacity: .16; transform-box: fill-box; transform-origin: center; animation: lmHalo 2.6s ease-out infinite; }
+.lm-pin .lm-core { fill: currentColor; stroke: #fff; stroke-width: 3; }
+.lm-pin text { font: 600 17px 'Inter', system-ui, sans-serif; fill: #1d2327; paint-order: stroke; stroke: #fff; stroke-width: 5px; stroke-linejoin: round; }
+.lm-pin.on .lm-core { stroke-width: 4; r: 11; }
+@keyframes lmHalo { 0% { transform: scale(.6); opacity: .35; } 100% { transform: scale(2.4); opacity: 0; } }
+
+.lm-card { position: absolute; width: min(330px, 92%); background: #fff; border: 1px solid #e3e8ea; border-radius: 12px; padding: 18px 20px;
+  box-shadow: 0 24px 50px -24px rgba(11,47,56,.35); opacity: 0; transform: translateY(8px); pointer-events: none;
+  transition: opacity .25s, transform .25s; z-index: 3; }
+.lm-card.on { opacity: 1; transform: none; pointer-events: auto; }
+.lm-card h3 { margin: 0; font: 600 1.1rem/1.2 'Inter', system-ui, sans-serif; color: #0b2f38; }
+.lm-card .lm-sub { font-size: .8rem; color: #7b878c; margin: 3px 0 12px; }
+.lm-card .lm-row { display: flex; align-items: flex-end; gap: 16px; }
+.lm-card .lm-aqi { font: 300 2.6rem/1 'Plus Jakarta Sans', system-ui, sans-serif; color: #0b2f38; }
+.lm-card .lm-aqi small { display: block; font: 600 .68rem/1.4 'Inter', system-ui, sans-serif; letter-spacing: .08em; text-transform: uppercase; color: #7b878c; }
+.lm-card .lm-pm { white-space: nowrap; font-size: .82rem; color: #5b676c; line-height: 1.6; }
+.lm-card .lm-pm b { color: #1d2327; }
+.lm-spark { width: 100%; height: 42px; margin: 10px 0 2px; display: block; }
+.lm-spark-l { font-size: .7rem; color: #8a969a; }
+.lm-card h4 { margin: 14px 0 6px; font: 600 .7rem/1 'Inter', system-ui, sans-serif; letter-spacing: .09em; text-transform: uppercase; color: #7b878c; }
+.lm-card ul { margin: 0; padding: 0; list-style: none; }
+.lm-card li a { display: flex; justify-content: space-between; gap: 8px; padding: 6px 0; font-size: .86rem; color: #0a6f80; text-decoration: none; border-bottom: 1px dashed #e6ecee; }
+.lm-card li a:hover { color: #0b2f38; }
+.lm-card .lm-ctas { display: flex; gap: 8px; margin-top: 14px; }
+.lm-card .lm-ctas a { flex: 1; text-align: center; padding: 10px 8px; border-radius: 6px; font-size: .8rem; font-weight: 600; text-decoration: none; }
+.lm-card .lm-c1 { background: #0e93a8; color: #fff; } .lm-card .lm-c2 { border: 1px solid #cfd9dc; color: #1d2327; }
+.lm-legend { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 10px; font-size: .72rem; color: #7b878c; }
+.lm-legend i { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-inline-end: 5px; vertical-align: middle; }
+[dir=rtl] .lm-eb, [dir=rtl] .lm-card h4, [dir=rtl] .lm-card .lm-aqi small { letter-spacing: 0; }
+[dir=rtl] .lm-sec, [dir=rtl] .lm-card { font-family: 'IBM Plex Sans Arabic', system-ui, sans-serif; }
+[dir=rtl] .lm-sec h2 { font-family: 'IBM Plex Sans Arabic', system-ui, sans-serif; font-weight: 400; letter-spacing: 0; }
+[dir=rtl] .lm-pin text { font-family: 'IBM Plex Sans Arabic', system-ui, sans-serif; }
+@media (max-width: 960px) { .lm-grid { grid-template-columns: 1fr; gap: 28px; } .lm-map { order: -1; } .lm-sec { padding: 64px 0; }
+  .lm-card { position: static; width: 100%; margin-top: 12px; display: none; } .lm-card.on { display: block; } .lm-pin text { font-size: 24px; } }
+@media (prefers-reduced-motion: reduce) { .lm-pin .lm-halo, .lm-live { animation: none; } }

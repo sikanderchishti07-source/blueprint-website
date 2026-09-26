@@ -6,6 +6,7 @@ import content as _C
 HOME = """
 """ + COVER + """
 
+LIVE_MAP
 <section id="overview" class="py-28 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid lg:grid-cols-2 gap-12 items-center">
@@ -302,5 +303,5 @@ def home():
     sect = "".join(
         f"""      <a href="{href}" class="sect-card"><span class="sect-img" style="background-image:url(\'{img}\')"></span><span class="sect-scrim"></span><span class="sect-shine"></span><span class="sect-edge"></span><span class="sect-tag">{cat}</span><span class="sect-body"><span class="sect-t"><i class="fas {icon}"></i>{title}</span><span class="sect-d">{desc}</span><span class="sect-rev"><span class="sect-obl"><b>Typically</b>{obl}</span><span class="sect-go">See the service <i class="fas fa-arrow-right"></i></span></span></span></a>\n"""
         for img, icon, cat, title, desc, obl, href in SECTORS)
-    import finder as _FD
-    return HOME.replace("CF_PROMO", _FD.promo("var(--bp-page)")).replace("PROCESS_CARDS", proc).replace("SECTOR_CARDS", sect).replace("CLIENT_LOGOS", clients)
+    import finder as _FD, livemap as _LM
+    return HOME.replace("LIVE_MAP", _LM.section()).replace("CF_PROMO", _FD.promo("var(--bp-page)")).replace("PROCESS_CARDS", proc).replace("SECTOR_CARDS", sect).replace("CLIENT_LOGOS", clients)
