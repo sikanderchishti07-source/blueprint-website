@@ -406,7 +406,7 @@ def nav(lang="en", page=None):
 
         <nav class="nav-links" style="flex:1;justify-content:center;" aria-label="{s["primary"]}">
           <div class="nav-item">
-            <a href="index.html" class="nav-link" data-page="index.html">{s["home"]} <i class="fas fa-chevron-down nav-chevron"></i></a>
+            <a href="about.html" class="nav-link" data-page="about.html">{s["about"]} <i class="fas fa-chevron-down nav-chevron"></i></a>
             <div class="nav-dropdown">
               <div class="nav-dropdown-box" style="min-width:230px;">
                 <div class="nav-dropdown-title">{s["about_bp"]}</div>
@@ -417,9 +417,6 @@ def nav(lang="en", page=None):
             </div>
           </div>
 
-          <div class="nav-item">
-            <a href="about.html" class="nav-link" data-page="about.html">{s["about"]}</a>
-          </div>
           <div class="nav-item">
             <a href="equipment.html" class="nav-link" data-page="equipment.html">{s["technology"]} <i class="fas fa-chevron-down nav-chevron"></i></a>
             <div class="nav-dropdown">
