@@ -249,6 +249,38 @@ D = {
    "ISO 9308-1 وAPHA 9222",
    "القولونيات وE.coli في مياه الشرب ومياه الترفيه"),
  ],
+ "modelling": [
+  ("Near field to about 50 km (AERMOD); regional to about 300 km (CALPUFF)",
+   "US EPA Guideline on Air Quality Models (Appendix W)",
+   "Stack and fugitive sources, run with a year of hourly meteorology",
+   "من النطاق القريب حتى نحو 50 كم (AERMOD)، وإقليمياً حتى نحو 300 كم (CALPUFF)",
+   "إرشادات نماذج جودة الهواء لوكالة US EPA (الملحق W)",
+   "مصادر المداخن والانبعاثات الهاربة، مع بيانات أرصاد جوية لكل ساعة على مدى عام"),
+  ("Near-field mixing zone to far-field coastal circulation",
+   "Mixing-zone assessment against the discharge permit",
+   "Desalination brine, cooling water and effluent outfalls",
+   "من منطقة الاختلاط القريبة إلى الدوران الساحلي البعيد",
+   "تقييم منطقة الاختلاط مقابل ترخيص التصريف",
+   "مصبّات الرجيع الملحي لمحطات التحلية ومياه التبريد والمياه المعالجة"),
+  ("Catchment rainfall-runoff through to river and wadi hydraulics",
+   "HEC hydrologic and hydraulic methods",
+   "Flood risk, drainage design and wadi crossings",
+   "من جريان الأمطار في مستجمعات المياه إلى هيدروليكا الأنهار والأودية",
+   "طرق HEC الهيدرولوجية والهيدروليكية",
+   "مخاطر الفيضانات وتصميم التصريف ومعابر الأودية"),
+  ("Site to regional aquifer scale, steady or time-varying",
+   "USGS finite-difference groundwater model",
+   "Dewatering, abstraction impact and contaminant transport",
+   "من نطاق الموقع إلى نطاق الخزان الجوفي الإقليمي، في حالة مستقرة أو متغيرة زمنياً",
+   "نموذج USGS للمياه الجوفية بطريقة الفروق المحدودة",
+   "نزح المياه وأثر السحب وانتقال الملوثات"),
+  ("Industrial, road and construction noise at receptors",
+   "ISO 9613-2 outdoor sound propagation",
+   "Predicting noise before a facility is built or expanded",
+   "ضوضاء المنشآت الصناعية والطرق والإنشاءات عند المستقبِلات",
+   "ISO 9613-2 لانتشار الصوت في الهواء الطلق",
+   "التنبؤ بالضوضاء قبل إنشاء المنشأة أو توسعتها"),
+ ],
 }
 
 # English -> Arabic entries for the Arabic page's word map
@@ -260,4 +292,4 @@ for _rows in D.values():
 
 # Latin codes and units allowed to stay in Arabic text
 LATIN = {"APHA", "ASTM", "BS", "DIN", "IHO", "S-44", "IOC", "WMO", "NTU", "BOD", "COD",
-         "O₂", "NO₂", "SO₂", "CO₂", "pH", "TO", "B", "S", "UNESCO", "D1586", "D2216", "D2974", "D4750", "D6913", "D1739"}
+         "O₂", "NO₂", "SO₂", "CO₂", "pH", "TO", "B", "S", "UNESCO", "D1586", "D2216", "D2974", "D4750", "D6913", "D1739", "USGS", "HEC", "AERMOD", "CALPUFF"}

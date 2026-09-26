@@ -186,8 +186,6 @@ def _sections():
     out = []
     for key, icon, name, sub, href, items in DOMAINS:
         def _ph(i, n):
-            if key == "modelling":
-                return '<div class="eqp-ph eqp-ph-sw"><i class="fas ' + icon + '"></i></div>'
             spec = EQD.D[key][i]
             dl = ('<dl class="eqp-spec" hidden>'
                   + ''.join('<div><dt>' + EQD.LABELS[k + 1][0] + '</dt><dd>' + spec[k] + '</dd></div>'
