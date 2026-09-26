@@ -207,6 +207,32 @@ SECTOR_CARDS    </div>
 
 """
 
+
+# ---- Section order (home page) ----------------------------------------------
+# The sections above are written in their original order; this puts them in the
+# order visitors see: who we are -> services -> how we work -> accreditations ->
+# live map + Compliance Finder -> sectors -> clients -> insights. The Arabic home
+# is made from this page, so it follows automatically.
+def _reorder(h):
+    cuts = [("map", "\nLIVE_MAP\n"), ("main", '<section id="overview"'), ("ins", '<section class="isec"'),
+            ("cf", "\n<!-- HOW WE WORK -->\nCF_PROMO\n"), ("proc", '<section id="process"'),
+            ("acc", "<!-- ACCREDITED & TRUSTED -->"), ("cli", "<!-- TRUSTED BY -->"), ("sec", "<!-- SECTORS -->")]
+    pos = [h.index(m) for _, m in cuts]
+    assert pos == sorted(pos), "home sections are not in the expected order"
+    head = h[:pos[0]]
+    part = {}
+    for i, (k, _) in enumerate(cuts):
+        part[k] = h[pos[i]:(pos[i + 1] if i + 1 < len(cuts) else len(h))]
+    tail = ""
+    if part["sec"].rstrip().endswith("</section>"):
+        cut = part["sec"].rindex("</section>") + len("</section>")
+        part["sec"], tail = part["sec"][:cut] + "\n\n", part["sec"][cut:]
+    order = ["main", "proc", "acc", "map", "cf", "sec", "cli", "ins"]
+    return head + "".join(part[k] for k in order) + tail
+
+
+HOME = _reorder(HOME)
+
 PROCESS = [
     (1, "assets/img/process-scoping.webp", "Project scoping",
      "Site visit and regulatory review, then a written scope agreed before any fieldwork begins."),
