@@ -601,7 +601,6 @@ def footer(lang="en", page=None):
       <div class="footer-bottom-inner flex flex-wrap items-center justify-between gap-4">
         <div style="display:flex;flex-direction:column;gap:3px;">
           <p class="footer-copy">© <span data-text="year"></span> {s["copy"]}</p>
-          <p class="footer-credit">{s["credit"]}</p>
         </div>
         <div style="display:flex;align-items:center;flex-wrap:wrap;gap:2px;">
           <a href="privacy.html" class="footer-legal-btn">{s["privacy"]}</a>
