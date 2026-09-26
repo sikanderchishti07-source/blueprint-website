@@ -1859,3 +1859,16 @@ button.bg-bp-primary.text-white { background: #0c8193; }
 [dir=rtl] .nf-sec h1, [dir=rtl] .nf-num { font-family: 'IBM Plex Sans Arabic', system-ui, sans-serif; }
 [dir=rtl] .nf-eb, [dir=rtl] .nf-sec h2.nf-h2 { letter-spacing: 0 !important; font-family: 'IBM Plex Sans Arabic', system-ui, sans-serif !important; font-size: 14px !important; }
 @media (max-width: 560px) { .nf-links { grid-template-columns: 1fr; } .nf-sec { padding: 100px 0 60px; } }
+
+/* ==== Footer: contact details as one full-width row under the link columns ==== */
+@media (min-width: 701px) {
+  .footer-grid > .footer-contact-col { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px 32px;
+    padding-top: 30px; border-top: 1px solid rgba(255,255,255,.08); }
+  .footer-contact-col .footer-col-title { grid-column: 1 / -1; margin-bottom: 4px; }
+  .footer-contact-col .footer-contact-row { border-bottom: 0; padding: 0; }
+}
+@media (min-width: 1101px) {
+  .footer-grid > .footer-contact-col { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.15fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.25fr); gap: 18px 24px; }
+  .footer-contact-col .footer-contact-value { white-space: nowrap; }
+  .footer-contact-col .footer-contact-row:first-of-type .footer-contact-value { white-space: normal; }
+}
