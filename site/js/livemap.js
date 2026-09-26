@@ -1,5 +1,5 @@
 /* ============================================================
-   BluePrint — livemap.js
+   BluePrint - livemap.js
    Live air quality across the Kingdom's industrial hubs, on a map.
    Data: Open-Meteo air-quality API (CAMS model estimates), hourly.
    Needs #lmList, #lmPins, #lmCard on the page.
@@ -67,7 +67,7 @@
   function paint() {
     C.forEach(function (c) {
       var d = data[c[0]], btn = list.querySelector('button[data-id="' + c[0] + '"]'), pin = pins.querySelector('[data-id="' + c[0] + '"]');
-      if (!d) { btn.querySelector('.lm-v').textContent = '—'; btn.querySelector('.lm-t').textContent = T.na; return; }
+      if (!d) { btn.querySelector('.lm-v').textContent = '-'; btn.querySelector('.lm-t').textContent = T.na; return; }
       var b = band(d.aqi), col = COL[b];
       pin.style.color = col; btn.querySelector('.lm-dot').style.background = col;
       btn.querySelector('.lm-v').textContent = d.aqi;

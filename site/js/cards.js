@@ -1,5 +1,5 @@
 /* ============================================================
-   BluePrint — cards.js
+   BluePrint - cards.js
    Three-card service showcase. Click a card to expand its
    service list, staggered in. Home page only.
    ============================================================ */
@@ -18,7 +18,7 @@
     {
       key: 'Compliance &amp; Permitting', short: 'Permitting', num: '01', icon: 'fa-stamp',
       img: 'assets/img/card-1.webp', pos: '20% 30%',
-      blurb: 'Getting your facility licensed &mdash; and keeping it licensed.',
+      blurb: 'Getting your facility licensed, and keeping it licensed.',
       href: 'service-environmental-permit.html',
       items: [
         ['Environmental Permit', 'NCEC permit file, start to issuance', 'service-environmental-permit.html'],
@@ -53,12 +53,12 @@
       blurb: 'Deeper technical work across six disciplines.',
       href: 'services.html',
       items: [
-        ['Climate Change &amp; Sustainability', 'ESG, carbon footprint, net zero &mdash; 17 services', 'service-climate-sustainability.html'],
-        ['Ecological &amp; Biological Surveys', 'Baseline, habitat, protected species &mdash; 6', 'service-ecological-surveys.html'],
-        ['Marine Environment', 'Sampling, mapping, modelling &mdash; 6', 'service-marine-environment.html'],
-        ['Remediation &amp; Rehabilitation', 'Investigation to in-situ works &mdash; 5', 'service-remediation-rehabilitation.html'],
-        ['Environmental Modelling', 'Dispersion, hydrology, noise &mdash; 5', 'service-environmental-modelling.html'],
-        ['Laboratory Services', 'Sampling through interpretation &mdash; 10', 'service-laboratory-services.html']
+        ['Climate Change &amp; Sustainability', 'ESG, carbon footprint, net zero, 17 services', 'service-climate-sustainability.html'],
+        ['Ecological &amp; Biological Surveys', 'Baseline, habitat, protected species, 6 services', 'service-ecological-surveys.html'],
+        ['Marine Environment', 'Sampling, mapping, modelling, 6 services', 'service-marine-environment.html'],
+        ['Remediation &amp; Rehabilitation', 'Investigation to in-situ works, 5 services', 'service-remediation-rehabilitation.html'],
+        ['Environmental Modelling', 'Dispersion, hydrology, noise, 5 services', 'service-environmental-modelling.html'],
+        ['Laboratory Services', 'Sampling through interpretation, 10 services', 'service-laboratory-services.html']
       ]
     }
   ];
@@ -94,7 +94,7 @@
             '<span class="svc-card-count">' + g.items.length + ' ' + T.services + '</span>' +
             '<span class="svc-card-title">' + g.key + '</span>' +
             '<span class="svc-card-blurb">' + g.blurb + '</span>' +
-            '<span class="svc-card-cta">View ' + g.items.length + ' services <i class="fas fa-arrow-right"></i></span>' +
+            '<span class="svc-card-cta">' + (T.viewN || 'View {n} services').replace('{n}', g.items.length) + ' <i class="fas fa-arrow-right"></i></span>' +
           '</span>' +
         '</span>' +
         '<span class="svc-face svc-back">' +
@@ -114,7 +114,7 @@
     lastFocus = trigger || null;
     document.getElementById('svcOvBg').style.backgroundImage = "url('" + g.img + "')";
     document.getElementById('svcOvBg').style.backgroundPosition = g.pos;
-    document.getElementById('svcOvKicker').innerHTML = g.num + ' &mdash; ' + g.items.length + ' ' + T.services;
+    document.getElementById('svcOvKicker').innerHTML = g.num + ' &middot; ' + g.items.length + ' ' + T.services;
     document.getElementById('svcOvTitle').innerHTML = g.key;
     document.getElementById('svcOvBlurb').innerHTML = g.blurb;
     var link = document.getElementById('svcOvLink');
@@ -136,7 +136,7 @@
 
     overlay.classList.add('is-open');
     overlay.setAttribute('aria-hidden', 'false');
-    // lock the page behind the overlay — html as well as body, or the
+    // lock the page behind the overlay - html as well as body, or the
     // page scrollbar stays visible down the right edge
     var sbw = window.innerWidth - document.documentElement.clientWidth;
     document.documentElement.style.overflow = 'hidden';

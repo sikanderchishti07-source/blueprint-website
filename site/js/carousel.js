@@ -1,5 +1,5 @@
 /* ============================================================
-   BluePrint — carousel.js
+   BluePrint - carousel.js
    Fanned "Our services" carousel. Bails out if not on the page.
    ============================================================ */
 (function () {
@@ -89,7 +89,7 @@
   }
   function go(n) { cur = (n + S.length) % S.length; layout(); }
 
-  /* autorotation — pauses on hover, on focus and when the tab is hidden */
+  /* autorotation - pauses on hover, on focus and when the tab is hidden */
   const REDUCED = matchMedia('(prefers-reduced-motion: reduce)').matches;
   let timer = null;
   function resume() { if (REDUCED || timer || hov !== null) return; timer = setInterval(() => go(cur + 1), 5000); }

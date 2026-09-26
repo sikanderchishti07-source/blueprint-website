@@ -1,5 +1,5 @@
 /* ============================================================
-   BluePrint — cover.js
+   BluePrint - cover.js
    Drives the pinned home cover. Bails out safely if the cover
    markup is not on the page.
    ============================================================ */
@@ -77,7 +77,7 @@ setTimeout(()=>document.querySelectorAll('#h1 .w').forEach(w=>w.classList.add('i
 
 /* inertia-smoothed scroll */
 let target=0, cur=0, running=false;
-/* opacity + transform only — a full-viewport blur costs ~100ms a frame */
+/* opacity + transform only - a full-viewport blur costs ~100ms a frame */
 const setScene=(el,o,dy)=>{el.style.opacity=o.toFixed(3);
   el.style.transform='translate3d(0,'+dy.toFixed(1)+'px,0)';
   el.style.visibility=o<.02?'hidden':'visible'};
@@ -140,14 +140,14 @@ function onScroll(){
     const c=d.current||{};
     const aqi=Math.round(c.us_aqi||0);
     /* the US EPA index is defined to 500; anything above is shown as 500+ */
-    document.getElementById('aqiVal').textContent = aqi ? (aqi>500 ? '500+' : aqi) : '—';
+    document.getElementById('aqiVal').textContent = aqi ? (aqi>500 ? '500+' : aqi) : '-';
     const BD = CT.bands || ['GOOD','MODERATE','UNHEALTHY · SENSITIVE','UNHEALTHY','VERY UNHEALTHY','HAZARDOUS'];
     const band = aqi<=50?BD[0] : aqi<=100?BD[1] : aqi<=150?BD[2]
                : aqi<=200?BD[3] : aqi<=300?BD[4] : BD[5];
     const lab=document.querySelector('.lc-val span');
     if(lab && aqi) lab.textContent = (CT.aqi||'AQI · ') + band;
-    document.getElementById('pm25').textContent=(c.pm2_5!=null)?c.pm2_5.toFixed(1):'—';
-    document.getElementById('pm10').textContent=(c.pm10!=null)?c.pm10.toFixed(1):'—';
+    document.getElementById('pm25').textContent=(c.pm2_5!=null)?c.pm2_5.toFixed(1):'-';
+    document.getElementById('pm10').textContent=(c.pm10!=null)?c.pm10.toFixed(1):'-';
     const frac=Math.min(1,aqi/500);
     document.getElementById('aqiArc').style.strokeDashoffset=(255*(1-frac)).toFixed(1);
     const h=d.hourly||{};

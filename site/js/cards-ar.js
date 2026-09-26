@@ -4,7 +4,7 @@ window.SVC_T = { services: 'خدمات', openList: 'عرض القائمة كام
 window.SVC_DATA_AR = [
   { key:'الامتثال والتصاريح', short:'التصاريح', num:'٠١', icon:'fa-stamp',
     img:'assets/img/card-1.webp', pos:'20% 30%',
-    blurb:'ترخيص منشأتك &mdash; والحفاظ عليه.',
+    blurb:'ترخيص منشأتك والحفاظ عليه.',
     href:'services.html',
     items:[
       ['التصريح البيئي','ملف المركز الوطني من البداية حتى الإصدار','services.html'],

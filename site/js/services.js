@@ -1,5 +1,5 @@
 /* ============================================================
-   BluePrint — services.js
+   BluePrint - services.js
    Interactive split-panel services showcase (desktop tabs /
    mobile accordion) with auto-rotate.
    ============================================================ */

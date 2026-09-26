@@ -1,5 +1,5 @@
 /* ============================================================
-   BluePrint — widgets.js
+   BluePrint - widgets.js
    WhatsApp button, expert CTA,
    client-logo ticker.
    ============================================================ */

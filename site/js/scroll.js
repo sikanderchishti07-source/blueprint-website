@@ -1,5 +1,5 @@
 /* ============================================================
-   BluePrint — scroll.js
+   BluePrint - scroll.js
    Staggered reveals and a light parallax drift on section
    imagery. Plain JS, no dependencies. Respects reduced motion.
    ============================================================ */

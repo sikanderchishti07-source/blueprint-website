@@ -348,7 +348,7 @@ def _script_data(available):
     ]
     SVC_T = {"services": "خدمات", "openList": "فتح القائمة الكاملة", "more": "أخرى",
              "hint": "مرّر فوق البطاقة للمعاينة · انقر لفتح القائمة الكاملة",
-             "kicker": "خدماتنا", "view": "عرض خدمات {k}"}
+             "kicker": "خدماتنا", "view": "عرض خدمات {k}", "viewN": "عرض {n} خدمات"}
 
     COVER_T = {
      # [label, value, x%, y%]: placed in the open left half, clear of the Arabic copy on the right

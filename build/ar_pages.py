@@ -140,6 +140,12 @@ def setup(PAGES):
     for _t, _a, _r in T.PAGES.values():
         common_attr.update(dict(_a))
     common_attr.update(dict(T.COMMON_ATTR))
+    # blog titles double as image descriptions on the related-article cards
+    _ht = dict(home_ar.TEXT)
+    import content as _CT
+    for _a in _CT.load_blog():
+        if _a['title'] in _ht:
+            common_attr.setdefault(_a['title'], _ht[_a['title']])
     for f, (title_en, desc_en, body, extra) in PAGES.items():
         if f == "index.html":
             continue

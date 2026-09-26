@@ -139,7 +139,7 @@ DOMAINS = [
         ("UV-visible spectrophotometer",
          "Colorimetric determinands",
          "Established methods for nutrients and a range of water quality parameters."),
-        ("BOD incubator and COD digestor",
+        ("BOD incubator and COD digester",
          "Oxygen demand",
          "BOD takes five days by definition, which is why it sets the reporting schedule."),
         ("Muffle furnace",

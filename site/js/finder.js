@@ -1,5 +1,5 @@
 /* ============================================================
-   BluePrint — finder.js
+   BluePrint - finder.js
    Compliance Finder: three questions -> the permits, studies and
    monitoring that typically apply. Indicative only; confirmed at scoping.
    Reads the page language from <html lang>. Needs #cfWrap on the page.
