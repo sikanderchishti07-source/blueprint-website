@@ -124,8 +124,28 @@
     });
   });
 
-  /* â”€â”€ Contact form (front-end only, as in the original) â”€â”€â”€â”€â”€ */
-  window.sendContactMessage = function () { /* lang-aware */ alert(document.documentElement.lang === 'ar' ? 'شكراً لك! سيتواصل معك فريقنا قريباً.' : 'Thank you! Our team will contact you shortly.'); };
+  /* â”€â”€ Contact form: builds a WhatsApp message from the fields â”€â”€â”€â”€â”€ */
+  window.sendContactMessage = function () {
+    var ar = document.documentElement.lang === 'ar';
+    var v = function (id) { var e = document.getElementById(id); return e ? e.value.trim() : ''; };
+    var st = document.getElementById('cfStatus');
+    var say = function (msg, bad) { if (!st) return; st.textContent = msg; st.hidden = false; st.style.color = bad ? '#b42318' : '#0a6f80'; };
+    var name = v('cf-name'), email = v('cf-email'), phone = v('cf-phone'), msg = v('cf-msg');
+    var sel = document.getElementById('cf-service');
+    var service = sel && sel.value ? sel.options[sel.selectedIndex].text : '';
+    if (!name) { say(ar ? 'يرجى كتابة اسمك.' : 'Please enter your name.', true); document.getElementById('cf-name').focus(); return; }
+    if (!email && !phone) { say(ar ? 'يرجى إضافة بريد إلكتروني أو رقم هاتف لنتواصل معك.' : 'Please add an email or phone number so we can reply.', true); document.getElementById('cf-email').focus(); return; }
+    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { say(ar ? 'يبدو أن البريد الإلكتروني غير صحيح.' : 'That email address does not look right.', true); document.getElementById('cf-email').focus(); return; }
+    var L = ar ? ['مرحباً بلوبرنت، أود الاستفسار عن خدماتكم.', 'الاسم', 'الشركة', 'البريد', 'الهاتف', 'الخدمة', 'التفاصيل']
+               : ['Hello BluePrint, I would like to discuss an enquiry.', 'Name', 'Company', 'Email', 'Phone', 'Service', 'Details'];
+    var lines = [L[0], '', L[1] + ': ' + name];
+    [[2, v('cf-company')], [3, email], [4, phone], [5, service], [6, msg]].forEach(function (p) { if (p[1]) lines.push(L[p[0]] + ': ' + p[1]); });
+    var C = window.BP_CONFIG || {};
+    var url = 'https://wa.me/' + (C.WHATSAPP || '966543470109') + '?text=' + encodeURIComponent(lines.join('\n'));
+    var w = window.open(url, '_blank', 'noopener');
+    if (!w) location.href = url;
+    say(ar ? 'تم فتح واتساب. اضغط إرسال هناك لإكمال رسالتك.' : 'WhatsApp has opened. Press send there to finish your message.', false);
+  };
 })();
 
 

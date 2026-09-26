@@ -389,12 +389,12 @@ html.bp-pre-on{overflow:hidden}
           <h3 class="text-2xl font-bold text-bp-ink mb-6">أخبرنا عن منشأتك</h3>
           <div class="space-y-4">
             <div class="grid md:grid-cols-2 gap-4">
-              <input type="text" placeholder="الاسم الكامل" aria-label="الاسم الكامل" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-bp-primary focus:ring-2 focus:ring-bp-primary/20 outline-none transition-all" />
-              <input type="text" placeholder="الشركة" aria-label="الشركة" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-bp-primary focus:ring-2 focus:ring-bp-primary/20 outline-none transition-all" />
+              <input type="text" id="cf-name" placeholder="الاسم الكامل" aria-label="الاسم الكامل" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-bp-primary focus:ring-2 focus:ring-bp-primary/20 outline-none transition-all" />
+              <input type="text" id="cf-company" placeholder="الشركة" aria-label="الشركة" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-bp-primary focus:ring-2 focus:ring-bp-primary/20 outline-none transition-all" />
             </div>
-            <input type="email" placeholder="البريد الإلكتروني" aria-label="البريد الإلكتروني" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-bp-primary focus:ring-2 focus:ring-bp-primary/20 outline-none transition-all" />
-            <input type="tel" placeholder="رقم الهاتف" aria-label="رقم الهاتف" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-bp-primary focus:ring-2 focus:ring-bp-primary/20 outline-none transition-all" />
-            <select aria-label="الخدمة المطلوبة" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-bp-primary outline-none transition-all text-gray-600 bg-white">
+            <input type="email" id="cf-email" placeholder="البريد الإلكتروني" aria-label="البريد الإلكتروني" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-bp-primary focus:ring-2 focus:ring-bp-primary/20 outline-none transition-all" />
+            <input type="tel" id="cf-phone" placeholder="رقم الهاتف" aria-label="رقم الهاتف" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-bp-primary focus:ring-2 focus:ring-bp-primary/20 outline-none transition-all" />
+            <select id="cf-service" aria-label="الخدمة المطلوبة" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-bp-primary outline-none transition-all text-gray-600 bg-white">
               <option value="">ما الخدمة التي تحتاجها؟</option>
               <option>الترخيص البيئي (NCEC)</option>
               <option>دراسة تقييم الأثر البيئي</option>
@@ -405,8 +405,10 @@ html.bp-pre-on{overflow:hidden}
               <option>القياسات البيئية</option>
               <option>لست متأكداً بعد، أرجو التوجيه</option>
             </select>
-            <textarea placeholder="نشاطك وطاقته وما تحتاجه تقريباً&hellip;" aria-label="تفاصيل المنشأة" rows="4" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-bp-primary outline-none transition-all resize-none"></textarea>
-            <button onclick="sendContactMessage()" class="w-full py-4 bg-bp-primary text-white rounded-xl font-bold hover:bg-bp-dark transition-all shadow-lg">إرسال الرسالة</button>
+            <textarea id="cf-msg" placeholder="نشاطك وطاقته وما تحتاجه تقريباً&hellip;" aria-label="تفاصيل المنشأة" rows="4" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-bp-primary outline-none transition-all resize-none"></textarea>
+            <button onclick="sendContactMessage()" class="w-full py-4 bg-bp-primary text-white rounded-xl font-bold hover:bg-bp-dark transition-all shadow-lg inline-flex items-center justify-center gap-2"><i class="fab fa-whatsapp"></i> <span>إرسال عبر واتساب</span></button>
+            <p class="text-xs text-gray-500 text-center">تُفتح بياناتك في واتساب جاهزة للإرسال إلى فريقنا.</p>
+            <p id="cfStatus" class="cf-status text-sm text-center" role="status" aria-live="polite" hidden></p>
           </div>
         </div>
         <div class="bg-white rounded-3xl p-8 shadow-xl">

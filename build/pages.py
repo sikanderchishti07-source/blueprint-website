@@ -174,12 +174,12 @@ def contact():
           <h3 class="text-2xl font-bold text-bp-ink mb-6">Tell us about your facility</h3>
           <div class="space-y-4">
             <div class="grid md:grid-cols-2 gap-4">
-              <input type="text" placeholder="Full Name" aria-label="Full name" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-bp-primary focus:ring-2 focus:ring-bp-primary/20 outline-none transition-all" />
-              <input type="text" placeholder="Company" aria-label="Company" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-bp-primary focus:ring-2 focus:ring-bp-primary/20 outline-none transition-all" />
+              <input type="text" id="cf-name" placeholder="Full Name" aria-label="Full name" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-bp-primary focus:ring-2 focus:ring-bp-primary/20 outline-none transition-all" />
+              <input type="text" id="cf-company" placeholder="Company" aria-label="Company" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-bp-primary focus:ring-2 focus:ring-bp-primary/20 outline-none transition-all" />
             </div>
-            <input type="email" placeholder="Email Address" aria-label="Email address" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-bp-primary focus:ring-2 focus:ring-bp-primary/20 outline-none transition-all" />
-            <input type="tel" placeholder="Phone Number" aria-label="Phone number" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-bp-primary focus:ring-2 focus:ring-bp-primary/20 outline-none transition-all" />
-            <select aria-label="Service interest" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-bp-primary outline-none transition-all text-gray-600 bg-white">
+            <input type="email" id="cf-email" placeholder="Email Address" aria-label="Email address" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-bp-primary focus:ring-2 focus:ring-bp-primary/20 outline-none transition-all" />
+            <input type="tel" id="cf-phone" placeholder="Phone Number" aria-label="Phone number" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-bp-primary focus:ring-2 focus:ring-bp-primary/20 outline-none transition-all" />
+            <select id="cf-service" aria-label="Service interest" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-bp-primary outline-none transition-all text-gray-600 bg-white">
               <option value="">Which service do you need?</option>
               <option>Environmental Permit (NCEC)</option>
               <option>Environmental Impact Assessment</option>
@@ -190,8 +190,10 @@ def contact():
               <option>Environmental Measurements</option>
               <option>Not sure yet, please advise</option>
             </select>
-            <textarea placeholder="Your activity, capacity, and roughly what you need&hellip;" aria-label="Facility details" rows="4" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-bp-primary outline-none transition-all resize-none"></textarea>
-            <button onclick="sendContactMessage()" class="w-full py-4 bg-bp-primary text-white rounded-xl font-bold hover:bg-bp-dark transition-all shadow-lg">Send Message</button>
+            <textarea id="cf-msg" placeholder="Your activity, capacity, and roughly what you need&hellip;" aria-label="Facility details" rows="4" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-bp-primary outline-none transition-all resize-none"></textarea>
+            <button onclick="sendContactMessage()" class="w-full py-4 bg-bp-primary text-white rounded-xl font-bold hover:bg-bp-dark transition-all shadow-lg inline-flex items-center justify-center gap-2"><i class="fab fa-whatsapp"></i> <span>Send via WhatsApp</span></button>
+            <p class="text-xs text-gray-500 text-center">Your details open in WhatsApp, ready to send to our team.</p>
+            <p id="cfStatus" class="cf-status text-sm text-center" role="status" aria-live="polite" hidden></p>
           </div>
         </div>
         <div class="bg-white rounded-3xl p-8 shadow-xl">
