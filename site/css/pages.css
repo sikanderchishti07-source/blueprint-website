@@ -1714,8 +1714,8 @@ html[dir=rtl] #navbar .nav-link, html[dir=rtl] #navbar .nav-lang-btn, html[dir=r
 .lm-sec > div { width: 100%; position: relative; }
 .lm-sec { position: relative; background: #fff url(../assets/img/livemap-bg-2560.webp) center / cover no-repeat; }
 .lm-sec::before { content: ""; position: absolute; inset: 0; pointer-events: none;
-  background: linear-gradient(90deg, rgba(255,255,255,.72), rgba(255,255,255,.35) 55%, rgba(255,255,255,.2)); }
-[dir=rtl] .lm-sec::before { background: linear-gradient(270deg, rgba(255,255,255,.72), rgba(255,255,255,.35) 55%, rgba(255,255,255,.2)); }
+  background: linear-gradient(90deg, rgba(255,255,255,.88), rgba(255,255,255,.74) 55%, rgba(255,255,255,.66)); }
+[dir=rtl] .lm-sec::before { background: linear-gradient(270deg, rgba(255,255,255,.88), rgba(255,255,255,.74) 55%, rgba(255,255,255,.66)); }
 .lm-grid { --lm-mw: min(60%, max(460px, calc((100vh - 190px) * 1.172))); display: grid; grid-template-columns: minmax(0, 1fr) var(--lm-mw); gap: clamp(32px, 4vw, 64px); align-items: center; }
 .lm-eb { display: inline-flex; align-items: center; gap: 10px; font: 600 12px/1 'Inter', system-ui, sans-serif; letter-spacing: .1em;
   text-transform: uppercase; color: #0a6f80; padding-bottom: 10px; border-bottom: 1px solid #0e93a8; margin-bottom: 14px; }
