@@ -73,7 +73,7 @@
 html.bp-pre-on{overflow:hidden}
 .bp-pre-seen #bpPre{display:none}
 #bpPre{--hz:56%;position:fixed;inset:0;z-index:2147483000;overflow:hidden;direction:ltr}
-#bpPre .bpp-sky,#bpPre .bpp-sand{position:absolute;left:0;right:0;transition:transform 1.05s cubic-bezier(.75,0,.2,1),opacity .7s ease}
+#bpPre .bpp-sky,#bpPre .bpp-sand{position:absolute;left:0;right:0;transition:transform .85s cubic-bezier(.75,0,.2,1),opacity .58s ease}
 #bpPre .bpp-sky{top:0;height:var(--hz);background:linear-gradient(180deg,#eef5f9 0%,#f7fbfd 100%)}
 #bpPre .bpp-sand{top:var(--hz);bottom:0;background:linear-gradient(180deg,#f5efe3 0%,#ece3d2 100%)}
 #bpPre .bpp-sun{position:absolute;left:50%;top:var(--hz);width:60vmin;height:60vmin;transform:translate(-50%,-50%);border-radius:50%;
@@ -93,11 +93,11 @@ html.bp-pre-on{overflow:hidden}
   font:500 clamp(11px,1.6vmin,14px)/1.2 "Segoe UI",system-ui,-apple-system,sans-serif;letter-spacing:.42em;text-transform:uppercase;color:#6a7a3a;opacity:0;transition:opacity .5s}
 #bpPre .bpp-tag.bpp-ar{letter-spacing:0 !important;text-transform:none;font-size:clamp(14px,2vmin,17px);font-family:"IBM Plex Sans Arabic","Segoe UI",sans-serif}
 #bpPre.bpp-play .bpp-sun{opacity:1}
-#bpPre.bpp-play .bpp-mark{animation:bppRise .95s cubic-bezier(.2,.8,.2,1) .35s forwards}
-#bpPre.bpp-play .bpp-w{animation:bppLeaf .8s cubic-bezier(.2,.8,.2,1) .8s forwards}
-#bpPre.bpp-play .bpp-wordwrap{animation:bppOpen .9s cubic-bezier(.65,0,.2,1) 1.3s forwards}
-#bpPre.bpp-play .bpp-word{animation:bppWord .7s ease-out 1.55s forwards}
-#bpPre.bpp-play .bpp-tag{animation:bppTag .8s ease-out 1.85s forwards}
+#bpPre.bpp-play .bpp-mark{animation:bppRise .75s cubic-bezier(.2,.8,.2,1) .25s forwards}
+#bpPre.bpp-play .bpp-w{animation:bppLeaf .62s cubic-bezier(.2,.8,.2,1) .6s forwards}
+#bpPre.bpp-play .bpp-wordwrap{animation:bppOpen .7s cubic-bezier(.65,0,.2,1) .98s forwards}
+#bpPre.bpp-play .bpp-word{animation:bppWord .55s ease-out 1.18s forwards}
+#bpPre.bpp-play .bpp-tag{animation:bppTag .62s ease-out 1.4s forwards}
 #bpPre.bpp-out{pointer-events:none}
 #bpPre.bpp-out .bpp-sky{transform:translateY(-100%)}
 #bpPre.bpp-out .bpp-sand{transform:translateY(100%)}
@@ -131,19 +131,19 @@ html.bp-pre-on{overflow:hidden}
   try{if(sessionStorage.getItem('bpPre')){p.parentNode.removeChild(p);return}sessionStorage.setItem('bpPre','1')}catch(e){}
   d.classList.add('bp-pre-on');
   var line=p.querySelector('.bpp-line'),imgs=p.querySelectorAll('img[data-src]'),t0=Date.now(),started=0,done=false,loaded=false,
-      reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches,FORM=reduce?300:2500,MAX=6500,left=imgs.length;
+      reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches,FORM=reduce?250:1900,MAX=5000,left=imgs.length;
   function start(){if(started)return;started=Date.now();p.classList.add('bpp-play');maybe()}
   for(var i=0;i<imgs.length;i++){imgs[i].onload=imgs[i].onerror=function(){if(--left<=0)start()};imgs[i].src=imgs[i].getAttribute('data-src')}
-  setTimeout(start,900);
+  setTimeout(start,700);
   (function tick(){if(done)return;var e=Date.now()-t0;
-    if(!reduce)line.style.transform='scaleX('+Math.min(.88,1-Math.exp(-e/900))+')';requestAnimationFrame(tick)})();
+    if(!reduce)line.style.transform='scaleX('+Math.min(.88,1-Math.exp(-e/675))+')';requestAnimationFrame(tick)})();
   function finish(){if(done)return;done=true;
-    line.style.transition='transform .45s ease-out, opacity .4s';line.style.transform='scaleX(1)';
+    line.style.transition='transform .35s ease-out, opacity .35s';line.style.transform='scaleX(1)';
     setTimeout(function(){p.classList.add('bpp-out');d.classList.remove('bp-pre-on');
-      setTimeout(function(){if(p.parentNode)p.parentNode.removeChild(p)},1200)},reduce?0:500)}
+      setTimeout(function(){if(p.parentNode)p.parentNode.removeChild(p)},1000)},reduce?0:380)}
   function maybe(){if(loaded&&started)setTimeout(finish,Math.max(0,FORM-(Date.now()-started)))}
   function ready(){loaded=true;maybe()}
-  if(document.readyState==='complete')ready();else window.addEventListener('load',ready);
+  if(document.readyState!=='loading')ready();else document.addEventListener('DOMContentLoaded',ready);  /* photos keep loading behind the split */
   setTimeout(finish,MAX);
 })();
 </script>
