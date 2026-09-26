@@ -216,12 +216,12 @@ def head(title, description, extra_css="", lang="en", page=None):
     page = page or "index.html"
     if lang == "ar":
         fonts = ('<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700'
-                 '&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600'
+                 '&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&family=DM+Sans:wght@300;400;500;600'
                  '&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />')
         rtl = '\n  <link rel="stylesheet" href="css/rtl.css" />'
         alt = _alternates(lang, page)
     else:
-        fonts = ('<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800'
+        fonts = ('<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600'
                  '&family=DM+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />')
         rtl = ""
         alt = _alternates(lang, page)
@@ -269,7 +269,7 @@ def head(title, description, extra_css="", lang="en", page=None):
 
   <script src="js/config.js"></script>
 {PL.HEAD}</head>
-<body class="font-sans">
+<body class="font-sans{'' if page in ('index.html', 'ar/index.html') else ' bp-inner'}">
 {PL.body(lang)}"""
 
 
