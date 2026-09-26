@@ -42,6 +42,7 @@ STR = {
   "about": "About", "technology": "Technology", "instrumentation": "Instrumentation",
   "equip": "Equipment Catalogue", "equip_sub": "Instrument types by domain",
   "compliance": "Compliance", "hub": "Compliance Hub", "hub_sub": "Saudi regulations, searchable",
+  "finder": "Compliance Finder", "finder_sub": "Which permits apply to you",
   "services": "Services", "view_all": "View All →", "see_all": "See all →",
   "measurement": "Measurement", "lab_sub": "Sampling, testing &amp; monitoring",
   "credentials": "Credentials", "licences_sub": "NCEC, MWAN, RCJY, IAS &amp; ISO",
@@ -99,6 +100,7 @@ STR = {
   "about": "من نحن", "technology": "التقنية", "instrumentation": "الأجهزة",
   "equip": "دليل الأجهزة", "equip_sub": "أنواع الأجهزة حسب المجال",
   "compliance": "الالتزام البيئي", "hub": "مركز الالتزام", "hub_sub": "الأنظمة السعودية مع البحث",
+  "finder": "أداة تحديد المتطلبات", "finder_sub": "ما التراخيص التي تنطبق عليك",
   "services": "الخدمات", "view_all": "عرض الكل ←", "see_all": "عرض الكل ←",
   "measurement": "القياس", "lab_sub": "أخذ العينات والفحص والرصد",
   "credentials": "الاعتمادات", "licences_sub": "NCEC وMWAN وRCJY وIAS وISO",
@@ -381,6 +383,7 @@ def nav(lang="en", page=None):
     <a href="technology.html#standards" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-stamp"></i></div>{s["licences"]}</a>
 
     <div class="drawer-divider"></div>
+    <a href="compliance-finder.html" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-list-check"></i></div>{s["finder"]}</a>
     <a href="blog.html" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-pen-nib"></i></div>{s["blog"]}</a>
     {careers_d}
     <a href="contact.html" class="drawer-link"><div class="drawer-link-icon"><i class="fas fa-envelope"></i></div>{s["contact"]}</a>
@@ -426,6 +429,7 @@ def nav(lang="en", page=None):
                 <div class="nav-dd-divider"></div>
                 <div class="nav-dropdown-title">{s["compliance"]}</div>
                 {dd_link("compliance.html", "fa-shield-halved", s["hub"], s["hub_sub"])}
+                {dd_link("compliance-finder.html", "fa-list-check", s["finder"], s["finder_sub"])}
               </div>
             </div>
           </div>

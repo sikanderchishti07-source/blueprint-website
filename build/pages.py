@@ -1,4 +1,5 @@
 # Page-specific sections for the BluePrint site build.
+import finder as _FD
 
 def page_header(title, subtitle, crumb):
     return f"""
@@ -51,7 +52,7 @@ def services():
       </div>''' for ic, nm, cnt, d in CATEGORIES)
     return page_header("A full spectrum of environmental services",
                        "From pre-licensing impact assessments to continuous periodic reporting, every service is delivered by accredited consultants who know the Saudi regulatory landscape inside out.",
-                       "Services") + f"""
+                       "Services") + _FD.promo() + f"""
 <section id="permitting" class="isvc-section" style="padding-top:56px;">
   <div class="isvc-header" style="margin-bottom:44px;">
     <div class="showcase-eyebrow">Compliance &amp; permitting</div>
@@ -150,7 +151,7 @@ def technology():
 def contact():
     return page_header("Let&rsquo;s map your path to compliance",
                        "Tell us about your facility and we&rsquo;ll identify the exact studies and permits you need. The initial consultation is free, and there&rsquo;s no obligation.",
-                       "Contact") + """
+                       "Contact") + _FD.promo() + """
 <section id="contact" class="py-20" style="background:var(--bp-page);">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid lg:grid-cols-2 gap-16">

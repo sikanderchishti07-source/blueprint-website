@@ -409,3 +409,8 @@ def home(available):
     for s in untranslated(html):
         print("  [home_ar] untranslated: " + s[:90])
     return _script_data(available) + html
+
+
+# Compliance Finder promo block on the home page
+import finder as _FD
+TEXT.extend(_FD.PROMO_AR.items())

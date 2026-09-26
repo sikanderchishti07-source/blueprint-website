@@ -126,6 +126,7 @@ HOME = """
 """ + insights(_C.load_blog()) + """
 
 <!-- HOW WE WORK -->
+CF_PROMO
 <section id="process" class="py-28 text-white relative" style="background:var(--bp-blue-ink);">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="text-center mb-20 scroll-reveal">
@@ -301,4 +302,5 @@ def home():
     sect = "".join(
         f"""      <a href="{href}" class="sect-card"><span class="sect-img" style="background-image:url(\'{img}\')"></span><span class="sect-scrim"></span><span class="sect-shine"></span><span class="sect-edge"></span><span class="sect-tag">{cat}</span><span class="sect-body"><span class="sect-t"><i class="fas {icon}"></i>{title}</span><span class="sect-d">{desc}</span><span class="sect-rev"><span class="sect-obl"><b>Typically</b>{obl}</span><span class="sect-go">See the service <i class="fas fa-arrow-right"></i></span></span></span></a>\n"""
         for img, icon, cat, title, desc, obl, href in SECTORS)
-    return HOME.replace("PROCESS_CARDS", proc).replace("SECTOR_CARDS", sect).replace("CLIENT_LOGOS", clients)
+    import finder as _FD
+    return HOME.replace("CF_PROMO", _FD.promo("var(--bp-page)")).replace("PROCESS_CARDS", proc).replace("SECTOR_CARDS", sect).replace("CLIENT_LOGOS", clients)

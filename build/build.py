@@ -1,6 +1,7 @@
 import about as AB
 import equipment as EQ
 import compliance as CP
+import finder as FD
 import os, partials as P, pages as G, pages_extra as X, arabic as AR, content as C, careers as CR, service_pages as SP, svc_cards as SVQ, svc_permitting as SPP, svc_monitoring as SPM, svc_specialist as SPS, svc_caps as SPC
 OUT = os.path.join(os.path.dirname(__file__), '..', 'site')
 PAGES = {
@@ -8,6 +9,7 @@ PAGES = {
   'about.html':      ('About BluePrint | Environmental Consultancy in Saudi Arabia', 'BluePrint Environmental Services, a registered Saudi environmental consultancy in Riyadh delivering permitting, monitoring, modelling and laboratory services across the Kingdom and the GCC.', AB.about(), ()),
   'equipment.html':  ('Equipment Catalogue | BluePrint Environmental Services', 'The instrument types BluePrint uses across air quality, noise, water, soil, marine, laboratory analysis and environmental modelling, with what each measures.', EQ.equipment(), ('js/eqp-lightbox.js',)),
   'compliance.html': ('Compliance Hub | Saudi Environmental Regulations | BluePrint', 'Searchable summaries of the Saudi environmental obligations that apply to regulated facilities, by category, authority and severity.', CP.compliance(), ()),
+  'compliance-finder.html': ('Compliance Finder | Which Permits Apply? | BluePrint', 'Answer three questions to see the environmental permits, studies and monitoring a facility like yours is normally asked for in Saudi Arabia.', FD.page(G.page_header), ('js/finder.js',)),
   'services.html':   ('Environmental Services in Saudi Arabia | BluePrint', 'Environmental services across KSA: impact assessments, MWAN waste permits, environmental registers, management plans, rehabilitation, and reporting.', G.services(), ('js/services.js',)),
   'technology.html': ('Laboratory & Accreditations | BluePrint', 'Environmental sampling, testing and monitoring services, and the licences BluePrint holds: NCEC, MWAN, Royal Commission for Jubail & Yanbu, IAS and ISO.', G.technology(), ()),
   'blog.html':       ('Environmental Compliance Blog | BluePrint KSA', 'Guides and insights on Saudi environmental regulation: MWAN permits, impact assessments, environmental registers, waste management, and compliance best practice.', X.blog(G.page_header), ()),

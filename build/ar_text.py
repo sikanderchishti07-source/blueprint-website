@@ -317,3 +317,9 @@ PAGES = {
  "technology.html": (LAB_TEXT, LAB_ATTR, []),
  "careers.html":    (CAREERS_TEXT, [], []),
 }
+
+
+# Compliance Finder (page, promo blocks)
+import finder as _FD
+COMMON_TEXT.extend(_FD.AR_TEXT.items())
+META["compliance-finder.html"] = _FD.META_AR

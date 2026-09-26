@@ -2718,3 +2718,8 @@ for _d in _EQ.DOMAINS:
     for _n, _m, _w in _d[5]:
         if _n in TEXT:
             ATTR[_n] = TEXT[_n]
+
+
+# Compliance Finder
+import finder as _FD2
+TEXT.update(_FD2.AR_TEXT)
