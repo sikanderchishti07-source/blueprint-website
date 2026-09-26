@@ -13,12 +13,12 @@
 
   var T = AR ? {
     bands: ['جيد', 'معتدل', 'غير صحي للحساسين', 'غير صحي', 'غير صحي جداً', 'خطر'], short: ['جيد', 'معتدل', 'للحساسين', 'غير صحي', 'غير صحي جداً', 'خطر'],
-    aqi: 'مؤشر جودة الهواء', pm: 'الجسيمات', last: 'PM2.5 خلال آخر 24 ساعة', applies: 'ما يهم منشآت هذه المنطقة',
+    close: 'إغلاق', aqi: 'مؤشر جودة الهواء', pm: 'الجسيمات', last: 'PM2.5 خلال آخر 24 ساعة', applies: 'ما يهم منشآت هذه المنطقة',
     finder: 'أداة تحديد المتطلبات', wa: 'واتساب', loading: 'جارٍ التحميل…', na: 'غير متاح',
     waMsg: 'مرحباً بلوبرنت، أود الاستفسار عن خدماتكم في {c}.'
   } : {
     bands: ['Good', 'Moderate', 'Unhealthy for sensitive groups', 'Unhealthy', 'Very unhealthy', 'Hazardous'], short: ['Good', 'Moderate', 'Sensitive groups', 'Unhealthy', 'Very unhealthy', 'Hazardous'],
-    aqi: 'Air quality index', pm: 'Particulates', last: 'PM2.5 over the last 24 hours', applies: 'What matters for facilities here',
+    close: 'Close', aqi: 'Air quality index', pm: 'Particulates', last: 'PM2.5 over the last 24 hours', applies: 'What matters for facilities here',
     finder: 'Compliance Finder', wa: 'WhatsApp', loading: 'Loading…', na: 'n/a',
     waMsg: 'Hello BluePrint, I would like to ask about your services in {c}.'
   };
@@ -88,7 +88,7 @@
     [].forEach.call(document.querySelectorAll('.lm-pin, .lm-list button'), function (e) { e.classList.toggle('on', e.getAttribute('data-id') === id); });
     var d = data[id], name = AR ? c[4] : c[3], b = d ? band(d.aqi) : 0;
     var BP = window.BP_CONFIG || {}, wa = 'https://wa.me/' + (BP.WHATSAPP || '966543470109') + '?text=' + encodeURIComponent(T.waMsg.replace('{c}', name));
-    card.innerHTML = '<h3>' + name + '</h3><p class="lm-sub">' + (AR ? c[6] : c[5]) + '</p>' +
+    card.innerHTML = '<button type="button" class="lm-x" aria-label="' + T.close + '">&times;</button><h3>' + name + '</h3><p class="lm-sub">' + (AR ? c[6] : c[5]) + '</p>' +
       (d ? '<div class="lm-row"><div class="lm-aqi" style="color:' + COL[b] + '">' + d.aqi + '<small>' + T.aqi + ' · ' + T.bands[b] + '</small></div>' +
         '<div class="lm-pm"><b>PM2.5</b> ' + d.pm25 + ' µg/m³<br><b>PM10</b> ' + d.pm10 + ' µg/m³</div></div>' + spark(d.hist) + '<div class="lm-spark-l">' + T.last + '</div>' : '<p class="lm-sub">' + T.na + '</p>') +
       '<h4>' + T.applies + '</h4><ul>' + c[7].map(function (k) { return '<li><a href="' + S[k][0] + '">' + (AR ? S[k][2] : S[k][1]) + ' <span>' + (AR ? '←' : '→') + '</span></a></li>'; }).join('') + '</ul>' +
@@ -98,11 +98,12 @@
       var x = pin.left - map.left, y = pin.top - map.top, cw = card.offsetWidth || 330;
       var left = x > map.width / 2 ? x - cw - 24 : x + 30;
       card.style.left = Math.max(0, Math.min(map.width - cw, left)) + 'px';
-      card.style.top = Math.max(0, Math.min(map.height - 360, y - 120)) + 'px';
+      card.style.top = Math.max(0, Math.min(map.height - card.offsetHeight, y - 120)) + 'px';
     }
     card.classList.add('on');
   }
 
+  card.addEventListener('click', function (e) { if (e.target.closest('.lm-x')) { card.classList.remove('on'); [].forEach.call(document.querySelectorAll('.lm-pin.on, .lm-list button.on'), function (x) { x.classList.remove('on'); }); cur = null; } });
   pins.addEventListener('click', function (e) { var g = e.target.closest('.lm-pin'); if (g) show(g.getAttribute('data-id')); });
   pins.addEventListener('mouseover', function (e) { var g = e.target.closest('.lm-pin'); if (g && window.innerWidth > 960) show(g.getAttribute('data-id')); });
   pins.addEventListener('keydown', function (e) { if (e.key === 'Enter') { var g = e.target.closest('.lm-pin'); if (g) show(g.getAttribute('data-id')); } });
