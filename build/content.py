@@ -1,6 +1,7 @@
 # Reads blog posts and careers from content/*.md so the owner can edit them
-# without touching Python. Each file has a small YAML-style header followed
-# by the body.
+# without touching Python. Each file has a small YAML-style header followed by
+# the body. When content/sanity.json has a projectId, both come from Sanity
+# instead (see sanity_source.py).
 
 import os, re, glob, datetime
 
@@ -81,6 +82,9 @@ def _sortkey(d):
 
 
 def load_blog():
+    import sanity_source as _S
+    if _S.enabled():
+        return _S.posts()
     items = [_parse(p) for p in glob.glob(os.path.join(ROOT, 'blog', '*.md'))]
     items = [i for i in items if i.get('title')]
     items.sort(key=_sortkey, reverse=True)
@@ -99,6 +103,9 @@ def load_blog():
 
 
 def load_careers():
+    import sanity_source as _S
+    if _S.enabled():
+        return _S.vacancies()
     items = [_parse(p) for p in glob.glob(os.path.join(ROOT, 'careers', '*.md'))]
     items = [i for i in items if i.get('title')]
     # closed vacancies stay in the folder but drop off the site

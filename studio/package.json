@@ -1,0 +1,17 @@
+{
+  "name": "blueprint-content",
+  "private": true,
+  "version": "1.0.0",
+  "description": "BluePrint website editor (blog posts and job vacancies)",
+  "scripts": {
+    "dev": "sanity dev",
+    "build": "sanity build",
+    "deploy": "sanity deploy"
+  },
+  "dependencies": {
+    "react": "^19.2.2",
+    "react-dom": "^19.2.2",
+    "sanity": "^6.17.0",
+    "styled-components": "^6.1.15"
+  }
+}

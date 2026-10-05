@@ -401,9 +401,15 @@ def untranslated(html):
     return sorted(set(left))
 
 
+# Phrases that are only on the home page while their article is among the latest
+# four; when articles change (Sanity), a missing one is expected, not a problem.
+EXPECTED_PARTIAL = set()
+
+
 def home(available):
     html = _english_home()
     html, missing = _translate(html)
+    missing = [(k, s) for k, s in missing if s not in EXPECTED_PARTIAL]
     for kind, s in missing:
         print("  [home_ar] no longer on the English page (%s): %s" % (kind, s[:70]))
     for s in untranslated(html):

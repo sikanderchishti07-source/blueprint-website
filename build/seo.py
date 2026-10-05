@@ -1,7 +1,7 @@
 """Search-engine files and structured data.
 
 - sitemap.xml: every page in both languages, with language pairs linked (hreflang).
-- robots.txt: lets search engines in, keeps them out of /admin/, points to the sitemap.
+- robots.txt: lets search engines in and points to the sitemap.
 - JSON-LD (structured data) in each page's <head>: the business on the home and contact
   pages, an article on each blog post, a service on each service page, and a breadcrumb.
 Everything follows partials.SITE_URL, so moving to a new domain is still one line.
@@ -135,7 +135,7 @@ def write_files(out_dir, en_pages, ar_pages):
     xml = ('<?xml version="1.0" encoding="UTF-8"?>\n'
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
            'xmlns:xhtml="http://www.w3.org/1999/xhtml">\n' + "\n".join(rows) + "\n</urlset>\n")
-    robots = ("User-agent: *\nAllow: /\nDisallow: /admin/\n\nSitemap: " + P.SITE_URL + "/sitemap.xml\n")
+    robots = ("User-agent: *\nAllow: /\n\nSitemap: " + P.SITE_URL + "/sitemap.xml\n")
     for name, data in (("sitemap.xml", xml), ("robots.txt", robots)):
         path = os.path.join(out_dir, name)
         old = open(path, encoding="utf-8").read() if os.path.exists(path) else None

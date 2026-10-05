@@ -345,7 +345,7 @@ ARTICLE_BODIES = {
 
 
 def article(a, page_header):
-    body = ARTICLE_BODIES.get(a['slug'])
+    body = a['html'] if a.get('source') == 'sanity' and a.get('html') else ARTICLE_BODIES.get(a['slug'])
     if body is None:
         body = f"""
 <p class="lead">{a['summary']}</p>
