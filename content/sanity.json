@@ -1,5 +1,5 @@
 {
-  "projectId": "",
+  "projectId": "6al70b2h",
   "dataset": "production",
   "apiVersion": "2025-02-19",
   "_note": "Fill projectId (from sanity.io/manage) to load blog posts and vacancies from Sanity. Empty = use the files in content/blog and content/careers."
