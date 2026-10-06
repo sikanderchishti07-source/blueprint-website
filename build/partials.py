@@ -152,7 +152,7 @@ def _lang_href(lang, page):
 # ---- link previews, icons and language links -------------------------------
 # The site's public address. Change this one line when the site moves to its
 # own domain: preview links, canonical addresses and language links follow.
-SITE_URL = "https://blueprint-website-wheat.vercel.app"
+SITE_URL = "https://www.blueprint-env.com"
 
 import os as _os
 _OG_DIR = _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "..", "site", "assets", "og")

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://blueprint-website-wheat.vercel.app/sitemap.xml
+Sitemap: https://www.blueprint-env.com/sitemap.xml
