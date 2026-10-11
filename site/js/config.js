@@ -16,6 +16,9 @@ window.BP_CONFIG = {
   EMAIL:          'info@blueprint-env.com',
   ADDRESS_LINE1:  '3704 Abi Jafar Al Mansur, Al Yarmouk District, Riyadh 13251-7669, Saudi Arabia',
   ADDRESS_LINE2:  'Sunday &ndash; Thursday, 9:00&ndash;18:00 AST',
-  WEBSITE:        'www.blueprint-env.com'
+  WEBSITE:        'www.blueprint-env.com',
+
+  // Google Analytics 4. Loaded only after the visitor accepts the cookie banner (js/consent.js).
+  GA_ID:          'G-YB0RQ9K2S1'
 
 };

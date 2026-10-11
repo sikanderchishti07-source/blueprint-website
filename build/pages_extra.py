@@ -404,7 +404,7 @@ def article(a, page_header):
 
 
 LEGAL = {
-"privacy": ("Privacy Policy", "How BluePrint Environmental Services collects, uses, and protects your personal information.", "July 1, 2026", """
+"privacy": ("Privacy Policy", "How BluePrint Environmental Services collects, uses, and protects your personal information.", "October 11, 2026", """
 <h2>Introduction</h2>
 <p>BluePrint Environmental Services (&ldquo;BluePrint&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;) respects your privacy. This policy explains what information we collect through our website, how we use it, and the choices you have.</p>
 
@@ -421,10 +421,11 @@ LEGAL = {
 <p>Enquiry records are retained only as long as necessary to serve you and to meet our legal and business obligations, after which they are securely deleted.</p>
 
 <h2>Your rights</h2>
-<p>You may request access to, correction of, or deletion of the personal information we hold about you by contacting us at the email address below.</p>
+<p>Under the Saudi Personal Data Protection Law (PDPL), you may request access to, correction of, or deletion of the personal information we hold about you, and you may withdraw your consent at any time, by contacting us at the email address below.</p>
 
 <h2>Cookies &amp; analytics</h2>
-<p>We may use cookies and privacy-respecting analytics to understand site usage. You can control cookies through your browser settings.</p>
+<p>We use Google Analytics to understand how visitors use our website, for example which pages are read most, so we can improve it. Analytics cookies are only set if you choose Accept in the cookie banner. If you choose Decline, no analytics cookies are used.</p>
+<p>You can change your choice at any time with the Cookie settings link at the bottom of every page. Analytics data reaches us in aggregate form and is not used to identify you.</p>
 
 <h2>Contact</h2>
 <p>For any privacy question, email us at <a data-mail data-text="email"></a> and we will respond promptly.</p>

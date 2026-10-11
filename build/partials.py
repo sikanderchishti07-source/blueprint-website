@@ -662,7 +662,7 @@ def widgets(lang="en"):
 
 
 def scripts(extra=(), lang="en"):
-    base = ["js/main.js", "js/widgets.js", "js/scroll.js"] + list(extra)
+    base = ["js/main.js", "js/widgets.js", "js/scroll.js", "js/consent.js"] + list(extra)
     return "\n".join(f'<script src="{s}"></script>' for s in base) + "\n</body>\n</html>\n"
 
 
