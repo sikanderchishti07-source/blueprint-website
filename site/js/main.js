@@ -126,7 +126,8 @@
     });
   });
 
-  /* â”€â”€ Contact form: builds a WhatsApp message from the fields â”€â”€â”€â”€â”€ */
+  /* â”€â”€ Contact form: sends to /api/contact (email + Odoo), WhatsApp as backup â”€â”€â”€â”€â”€ */
+  document.addEventListener('focusin', function (e) { if (!window.__bpFormT && e.target && /^cf-/.test(e.target.id || '')) window.__bpFormT = Date.now(); });
   window.sendContactMessage = function () {
     var ar = document.documentElement.lang === 'ar';
     var v = function (id) { var e = document.getElementById(id); return e ? e.value.trim() : ''; };
@@ -143,10 +144,38 @@
     var lines = [L[0], '', L[1] + ': ' + name];
     [[2, v('cf-company')], [3, email], [4, phone], [5, service], [6, msg]].forEach(function (p) { if (p[1]) lines.push(L[p[0]] + ': ' + p[1]); });
     var C = window.BP_CONFIG || {};
-    var url = 'https://wa.me/' + (C.WHATSAPP || '966543470109') + '?text=' + encodeURIComponent(lines.join('\n'));
-    var w = window.open(url, '_blank', 'noopener');
-    if (!w) location.href = url;
-    say(ar ? 'تم فتح واتساب. اضغط إرسال هناك لإكمال رسالتك.' : 'WhatsApp has opened. Press send there to finish your message.', false);
+    /* if the message cannot be sent, offer the same details by WhatsApp (one tap, nothing retyped) */
+    function viaWhatsApp() {
+      var url = 'https://wa.me/' + (C.WHATSAPP || '966543470109') + '?text=' + encodeURIComponent(lines.join('\n'));
+      if (!st) { location.href = url; return; }
+      st.hidden = false; st.style.color = '#b42318'; st.textContent = '';
+      st.appendChild(document.createTextNode(ar ? 'تعذّر إرسال الرسالة الآن. ' : 'We could not send your message just now. '));
+      var a = document.createElement('a'); a.href = url; a.target = '_blank'; a.rel = 'noopener';
+      a.style.cssText = 'color:#078f88;font-weight:700;text-decoration:underline';
+      a.textContent = ar ? 'أرسلها عبر واتساب' : 'Send it by WhatsApp instead';
+      st.appendChild(a);
+    }
+    var btn = document.getElementById('cf-send');
+    if (btn && btn.disabled) return;
+    if (btn) { btn.disabled = true; btn.style.opacity = '.7'; }
+    say(ar ? 'جارٍ الإرسال...' : 'Sending...', false);
+    var hp = document.getElementById('cf-website');
+    fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name: name, company: v('cf-company'), email: email, phone: phone, service: service, message: msg,
+        lang: ar ? 'ar' : 'en', page: location.pathname, website: hp ? hp.value : '', t: window.__bpFormT || 0 }) })
+      .then(function (r) { return r.json().then(function (j) { return { s: r.status, j: j }; }); })
+      .then(function (x) {
+        if (x.j && x.j.ok) {
+          ['cf-name', 'cf-company', 'cf-email', 'cf-phone', 'cf-msg'].forEach(function (id) { var e = document.getElementById(id); if (e) e.value = ''; });
+          if (sel) sel.selectedIndex = 0;
+          say(ar ? 'شكراً لك، وصلتنا رسالتك. سنتواصل معك خلال يوم عمل واحد.' : 'Thank you, your message has reached us. We will reply within one working day.', false);
+          try { if (window.gtag) window.gtag('event', 'generate_lead', { method: 'contact_form' }); } catch (e) {}
+        } else if (x.s === 429) {
+          say(ar ? 'أرسلت عدة رسائل للتو. يرجى المحاولة لاحقاً أو التواصل عبر واتساب.' : 'You have sent several messages just now. Please try again later or use WhatsApp.', true);
+        } else { viaWhatsApp(); }
+      })
+      .catch(viaWhatsApp)
+      .then(function () { if (btn) { btn.disabled = false; btn.style.opacity = ''; } });
   };
 })();
 

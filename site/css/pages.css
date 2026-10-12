@@ -2004,3 +2004,6 @@ button.bg-bp-primary.text-white { background: #0c8193; }
 html.bp-pre-on.bp-home #navbar .bp-wave,
 html.bp-pre-on.bp-home #navbar .bp-b,
 html.bp-pre-on.bp-home #navbar .bp-txt { animation-play-state: paused; }
+
+/* contact form: hidden field that only bots fill in */
+.cf-hp { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; opacity: 0; }

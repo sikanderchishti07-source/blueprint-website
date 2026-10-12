@@ -192,8 +192,9 @@ def contact():
               <option>Not sure yet, please advise</option>
             </select>
             <textarea id="cf-msg" placeholder="Your activity, capacity, and roughly what you need&hellip;" aria-label="Facility details" rows="4" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-bp-primary outline-none transition-all resize-none"></textarea>
-            <button onclick="sendContactMessage()" class="w-full py-4 bg-bp-primary text-white rounded-xl font-bold hover:bg-bp-dark transition-all shadow-lg inline-flex items-center justify-center gap-2"><i class="fab fa-whatsapp"></i> <span>Send via WhatsApp</span></button>
-            <p class="text-xs text-gray-500 text-center">Your details open in WhatsApp, ready to send to our team.</p>
+            <input type="text" id="cf-website" name="website" class="cf-hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <button id="cf-send" onclick="sendContactMessage()" class="w-full py-4 bg-bp-primary text-white rounded-xl font-bold hover:bg-bp-dark transition-all shadow-lg inline-flex items-center justify-center gap-2"><i class="fas fa-paper-plane"></i> <span>Send message</span></button>
+            <p class="text-xs text-gray-500 text-center">We reply within one working day. Prefer WhatsApp? Use the button on the left.</p>
             <p id="cfStatus" class="cf-status text-sm text-center" role="status" aria-live="polite" hidden></p>
           </div>
         </div>
