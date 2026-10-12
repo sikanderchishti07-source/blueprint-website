@@ -1999,3 +1999,8 @@ button.bg-bp-primary.text-white { background: #0c8193; }
 @media (max-width: 700px) {
   .fc-map { max-width: 340px; }
 }
+/* the menu logo animation waits while the opening animation covers the screen,
+   then plays as the screen opens (so visitors actually see it) */
+html.bp-pre-on.bp-home #navbar .bp-wave,
+html.bp-pre-on.bp-home #navbar .bp-b,
+html.bp-pre-on.bp-home #navbar .bp-txt { animation-play-state: paused; }
