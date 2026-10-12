@@ -1879,3 +1879,31 @@ button.bg-bp-primary.text-white { background: #0c8193; }
   .footer-contact-col .footer-contact-value { white-space: nowrap; }
   .footer-contact-col .footer-contact-row:first-of-type .footer-contact-value { white-space: normal; }
 }
+
+/* New logo (Oct 2026): two-stroke B mark (navy + teal), wide BLUEPRINT wordmark,
+   tagline in brand teal. The mark is almost square (649 x 675). */
+#navbar .bp-mark { width: 42px !important; height: 44px !important; }
+.drawer-header .bp-mark { width: 33px !important; height: 34px !important; }
+#navbar .bp-lock { gap: 12px; }
+#navbar .bp-word { height: 15px !important; }
+.drawer-header .bp-word { height: 12px !important; }
+.bp-txt { display: inline-flex; flex-direction: column; }
+.bp-tag, #navbar .bp-tag, #navbar.scrolled .bp-tag { color: #078f88 !important; font-weight: 700; letter-spacing: .2em; margin-top: 6px; }
+#navbar .bp-tag { font-size: 8px; }
+.drawer-header .bp-tag { font-size: 6.6px; letter-spacing: .19em; margin-top: 5px; }
+@media (max-width: 640px) {
+  #navbar .bp-mark { width: 36px !important; height: 38px !important; }
+  #navbar .bp-word { height: 13px !important; }
+  #navbar .bp-tag { font-size: 7px; letter-spacing: .19em; margin-top: 5px; }
+}
+#navbar.scrolled.on-dark .bp-tag { color: #fff !important; }
+/* footer: white version of the logo, as supplied */
+.footer-brand-logo .bp-mark { width: 46px !important; height: 48px !important; }
+.footer-brand-logo .bp-mark img { filter: brightness(0) invert(1); }
+.footer-brand-logo .bp-word { height: 17px !important; }
+.footer-brand-logo .bp-tag { color: rgba(255,255,255,.75) !important; font-size: 8.6px !important; letter-spacing: .2em !important; }
+[lang="ar"] .bp-tag { letter-spacing: 0 !important; }
+/* over a dark section the navy parts of the logo turn white so they stay visible */
+#navbar.scrolled.on-dark .bp-mark img,
+#navbar.scrolled.on-dark .bp-word { filter: brightness(0) invert(1) !important; }
+#navbar.scrolled.on-dark .bp-lock { filter: drop-shadow(0 1px 4px rgba(0,0,0,.45)) !important; }

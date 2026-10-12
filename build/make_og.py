@@ -86,7 +86,7 @@ def brand_card():
 
 
 def first_photo(html):
-    main = html[html.find("<main>"):html.find("</main>")]
+    main = html[html.find("<main"):html.find("</main>")]   # <main> may carry attributes (id="main")
     m = re.search(r"""(?:url\(['"]?|<img[^>]+src=")(?:\.\./)?assets/img/([^'")\s]+\.(?:webp|jpg|jpeg|png))""", main)
     return m.group(1) if m else None
 

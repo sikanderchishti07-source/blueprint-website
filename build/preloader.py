@@ -31,18 +31,18 @@ html.bp-pre-on{overflow:hidden}
 #bpPre .bpp-sun{position:absolute;left:50%;top:var(--hz);width:60vmin;height:60vmin;transform:translate(-50%,-50%);border-radius:50%;
   background:radial-gradient(closest-side,rgba(255,226,160,.55),rgba(255,226,160,0));opacity:0;transition:opacity .6s}
 #bpPre .bpp-line{position:absolute;left:10%;right:10%;top:var(--hz);height:2px;margin-top:-1px;transform:scaleX(0);
-  background:linear-gradient(90deg,transparent,#1640b8 18%,#0e93a8 50%,#6a7a3a 82%,transparent);
-  box-shadow:0 0 12px rgba(14,147,168,.45);transition:opacity .4s}
+  background:linear-gradient(90deg,transparent,#102f50 18%,#078f88 50%,#102f50 82%,transparent);
+  box-shadow:0 0 12px rgba(7,143,136,.45);transition:opacity .4s}
 #bpPre .bpp-lock{position:absolute;left:0;right:0;bottom:calc(100% - var(--hz));display:flex;justify-content:center;align-items:flex-end;
   padding-bottom:clamp(10px,1.6vmin,16px);transition:opacity .5s,transform .8s}
 #bpPre .bpp-rise{overflow:hidden;height:clamp(96px,18vmin,172px);display:flex;align-items:flex-end}
-#bpPre .bpp-mark{position:relative;height:100%;aspect-ratio:201/240;transform:translateY(105%)}
+#bpPre .bpp-mark{position:relative;height:100%;aspect-ratio:649/675;transform:translateY(105%)}
 #bpPre .bpp-mark img{position:absolute;inset:0;width:100%;height:100%;max-width:none}
 #bpPre .bpp-w{transform-origin:20% 90%;transform:rotate(-14deg);opacity:0}
 #bpPre .bpp-wordwrap{max-width:0;overflow:hidden;display:flex;align-items:flex-end}
-#bpPre .bpp-word{height:clamp(40px,7.4vmin,72px);width:auto;max-width:none;margin-left:clamp(12px,2vmin,20px);margin-bottom:clamp(14px,2.6vmin,26px);opacity:0;transform:translateX(-24px)}
+#bpPre .bpp-word{height:clamp(22px,4vmin,40px);width:auto;max-width:none;margin-left:clamp(12px,2vmin,20px);margin-bottom:clamp(37px,7vmin,67px);opacity:0;transform:translateX(-24px)}
 #bpPre .bpp-tag{position:absolute;left:0;right:0;top:calc(var(--hz) + clamp(16px,2.6vmin,26px));text-align:center;margin:0;
-  font:500 clamp(11px,1.6vmin,14px)/1.2 "Segoe UI",system-ui,-apple-system,sans-serif;letter-spacing:.42em;text-transform:uppercase;color:#6a7a3a;opacity:0;transition:opacity .5s}
+  font:500 clamp(11px,1.6vmin,14px)/1.2 "Segoe UI",system-ui,-apple-system,sans-serif;letter-spacing:.42em;text-transform:uppercase;color:#078f88;opacity:0;transition:opacity .5s}
 #bpPre .bpp-tag.bpp-ar{letter-spacing:0 !important;text-transform:none;font-size:clamp(14px,2vmin,17px);font-family:"IBM Plex Sans Arabic","Segoe UI",sans-serif}
 #bpPre.bpp-play .bpp-sun{opacity:1}
 #bpPre.bpp-play .bpp-mark{animation:bppRise .75s cubic-bezier(.2,.8,.2,1) .25s forwards}
