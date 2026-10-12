@@ -21,6 +21,8 @@
   document.querySelectorAll('[data-text=email]').forEach(function (el) { el.textContent = C.EMAIL; });
   document.querySelectorAll('[data-text=website]').forEach(function (el) { el.textContent = C.WEBSITE; });
   document.querySelectorAll('[data-text=address]').forEach(function (el) { el.innerHTML = C.ADDRESS_LINE1 + '<br>' + C.ADDRESS_LINE2; });
+  // footer: street address only (the working hours have their own line there)
+  document.querySelectorAll('[data-text=address1]').forEach(function (el) { el.innerHTML = C.ADDRESS_LINE1; });
   document.querySelectorAll('[data-text=year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
   window.bpWaLink = waLink;
 

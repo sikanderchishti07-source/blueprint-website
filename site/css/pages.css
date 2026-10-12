@@ -1963,3 +1963,39 @@ button.bg-bp-primary.text-white { background: #0c8193; }
   .fc-items { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr) minmax(0, 1fr); gap: 22px 28px; }
   .footer-contact-col .fc-items .footer-contact-row:first-of-type { grid-row: span 2; }
 }
+
+/* Footer contact: two balanced columns, centred next to the map */
+@media (min-width: 701px) {
+  .fc-items { align-self: center; grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 30px 40px !important; }
+  .footer-contact-col .fc-items .footer-contact-row:first-of-type { grid-row: auto; }
+  .footer-contact-col .fc-items .footer-contact-value { white-space: normal; }
+}
+@media (min-width: 1101px) {
+  .footer-grid > .footer-contact-col { grid-template-columns: minmax(0, 1fr) 300px !important; gap: 0 72px !important; }
+  .fc-items { max-width: 760px; }
+}
+/* Menu over dark sections: dark see-through glass instead of fully transparent, so it never overlaps the content */
+#navbar.scrolled.on-dark .nav-inner {
+  background: rgba(8, 31, 41, .78) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(1.2) !important;
+  backdrop-filter: blur(14px) saturate(1.2) !important;
+  border-bottom-color: rgba(255,255,255,.08) !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,.22) !important;
+}
+/* keep the CONTACT title with its details; the pair sits centred beside the map */
+@media (min-width: 701px) {
+  .footer-grid > .footer-contact-col { grid-template-rows: 1fr auto auto 1fr !important; }
+  .footer-contact-col > .footer-col-title { grid-row: 2 !important; }
+  .fc-items { grid-row: 3 !important; align-self: start; }
+  .fc-map { grid-row: 1 / span 4 !important; }
+}
+/* map size: compact square that balances with the contact details */
+@media (min-width: 701px) {
+  .footer-grid > .footer-contact-col { grid-template-columns: minmax(0, 1fr) 240px !important; }
+}
+@media (min-width: 1101px) {
+  .footer-grid > .footer-contact-col { grid-template-columns: minmax(0, 1fr) 270px !important; }
+}
+@media (max-width: 700px) {
+  .fc-map { max-width: 340px; }
+}

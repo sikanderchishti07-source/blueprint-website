@@ -63,7 +63,7 @@ STR = {
   "f_hours": "Working hours", "f_hours_v": "Sun &ndash; Thu &middot; 9:00 &ndash; 18:00 AST",
   "f_find": "Find us", "f_dir": "Get directions", "f_showmap": "Show map", "f_area": "Al Yarmouk, Riyadh",
   "f_brand": "BluePrint Environmental Services", "f_map_t": "BluePrint office location map",
-  "address": '<div class="footer-contact-value" data-text="address"></div>',
+  "address": '<div class="footer-contact-value" data-text="address1"></div>',
   "copy": "BluePrint Environmental Services. All rights reserved.",
   "credit": 'Prepared by: <span>Sikander Chishti</span>, Environmental Engineer',
   "privacy": "Privacy Policy", "terms": "Terms &amp; Conditions",
