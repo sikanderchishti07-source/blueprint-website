@@ -12,11 +12,11 @@
   var GA = C.GA_ID;
   var ar = (document.documentElement.lang || '').indexOf('ar') === 0;
   var T = ar ? {
-    text: 'نستخدم ملفات تعريف الارتباط التحليلية لفهم طريقة استخدام الزوار لموقعنا وتحسينه، ولا تُفعَّل إلا بموافقتك.',
+    text: 'نستخدم ملفات تعريف الارتباط للإحصاءات ولخريطة موقع المكتب، بهدف تحسين موقعنا، ولا تُفعَّل إلا بموافقتك.',
     more: 'سياسة الخصوصية', accept: 'قبول', decline: 'رفض',
     label: 'ملفات تعريف الارتباط', settings: 'إعدادات ملفات تعريف الارتباط'
   } : {
-    text: 'We use analytics cookies to understand how visitors use our website so we can improve it. They are only set if you accept.',
+    text: 'We use cookies for website analytics and for the office map, so we can improve our website. They are only set if you accept.',
     more: 'Privacy Policy', accept: 'Accept', decline: 'Decline',
     label: 'Cookies', settings: 'Cookie settings'
   };
@@ -68,6 +68,8 @@
     document.head.appendChild(st);
   }
 
+  function fire() { try { window.dispatchEvent(new Event('bp-consent')); } catch (e) {} window.BP_CONSENT = true; }
+
   function hide() { var b = document.getElementById('bp-cc'); if (b) b.remove(); }
 
   function show() {
@@ -81,7 +83,7 @@
     b.innerHTML = '<p>' + T.text + ' <a href="privacy.html">' + T.more + '</a></p>' +
       '<div class="bp-cc-btns"><button type="button" class="bp-cc-yes">' + T.accept + '</button>' +
       '<button type="button" class="bp-cc-no">' + T.decline + '</button></div>';
-    b.querySelector('.bp-cc-yes').onclick = function () { set('granted'); hide(); loadGA(); };
+    b.querySelector('.bp-cc-yes').onclick = function () { set('granted'); hide(); loadGA(); fire(); };
     b.querySelector('.bp-cc-no').onclick = function () {
       var was = get() === 'granted';
       set('denied'); hide(); clearGACookies();
@@ -109,7 +111,7 @@
   function start() {
     footerLink();
     var v = get();
-    if (v === 'granted') loadGA();
+    if (v === 'granted') { loadGA(); fire(); }
     else if (v !== 'denied') show();
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);

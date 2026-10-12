@@ -61,6 +61,8 @@ STR = {
   "f_accred": "Accreditations",
   "f_location": "Location", "f_email": "Email", "f_phone": "Phone", "f_wa": "WhatsApp",
   "f_hours": "Working hours", "f_hours_v": "Sun &ndash; Thu &middot; 9:00 &ndash; 18:00 AST",
+  "f_find": "Find us", "f_dir": "Get directions", "f_showmap": "Show map", "f_area": "Al Yarmouk, Riyadh",
+  "f_brand": "BluePrint Environmental Services", "f_map_t": "BluePrint office location map",
   "address": '<div class="footer-contact-value" data-text="address"></div>',
   "copy": "BluePrint Environmental Services. All rights reserved.",
   "credit": 'Prepared by: <span>Sikander Chishti</span>, Environmental Engineer',
@@ -119,6 +121,8 @@ STR = {
   "f_accred": "الاعتمادات",
   "f_location": "الموقع", "f_email": "البريد الإلكتروني", "f_phone": "الهاتف", "f_wa": "واتساب",
   "f_hours": "ساعات العمل", "f_hours_v": "الأحد &ndash; الخميس &middot; 9:00 &ndash; 18:00",
+  "f_find": "موقعنا", "f_dir": "احصل على الاتجاهات", "f_showmap": "عرض الخريطة", "f_area": "حي اليرموك، الرياض",
+  "f_brand": "بلوبرنت للخدمات البيئية", "f_map_t": "خريطة موقع مكتب بلوبرنت",
   "address": '<div class="footer-contact-value">3704 أبي جعفر المنصور، حي اليرموك، الرياض <span dir="ltr">13251-7669</span>، المملكة العربية السعودية</div>',
   "copy": "بلوبرنت للخدمات البيئية. جميع الحقوق محفوظة.",
   "credit": 'إعداد: <span>Sikander Chishti</span>، مهندس بيئي',
@@ -586,11 +590,22 @@ def footer(lang="en", page=None):
 
       <div class="footer-contact-col">
         <h4 class="footer-col-title">{s["contact"]}</h4>
+        <div class="fc-items">
         <div class="footer-contact-row"><div class="footer-contact-icon-box"><i class="fas fa-map-marker-alt"></i></div><div><div class="footer-contact-label">{s["f_location"]}</div>{s["address"]}</div></div>
         <div class="footer-contact-row"><div class="footer-contact-icon-box"><i class="fas fa-envelope"></i></div><div><div class="footer-contact-label">{s["f_email"]}</div><div class="footer-contact-value"><a data-mail data-text="email"></a></div></div></div>
         <div class="footer-contact-row"><div class="footer-contact-icon-box"><i class="fas fa-phone"></i></div><div><div class="footer-contact-label">{s["f_phone"]}</div><div class="footer-contact-value"><a data-tel data-text="phone" dir="ltr"></a></div></div></div>
         <div class="footer-contact-row"><div class="footer-contact-icon-box"><i class="fab fa-whatsapp"></i></div><div><div class="footer-contact-label">{s["f_wa"]}</div><div class="footer-contact-value"><a data-wa="" data-text="phone" dir="ltr"></a></div></div></div>
         <div class="footer-contact-row"><div class="footer-contact-icon-box"><i class="fas fa-clock"></i></div><div><div class="footer-contact-label">{s["f_hours"]}</div><div class="footer-contact-value">{s["f_hours_v"]}</div></div></div>
+        </div>
+        <div class="fc-map">
+          <h4 class="footer-col-title fc-map-title">{s["f_find"]}</h4>
+          <div class="fc-map-box" data-map data-title="{s["f_map_t"]}">
+            <span class="fc-map-ph" aria-hidden="true"></span>
+            <button type="button" class="fc-map-load">{s["f_showmap"]}</button>
+            <span class="fc-pin" aria-hidden="true"><span class="fc-pulse"></span><svg viewBox="0 0 38 50"><path d="M19 0C8.5 0 0 8.4 0 18.8 0 32.9 19 50 19 50s19-17.1 19-31.2C38 8.4 29.5 0 19 0z" fill="#078f88"/><path d="M19 0C8.5 0 0 8.4 0 18.8 0 32.9 19 50 19 50V0z" fill="#102f50" opacity=".25"/><circle cx="19" cy="18.5" r="10.5" fill="#fff"/><image href="assets/logo/blueprint-mark.png" x="12" y="11.3" width="14" height="14.6"/></svg></span>
+          </div>
+          <div class="fc-map-cap"><div><strong>{s["f_brand"]}</strong><small>{s["f_area"]}</small></div><a class="fc-dir" data-map-dir href="#" target="_blank" rel="noopener">{s["f_dir"]}</a></div>
+        </div>
       </div>
 
     </div>
@@ -662,7 +677,7 @@ def widgets(lang="en"):
 
 
 def scripts(extra=(), lang="en"):
-    base = ["js/main.js", "js/widgets.js", "js/scroll.js", "js/consent.js"] + list(extra)
+    base = ["js/main.js", "js/widgets.js", "js/scroll.js", "js/consent.js", "js/map.js"] + list(extra)
     return "\n".join(f'<script src="{s}"></script>' for s in base) + "\n</body>\n</html>\n"
 
 

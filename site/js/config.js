@@ -19,6 +19,9 @@ window.BP_CONFIG = {
   WEBSITE:        'www.blueprint-env.com',
 
   // Google Analytics 4. Loaded only after the visitor accepts the cookie banner (js/consent.js).
-  GA_ID:          'G-YB0RQ9K2S1'
+  GA_ID:          'G-YB0RQ9K2S1',
+
+  // Footer map. Use the office's exact coordinates ('24.7,46.7') or an address.
+  MAP_QUERY:      '3704 Abi Jafar Al Mansur, Al Yarmouk, Riyadh 13251, Saudi Arabia'
 
 };

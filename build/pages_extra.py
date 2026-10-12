@@ -425,6 +425,7 @@ LEGAL = {
 
 <h2>Cookies &amp; analytics</h2>
 <p>We use Google Analytics to understand how visitors use our website, for example which pages are read most, so we can improve it. Analytics cookies are only set if you choose Accept in the cookie banner. If you choose Decline, no analytics cookies are used.</p>
+<p>The office map at the bottom of each page is provided by Google Maps, which may set its own cookies. It loads only if you accept cookies or press Show map.</p>
 <p>You can change your choice at any time with the Cookie settings link at the bottom of every page. Analytics data reaches us in aggregate form and is not used to identify you.</p>
 
 <h2>Contact</h2>
