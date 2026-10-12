@@ -92,7 +92,12 @@ AR_ADDRESS = ('3704 أبي جعفر المنصور، حي اليرموك، ال�
               'المملكة العربية السعودية<br>الأحد &ndash; الخميس &middot; 9:00 &ndash; 18:00')
 
 
+AR_ADDRESS1 = AR_ADDRESS.split('<br>')[0]   # street address only (hours shown separately)
+
+
 def fill_runtime_text(html):
+    html = re.sub(r'(<(\w+)[^>]*?) data-text="address1"([^>]*)></\2>',
+                  lambda m: m.group(1) + m.group(3) + ">" + AR_ADDRESS1 + "</" + m.group(2) + ">", html)
     return re.sub(r'(<(\w+)[^>]*?) data-text="address"([^>]*)></\2>',
                   lambda m: m.group(1) + m.group(3) + ">" + AR_ADDRESS + "</" + m.group(2) + ">", html)
 
