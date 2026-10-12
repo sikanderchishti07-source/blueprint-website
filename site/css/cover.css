@@ -297,3 +297,47 @@ h2{font-family:var(--disp);font-size:clamp(1.7rem,3.5vw,2.9rem);font-weight:800;
   .plane, .kb, .sc-s { height: 200px; }
   .sin { padding: 0 18px 28px; }
 }
+
+
+/* ==== Mobile cover v2 (Oct 2026): full-screen photo, copy over the photo ==== */
+@media (max-width: 900px) {
+  .stage { position: relative; min-height: 100svh; min-height: 100vh; min-height: 100svh;
+    display: flex; flex-direction: column; justify-content: flex-end; padding-top: 0; overflow: hidden; }
+  .plane, .kb { position: absolute !important; inset: 0 !important; height: 100% !important; width: 100%; }
+  .kb img, .cvr { object-position: 60% 50%; }
+  .kb { animation: mcvZoom 14s ease-out both; }
+  @keyframes mcvZoom { from { transform: scale(1.12); } to { transform: scale(1); } }
+  .sc-s { position: absolute !important; inset: 0 !important; height: 100% !important; z-index: 1;
+    background: linear-gradient(to bottom, rgba(6,26,32,.35) 0%, rgba(6,26,32,.10) 26%, rgba(6,26,32,.55) 52%,
+      rgba(6,26,32,.92) 78%, rgba(6,26,32,.98) 100%) !important; }
+  #s1 { background: transparent !important; position: relative; z-index: 2; }
+  .sin { margin-top: 0 !important; padding: 0 22px calc(92px + env(safe-area-inset-bottom)) !important; }
+  .cv-cred { margin-bottom: 18px !important; }
+
+  .eb { display: flex !important; align-items: center; gap: 8px; font-size: .56rem !important; letter-spacing: .1em !important;
+    white-space: nowrap; margin-bottom: 14px !important; color: rgba(255,255,255,.85) !important; }
+  .cv-rule { display: none !important; }
+  .sin h1 { font-size: clamp(2.2rem, 10.4vw, 2.9rem) !important; line-height: 1.02 !important; margin-bottom: 14px !important;
+    text-shadow: 0 2px 18px rgba(0,0,0,.35); }
+  .lede { font-size: .95rem !important; margin-bottom: 18px !important; color: rgba(255,255,255,.86) !important; }
+
+  /* accreditations as one row of small glass chips */
+  .cv-cred { display: flex !important; flex-wrap: wrap; gap: 6px !important; padding: 0 !important; margin: 0 0 22px !important;
+    border: 0 !important; }
+  .cv-cred > div { display: inline-flex; align-items: baseline; gap: 5px; padding: 6px 10px !important; border-radius: 8px;
+    background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14); grid-column: auto !important; }
+  .cv-cred b { font-size: .72rem !important; white-space: nowrap; }
+  .cv-cred span { font-size: .5rem !important; letter-spacing: .1em !important; margin-top: 0 !important; color: rgba(255,255,255,.55); }
+
+  /* main button full width, second one a quiet outline next line */
+  .cta { gap: 10px !important; }
+  .cta .b1 { padding: 16px 20px !important; border-radius: 14px !important; box-shadow: 0 10px 28px rgba(0,0,0,.28); }
+  .cta .b2 { background: rgba(255,255,255,.06) !important; border: 1px solid rgba(255,255,255,.3) !important; color: #fff !important;
+    padding: 14px 20px !important; border-radius: 14px !important; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
+  .whatsapp-container { bottom: 18px; }
+}
+@media (max-width: 400px) {
+  .plane, .kb, .sc-s { height: 100% !important; }
+  .cv-cred span { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .kb { animation: none !important; } }
