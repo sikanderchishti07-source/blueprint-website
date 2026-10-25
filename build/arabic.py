@@ -120,7 +120,6 @@ FOOTER = """
           <span class="footer-cert-badge">آيزو 45001</span>
         </div>
         <div class="footer-social-row">
-          <a href="https://www.linkedin.com/company/alemad-alarabi/" target="_blank" rel="noopener" class="footer-social-btn" aria-label="لينكدإن"><i class="fab fa-linkedin-in"></i></a>
           <a href="https://x.com/blueprint_env" target="_blank" rel="noopener" class="footer-social-btn" aria-label="إكس"><i class="fab fa-twitter"></i></a>
           <a href="https://www.instagram.com/blueprint_env" target="_blank" rel="noopener" class="footer-social-btn" aria-label="إنستغرام"><i class="fab fa-instagram"></i></a>
           <a data-wa="" class="footer-social-btn wa" aria-label="واتساب"><i class="fab fa-whatsapp"></i></a>

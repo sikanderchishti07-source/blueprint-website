@@ -53,7 +53,6 @@ def _business(lang):
             "opens": "09:00", "closes": "18:00",
         },
         "sameAs": [
-            "https://www.linkedin.com/company/alemad-alarabi/",
             "https://x.com/blueprint_env",
             "https://www.instagram.com/blueprint_env",
         ],
